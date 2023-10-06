@@ -53,10 +53,28 @@ td a:hover {
 
 }
 
-nav {
+header {
     background-color: black;
     color: white;
     padding: 20px;
+    display: flex;
+    align-items: center;
+
+}
+
+header h2 {
+    text-align: left;
+    margin: 0;
+    padding-right: 30px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.social-links {
+    padding-left: 320px;
+}
+
+nav {
     text-align: left;
 }
 
@@ -85,3 +103,4 @@ nav ul li a:hover {
     color: #0056b3; /* New color on hover */
     transition: color 0.3s;
 }
+
