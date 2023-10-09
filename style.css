@@ -1,13 +1,7 @@
-.venndg {
+.details {
     font-size: 24px;
-}
-
-.busycaldr {
-    font-size: 24px;
-}
-
-.progexcs {
-    font-size: 24px;
+    border: solid 1px;
+    padding-left: 8px;
 }
 
 /* Basic */
@@ -50,7 +44,6 @@ td a {
 
 td a:hover {
     color: #0056b3;
-
 }
 
 header {
@@ -111,5 +104,40 @@ nav ul li a:hover {
 }
 
 footer {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.welcomeMessage {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.projects {
+    text-align: center;
+    margin-right: 25px;
+    padding-bottom: 15px;
+
+}
+
+.aboutMe {
+    text-align: center;
+    margin-right: 25px;
+}
+
+.contributions {
+    text-align: center;
+    margin-right: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.contributeText {
+    text-align: center;
+}
+
+.table {
+    align-items: center;
     text-align: center;
 }
