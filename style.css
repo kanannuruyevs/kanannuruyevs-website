@@ -62,13 +62,11 @@ header h3 {
     transform: translateX(-50%);
 }
 
-.social-links {
-    padding-left: 365px;
-}
 
 nav {
     display: flex;
     justify-content: space-between;
+    position: absolute;
 }
 
 /* Remove bullet points from the list */
@@ -95,6 +93,10 @@ nav ul li a {
 nav ul li a:hover {
     color: #0056b3; /* New color on hover */
     transition: color 0.3s;
+}
+
+.social-links {
+    justify-content: flex-end;
 }
 
 footer {
@@ -149,3 +151,70 @@ footer {
     padding-left: 8px;
 }
 
+/* Decorations for Mobile Version */
+
+@media only screen and (max-width: 768px) {
+    /* Styles for typical tablets and mobiles screens */
+
+    header h3 {
+        text-align: center;
+    }
+
+    /* CSS for burger menu */
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .line {
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        margin: 4px 0;
+    }
+
+    /* CSS for mobile menu */
+    .nav-menu {
+        display: none; /* Hide the mobile menu by default */
+        background-color: black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 80%; /* Adjust the width of the menu as needed */
+        height: 100vh;
+        padding-top: 40px; /* Adjust the padding to avoid overlapping with the header */
+        padding-left: 20px;
+        z-index: 1000;
+    }
+
+    .social-links {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 80%; /* Adjust the width of the menu as needed */
+        height: 100vh;
+        padding-top: 100px; /* Adjust the padding to avoid overlapping with the header */
+        padding-left: 20px;
+        z-index: 1000;
+    }
+
+    .nav-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    .nav-menu li {
+        margin-bottom: 20px;
+    }
+
+    .nav-menu a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+    }
+}
