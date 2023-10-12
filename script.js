@@ -36,3 +36,10 @@ hammer.on('swipeleft', function(event) {
     navMenu.style.display = "none";
     socialLinks.style.display = "none"; // hide the social links
 });
+
+const closeMenu = document.querySelector('.burger-menu-close'); // select the close button
+
+closeMenu.addEventListener('click', () => {
+    navMenu.style.display = "none";
+    socialLinks.style.display = "none";
+});

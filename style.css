@@ -95,6 +95,23 @@ nav ul li a:hover {
     transition: color 0.3s;
 }
 
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-item {
+  margin-bottom: 20px; /* adjust as needed */
+  display: flex;
+
+}
+
+.flex-item-text {
+   font-size: 24px;
+   padding: 8px 20px;
+   align-items: center;
+}
+
 .social-links {
     justify-content: flex-end;
 }
@@ -177,7 +194,7 @@ footer {
 
     /* CSS for mobile menu */
     .nav-menu {
-        display: none; /* Hide the mobile menu by default */
+        display: flex; /* Hide the mobile menu by default */
         background-color: black;
         position: absolute;
         top: 0;
@@ -190,27 +207,36 @@ footer {
     }
 
     .social-links {
-        display: none;
+        display: flex;
         position: absolute;
         top: 0;
         left: 0;
+        height: 50vh;
         width: 80%; /* Adjust the width of the menu as needed */
-        height: 100vh;
-        padding-top: 100px; /* Adjust the padding to avoid overlapping with the header */
+        padding-top: 150px; /* Adjust the padding to avoid overlapping with the header */
         padding-left: 20px;
         z-index: 1000;
+        margin-top: 20px;
+        flex-direction: column;
     }
 
     .nav-menu ul {
+        display: flex;
         list-style: none;
         padding: 0;
         margin: 0;
-        text-align: center;
+        flex-direction: column;
     }
 
     .nav-menu li {
         margin-bottom: 20px;
+
     }
+.nav-menu ul li {
+    margin-bottom: 20px;
+    /* rest of your styles */
+
+}
 
     .nav-menu a {
         text-decoration: none;
