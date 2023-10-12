@@ -184,36 +184,26 @@ footer {
 
     header h3 {
         text-align: center;
+        display: block !important;
+        z-index: 1003;
     }
 
     /* CSS for burger menu */
-.burger-menu {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    padding: 10px;
-    position: relative;
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 10px;
+        position: relative;
+        z-index: 1002;
 
-}
-.burger-menu-close {
-display: none;
-    position: relative;
-    top: 0;
-    /* Additional styles specific to .burger-menu-close */
-}
+    }
 
     .line {
         width: 30px;
         height: 3px;
         background-color: white;
         margin: 4px 0;
-    }
-
-    .line-close {
-        width: 30px;
-        height: 3px;
-        background-color: white;
-        margin: 7px 0;
     }
 
     /* CSS for mobile menu */
@@ -225,10 +215,34 @@ display: none;
         left: 0;
         width: 80%; /* Adjust the width of the menu as needed */
         height: 100vh;
-        padding-top: 40px; /* Adjust the padding to avoid overlapping with the header */
+        padding-top: 70px; /* Adjust the padding to avoid overlapping with the header */
         padding-left: 20px;
         z-index: 1000; /* Increase if necessary */
 
+    }
+
+    .nav-menu ul {
+        display: flex;
+        list-style: none;
+        flex-direction: column;
+        padding: 0;
+        margin-top: 40px;
+    }
+
+    .nav-menu ul li {
+        margin-bottom: 20px;
+        flex-direction: column;
+        display: block;
+        text-align: center;
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 10px; /* Adjust as needed */
+        background-color: brown; /* Green background */
+        color: white; /* White text */
+        border: none; /* No border */
+        cursor: pointer; /* Cursor style */
     }
 
     .social-links {
@@ -249,26 +263,8 @@ display: none;
         padding: 0;
         margin: 0;
         flex-direction: column;
-
-
-    .nav-menu ul {
-        display: flex;
-        list-style: none;
-        padding: 0;
-        margin: 0;
     }
-
-.nav-menu ul li {
-    margin-bottom: 20px;
-            flex-direction: column;
-
-
-}
-
-}
-    .nav-menu a {
-        text-decoration: none;
-        color: white;
-        font-size: 18px;
+    .show {
+        display: block !important;
     }
 }
