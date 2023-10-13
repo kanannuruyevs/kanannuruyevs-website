@@ -95,23 +95,6 @@ nav ul li a:hover {
     transition: color 0.3s;
 }
 
-.flex-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.flex-item {
-  margin-bottom: 20px; /* adjust as needed */
-  display: flex;
-
-}
-
-.flex-item-text {
-   font-size: 24px;
-   padding: 8px 20px;
-   align-items: center;
-}
-
 .social-links {
     justify-content: space-between;
     display: inline-flex;
@@ -139,13 +122,6 @@ footer {
 
 /* about-me.html */
 
-.projects {
-    text-align: center;
-    margin-right: 25px;
-    padding-bottom: 15px;
-
-}
-
 .aboutMe {
     text-align: center;
     margin-right: 25px;
@@ -171,6 +147,36 @@ footer {
 
 /* index.html */
 
+
+.projects-text {
+    text-align: center;
+    background: red;
+    margin-bottom: 50px;
+    padding: 70px 30px 60px 0;
+
+}
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-item {
+    margin: 0 20px 0 30px; /* adjust as needed */
+    display: flex;
+}
+
+.flex-item-text {
+    display: inline-flex;
+    font-size: 32px;
+    padding-left: 30px;
+    align-items: center;
+}
+
+.flex-item img {
+    width: 100%; /* Adjust as needed */
+    height: auto;
+}
+
 .details {
     font-size: 24px;
     border: solid 1px;
@@ -179,7 +185,7 @@ footer {
 
 /* Decorations for Mobile Version */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 480px) and (max-width: 768px) {
     /* Styles for typical tablets and mobiles screens */
 
     header h3 {
@@ -264,6 +270,30 @@ footer {
         margin: 0;
         flex-direction: column;
     }
+
+.flex-item {
+  width: 100%; /* Adjust as needed */
+  margin-bottom: 20px;
+  align-content: center; /* Center the flex lines */
+  text-align: center;
+  flex-direction: column;
+}
+
+    .flex-item-text {
+        display: block;
+        font-size: 18px; /* adjust as needed */
+        width: 80%; /* Adjust as needed */
+        height: auto;
+        padding-right: 105px;
+
+    }
+
+    .flex-item img {
+        width: 60%; /* Adjust as needed */
+        height: auto;
+        padding-right: 75px;
+    }
+
     .show {
         display: block !important;
     }
