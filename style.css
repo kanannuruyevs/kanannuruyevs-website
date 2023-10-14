@@ -52,7 +52,7 @@ header {
     z-index: 100;
 }
 
-header h3 {
+.username {
     margin: 0 auto;
     padding-right: 30px;
     font-weight: bold;
@@ -188,10 +188,11 @@ footer {
 @media only screen and (max-width: 1100px) {
     /* Styles for typical tablets and mobiles screens */
 
-    header h3 {
+    .username {
         text-align: center;
-        display: block !important;
         z-index: 1003;
+        display: flex;
+        padding-left: 28px;
     }
 
     /* CSS for burger menu */
@@ -205,12 +206,46 @@ footer {
 
     }
 
+    .projects-text {
+        text-align: center;
+        padding-left: 25px;
+    }
+
     .line {
-        width: 30px;
+        width: 40px;
         height: 3px;
         background-color: white;
         margin: 4px 0;
+    transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+    transform-origin: center;
     }
+
+/* Initial state of the lines */
+.burger-menu .line:nth-child(1) {
+    top:0px;
+}
+
+.burger-menu .line:nth-child(2) {
+    top:13px;
+    opacity:1;
+}
+
+.burger-menu .line:nth-child(3) {
+    bottom:0px;
+}
+
+/* State of the lines when the menu is open */
+.burger-menu.open .line:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+}
+
+.burger-menu.open .line:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.open .line:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
+}
 
     /* CSS for mobile menu */
     .nav-menu {
@@ -219,7 +254,7 @@ footer {
         position: absolute;
         top: 0;
         left: 0;
-        width: 80%; /* Adjust the width of the menu as needed */
+        width: 50%; /* Adjust the width of the menu as needed */
         height: 100vh;
         padding-top: 70px; /* Adjust the padding to avoid overlapping with the header */
         padding-left: 20px;

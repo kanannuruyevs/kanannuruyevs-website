@@ -6,4 +6,5 @@ const socialLinks = document.querySelector('.social-links'); // select the socia
 burgerMenu.addEventListener('click', () => {
     navMenu.classList.toggle('show');
     socialLinks.classList.toggle('show'); // toggle the social links
+    burgerMenu.classList.toggle('open'); // toggle the open class on burger menu
 });
