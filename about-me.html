@@ -1,134 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <link rel="stylesheet" href="style.css">
-<script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
 </head>
 <body>
-    <header>
-<div class="burger-menu">
+<header>
+  <div class="burger-menu">
     <div class="line"></div>
     <div class="line"></div>
     <div class="line"></div>
-</div>
-<nav class="nav-menu">
+  </div>
+  <nav class="nav-menu">
     <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about-me.html">About Me</a></li>
-        <li><a href="contributions.html">Contributions</a></li>
-        <li><a href="resume.html">Resume</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about-me.html">About Me</a></li>
+      <li><a href="contributions.html">Contributions</a></li>
+      <li><a href="resume.html">Resume</a></li>
     </ul>
-</nav>
-        <h3 class="username">kanansnote</h3>
-        <div class="social-links">
-        <ul><li><a href="mailto:kanansnote@gmail.com">
-          <img src="https://img.shields.io/badge/Gmail-D14836?style=flat&logo=gmail&logoColor=white" alt="Gmail"></a></li></ul>
-        <ul><li><a href="https://join.skype.com/invite/F3ix8zp5tSBy">
-          <img src="https://img.shields.io/badge/Skype-%2300AFF0.svg?style=flat&logo=Skype&logoColor=white" alt="Skype"></a></li></ul>
-        <ul><li><a href="https://t.me/kanansnote">
-          <img src="https://img.shields.io/badge/Telegram-2CA5E0?style=flat&logo=telegram&logoColor=white" alt="Telegram"></a></li></ul>
-        <ul><li><a href="https://github.com/kanansnote">
-          <img src="https://img.shields.io/badge/GitHub-%23121011.svg?style=flat&logo=github&logoColor=white" alt="GitHub"></a></li></ul>
-        <ul><li><a href="https://gitlab.com/kanansnote">
-	      <img src="https://img.shields.io/badge/GitLab-%23181717.svg?style=flat&logo=gitlab&logoColor=white" alt="GitLab"></a></li></ul>
-        <ul><li><a href="https://www.upwork.com/freelancers/~01436abedec5f3ec3c">
-		  <img src="https://img.shields.io/badge/Upwork-6FDA44?style=flat&logo=Upwork&logoColor=white" alt="Upwork"></a></li></ul>
-        </div>
-    </header>
+  </nav>
+  <h3 class="username">kanansnote</h3>
+  <div class="social-links">
+    <ul>
+      <li><a href="mailto:kanansnote@gmail.com">
+        <img src="https://img.shields.io/badge/Gmail-D14836?style=flat&logo=gmail&logoColor=white"
+             alt="Gmail"></a></li>
+    </ul>
+    <ul>
+      <li><a href="https://join.skype.com/invite/F3ix8zp5tSBy">
+        <img src="https://img.shields.io/badge/Skype-%2300AFF0.svg?style=flat&logo=Skype&logoColor=white"
+             alt="Skype"></a></li>
+    </ul>
+    <ul>
+      <li><a href="https://t.me/kanansnote">
+        <img src="https://img.shields.io/badge/Telegram-2CA5E0?style=flat&logo=telegram&logoColor=white"
+             alt="Telegram"></a>
+      </li>
+    </ul>
+    <ul>
+      <li><a href="https://github.com/kanansnote">
+        <img src="https://img.shields.io/badge/GitHub-%23121011.svg?style=flat&logo=github&logoColor=white"
+             alt="GitHub"></a></li>
+    </ul>
+    <ul>
+      <li><a href="https://gitlab.com/kanansnote">
+        <img src="https://img.shields.io/badge/GitLab-%23181717.svg?style=flat&logo=gitlab&logoColor=white"
+             alt="GitLab"></a></li>
+    </ul>
+    <ul>
+      <li><a href="https://www.upwork.com/freelancers/~01436abedec5f3ec3c">
+        <img src="https://img.shields.io/badge/Upwork-6FDA44?style=flat&logo=Upwork&logoColor=white"
+             alt="Upwork"></a>
+      </li>
+    </ul>
+  </div>
+</header>
 
+<main>
+  <h1 class="aboutMe">About Me</h1>
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        @keyframes hi  {
+            0% { transform: rotate( 0.0deg) }
+           10% { transform: rotate(14.0deg) }
+           20% { transform: rotate(-8.0deg) }
+           30% { transform: rotate(14.0deg) }
+           40% { transform: rotate(-4.0deg) }
+           50% { transform: rotate(10.0deg) }
+           60% { transform: rotate( 0.0deg) }
+          100% { transform: rotate( 0.0deg) }
+        }
 
-    <main>
-    <h1 class="aboutMe">About Me</h1>
-    <foreignObject width="100%" height="100%">
-        <div xmlns="http://www.w3.org/1999/xhtml">
-            <style>
-                @keyframes hi  {
-                    0% { transform: rotate( 0.0deg) }
-                   10% { transform: rotate(14.0deg) }
-                   20% { transform: rotate(-8.0deg) }
-                   30% { transform: rotate(14.0deg) }
-                   40% { transform: rotate(-4.0deg) }
-                   50% { transform: rotate(10.0deg) }
-                   60% { transform: rotate( 0.0deg) }
-                  100% { transform: rotate( 0.0deg) }
-                }
+        @keyframes gradient {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
 
-                @keyframes gradient {
-                  0% {
-                    background-position: 0% 50%;
-                  }
-                  50% {
-                    background-position: 100% 50%;
-                  }
-                  100% {
-                    background-position: 0% 50%;
-                  }
-                }
+        .container {
+          --color-main: #ef476f;
+          --color-primary: #ffd166;
+          --color-secondary: #06d6a0;
+          --color-tertiary: #118ab2;
 
-                .container {
-                  --color-main: #ef476f;
-                  --color-primary: #ffd166;
-                  --color-secondary: #06d6a0;
-                  --color-tertiary: #118ab2;
+          background: linear-gradient(
+            -45deg,
+            var(--color-main),
+            var(--color-primary),
+            var(--color-secondary),
+            var(--color-tertiary)
+          );
+          background-size: 400% 400%;
+          animation: gradient 5s ease-in-out infinite;
 
-                  background: linear-gradient(
-                    -45deg,
-                    var(--color-main),
-                    var(--color-primary),
-                    var(--color-secondary),
-                    var(--color-tertiary)
-                  );
-                  background-size: 400% 400%;
-                  animation: gradient 5s ease-in-out infinite;
+          width: 100%;
+          height: 300px;
 
-                  width: 100%;
-                  height: 300px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: black;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol";
+        }
 
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  color: black;
-                  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-                }
+        .hi {
+          animation: hi 1.5s linear -0.5s infinite;
+          display: inline-block;
+          transform-origin: 70% 70%;
+        }
 
-                .hi {
-                  animation: hi 1.5s linear -0.5s infinite;
-                  display: inline-block;
-                  transform-origin: 70% 70%;
-                }
+        @media (prefers-color-scheme: light) {
+          .container {
+            --color-main: #ffc8dd;
+            --color-primary: #ffafcc;
+            --color-secondary: #bde0fe;
+            --color-tertiary: #a2d2ff;
+          }
+        }
+      </style>
+      <div class="container">
+        <h1>Hi there, my name is Kanan
+          <div class="hi">👋</div>
+        </h1>
+      </div>
+    </div>
+  </foreignObject>
+  <p class="summary">I'm learning programming via online learning platform
+    <a href="https://mimo.org/">Mimo</a>
+    by focusing mainly in <strong>Python</strong> & <strong>JavaScript</strong> 👨🏻‍💻 and occasionally
+    <strong>HTML</strong> & <strong>CSS</strong>.
+    Also, I'm inclined to explore different kinds of software,
+    including <strong>apps</strong> and <strong>extensions</strong> by contributing with opening issues and fixing
+    grammar errors in <strong>documentation</strong> 💻.
+    Most of the time, <strong>ChatGPT</strong> & <strong>Bing Chat</strong> might help with my programming requests.
+  </p>
+</main>
+<footer>
+  <p>© 2023 Kanan N. All rights reserved.</p>
+</footer>
 
-                @media (prefers-color-scheme: light) {
-                  .container {
-                    --color-main: #ffc8dd;
-                    --color-primary: #ffafcc;
-                    --color-secondary: #bde0fe;
-                    --color-tertiary: #a2d2ff;
-                  }
-                }
-            </style>
-            <div class="container">
-                <h1>Hi there, my name is Kanan <div class="hi">👋</div></h1>
-            </div>
-        </div>
-    </foreignObject>
-    <p class="summary">I'm learning programming via online learning platform
-        <a href="https://mimo.org/">Mimo</a>
-        by focusing mainly in <strong>Python</strong> & <strong>JavaScript</strong> 👨🏻‍💻 and occasionally <strong>HTML</strong> & <strong>CSS</strong>.
-        Also, I'm inclined to explore different kinds of software,
-        including <strong>apps</strong> and <strong>extensions</strong> by contributing with opening issues and fixing grammar errors in <strong>documentation</strong> 💻.
-        Most of the time, <strong>ChatGPT</strong> & <strong>Bing Chat</strong> might help with my programming requests.
-    </p>
-        </main>
-    <footer>
-        <p>© 2023 Kanan N. All rights reserved.</p>
-    </footer>
+<!-- Other content for your About Me page -->
 
-    <!-- Other content for your About Me page -->
-
-    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+<script src="script.js"></script> <!-- Link to your JavaScript file -->
 </body>
 
 </html>
