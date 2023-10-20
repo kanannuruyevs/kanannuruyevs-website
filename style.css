@@ -157,26 +157,56 @@ footer {
     padding: 70px 30px 60px 0;
 
 }
+
 .flex-container {
     display: flex;
     flex-direction: column;
 }
 
 .flex-item {
-    margin: 0 20px 0 30px; /* adjust as needed */
     display: flex;
+    margin: 0 20px 0 30px; /* adjust as needed */
+}
+
+.text-container {
+    display: flex-start;
+    flex-direction: column;
+    margin-left: 25px;
+}
+
+.text-container p {
+    padding-top: 10px;
+}
+
+.tags, .first-tag {
+    border: solid 1px;
+    color: grey;
+    display: inline;
+    padding: 5.5px;
+}
+
+.tags {
+    margin-left: 5px;
+}
+
+.flex-item-heading {
+    color: orange;
+    text-decoration: none;
+}
+
+.flex-item-heading:hover {
+    color: #0056b3; /* New color on hover */
+    transition: color 0.3s;
 }
 
 .flex-item-text {
-    display: inline-flex;
-    font-size: 32px;
-    padding-left: 30px;
-    align-items: center;
+    font-size: 24px;
 }
 
 .flex-item img {
-    width: 100%; /* Adjust as needed */
-    height: auto;
+    width: 300px; /* Adjust as needed */
+    height: 300px; /* Adjust as needed */
+    object-fit: cover; /* This will prevent distortion */
 }
 
 .details {
