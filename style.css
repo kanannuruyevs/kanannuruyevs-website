@@ -31,15 +31,6 @@ p a:hover {
     color: #0056b3;
 }
 
-td a {
-    text-decoration: none;
-    color: black;
-}
-
-td a:hover {
-    color: #0056b3;
-}
-
 header {
     background-color: black;
     color: white;
@@ -186,6 +177,33 @@ footer {
 .table {
     align-items: center;
     text-align: center;
+    width: 100%; /* Full-width table */
+    border-collapse: collapse; /* Collapse borders */
+}
+
+.table th {
+    background-color: black; /* Light grey background */
+    color: white; /* Black text color */
+    padding: 15px; /* Padding */
+    border: 1px solid white;
+}
+
+.table td {
+    border: 1px solid #ddd; /* Add a border */
+    padding: 8px; /* Padding */
+}
+
+.table td a {
+    text-decoration: none;
+    color: orange;
+}
+
+.table td a:hover {
+    color: #0056b3;
+}
+
+.table tr:hover {
+    background-color: black; /* Add a hover effect to rows */
 }
 
 /* index.html */
