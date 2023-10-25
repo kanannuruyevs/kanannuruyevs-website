@@ -278,7 +278,7 @@ footer {
 
 /* Decorations for Mobile Version */
 
-@media only screen and (max-device-width: 800px) {
+@media only screen and (max-device-width: 800px) and (prefers-color-scheme: dark) {
     /* Styles for typical tablets and mobiles screens */
 
     .username {
