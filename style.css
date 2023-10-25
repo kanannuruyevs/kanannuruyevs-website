@@ -397,10 +397,13 @@ footer {
         flex-direction: column;
         text-align: center;
         margin-bottom: 20px;
+        align-items: center;
+        margin: unset;
     }
 
     .projects-items-text {
         font-size: 18px;
+        margin-bottom: 40px;
     }
 
     .projects-items img {
