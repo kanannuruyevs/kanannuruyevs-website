@@ -278,7 +278,7 @@ footer {
 
 /* Decorations for Mobile Version */
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-device-width: 800px) {
     /* Styles for typical tablets and mobiles screens */
 
     .username {
