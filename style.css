@@ -163,46 +163,39 @@ footer {
 
 /* contributions.html */
 
-.contributions {
-    text-align: center;
-    margin-right: 40px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
 .contributeText {
     text-align: center;
 }
 
-.table {
+.contributions {
     align-items: center;
     text-align: center;
     width: 100%; /* Full-width table */
     border-collapse: collapse; /* Collapse borders */
 }
 
-.table th {
+.contributions th {
     background-color: black; /* Light grey background */
     color: white; /* Black text color */
     padding: 15px; /* Padding */
     border: 1px solid white;
 }
 
-.table td {
+.contributions td {
     border: 1px solid #ddd; /* Add a border */
     padding: 8px; /* Padding */
 }
 
-.table td a {
+.contributions td a {
     text-decoration: none;
     color: orange;
 }
 
-.table td a:hover {
+.contributions td a:hover {
     color: #0056b3;
 }
 
-.table tr:hover {
+.contributions tr:hover {
     background-color: black; /* Add a hover effect to rows */
 }
 
