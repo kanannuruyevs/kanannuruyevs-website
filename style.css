@@ -53,6 +53,16 @@ header {
     transform: translateX(-50%);
 }
 
+.spiderWebFlat {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px; /* adjust as needed */
+    height: 50px; /* adjust as needed */
+    padding-right: 210px; /* adjust as needed */
+}
+
 /* Navigation Menu Decoration */
 
 nav {
@@ -202,7 +212,7 @@ footer {
 /* index.html */
 
 .frontBanner {
-    background-image: url('abstract-art.jpg');
+    background-image: url('media/abstract-art.jpg');
     background-size: cover; /* cover image */
     background-repeat: no-repeat; /* to prevent repeating the image */
     padding-top: 150px;
@@ -300,7 +310,12 @@ footer {
         text-align: center;
         z-index: 1003;
         display: flex;
-        padding-left: 28px;
+        padding-left: 40px;
+    }
+
+    .spiderWebFlat {
+        padding: 0 175px 2px 0;
+        z-index: 1004;
     }
 
     /* CSS for burger menu */
