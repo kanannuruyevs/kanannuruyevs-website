@@ -291,15 +291,6 @@ footer {
     padding-left: 8px;
 }
 
-.resume {
-    text-decoration: none;
-    color: orange;
-}
-
-.resume:hover {
-    color: #0056b3;
-}
-
 /* Decorations for Mobile Version */
 
 @media only screen and (max-width: 800px) and (prefers-color-scheme: dark) {
