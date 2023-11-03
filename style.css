@@ -84,6 +84,7 @@ header {
     text-decoration: none;
     padding: 10px;
     display: block;
+    background-color: brown;
 
     /* Add a box shadow to create a 3D effect */
     box-shadow: inset 0 -3px white;
@@ -95,7 +96,7 @@ header {
 /* Change the box shadow on hover to create a push effect */
 .nav-menu a:hover {
     box-shadow: inset 0 -3px brown;
-    color: brown;
+    color: black;
     transition: 0.3 ease-in-out;
 }
 
@@ -392,7 +393,7 @@ footer {
         position: absolute;
         top: 0;
         left: 0;
-        width: 50%; /* Adjust the width of the menu as needed */
+        width: 32%; /* Adjust the width of the menu as needed */
         height: 100vh;
         padding-top: 70px; /* Adjust the padding to avoid overlapping with the header */
         padding-left: 20px;
@@ -401,7 +402,7 @@ footer {
     }
 
     .nav-menu ul {
-        display: flex;
+        display: inline-block;
         list-style: none;
         flex-direction: column;
         padding: 0;
@@ -412,7 +413,6 @@ footer {
         margin-bottom: 20px;
         flex-direction: column;
         display: block;
-        text-align: center;
     }
 
     .nav-menu a {
