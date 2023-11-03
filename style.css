@@ -63,37 +63,66 @@ header {
 }
 
 /* Navigation Menu Decoration */
-
-nav {
+.nav-menu {
     display: flex;
     justify-content: space-between;
     position: absolute;
 }
 
-/* Remove bullet points from the list */
-nav ul {
-    list-style: none;
-    padding: 0;
+.nav-menu ul {
+    list-style-type: none;
     margin: 0;
+    padding: 0;
 }
 
-/* Display list items horizontally */
-nav ul li {
-    display: inline;
-    margin-right: 20px; /* Adjust the spacing between links if needed */
+.nav-menu li {
+    display: inline-block;
 }
 
-/* Style the links */
-nav ul li a {
+.nav-menu a {
+    color: white;
     text-decoration: none;
-    color: white; /* Link color */
-    font-weight: bold; /* Optional: Make the text bold */
+    padding: 10px;
+    display: block;
+
+    /* Add a box shadow to create a 3D effect */
+    box-shadow: inset 0 -3px white;
+
+    /* Add a transition effect for the box shadow */
+    transition: box-shadow 0.3s ease-in-out;
 }
 
-/* Change link color on hover */
-nav ul li a:hover {
-    color: #0056b3; /* New color on hover */
-    transition: color 0.3s;
+/* Change the box shadow on hover to create a push effect */
+.nav-menu a:hover {
+    box-shadow: inset 0 -3px brown;
+    color: brown;
+    transition: 0.3 ease-in-out;
+}
+
+/* Add some shapes and icons before the link text using pseudo-elements */
+.nav-menu a:before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+
+    /* Position the pseudo-element relative to the link */
+    position: relative;
+
+    /* Move it to the left of the link */
+    margin-left: -20px;
+
+    /* Hide it by default */
+    opacity: 0;
+
+    /* Add a transition effect for the opacity and margin */
+    transition: opacity 0.3s ease-in-out, margin-left 0.3s ease-in-out;
+}
+
+/* Change the opacity and margin on hover to make the pseudo-element visible */
+.nav-menu a:hover:before {
+    opacity: 1;
+    margin-right: 1px;
 }
 
 .social-links {
