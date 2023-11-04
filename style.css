@@ -1,34 +1,17 @@
 /* Basic Things to Do First */
 @import url("https://use.typekit.net/ovt6ynt.css");
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Oswald:wght@200;300;400;500;600;700&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Spectral:wght@200;300;400;500;600;700;800&display=swap");
+@font-face {
+  font-family: "Techno Race Italic";
+  src: url("technoraceitalic.woff") format("woff"),
+       url("TechnoRaceItalic.ttf") format("truetype");
+}
 
 body {
     height: 100%;
 	font-family: "Roboto", sans-serif;
 	background: linear-gradient(#201F2F, #141e30);
 	color: white;
-}
-
-body li a {
-    color: white;
-    transition: color 0.3s;
-}
-
-a {
-    text-decoration: none;
-}
-
-a:hover {
-    color: #0056b3;
-}
-
-p a {
-    text-decoration: none;
-    color: black;
-}
-
-p a:hover {
-    color: #0056b3;
 }
 
 header {
@@ -50,6 +33,7 @@ header {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    font-family: "Techno Race Italic";
 }
 
 .spiderWebFlat {
@@ -85,6 +69,8 @@ header {
     padding: 10px;
     display: block;
     background-color: brown;
+    transform: skewX(160deg);
+    font-weight: bold;
 
     /* Add a box shadow to create a 3D effect */
     box-shadow: inset 0 -3px white;
@@ -332,13 +318,17 @@ footer {
     margin-left: 5px;
 }
 
+.projects-items a {
+    text-decoration: none;
+}
+
 .projects-items-heading {
     color: orange;
     text-decoration: none;
 }
 
 .projects-items-heading:hover {
-    color: #0056b3; /* New color on hover */
+    color: black; /* New color on hover */
     transition: color 0.3s;
 }
 
