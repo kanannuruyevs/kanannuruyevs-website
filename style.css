@@ -200,6 +200,43 @@ footer {
   animation: gradient 5s ease infinite;
 }
 
+.aboutMe {
+    text-align: center;
+    padding-top: 5px;
+}
+
+.aboutMe p {
+    padding-bottom: 5px;
+}
+
+.skillsAndTools {
+    border-collapse: separate;
+    border-spacing: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.skillsAndTools th {
+    background-color: purple;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.skillsAndTools td {
+    background-color: maroon;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    font-weight: normal;
+}
+
 /* contributions.html */
 
 .contributeText {
@@ -361,16 +398,16 @@ footer {
 
     /* Initial state of the lines */
     .burger-menu .line:nth-child(1) {
-        top:0px;
+        top: 0px;
     }
 
     .burger-menu .line:nth-child(2) {
-        top:13px;
-        opacity:1;
+        top: 13px;
+        opacity: 1;
     }
 
     .burger-menu .line:nth-child(3) {
-        bottom:0px;
+        bottom: 0px;
     }
 
     /* State of the lines when the menu is open */
@@ -393,7 +430,7 @@ footer {
         position: absolute;
         top: 0;
         left: 0;
-        width: 32%; /* Adjust the width of the menu as needed */
+        width: 40%; /* Adjust the width of the menu as needed */
         height: 100vh;
         padding-top: 70px; /* Adjust the padding to avoid overlapping with the header */
         padding-left: 20px;
