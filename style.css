@@ -4,7 +4,7 @@
 @font-face {
   font-family: "Techno Race Italic";
   src: url("technoraceitalic.woff") format("woff"),
-       url("TechnoRaceItalic.ttf") format("truetype");
+       url("technoraceitalic.ttf") format("truetype");
 }
 
 body {
