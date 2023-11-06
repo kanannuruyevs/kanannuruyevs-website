@@ -32,7 +32,7 @@ header {
     font-size: 24px;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) skewX(15deg);
     font-family: "Techno Race Italic";
 }
 
@@ -69,7 +69,6 @@ header {
     padding: 10px;
     display: block;
     background-color: brown;
-    transform: skewX(160deg);
     font-weight: bold;
 
     /* Add a box shadow to create a 3D effect */
@@ -357,6 +356,7 @@ footer {
         text-align: center;
         z-index: 1003;
         display: flex;
+        left: 50%;
     }
 
     .spiderWebFlat {
