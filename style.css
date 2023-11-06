@@ -27,7 +27,7 @@ header {
 }
 
 .username {
-    margin: 0 auto;
+    margin-bottom: 21px;
     font-weight: bold;
     font-size: 24px;
     position: absolute;
@@ -268,15 +268,27 @@ footer {
     background-repeat: no-repeat; /* to prevent repeating the image */
     padding-top: 150px;
     text-align: center;
+    height: 40vh;
 }
 
-.frontBanner h1 {
+.overlay-shape {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 62.6%;
+    margin-top: 76px;
+    background-color: rgb(48 32 32 / 50%);
+    background-size: cover;
+}
+
+.overlay-heading {
     background-color: red;
     text-transform: uppercase;
-    font-weight: semibold;
     font-family: "Source Sans Pro", sans-serif;
     padding: 20px 60px; /* adjust as needed */
-    margin: 10px 0 200px 0;
+    margin: 130px 0 200px 0;
     display: inline-block;
 }
 
@@ -367,12 +379,12 @@ footer {
         z-index: 1004;
     }
 
-    /* CSS for burger menu */
+    /* burger menu */
     .burger-menu {
         display: flex;
         flex-direction: column;
         cursor: pointer;
-        padding: 10px;
+        padding: 0;
         position: relative;
         z-index: 1002;
     }
