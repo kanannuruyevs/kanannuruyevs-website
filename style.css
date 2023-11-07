@@ -208,7 +208,6 @@ footer {
 .skillsAndTools th {
     background-color: purple;
     color: white;
-    border-radius: 10px;
     padding: 10px;
     text-align: center;
     font-weight: bold;
@@ -216,7 +215,6 @@ footer {
 
 .skillsAndTools td {
     background-color: maroon;
-    border-radius: 10px;
     padding: 10px;
     text-align: center;
     font-weight: normal;
@@ -233,18 +231,31 @@ footer {
     text-align: center;
     width: 100%; /* Full-width table */
     border-collapse: collapse; /* Collapse borders */
+    font-family: "Arial";
+    border: 1px solid;
 }
 
 .contributions th {
     background-color: black; /* Light grey background */
     color: white; /* Black text color */
     padding: 15px; /* Padding */
-    border: 1px solid white;
+    border-bottom: 1px solid;
 }
 
 .contributions td {
-    border: 1px solid #ddd; /* Add a border */
-    padding: 8px; /* Padding */
+    padding: 12px; /* Padding */
+}
+
+.contributions td:nth-child(1) {
+    background-color: black; /* Add a border */
+    padding: 12px; /* Padding */
+    border-right: 1px solid;
+}
+
+.contributions td:nth-child(3) {
+    background-color: black; /* Add a border */
+    padding: 12px; /* Padding */
+    border-left: 1px solid;
 }
 
 .contributions td a {
