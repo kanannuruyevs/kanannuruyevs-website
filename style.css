@@ -391,7 +391,11 @@ footer {
     }
 
     .overlay-shape {
-        height: 69vh;
+        height: 67%;
+    }
+
+    .overlay-heading {
+        width: 69%;
     }
 
     /* burger menu */
