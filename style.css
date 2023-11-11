@@ -390,6 +390,10 @@ footer {
         z-index: 1004;
     }
 
+    .overlay-shape {
+        height: 69vh;
+    }
+
     /* burger menu */
     .burger-menu {
         display: flex;
