@@ -452,7 +452,7 @@ footer {
         position: absolute;
         top: 0;
         left: 0;
-        width: 22vh; /* Adjust the width of the menu as needed */
+        width: 21vh; /* Adjust the width of the menu as needed */
         height: 100vh;
         padding-top: 70px; /* Adjust the padding to avoid overlapping with the header */
         padding-left: 20px;
