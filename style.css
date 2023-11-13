@@ -28,7 +28,6 @@ header {
 
 .username {
     margin-bottom: 21px;
-    font-weight: bold;
     font-size: 24px;
     position: absolute;
     left: 50%;
@@ -69,7 +68,6 @@ header {
     padding: 7px;
     display: block;
     background-color: brown;
-    font-weight: bold;
 
     /* Add a box shadow to create a 3D effect */
     box-shadow: inset 0 -3px white;
@@ -186,7 +184,6 @@ footer {
 }
 
 .aboutMe {
-    text-align: center;
     padding-top: 5px;
 }
 
@@ -195,18 +192,11 @@ footer {
 }
 
 .skillsAndTools {
-    border-collapse: separate;
-    border-spacing: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: auto;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+    display: flex;
 }
 
 .skillsAndTools th {
-    background-color: purple;
+    background-color: brown;
     color: white;
     padding: 10px;
     text-align: center;
@@ -214,12 +204,16 @@ footer {
 }
 
 .skillsAndTools td {
-    background-color: maroon;
+    background-color: black;
     padding: 10px;
     text-align: center;
     font-weight: normal;
 }
 
+.skillsAndTools p {
+    width: 60%;
+    margin-left: 15px;
+}
 /* contributions.html */
 
 .contributeText {
@@ -231,7 +225,6 @@ footer {
     text-align: center;
     width: 100%; /* Full-width table */
     border-collapse: collapse; /* Collapse borders */
-    font-family: "Arial";
     border: 1px solid;
 }
 
@@ -295,13 +288,15 @@ footer {
 }
 
 .overlay-heading {
-    background-color: red;
-    text-transform: uppercase;
-    font-family: "Source Sans Pro", sans-serif;
-    padding: 20px 60px; /* adjust as needed */
-    margin: 130px 0 200px 0;
-    display: inline-block;
-    max-width: 61%;
+    background-color: brown;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 75px;
+    text-align: center;
+    padding-top: 24px;
+    white-space: nowrap;
 }
 
 .underBannerText {
@@ -530,6 +525,11 @@ footer {
     .tags, first-tag {
         display: inline-flex;
         margin-bottom: 8px;
+    }
+
+    .skillsAndTools {
+        width: 100%;
+        overflow-x: auto; /* Adds horizontal scrollbar if needed */
     }
 
     .show {
