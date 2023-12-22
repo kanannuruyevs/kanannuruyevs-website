@@ -21,7 +21,7 @@
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="about-me.html">About Me</a></li>
-      <li><a href="contributions.html">Contributions</a></li>
+      <li><a href="blog.html">Blog</a></li>
     </ul>
   </nav>
   <div class="social-links">
@@ -51,25 +51,30 @@
     </ul>
   </div>
 </header>
-<main>
+<main class="aboutMe">
   <div class="svg-container">
-    <h1>Hi there, my name is Kanan
+    <h2>Hi there, my name is Kanan
       <div class="hi-hand">👋</div>
-    </h1>
+    </h2>
   </div>
-  <div class="aboutMe">
-    <h2 class="intro">🚩 Introduction</h2>
-      <p class="intro">I'm a self-taught developer, primarily focusing on
+  <div class="aboutContent">
+    <section id="introduction">
+      <h2>🚩 Introduction</h2>
+      <p>I'm a self-taught developer, primarily focusing on
         <strong>Python, JavaScript, HTML, and CSS</strong>.
         While my programming proficiency is currently at a basic level
         and I face challenges when writing code from scratch,
         I can comprehend programming structures and implement necessary code
         with the help of <strong>ChatGPT & Bing Chat</strong>.
         Also, I have an interest in exploring various types of software
-        and contribute projects in GitHub by opening issues and fixing grammar errors in documentation.</p>
-    <h2 class="beginning">📝 Beginning</h2>
-      <p class="beginning">I started coding in C++ and Java during my Bachelor's studies, but wasn't interested at all,
-        so most of the time, I got busy with doing research and deliver presentations at seminars based on lecture topics.
+        and contribute projects in GitHub by opening issues and fixing grammar errors in documentation.
+      </p>
+    </section>
+    <section id="beginning">
+      <h2>📝 Beginning</h2>
+      <p>I started coding in C++ and Java during my Bachelor's studies, but wasn't interested at all,
+        so most of the time, I got busy with doing research and deliver presentations at seminars based on lecture
+        topics.
         After graduation, I became an IT intern, but unfortunately,
         my internship was cut short due to the COVID-19 pandemic, so that led me to work only as a freelancer,
         where I was up to create two PowerPoint slides for client’s specifications. Then, I initially
@@ -78,17 +83,21 @@
         education abroad that caused me to decline my application process.
         <br><br>
         I stayed determined and used the break time to explore potential career paths and refine my personal skills.
-        Last year, I discovered programming with important decision of my life to begin learning <strong>Python</strong> through
+        Last year, I discovered programming with important decision of my life to begin learning <strong>Python</strong>
+        through
         an Android App and kept my keen interest in exploring other programming & markup languages, such as <strong>JavaScript,
-        HTML & CSS</strong>, in order to get into software & web development as a potential job duty now.
-        I was also prone to bother with the issues of the software, mostly related to Linux apps and extensions, which led
+          HTML & CSS</strong>, in order to get into software & web development as a potential job duty now.
+        I was also prone to bother with the issues of the software, mostly related to Linux apps and extensions, which
+        led
         me to increase my usage of GitHub by opening issues and making pull requests and engaging in
         reporting bugs, suggesting new features, correcting mistakes in the documentation, etc. Furthermore, I
         think this involvement allowed me to enhance my enthusiasm and overall experience in IT field.
       </p>
-    <h2>🔧 Skills & Tools</h2>
-    <div class="skillsAndTools">
+    </section>
+    <section id="skillsAndTools">
+      <h2>🔧 Skills &amp; Tools</h2>
       <table>
+        <thead>
         <tr>
           <th>Programming Languages</th>
           <th>Markup Languages</th>
@@ -96,6 +105,8 @@
           <th>Operating Systems</th>
           <th>Web Browsers</th>
         </tr>
+        </thead>
+        <tbody>
         <tr>
           <td>
             <img alt="Python"
@@ -126,17 +137,14 @@
                  src="https://img.shields.io/badge/Edge-0078D7?style=for-the-badge&logo=Microsoft-Edge&logoColor=white"/>
           </td>
         </tr>
+        </tbody>
       </table>
-    </div>
+    </section>
   </div>
 </main>
 <footer>
   <p>© 2023 Kanan N. All rights reserved.</p>
 </footer>
-
-<!-- Other content for your About Me page -->
-
-<script src="script.js"></script> <!-- Link to your JavaScript file -->
+<script src="script.js"></script>
 </body>
-
 </html>

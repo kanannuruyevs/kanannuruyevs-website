@@ -21,7 +21,7 @@
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="about-me.html">About Me</a></li>
-      <li><a href="contributions.html">Contributions</a></li>
+      <li><a href="blog.html">Blog</a></li>
     </ul>
   </nav>
   <div class="social-links">
@@ -51,23 +51,36 @@
     </ul>
   </div>
 </header>
-
-<!-- Main content section -->
 <main>
   <div class="frontBanner">
     <div class="overlay-shape">
-      <img class="overlay-heading"
+      <img class="overlay-heading-desktop"
            src="https://readme-typing-svg.herokuapp.com?font=Source+Sans+Pro&color=F7F7F7&size=24&center=true&vCenter=true
            &duration=3500&pause=800&lines=Welcome+to+My+Personal+Website+🙂+!;+Nice+to+Meet+You+⚡!"
+           alt="Typing SVG">
+      <img class="overlay-heading-mobile"
+           src="https://readme-typing-svg.herokuapp.com?font=Source+Sans+Pro&color=F7F7F7&size=24&center=true&vCenter=true&duration=3500&pause=800&lines=Welcome+to+My+Personal+Website+🙂+!;+Nice+to+Meet+You+⚡!"
            alt="Typing SVG">
     </div>
   </div>
   <div class="underBannerText">
     <h2>Discover My Latest Projects</h2>
   </div>
-  <div class="projects-container">
-    <div class="projects-items">
-      <img src="media/venn-diagram.png" alt="Venn Diagram Project" media="(max-width: 768px)">
+  <button id="arrowLeftButton" class="bothArrowButtons">
+    <div id="arrow-left" class="arrow">
+      <div class="arrow-top"></div>
+      <div class="arrow-bottom"></div>
+    </div>
+  </button>
+  <button id="arrowRightButton" class="bothArrowButtons">
+    <div id="arrow-right" class="arrow">
+      <div class="arrow-top"></div>
+      <div class="arrow-bottom"></div>
+    </div>
+  </button>
+  <div class="projects-container scrollContainer">
+    <div class="projects-items firstItem">
+      <img src="media/venn-diagram.jpeg" alt="Venn Diagram Project" media="(max-width: 768px)">
       <div class="text-container">
         <a target="_blank" href="https://github.com/kanansnote/My-Venn-Diagram">
           <h1 class="projects-items-heading">Venn Diagram</h1>
@@ -75,12 +88,13 @@
         <span class="first-tag">MBTI</span>
         <span class="tags">Career Options</span>
         <span class="tags">Cognitive Functions</span>
-        <p class="projects-items-text">The project focuses on a career path exploration, including MBTI Cognitive Functions.
+        <p class="projects-items-text">The project focuses on a career path exploration, including MBTI Cognitive
+          Functions.
           That was the main cause for returning to programming stuff after 6 months of delay.</p>
       </div>
     </div>
-    <div class="projects-items">
-      <img src="media/business-calendar.png" alt="Business Calendar Project" media="(max-width: 768px)">
+    <div class="projects-items secondItem">
+      <img src="media/business-calendar.jpeg" alt="Business Calendar Project" media="(max-width: 768px)">
       <div class="text-container">
         <a target="_blank" href="https://github.com/kanansnote/My-Business-Calendar">
           <h1 class="projects-items-heading">Business Calendar</h1>
@@ -88,13 +102,14 @@
         <span class="first-tag">Business</span>
         <span class="tags">Calendar</span>
         <span class="tags">PowerPoint</span>
-        <p class="projects-items-text">The project is designed to provide a personalized calendar experience. Inspired by the
+        <p class="projects-items-text">The project is designed to provide a personalized calendar experience. Inspired
+          by the
           idea of creating a business calendar with PowerPoint Slides in accordance with client's specifications working
           at Upwork.</p>
       </div>
     </div>
-    <div class="projects-items">
-      <img src="media/programming.png" alt="Programming Exercises Project" media="(max-width: 768px)">
+    <div class="projects-items thirdItem">
+      <img src="media/programming.jpeg" alt="Programming Exercises Project" media="(max-width: 768px)">
       <div class="text-container">
         <a target="_blank" href="https://github.com/kanansnote/My-Basic-Programming-Exercises">
           <h1 class="projects-items-heading">Basic Programming Exercises</h1>
@@ -110,6 +125,77 @@
           languages. It includes Python, JavaScript, C++, Java, HTML, and CSS.</p>
       </div>
     </div>
+  </div>
+  <div class="contributions">
+    <h2 class="contributeText"><strong>Highlighted Open Source Contributions</strong></h2>
+    <table class="contributeTable">
+      <thead>
+      <tr>
+        <th>Project</th>
+        <th>Description</th>
+        <th>Type</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><a href="https://github.com/gofiber/fiber">Fiber</a></td>
+        <td><a target="_blank" href="https://github.com/gofiber/fiber/pull/2413">Correct grammar errors in Azerbaijani
+          translation
+          #2413.</a>
+        </td>
+        <td>Pull Request</td>
+      </tr>
+      <tr>
+        <td><a href="https://github.com/firstcontributions/first-contributions">First Contributions</a></td>
+        <td><a target="_blank" href="https://github.com/firstcontributions/first-contributions/pull/59782">
+          Fix grammar mistakes in Azerbaijani translation #59782.</a>
+        </td>
+        <td>Pull Request</td>
+      </tr>
+      <tr>
+        <td><a href="https://github.com/lakoliu/Furtherance">Furtherance</a></td>
+        <td><a target="_blank"
+               href="https://github.com/lakoliu/Furtherance/issues/107">"Bug: Pomodoro Timer displays one-minute over
+          the set time"
+          #107.</a>
+        </td>
+        <td>Issue</td>
+      </tr>
+      <tr>
+        <td><a href="https://github.com/linux-is-awesome/gnome_extension_rocketbar">Rocketbar</a></td>
+        <td><a target="_blank"
+               href="https://github.com/linux-is-awesome/gnome_extension_rocketbar/issues/29">Suggested to add an option
+          to prevent
+          interference in placement with others in the status bar #29.</a>
+        </td>
+        <td>Issue</td>
+      </tr>
+      <tr>
+        <td><a href="https://github.com/jenspfahl/KeepAwake">Keep Awake!</a></td>
+        <td><a target="_blank" href="https://github.com/jenspfahl/KeepAwake/issues/36">Requested support for GNOME 44
+          #36.</a></td>
+        <td>Issue</td>
+      </tr>
+      <tr>
+        <td><a href="https://github.com/ryonakano/reco">Reco</a></td>
+        <td><a target="_blank"
+               href="https://github.com/ryonakano/reco/issues/190">"Info: runtime org.gnome. Platform branch 42 is
+          end-of-life"
+          #190.</a>
+        </td>
+        <td>Issue</td>
+      </tr>
+      <tr>
+        <td><a href="https://github.com/patrick330602/electron-microsoft-todo">Electron Microsoft To Do</a></td>
+        <td><a target="_blank"
+               href="https://github.com/patrick330602/electron-microsoft-todo/issues/4">"Bug: Sign-in page appears on
+          every app launch"
+          #4.</a>
+        </td>
+        <td>Issue</td>
+      </tr>
+      </tbody>
+    </table>
   </div>
 </main>
 <footer>
