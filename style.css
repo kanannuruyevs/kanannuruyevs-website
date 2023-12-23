@@ -301,117 +301,37 @@ footer {
 .bothArrowButtons {
     position: absolute;
     background-color: brown;
-    padding: 15px;
-    top: 93%;
+    border: 3px solid white;
+    top: 91%;
+}
+
+.bothArrowButtons:hover {
+    border: 3px solid black;
 }
 
 #arrowLeftButton {
     left: 1%;
+    padding: 10px 6px 7px 11px;
 }
 
 #arrowRightButton {
     right: 1%;
+    padding: 10px 11px 7px 6px;
 }
 
 .arrow {
-    cursor: pointer;
-    position: absolute;
-    transition: transform 0.1s;
-    width: 15px;
-    background-color: white;
-}
-
-.arrow-top, .arrow-bottom {
-    background-color: #fff;
-    height: 4px;
-    position: absolute;
-    top: 50%;
-    width: 100%;
-}
-
-.arrow-top:after, .arrow-bottom:after {
-    background-color: #000;
-    content: '';
-    height: 100%;
-    position: absolute;
-    top: 0;
-    transition: all 0.15s;
+    border: solid white;
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 5px;
 }
 
 #arrow-left {
-    left: 31%;
-    bottom: 54%;
-}
-
-#arrow-left .arrow-top {
-    transform: rotate(-45deg);
-    transform-origin: bottom left;
-}
-
-#arrow-left .arrow-top:after {
-    left: 0;
-    transition-delay: 0s;
-}
-
-#arrow-left .arrow-bottom {
-    transform: rotate(45deg);
-    transform-origin: top left;
-}
-
-#arrow-left .arrow-bottom:after {
-    right: 0;
-    left: 100%;
-    transition-delay: 0.15s;
-}
-
-#arrow-left:hover .arrow-top:after {
-    right: 0;
-    transition-delay: 0.15s;
-}
-
-#arrow-left:hover .arrow-bottom:after {
-    left: 0;
-    transition-delay: 0s;
+    transform: rotate(135deg);
 }
 
 #arrow-right {
-    right: 31%;
-    bottom: 54%;
-}
-
-#arrow-right .arrow-top {
-    transform: rotate(45deg);
-    transform-origin: bottom right;
-}
-
-#arrow-right .arrow-top:after {
-    right: 0;
-    transition-delay: 0s;
-}
-
-#arrow-right .arrow-bottom {
     transform: rotate(-45deg);
-    transform-origin: top right;
-}
-
-#arrow-right .arrow-bottom:after {
-    left: 0;
-    right: 100%;
-    transition-delay: 0.15s;
-}
-
-#arrow-right:hover .arrow-top:after {
-    left: 0;
-    transition-delay: 0.15s;
-}
-
-#arrow-right:hover .arrow-bottom:after {
-    right: 0;
-    transition-delay: 0s;
-}
-
-.arrow:active {
-    transform: translateX(-50%) translateY(-50%) scale(0.9);
 }
 
 .projects-items {
