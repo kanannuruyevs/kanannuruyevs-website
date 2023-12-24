@@ -401,22 +401,23 @@ footer {
     background-color: black; /* Light grey background */
     color: white; /* Black text color */
     padding: 15px; /* Padding */
-    border-bottom: 1px solid;
+    border: 1px solid;
 }
 
 .contributeTable td {
     padding: 12px; /* Padding */
 }
 
-.contributeTable td:nth-child(1) {
+.contributeTable td:nth-child(1), .contributeTable td:nth-child(3) {
     background-color: black; /* Add a border */
     padding: 12px; /* Padding */
+}
+
+.contributeTable td:nth-child(1) {
     border-right: 1px solid;
 }
 
 .contributeTable td:nth-child(3) {
-    background-color: black; /* Add a border */
-    padding: 12px; /* Padding */
     border-left: 1px solid;
 }
 
