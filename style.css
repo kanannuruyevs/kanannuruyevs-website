@@ -16,6 +16,7 @@ body {
 }
 
 header {
+    color: white;
     background-color: black;
     color: white;
     padding: 20px;
@@ -45,9 +46,9 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50px; /* adjust as needed */
-    height: 50px; /* adjust as needed */
-    padding-right: 180px; /* adjust as needed */
+    width: 50px;
+    height: 50px;
+    padding-right: 180px;
 }
 
 /* Navigation Menu Decoration */
@@ -148,7 +149,7 @@ footer {
 
 /* about-me.html */
 
-.aboutMe {
+#aboutMeMain {
     display: flex;
 }
 
@@ -274,7 +275,7 @@ footer {
 }
 
 .underBannerText, .contributeText {
-    padding: 40px 35px 30px 30px;
+    padding: 30px 0 40px 0;
     text-align: center;
     text-transform: uppercase;
 }
@@ -352,23 +353,25 @@ footer {
 }
 
 .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
-.text-container p {
-    padding-top: 10px;
-}
-
-.tags, .first-tag {
-    border: solid 1px;
-    color: grey;
-    display: inline-flex;
-    padding: 5px;
-    margin-top: 5px;
-}
-
 .tags {
-    margin-left: 5px;
+    display: inline-flex;
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: wrap;
+    color: grey;
+    width: 120%;
+}
+
+.otherTags, .first-tag {
+    border: solid 1px;
+    padding: 5px;
 }
 
 .projects-items a {
@@ -378,6 +381,7 @@ footer {
 .projects-items-heading {
     color: orange;
     text-decoration: none;
+    padding-top: 3px;
 }
 
 .projects-items-heading:hover {
@@ -386,6 +390,7 @@ footer {
 }
 
 .projects-items-text {
+    padding-top: 5px;
     font-size: 20px;
     width: 100%;
 }
@@ -405,19 +410,19 @@ footer {
 }
 
 .contributeTable th {
-    background-color: black; /* Light grey background */
-    color: white; /* Black text color */
-    padding: 15px; /* Padding */
+    background-color: black;
+    color: white;
+    padding: 15px;
     border: 1px solid;
 }
 
 .contributeTable td {
-    padding: 12px; /* Padding */
+    padding: 12px;
 }
 
 .contributeTable td:nth-child(1), .contributeTable td:nth-child(3) {
-    background-color: black; /* Add a border */
-    padding: 12px; /* Padding */
+    background-color: black;
+    padding: 12px;
 }
 
 .contributeTable td:nth-child(1) {
@@ -462,12 +467,12 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 50px; /* Adjust as needed */
-    width: 100%; /* Adjust as needed */
+    height: 50px;
+    width: 100%;
 }
 
 .blogLinesContainer div {
-    width: 98%; /* Adjust as needed */
+    width: 98%;
     height: 5px;
     background-color: #ffffff; /* White */
     margin: 9px;
@@ -481,7 +486,11 @@ footer {
 
 .blogItems {
     display: flex;
-    margin: 15px 20px 10px 5px; /* adjust as needed */
+    margin: 15px 20px 10px 5px;
+}
+
+.blogItemsTags {
+    justify-content: unset;
 }
 
 .blogTextContainer {
@@ -495,6 +504,12 @@ footer {
     text-decoration: none;
 }
 
+.blogItemsText {
+    font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
 .learnMore {
     color: white;
     background-color: brown;
@@ -506,8 +521,8 @@ footer {
 }
 
 .learnMore:hover {
-  color: #fff;
-  box-shadow: inset 200px 0 0 0 black;;
+    color: #fff;
+    box-shadow: inset 200px 0 0 0 black;;
 }
 
 /* Decorations for Mobile Version */
@@ -653,7 +668,7 @@ footer {
         display: none;
     }
 
-    .aboutMe {
+    #aboutMeMain {
         flex-direction: column;
     }
 
@@ -695,9 +710,14 @@ footer {
         padding: 40px 0 20px 0;
     }
 
+    .projects-items-heading {
+        padding-top: unset;
+    }
+
     .projects-items-text {
         font-size: 18px;
         margin-bottom: 40px;
+        width: unset;
     }
 
     .projects-items img, .blogItems img {
@@ -707,14 +727,21 @@ footer {
     }
 
     .text-container, .blogTextContainer {
-        width: 80%;
         margin-left: 0;
     }
 
-    .tags, first-tag {
-        display: inline-flex;
-        margin-bottom: 8px;
+    .tags {
+        width: 110%;
     }
+
+    .blogItemsTags {
+        display: unset;
+    }
+
+    .blogItemsText {
+        font-size: 18px;
+    }
+
 
     #skillsAndToolsList img {
         width: 35px;
