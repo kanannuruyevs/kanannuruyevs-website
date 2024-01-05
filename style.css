@@ -146,94 +146,6 @@ footer {
     margin-top: 40px;
 }
 
-/* about-me.html */
-
-#aboutMeMain {
-    display: flex;
-}
-
-.svg-container {
-    background-color: #ef476f;
-    width: 30%;
-    height: 73vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.svg-container h2 {
-    text-align: center;
-}
-
-.hi-hand {
-    animation: hi 1.5s linear -0.5s infinite;
-    display: inline-block;
-    transform-origin: 70% 70%;
-}
-
-@keyframes hi {
-    0% { transform: rotate( 0.0deg) }
-   10% { transform: rotate(14.0deg) }
-   20% { transform: rotate(-8.0deg) }
-   30% { transform: rotate(14.0deg) }
-   40% { transform: rotate(-4.0deg) }
-   50% { transform: rotate(10.0deg) }
-   60% { transform: rotate( 0.0deg) }
-  100% { transform: rotate( 0.0deg) }
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.svg-container {
-  background-size: 200% 200%;
-  background-image: linear-gradient(
-    45deg,
-    #ef476f,
-    #ffd166,
-    #06d6a0,
-    #118ab2,
-    #ef476f
-  );
-
-  animation: gradient 5s ease infinite;
-}
-
-.aboutContent {
-    width: 69%;
-    margin-left: 20px;
-    overflow-x: hidden; /* Hide horizontal scrollbar */
-    overflow-y: auto;   /* Show vertical scrollbar if needed */
-    height: 72vh;
-}
-
-#skillsAndTools {
-    display: flex;
-    flex-direction: column;
-}
-
-#skillsAndToolsList {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
-
-#skillsAndToolsList img {
-    margin: 15px;
-    width: 65px;
-}
-
 /* index.html */
 
 .frontBanner {
@@ -445,6 +357,148 @@ footer {
     background-color: black; /* Add a hover effect to rows */
 }
 
+/* about-me.html */
+
+#aboutMeMain {
+    display: flex;
+}
+
+.svg-container {
+    background-color: #ef476f;
+    width: 30%;
+    height: 73vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.svg-container h2 {
+    text-align: center;
+}
+
+.hi-hand {
+    animation: hi 1.5s linear -0.5s infinite;
+    display: inline-block;
+    transform-origin: 70% 70%;
+}
+
+@keyframes hi {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }
+  100% { transform: rotate( 0.0deg) }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.svg-container {
+  background-size: 200% 200%;
+  background-image: linear-gradient(
+    45deg,
+    #ef476f,
+    #ffd166,
+    #06d6a0,
+    #118ab2,
+    #ef476f
+  );
+
+  animation: gradient 5s ease infinite;
+}
+
+.aboutContent {
+    width: 69%;
+    margin-left: 20px;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    overflow-y: auto;   /* Show vertical scrollbar if needed */
+    height: 72vh;
+}
+
+#skillsAndTools {
+    display: flex;
+    flex-direction: column;
+}
+
+#skillsAndToolsList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#skillsAndTools img {
+    margin: 15px;
+    width: 65px;
+}
+
+.listTooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.listTooltip .listTooltipText {
+    visibility: hidden;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 5px;
+    border-radius: 6px;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1009;
+    top: 50%; /* Place the tooltip text above the tooltip */
+    left: 50%;
+    margin-left: -30px; /* Use half of the width to center the tooltip text */
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.listTooltip:hover .listTooltipText {
+    visibility: visible;
+    opacity: 1;
+}
+
+#javascriptText {
+    margin-left: -45px;
+}
+
+#htmlText {
+    margin-left: -27px;
+}
+
+#cssText {
+    margin-left: -20px;
+}
+
+#pycharmText {
+    margin-left: -39px;
+}
+
+#windows11Text {
+    margin-left: -50px;
+}
+
+#edgeText {
+    margin-left: -23px;
+}
+
 /* blog.html */
 
 .blogBanner {
@@ -521,7 +575,7 @@ footer {
 
 .learnMore:hover {
     color: #fff;
-    box-shadow: inset 200px 0 0 0 black;;
+    box-shadow: inset 200px 0 0 0 black;
 }
 
 /* Decorations for Mobile Version */
@@ -741,9 +795,12 @@ footer {
         font-size: 18px;
     }
 
-
-    #skillsAndToolsList img {
+    #skillsAndTools img {
         width: 35px;
+    }
+
+    #windows11Text {
+        margin-left: -38px;
     }
 
     .show {
