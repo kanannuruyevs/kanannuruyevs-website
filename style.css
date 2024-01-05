@@ -734,6 +734,7 @@ footer {
         width: 100%;
         height: unset;
         margin: unset;
+        overflow: hidden;
     }
 
     #blogText {
