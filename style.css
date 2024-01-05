@@ -796,6 +796,10 @@ footer {
         font-size: 18px;
     }
 
+    #skillsAndTools {
+        margin-bottom: 15px;
+    }
+
     #skillsAndTools img {
         width: 35px;
     }
