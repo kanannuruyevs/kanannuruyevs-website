@@ -730,6 +730,7 @@ footer {
     }
 
     #aboutMeBody {
+        overflow: auto;
         height: unset;
     }
 
