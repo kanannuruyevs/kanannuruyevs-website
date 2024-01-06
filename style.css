@@ -195,13 +195,11 @@ footer {
     display: flex;
     position: relative;
     overflow-x: scroll;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    scrollbar-width: none;  /* Hide scrollbar for Firefox */
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
 .projects-container::-webkit-scrollbar {
-    display: none;
+    display: none; /* Hide scrollbar for Edge, Chrome, Safari and Opera */
 }
 
 .bothArrowButtons {
@@ -358,6 +356,16 @@ footer {
 }
 
 /* about-me.html */
+
+#aboutMeBody {
+    height: 100vh;
+    scrollbar-height: none; /* Hide scrollbar for Firefox */
+    overflow: hidden;
+}
+
+#aboutMeBody::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Edge Chrome, Safari and Opera */
+}
 
 #aboutMeMain {
     display: flex;
@@ -719,6 +727,10 @@ footer {
 
     .bothArrowButtons {
         display: none;
+    }
+
+    #aboutMeBody {
+        height: unset;
     }
 
     #aboutMeMain {
