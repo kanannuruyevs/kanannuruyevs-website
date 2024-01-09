@@ -27,6 +27,10 @@ header {
     z-index: 100;
 }
 
+#blogPage {
+    overflow-x: hidden;
+}
+
 main {
     margin: 14px;
 }
@@ -748,6 +752,10 @@ footer {
         height: unset;
         margin: unset;
         overflow: hidden;
+    }
+
+    #blogPage {
+        overflow-x: hidden;
     }
 
     #blogText {
