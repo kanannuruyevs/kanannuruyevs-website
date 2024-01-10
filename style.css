@@ -74,7 +74,7 @@ main {
 .nav-menu a {
     color: white;
     text-decoration: none;
-    padding: 7px;
+    padding: 10px;
     display: block;
     background-color: brown;
 
@@ -211,14 +211,22 @@ footer {
     background-color: brown;
     border: 3px solid white;
     top: 91%;
+    transition: all 0.25s ease-in-out;
 }
 
 .bothArrowButtons:hover {
+    transition: all 0.25s ease-in-out;
     border: 3px solid black;
 }
 
 .bothArrowButtons:active {
     animation: shadow-inset-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    outline: 1px solid black;
+
+    .arrow {
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    }
 }
 
 @keyframes shadow-inset-center {
