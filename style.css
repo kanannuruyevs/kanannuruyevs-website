@@ -590,12 +590,46 @@ footer {
     padding: 8px;
     box-shadow: inset 0 0 0 0 black;
     transition: color .8s ease-in-out, box-shadow .3s ease-in-out;
-    pointer-events: none;
 }
 
 .learnMore:hover {
     color: #fff;
     box-shadow: inset 200px 0 0 0 black;
+}
+
+/* Nested Pages */
+
+#goBack {
+    background-color: brown;
+    padding: 5px;
+}
+
+#goBackText {
+    color: white;
+    font-size: 20px;
+}
+
+/* venn-diagram.html */
+
+#venn-diagram {
+    font-size: 18px;
+}
+
+.vennDiagramImgs {
+    width: 40%;
+}
+
+#vennDiagramImg3 {
+    float: left;
+    margin-right: 5vh;
+}
+
+#vennDiagramPart2, #vennDiagramPart5 {
+    clear: left;
+}
+
+#intersections, #conclusion {
+    padding-top: 15px;
 }
 
 /* Decorations for Mobile Version */
@@ -776,6 +810,18 @@ footer {
 
     .projects-container, .blogContainer {
         flex-direction: column;
+    }
+
+    #vennDiagramHead {
+        text-align: center;
+    }
+
+    .vennDiagramImgs {
+        width: 100%;
+    }
+
+    #intersections {
+        clear: left;
     }
 
     .projects-items, .blogItems {

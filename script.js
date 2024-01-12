@@ -21,3 +21,11 @@ arrowLeft.addEventListener('click', () => {
 arrowRight.addEventListener('click', () => {
   scrollContainer.scrollLeft += 200; // Change this value to adjust scroll distance
 });
+
+// Update year in footer tag
+const updateYear = new Date().getFullYear();
+const crElements = document.getElementsByClassName("copyright");
+
+for(let i = 0; i < crElements.length; i++) {
+  crElements[i].innerHTML = "© " + updateYear + " Kanan N. All rights reserved.";
+}
