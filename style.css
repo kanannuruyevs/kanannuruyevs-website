@@ -588,7 +588,7 @@ footer {
     padding: 5px 0 10px 0;
 }
 
-.learnMore {
+.readArticle {
     color: white;
     background-color: brown;
     text-decoration: none;
@@ -597,7 +597,7 @@ footer {
     transition: color .8s ease-in-out, box-shadow .3s ease-in-out;
 }
 
-.learnMore:hover {
+.readArticle:hover {
     color: #fff;
     box-shadow: inset 200px 0 0 0 black;
 }
@@ -616,12 +616,17 @@ footer {
 
 /* venn-diagram-blog.html */
 
-#venn-diagram {
+#venn-diagram-content {
     font-size: 18px;
 }
 
 .vennDiagramImgs {
     width: 40%;
+    margin-right: 15px;
+}
+
+#vennDiagramImg1 {
+    width: 34.15%;
 }
 
 #vennDiagramImg3 {
@@ -629,12 +634,12 @@ footer {
     margin-right: 5vh;
 }
 
-#vennDiagramPart2, #vennDiagramPart5 {
-    clear: left;
+#intersections {
+    padding-top: 15px;
 }
 
-#intersections, #conclusion {
-    padding-top: 15px;
+#conclusion {
+    padding-top: 5px;
 }
 
 /* video-games.html */
