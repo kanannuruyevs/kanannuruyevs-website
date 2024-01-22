@@ -858,7 +858,7 @@ footer {
         text-align: center;
     }
 
-    .vennDiagramImgs, #video-games-content img {
+    .vennDiagramImgs, #vennDiagramImg1, video-games-content img {
         width: 100%;
     }
 
