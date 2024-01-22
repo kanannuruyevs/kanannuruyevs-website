@@ -148,6 +148,7 @@ main {
 footer {
     text-align: center;
     margin-top: 40px;
+    clear: left;
 }
 
 /* index.html */
@@ -613,7 +614,7 @@ footer {
     font-size: 20px;
 }
 
-/* venn-diagram.html */
+/* venn-diagram-blog.html */
 
 #venn-diagram {
     font-size: 18px;
@@ -634,6 +635,38 @@ footer {
 
 #intersections, #conclusion {
     padding-top: 15px;
+}
+
+/* video-games.html */
+
+#video-games-content img {
+    width: 30%;
+    background: cover;
+    margin-right: 15px;
+}
+
+#trueCrimeGameStory {
+    padding-top: 5px;
+}
+
+#trueCrimeGameImg {
+    float: left;
+}
+
+#farCryImg {
+    float: right;
+}
+
+#csSourceImg, #csGoImg {
+    float: left;
+}
+
+#mobileGamesImg {
+    float: right;
+}
+
+#csSourceMobileHeading {
+    display: none;
 }
 
 /* Decorations for Mobile Version */
@@ -816,16 +849,29 @@ footer {
         flex-direction: column;
     }
 
-    #vennDiagramHead {
+    #vennDiagramHead, #video-games-content h1 {
         text-align: center;
     }
 
-    .vennDiagramImgs {
+    .vennDiagramImgs, #video-games-content img {
         width: 100%;
     }
 
     #intersections {
         clear: left;
+    }
+
+    #video-games-content img {
+        width: 100%;
+        float: unset;
+    }
+
+    #csSourceMobileHeading {
+        display: block;
+    }
+
+    #csSourceDesktopHeading {
+        display: none;
     }
 
     .projects-items, .blogItems {

@@ -10,22 +10,23 @@ burgerMenu.addEventListener('click', () => {
 });
 
 // Left and right arrow buttons for scrolling through projects
-const scrollContainer = document.querySelector('.scrollContainer');
-const arrowLeft = document.getElementById('arrowLeftButton');
-const arrowRight = document.getElementById('arrowRightButton');
+const scrollContainer = document.querySelector('.scrollContainer'); // Modify based on your chosen element
 
-arrowLeft.addEventListener('click', () => {
-  scrollContainer.scrollLeft -= 200; // Change this value to adjust scroll distance
-});
+if (scrollContainer) {
+  const arrowLeft = document.getElementById('arrowLeftButton'); // Replace with your arrow element IDs
+  const arrowRight = document.getElementById('arrowRightButton');
 
-arrowRight.addEventListener('click', () => {
-  scrollContainer.scrollLeft += 200; // Change this value to adjust scroll distance
-});
+  arrowLeft.addEventListener('click', () => {
+    scrollContainer.scrollLeft -= 200; // Adjust scroll distance
+  });
+
+  arrowRight.addEventListener('click', () => {
+    scrollContainer.scrollLeft += 200; // Adjust scroll distance
+  });
+}
 
 // Update year in footer tag
 const updateYear = new Date().getFullYear();
-const crElements = document.getElementsByClassName("copyright");
+const copyrightElement = document.getElementById("copyright");
 
-for(let i = 0; i < crElements.length; i++) {
-  crElements[i].innerHTML = "© " + updateYear + " Kanan N. All rights reserved.";
-}
+copyrightElement.innerHTML = "© 2023 - " + updateYear + " Kanan N. All rights reserved.";
