@@ -854,8 +854,9 @@ footer {
         flex-direction: column;
     }
 
-    #vennDiagramHead, #video-games-content h1 {
+    #vennDiagramHead, #videoGamesHeading {
         text-align: center;
+        font-size: 25px;
     }
 
     .vennDiagramImgs, #vennDiagramImg1, video-games-content img {
