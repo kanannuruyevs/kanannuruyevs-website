@@ -1,0 +1,222 @@
+/* Venn Diagram */
+
+#vennDiagramMain {
+    display: flex;
+}
+
+#venn {
+    max-width: 100%;
+    margin-left: 0;
+}
+
+#venn h1, #content h1 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    width: 100px;
+    height: 16px;
+    background: #333;
+    color: #ddd;
+    font-size: 14px;
+    padding: 5px;
+    border: 0px;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+.icon {
+    display: inline-block;
+    position: relative;
+    width: 15px;
+    height: 15px;
+    top: 3px;
+}
+
+.icon-design {
+    background: #b7cddd;
+}
+
+.icon-development {
+    background: #efcfb3;
+}
+
+.icon-it {
+    background: #bbd8bb;
+}
+
+.icon-devigner {
+    background: #c9baaa;
+}
+
+.icon-freelancer {
+    background: #95c3b2;
+}
+
+.icon-backend {
+    background: #bfc492;
+}
+
+.icon-unicorn {
+    background: #a3b48b;
+}
+
+/* Separate Circles */
+#content {
+    display: flex;
+    flex-direction: column;
+    margin: 15px auto;
+    text-align: center;
+}
+
+#content h1 {
+    margin-bottom: 40px;
+}
+
+.circles-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0 15px 15px 10px;
+}
+
+.blue {
+    background-color: #3498db;
+}
+
+.green {
+    background-color: #16a085;
+}
+
+.red {
+    background-color: #e74c3c;
+}
+
+/* Keywords */
+
+.keywords {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 8%;
+    top: 70%;
+}
+
+.keywords ul {
+    list-style: none;
+    text-align: left;
+    margin-left: 10vh;
+}
+
+.keywords ul li {
+    line-height: 2em;
+}
+
+.keywords ul li span {
+    margin-right: 5px;
+}
+
+@media only screen and (max-width: 1200px) and (prefers-color-scheme: dark) {
+
+    .keywords {
+        left: -7%;
+        top: 101%;
+    }
+
+    footer {
+        margin-top: 80px;
+    }
+}
+
+@media only screen and (max-width: 1032px) and (prefers-color-scheme: dark) {
+
+    .keywords {
+        top: 110%;
+        margin-right: 35vh;
+    }
+
+    .keywords ul {
+        margin-left: 3vh;
+    }
+
+    footer {
+        margin-top: unset;
+    }
+}
+
+@media only screen and (max-width: 800px) and (prefers-color-scheme: dark) {
+
+    #vennDiagramMain {
+        flex-direction: column;
+    }
+
+    #venn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #venn h1 {
+        margin-bottom: 10px;
+    }
+
+    #content {
+        margin: 0;
+    }
+
+    #content h1 {
+        margin: 80vh 0 10px 0;
+    }
+
+    .circles-container {
+        margin-top: 20px;
+        justify-content: center;
+    }
+
+    .circle {
+        margin: 5px 5px;
+    }
+
+    .keywords {
+        position: relative;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-right: unset;
+    }
+
+    .keywords ul, #venn {
+        margin-left: unset;
+    }
+}
+
+@media only screen and (max-width: 650px) and (prefers-color-scheme: dark) {
+
+    #venn h1 {
+        margin: -15vh 0 0 10px;
+    }
+
+    #content h1 {
+        margin-top: 63vh;
+    }
+}

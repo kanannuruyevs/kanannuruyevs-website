@@ -306,7 +306,32 @@ footer {
     padding-top: 3px;
 }
 
-.projects-items-heading:hover {
+details > summary {
+    list-style-type: none;
+}
+
+/* For Chrome, Safari and Edge */
+details > summary::-webkit-details-marker {
+    display: none;
+}
+
+/* For Firefox */
+details > summary::marker {
+    display: none;
+}
+
+.projects-items-links {
+    list-style: none;
+    text-decoration: none;
+    padding-bottom: 2.5vh;
+}
+
+.projects-items-links a {
+    color: orange;
+    margin: 5px;
+}
+
+.projects-items-heading:hover, .projects-items-links a:hover {
     color: black; /* New color on hover */
     transition: color 0.3s;
 }
@@ -944,5 +969,9 @@ footer {
 
     .show {
         display: block !important;
+    }
+
+    footer {
+        margin-top: 20px;
     }
 }
