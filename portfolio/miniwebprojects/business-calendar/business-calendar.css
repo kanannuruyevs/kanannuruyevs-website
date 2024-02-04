@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-#businessCalMain {
+#bizCalMain {
     font-family: "Montserrat";
     box-shadow: 0px 0px 0px 2px #e66053, 10px 10px 20px 10px rgba(78, 79, 74, 0.5);
     border: 2px solid #e66053;
@@ -24,6 +24,7 @@
 }
 
 .bothArrowButtons {
+    display: block;
     top: 38%;
 }
 
@@ -58,7 +59,6 @@
 }
 
 .calendarDayHeader {
-    font-size: 1rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     position: relative;
@@ -93,6 +93,7 @@
     position: absolute;
     left: 10px;
     top: 5px;
+    font-size: 1.6rem;
 }
 
 .title {
@@ -109,7 +110,49 @@
     font-size: 1.6rem;
 }
 
-@media only screen and (max-width: 800px) and (prefers-color-scheme: dark) {
 
+@media only screen and (max-width: 1001px) and (prefers-color-scheme: dark) {
 
+    .calendarDayHeader {
+        font-size: 0.85rem;
+    }
+
+    .calendarDayCell {
+        padding: 5vh 0 10vh 0;
+    }
+
+    .fontClass, .growing-number, .day {
+        font-size: 1.2rem;
+    }
+
+    .day {
+        left: 7px;
+    }
 }
+
+@media only screen and (max-width: 870px) and (prefers-color-scheme: dark) {
+
+    .fontClass {
+        font-size: 1rem;
+    }
+
+    .day, .growing-number {
+        font-size: unset;
+    }
+}
+
+@media only screen and (max-width: 752px) and (prefers-color-scheme: dark) {
+
+    .calendarDayCell {
+        padding: 2.5vh 0 10vh 0;
+    }
+
+    .fontClass {
+        font-size: 0.85rem;
+    }
+
+    .day, .growing-number {
+        font-size: unset;
+    }
+}
+

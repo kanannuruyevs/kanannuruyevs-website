@@ -196,18 +196,8 @@ footer {
     text-transform: uppercase;
 }
 
-.projects-container {
-    display: flex;
-    position: relative;
-    overflow-x: scroll;
-    scrollbar-width: none;  /* Hide scrollbar for Firefox */
-}
-
-.projects-container::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for Edge, Chrome, Safari and Opera */
-}
-
 .bothArrowButtons {
+    display: none;
     position: absolute;
     background-color: brown;
     border: 3px solid white;
@@ -264,10 +254,20 @@ footer {
     transform: rotate(-45deg);
 }
 
+.projects-container {
+    display: flex;
+    position: relative;
+    scrollbar-width: none;  /* Hide scrollbar for Firefox */
+}
+
+.projects-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Edge, Chrome, Safari and Opera */
+}
+
 .projects-items {
     display: flex;
     flex-direction: column;
-    margin: 15px 12vh 10px 12vh; /* adjust as needed */
+    margin: 15px 12vh 10px 12vh;
 }
 
 .firstItem {
@@ -697,6 +697,18 @@ details > summary::marker {
 
 #csSourceMobileHeading {
     display: none;
+}
+
+
+/* Display Arrow Buttons */
+@media only screen and (min-width: 801px) and (max-width: 1300px) and (prefers-color-scheme: dark) {
+    .bothArrowButtons {
+        display: block;
+    }
+
+    .projects-container {
+        overflow-x: scroll;
+    }
 }
 
 /* Decorations for Mobile Version */
