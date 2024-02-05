@@ -36,9 +36,11 @@ main {
 }
 
 .username {
-    margin-bottom: 21px;
+    text-decoration: none;
+    color: white;
     font-size: 24px;
     position: absolute;
+    top: 38%;
     left: 50%;
     transform: translateX(-50%) skewX(15deg);
     font-family: "Techno Race Italic";
@@ -717,9 +719,7 @@ details > summary::marker {
     /* Styles for typical tablets and mobiles screens */
 
     .username {
-        text-align: center;
         z-index: 1003;
-        display: flex;
     }
 
     .spiderWebFlat {
