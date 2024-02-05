@@ -719,7 +719,7 @@ details > summary::marker {
     /* Styles for typical tablets and mobiles screens */
 
     .username {
-        top: 36.5%;
+        top: 36%;
         z-index: 1003;
     }
 
