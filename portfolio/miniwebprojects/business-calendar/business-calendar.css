@@ -156,3 +156,24 @@
     }
 }
 
+@media only screen and (max-width: 650px) and (prefers-color-scheme: dark) {
+
+    .fontClass {
+        font-size: 0.75rem;
+    }
+
+    .day, .growing-number {
+        font-size: unset;
+    }
+}
+
+@media only screen and (max-width: 588px) and (prefers-color-scheme: dark) {
+
+    .fontClass {
+        font-size: 0.4rem;
+    }
+
+    .day, .growing-number {
+        font-size: unset;
+    }
+}
