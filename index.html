@@ -53,25 +53,33 @@
 </header>
 <main>
   <div class="frontBanner">
-    <div class="overlay-shape">
-      <img class="overlay-heading-desktop"
-           src="https://readme-typing-svg.herokuapp.com?font=Source+Sans+Pro&color=F7F7F7&size=24&center=true&vCenter=true
-           &duration=3500&pause=800&lines=Welcome+to+My+Personal+Website+🙂+!;+Nice+to+Meet+You+⚡!"
-           alt="Typing SVG">
-      <img class="overlay-heading-mobile"
-           src="https://readme-typing-svg.herokuapp.com?font=Source+Sans+Pro&color=F7F7F7&size=24&center=true&vCenter=true&duration=3500&pause=800&lines=Welcome+to+My+Personal+Website+🙂+!;+Nice+to+Meet+You+⚡!"
-           alt="Typing SVG">
+    <div id="frontBannerBox">
+      <img src="media/my-picture.jpg"/>
+      <div id="frontBannerText">
+        <h1>Kanan N.</h1>
+        <p>Self-taught developer, primarily focusing on
+          <strong>Front-End Development</strong>.</p>
+      </div>
+    </div>
+    <div class="frontBannerBack"></div>
+    <div class="marquee">
+      <div>
+        <span id="marquee1st">Welcome to My Personal Website 🙂!</span>
+        <span id="marquee2st">Nice to Meet You ⚡!</span>
+      </div>
     </div>
   </div>
-  <div class="underBannerText">
-    <h2>Discover My Latest Projects</h2>
+  <div id="underFrontBanner">
+    <div class="underFrontBannerText">
+      <h2>Discover My Latest Projects</h2>
+    </div>
+    <button id="arrowLeftButton" class="bothArrowButtons">
+      <i id="arrow-left" class="arrow"></i>
+    </button>
+    <button id="arrowRightButton" class="bothArrowButtons">
+      <i id="arrow-right" class="arrow"></i>
+    </button>
   </div>
-  <button id="arrowLeftButton" class="bothArrowButtons">
-    <i id="arrow-left" class="arrow"></i>
-  </button>
-  <button id="arrowRightButton" class="bothArrowButtons">
-    <i id="arrow-right" class="arrow"></i>
-  </button>
   <div class="projects-container scrollContainer">
     <div class="projects-items firstItem">
       <img src="media/projects-cover/venn-diagram-project.jpeg" alt="Venn Diagram Project" media="(max-width: 768px)"/>

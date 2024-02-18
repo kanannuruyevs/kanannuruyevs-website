@@ -10,7 +10,7 @@
 body {
     margin: 0;
     height: 100%;
-	font-family: "Roboto", sans-serif;
+	font-family: "Lato", sans-serif;
 	background: linear-gradient(#201F2F, #141e30);
 	color: white;
 }
@@ -24,7 +24,7 @@ header {
     justify-content: space-between;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 2000;
 }
 
 #blogPage {
@@ -156,46 +156,105 @@ footer {
 /* index.html */
 
 .frontBanner {
-    background-image: url('media/abstract-art.jpg');
-    background-size: cover; /* cover image */
-    background-repeat: no-repeat; /* to prevent repeating the image */
-    padding-top: 150px;
     text-align: center;
-    height: 40vh;
-}
-
-.overlay-shape {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
-    height: 73vh;
-    margin-top: 50px;
-    background-color: rgb(48 32 32 / 50%);
     background-size: cover;
 }
 
-.overlay-heading-desktop {
-    background-color: brown;
+#frontBannerBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 10px;
+    z-index: 1100;
+}
+
+#frontBannerBox img {
+    width: 45vh;
+    height: 45vh;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#frontBannerText p {
+    font-size: 18px;
+}
+
+.frontBannerBack {
+    animation: scroll 100s linear infinite;
+    background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80"),
+    #111111;
+    color: #eee;
+    height: 68vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 75px;
-    text-align: center;
-    padding-top: 24px;
-    white-space: nowrap;
+    top: 0;
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
 }
 
-.overlay-heading-mobile {
-    display: none;
+@keyframes scroll {
+  100% {
+    background-position: 0px -400%;
+  }
 }
 
-.underBannerText, .contributeText {
+/* Fallback if the operating system prefers reduced motion*/
+@media (prefers-reduced-motion) {
+  .frontBannerBack {
+    animation: scroll 800s linear infinite;
+  }
+}
+
+.marquee {
+    height: 25px;
+    width: 420px;
+    overflow: hidden;
+    position: relative;
+    top: 31px;
+    margin: auto;
+    background-color: brown;
+}
+
+.marquee div {
+    display: block;
+    width: 200%;
+    height: 30px;
+    position: absolute;
+    overflow: hidden;
+    animation: marquee 5s linear infinite;
+}
+
+.marquee span {
+  float: left;
+  width: 50%;
+  font-size: 18px;
+}
+
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+
+#underFrontBanner {
+    position: relative;
+    top: 15%;
+}
+
+.underFrontBannerText, .contributeText {
     padding: 30px 0 40px 0;
     text-align: center;
     text-transform: uppercase;
+}
+
+.underFrontBannerText {
+    margin-top: 5vh;
 }
 
 .bothArrowButtons {
@@ -205,6 +264,8 @@ footer {
     border: 3px solid white;
     top: 91%;
     transition: all 0.25s ease-in-out;
+    border-radius: 2em;
+    z-index: 1500;
 }
 
 .bothArrowButtons:hover {
@@ -731,22 +792,6 @@ details > summary::marker {
         z-index: 1004;
     }
 
-    .overlay-shape {
-        height: 73vh;
-    }
-
-    .overlay-heading-desktop {
-        display: none;
-    }
-
-    .overlay-heading-mobile {
-        display: inline-block;
-        position: relative;
-        top: 45%;
-        background-color: brown;
-        width: 90%;
-    }
-
     /* burger menu */
     .burger-menu {
         display: flex;
@@ -853,6 +898,10 @@ details > summary::marker {
 
     .bothArrowButtons {
         display: none;
+    }
+
+    .marquee {
+        width: 100%;
     }
 
     #aboutMeBody {
