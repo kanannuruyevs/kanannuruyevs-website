@@ -7,6 +7,22 @@
        url("fonts/technoraceitalic.ttf") format("truetype");
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 body {
     margin: 0;
     height: 100%;
@@ -41,19 +57,19 @@ main {
     font-size: 24px;
     position: absolute;
     top: 38%;
-    left: 50%;
-    transform: translateX(-50%) skewX(15deg);
+    left: 11vh;
+    transform: skewX(15deg);
     font-family: "Techno Race Italic";
 }
 
 .spiderWebFlat {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 6vh;
     transform: translate(-50%, -50%);
     width: 50px;
     height: 50px;
-    padding-right: 180px;
+
 }
 
 /* Navigation Menu Decoration */
@@ -61,6 +77,7 @@ main {
     display: flex;
     justify-content: space-between;
     position: absolute;
+    right: 25vh;
 }
 
 .nav-menu ul {
@@ -76,7 +93,7 @@ main {
 .nav-menu a {
     color: white;
     text-decoration: none;
-    padding: 10px;
+    padding: 10.5px;
     display: block;
     background-color: brown;
 
@@ -247,14 +264,11 @@ footer {
     top: 15%;
 }
 
-.underFrontBannerText, .contributeText {
-    padding: 30px 0 40px 0;
+.underFrontBannerText, .contributeText, #aboutMeHeading, #skillsAndTools h2 {
+    padding: 6vh 0 5vh 0;
+    margin: 0 auto;
     text-align: center;
     text-transform: uppercase;
-}
-
-.underFrontBannerText {
-    margin-top: 5vh;
 }
 
 .bothArrowButtons {
@@ -262,7 +276,7 @@ footer {
     position: absolute;
     background-color: brown;
     border: 3px solid white;
-    top: 91%;
+    top: 80%;
     transition: all 0.25s ease-in-out;
     border-radius: 2em;
     z-index: 1500;
@@ -456,20 +470,14 @@ details > summary::marker {
     background-color: black; /* Add a hover effect to rows */
 }
 
-/* about-me.html */
-
-#aboutMeBody {
-    height: 100vh;
-    scrollbar-height: none; /* Hide scrollbar for Firefox */
-    overflow: hidden;
-}
-
-#aboutMeBody::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for Edge Chrome, Safari and Opera */
-}
-
-#aboutMeMain {
+#aboutMe {
     display: flex;
+    gap: 3vh;
+}
+
+#aboutMeContent {
+    width: 70%;
+    height: 75vh;
 }
 
 .svg-container {
@@ -528,30 +536,22 @@ details > summary::marker {
   animation: gradient 5s ease infinite;
 }
 
-.aboutContent {
-    width: 69%;
-    margin-left: 20px;
-    overflow-x: hidden; /* Hide horizontal scrollbar */
-    overflow-y: auto;   /* Show vertical scrollbar if needed */
-    height: 72vh;
+
+#beginning p {
+    font-size: 18px;
 }
 
 #skillsAndTools {
     display: flex;
-    flex-direction: column;
-}
-
-#skillsAndToolsList {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 #skillsAndTools img {
-    margin: 15px;
-    width: 65px;
+    margin: 25px;
+    width: 90px;
 }
 
 .listTooltip {
@@ -780,7 +780,9 @@ details > summary::marker {
     /* Styles for typical tablets and mobiles screens */
 
     .username {
+        left: 50%;
         top: 36%;
+        transform: translateX(-50%) skewX(15deg);
         z-index: 1003;
     }
 
@@ -855,20 +857,18 @@ details > summary::marker {
     .nav-menu ul {
         display: inline-block;
         list-style: none;
-        flex-direction: column;
         padding: 0;
         margin-top: 40px;
     }
 
     .nav-menu ul li {
         margin-bottom: 20px;
-        flex-direction: column;
         display: block;
     }
 
     .nav-menu a {
         display: block;
-        padding: 10px 16.5px;
+        padding: 10px 7.5vh 10px 15px;
         margin-left: 6px;
         background-color: brown;
         color: white;
@@ -900,29 +900,22 @@ details > summary::marker {
         display: none;
     }
 
-    .marquee {
-        width: 100%;
+    #aboutMe {
+        flex-direction: column;
     }
 
-    #aboutMeBody {
-        overflow: auto;
+    #aboutMeContent {
+        width: 100%;
         height: unset;
     }
 
-    #aboutMeMain {
-        flex-direction: column;
+    .marquee {
+        width: 100%;
     }
 
     .svg-container {
         width: 100%;
         height: 300px;
-    }
-
-    .aboutContent {
-        width: 100%;
-        height: unset;
-        margin: unset;
-        overflow: hidden;
     }
 
     #blogPage {
@@ -1017,12 +1010,8 @@ details > summary::marker {
         font-size: 18px;
     }
 
-    #skillsAndTools {
-        margin-bottom: 15px;
-    }
-
     #skillsAndTools img {
-        width: 35px;
+        width: 55px;
     }
 
     #windows11Text {
