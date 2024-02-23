@@ -249,9 +249,9 @@ footer {
 }
 
 .marquee span {
-  float: left;
   width: 50%;
   font-size: 18px;
+  margin-right: 5vh;
 }
 
 @keyframes marquee {
@@ -470,20 +470,31 @@ details > summary::marker {
     background-color: black; /* Add a hover effect to rows */
 }
 
+#aboutMeHeading, #skillsAndTools h2 {
+    margin-top: 5vh;
+}
+
 #aboutMe {
     display: flex;
     gap: 3vh;
+    height: 80vh;
+    overflow-y: auto;
+    margin-top: 5vh;
 }
 
 #aboutMeContent {
     width: 70%;
-    height: 75vh;
+}
+
+#aboutMeContent p {
+    font-size: 18px;
+    margin: 1.5vh auto;
 }
 
 .svg-container {
     background-color: #ef476f;
     width: 30%;
-    height: 73vh;
+    height: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -534,11 +545,6 @@ details > summary::marker {
   );
 
   animation: gradient 5s ease infinite;
-}
-
-
-#beginning p {
-    font-size: 18px;
 }
 
 #skillsAndTools {
@@ -762,6 +768,27 @@ details > summary::marker {
     display: none;
 }
 
+@media only screen and (max-width: 1252px) and (prefers-color-scheme: dark) {
+
+    #aboutMe {
+        flex-direction: column;
+        height: unset;
+    }
+
+    #aboutMeContent {
+        width: 100%;
+        height: unset;
+    }
+
+    .marquee {
+        width: 100%;
+    }
+
+    .svg-container {
+        width: 100%;
+        height: 300px;
+    }
+}
 
 /* Display Arrow Buttons */
 @media only screen and (min-width: 801px) and (max-width: 1300px) and (prefers-color-scheme: dark) {
@@ -898,24 +925,6 @@ details > summary::marker {
 
     .bothArrowButtons {
         display: none;
-    }
-
-    #aboutMe {
-        flex-direction: column;
-    }
-
-    #aboutMeContent {
-        width: 100%;
-        height: unset;
-    }
-
-    .marquee {
-        width: 100%;
-    }
-
-    .svg-container {
-        width: 100%;
-        height: 300px;
     }
 
     #blogPage {
