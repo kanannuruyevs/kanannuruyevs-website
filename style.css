@@ -206,7 +206,9 @@ footer {
 }
 
 #mainContent {
-	background-image: url("media/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("media/background.jpg");
+	background-image: url("media/gradient-background.jpg");
+	background-attachment: fixed;
+	background-size: cover;
 	margin: 0 auto;
     position: relative;
     top: 10vh;
@@ -1029,6 +1031,7 @@ details > summary::marker {
     }
 
     footer {
-        margin-top: 20px;
+        position: relative;
+        top: 5px;
     }
 }
