@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="icon" href="./src/media/logo/spiderswebflat.jpeg" type="image/jpeg">
+  <link rel="stylesheet" href="./src/css/style.css">
+  <link rel="stylesheet" href="./src/css/background.css">
+  <script src="https://hammerjs.github.io/dist/hammer.js"></script>
+</head>
+
+<body>
+  <header>
+    <img class="spiderWebFlat" src="./src/media/logo/spiderswebflat1.png" alt="Spider's Web" />
+    <a class="username" href="index.html">kanansnote</a>
+    <div class="burger-menu">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+    <div class="social-links">
+      <ul>
+        <li><a href="mailto:kanansnote@gmail.com">
+            <img src="./src/media/social-links/gmail-svgrepo-com.svg" alt="Gmail"></a>
+        </li>
+      </ul>
+      <ul>
+        <li><a href="https://discord.com/users/kanansnote">
+            <img src="./src/media/social-links/discord-svgrepo-com.svg" alt="Discord"></a>
+        </li>
+      </ul>
+      <ul>
+        <li><a href="https://t.me/kanansnote">
+            <img src="./src/media/social-links/telegram-svgrepo-com.svg" alt="Telegram"></a>
+        </li>
+      </ul>
+      <ul>
+        <li><a href="https://github.com/kanansnote">
+            <img src="./src/media/social-links/github-svgrepo-com.svg" alt="GitHub"></a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <main id="bizCalMain">
+    <div class="animatedBack">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <table class="calendar JuneMonth">
+      <div class="overlay-shape"></div>
+      <caption class="calendarMonthBanner JuneMonthBanner">
+        <h1 id="june2020">June 2020</h1>
+        <button title="button" id="arrowRightButton" class="bothArrowButtons">
+          <i id="arrow-right" class="arrow"></i>
+        </button>
+      </caption>
+      <thead>
+        <tr>
+          <th class="calendarDayHeader">Sun</th>
+          <th class="calendarDayHeader">Mon</th>
+          <th class="calendarDayHeader">Tue</th>
+          <th class="calendarDayHeader">Wed</th>
+          <th class="calendarDayHeader">Thu</th>
+          <th class="calendarDayHeader">Fri</th>
+          <th class="calendarDayHeader">Sat</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="calendarDayCell"></td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell"></td>
+          <td class="calendarDayCell"></td>
+          <td class="calendarDayCell"></td>
+          <td class="calendarDayCell"></td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="calendar JulyMonth">
+      <caption class="calendarMonthBanner JulyMonthBanner">
+        <h1 id="july2020">July 2020</h1>
+        <button title="button" id="arrowLeftButton" class="bothArrowButtons">
+          <i id="arrow-left" class="arrow"></i>
+        </button>
+      </caption>
+      <thead>
+        <tr>
+          <th class="calendarDayHeader">Sun</th>
+          <th class="calendarDayHeader">Mon</th>
+          <th class="calendarDayHeader">Tue</th>
+          <th class="calendarDayHeader">Wed</th>
+          <th class="calendarDayHeader">Thu</th>
+          <th class="calendarDayHeader">Fri</th>
+          <th class="calendarDayHeader">Sat</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="calendarDayCell"></td>
+          <td class="calendarDayCell"></td>
+          <td class="calendarDayCell"></td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell activated">
+            <div class="fontClass">
+              <span class="day"></span>
+              <span class="title"></span>
+              <span class="growing-number"></span>
+            </div>
+          </td>
+          <td class="calendarDayCell"></td>
+        </tr>
+      </tbody>
+    </table>
+    <footer>
+      <p id="copyright"></p>
+    </footer>
+    <script src="./src/js/script.js"></script>
+    <script src="./src/js/business-calendar.js"></script>
+</body>
+
+</html>
