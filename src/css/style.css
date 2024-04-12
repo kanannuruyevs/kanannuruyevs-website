@@ -37,7 +37,6 @@ body {
 header {
     color: white;
     background-color: black;
-    padding: 5vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -145,30 +144,28 @@ main {
 
 .social-links {
     display: flex;
-    position: absolute;
-    right: 2vh;
+    gap: 1vh;
+    list-style: none;
+    margin-right: 5vh;
 }
 
-.social-links ul {
-    list-style: none;
-    padding: 4px 0 0 0;
-    text-decoration: none;
-    margin: 0 0 0 4px;
+.social-links li {
     background-color: #544F92;
 }
 
-.social-links ul li {
-    padding: 4px;
+.social-links li a {
+    text-decoration: none;
 }
 
-.social-links ul li a img:hover {
-    transform: scale(1.2); /* Scales the icon up when hovered over */
-}
-
-.social-links ul li a img {
+.social-links li a img {
+    padding: 5px 5px 3px;
     width: 35px;
     height: 25px;
     transition: transform 0.3s ease-in-out; /* Adds a smooth transition effect */
+}
+
+.social-links li a img:hover {
+    transform: scale(1.2); /* Scales the icon up when hovered over */
 }
 
 footer {
@@ -874,8 +871,8 @@ details > summary::marker {
         left: 0;
         width: 21vh; /* Adjust the width of the menu as needed */
         height: 100vh;
-        padding-top: 70px; /* Adjust the padding to avoid overlapping with the header */
-        padding-left: 20px;
+        padding-top: 60px; /* Adjust the padding to avoid overlapping with the header */
+        padding-left: 10px;
         z-index: 1000; /* Increase if necessary */
     }
 
@@ -903,19 +900,11 @@ details > summary::marker {
         display: none; /* Hide the social links by default */
         position: absolute;
         top: 70vh; /* Adjust if necessary */
-        left: 0;
-        width: 20vh; /* Adjust the width of the menu as needed */
-        padding-left: 23px;
         z-index: 1001; /* Increase if necessary */
+        padding-left: 0;
     }
 
-    .social-links ul {
-        display: inline-flex;
-        margin-bottom: 9px;
-        width: max-content;
-    }
-
-    .social-links ul li {
+    .social-links li {
         padding: 5px;
     }
 
@@ -1024,7 +1013,9 @@ details > summary::marker {
     }
 
     .show {
-        display: block !important;
+        display: flex !important;
+        flex-wrap: wrap;
+        width: 140px;
     }
 
     footer {
