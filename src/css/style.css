@@ -206,7 +206,7 @@ footer {
 }
 
 #mainContent {
-    background-image: url('/src/media/home/ashley-whitlatch-36aGnv29Ss0-unsplash.jpg');
+    background-image: url('../media/home/ashley-whitlatch-36aGnv29Ss0-unsplash.jpg');
 	background-attachment: fixed;
 	background-size: cover;
 	margin: 0 auto;
