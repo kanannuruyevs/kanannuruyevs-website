@@ -1,0 +1,512 @@
+main {
+    margin: 0;
+
+    /* index.html */
+
+    .frontBanner {
+        text-align: center;
+        position: relative;
+        width: 100%;
+        background-size: cover;
+
+        #frontBannerBox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10vh;
+            position: relative;
+            top: 10vh;
+            margin: 5vh;
+            z-index: 1100;
+        }
+
+        #frontBannerText {
+
+            h1 {
+                font-size: 36px;
+            }
+
+            p {
+                font-size: 26px;
+            }
+        }
+
+    }
+
+    #mainContent {
+        background-image: url('../media/home/ashley-whitlatch-36aGnv29Ss0-unsplash.jpg');
+        background-attachment: fixed;
+        background-size: cover;
+        margin: 0 auto;
+        position: relative;
+        top: 10vh;
+        width: calc(100% - 4rem);
+        max-width: 80rem;
+        z-index: 2000;
+
+
+        #underFrontBanner {
+            position: relative;
+            top: 15%;
+        }
+
+        .underFrontBannerText,
+        .contributeText,
+        #aboutMeHeading,
+        #skillsAndTools h2 {
+            padding: 6vh 0 5vh 0;
+            margin: 0 auto;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .bothArrowButtons {
+            position: absolute;
+            background: none;
+            border: none;
+            top: 77%;
+            transition: all 0.25s ease-in-out;
+            z-index: 1500;
+        }
+
+        .bothArrowButtons:hover {
+            transition: all 0.25s ease-in-out;
+            background: 3px solid black;
+        }
+
+        .bothArrowButtons:active {
+            .arrow {
+                border-right: 3px solid black;
+                border-bottom: 3px solid black;
+            }
+        }
+
+        @keyframes shadow-inset-center {
+            0% {
+                box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
+            }
+
+            100% {
+                box-shadow: inset 0 0 39px 0px rgba(0, 0, 0, 0.5);
+            }
+        }
+
+        #arrowLeftButton {
+            left: 1%;
+            padding: 10px 6px 7px 11px;
+        }
+
+        #arrowRightButton {
+            right: 1%;
+            padding: 10px 11px 7px 6px;
+        }
+
+        .arrow {
+            border: solid white;
+            border-width: 0 4px 4px 0;
+            display: inline-block;
+            padding: 5px;
+        }
+
+        #arrow-left {
+            transform: rotate(135deg);
+        }
+
+        #arrow-right {
+            transform: rotate(-45deg);
+        }
+
+        .projects-container {
+            display: flex;
+            position: relative;
+            overflow-x: scroll;
+            scrollbar-width: none;
+            /* Hide scrollbar for Firefox */
+
+            &::-webkit-scrollbar {
+                display: none;
+                /* Hide scrollbar for Edge, Chrome, Safari and Opera */
+            }
+            
+            .projects-items {
+                display: flex;
+                flex-direction: column;
+                margin: 15px 12vh 10px 12vh;
+
+                .text-container {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+
+                    .tags {
+                        display: inline-flex;
+                        justify-content: center;
+                        gap: 5px;
+                        flex-wrap: wrap;
+                        color: white;
+                        width: 120%;
+            
+                        .otherTags,
+                        .first-tag {
+                            border: solid 1px;
+                            padding: 5px;
+                        }
+                    }
+
+                    .projects-items-heading {
+                        color: orange;
+                        padding-top: 3px;
+                    }
+            
+                    .projects-items-links {
+                        list-style: none;
+                        padding-bottom: 2.5vh;
+
+                        a {
+                            color: orange;
+                            margin: 5px;
+                        }
+                    }
+
+                    .projects-items-heading:hover,
+                    .projects-items-links a:hover {
+                        color: black;
+                        /* New color on hover */
+                        transition: color 0.3s;
+                    }
+
+                    .projects-items-text {
+                        padding-top: 5px;
+                        font-size: 20px;
+                        width: 120%;
+                    }
+                }
+            }
+
+            .firstItem {
+                margin-left: 7vh;
+            }
+        }
+
+        .projects-items img,
+        .blogItems img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            /* This will prevent distortion */
+        }
+
+        .contributeTable {
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            /* Full-width table */
+            border-collapse: collapse;
+            /* Collapse borders */
+            border: 1px solid;
+
+            th {
+                background-color: black;
+                color: white;
+                padding: 15px;
+                border: 1px solid;
+            }
+
+            td {
+                padding: 12px;
+
+                &:nth-child(1), &:nth-child(3) {
+                    background-color: black;
+                    padding: 12px;
+                }
+
+                &::nth-child(1) {
+                    border-right: 1px solid;
+                }
+
+                &:nth-child(3) {
+                    border-left: 1px solid;
+                }
+
+                a {
+                    color: orange;
+
+                    &:hover {
+                        color: #0056b3;
+                    }
+                }
+            }
+
+            tr:hover {
+                background-color: black;
+                /* Add a hover effect to rows */
+            }
+        }
+
+        #aboutMeHeading,
+        #skillsAndTools h2 {
+            margin-top: 5vh;
+        }
+
+        #aboutMe {
+            display: flex;
+            align-items: center;
+            gap: 3vh;
+            height: 80vh;
+            overflow-y: auto;
+            margin: 14px;
+
+            img {
+                max-width: 60vh;
+                max-height: 67.5vh;
+                object-fit: cover;
+            }
+
+            #aboutMeContent {
+                width: 70%;
+    
+                p {
+                    font-size: 18px;
+                    margin: 1.5vh auto;
+                }
+            }
+        }
+
+        #skillsAndTools {
+            display: flex;
+            flex-direction: column;
+
+            #skillsAndToolsList {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+
+                img {
+                    margin: 25px;
+                    width: 90px;
+                }
+
+                .listTooltip {
+                    position: relative;
+                    display: inline;
+
+                    .listTooltipText {
+                        visibility: hidden;
+                        background-color: #555;
+                        color: #fff;
+                        text-align: center;
+                        padding: 5px 5px;
+                        border-radius: 6px;
+            
+                        /* Position the tooltip text */
+                        position: absolute;
+                        z-index: 1009;
+                        top: 50%;
+                        /* Place the tooltip text above the tooltip */
+                        left: 50%;
+                        margin-left: -30px;
+                        /* Use half of the width to center the tooltip text */
+            
+                        /* Fade in tooltip */
+                        opacity: 0;
+                        transition: opacity 0.3s;
+                    }
+
+                    &:hover .listTooltipText {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+
+                    #javascriptText {
+                        margin-left: -45px;
+                    }
+            
+                    #htmlText {
+                        margin-left: -27px;
+                    }
+            
+                    #cssText {
+                        margin-left: -20px;
+                    }
+            
+                    #pycharmText {
+                        margin-left: -39px;
+                    }
+            
+                    #windows11Text {
+                        margin-left: -50px;
+                    }
+            
+                    #edgeText {
+                        margin-left: -23px;
+                    }
+                }
+            }
+        }
+    }
+
+    /* blog.html */
+
+    .blogBanner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #ffffff;
+        padding: 10px 20px;
+        margin: 3vh;
+        
+        #blogText {
+            font-size: 80px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .blogLinesContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 50px;
+            width: 100%;
+
+            div {
+                width: 98%;
+                height: 5px;
+                background-color: #ffffff;
+                /* White */
+                margin: 9px;
+                padding: 5px;
+            }
+        }
+    }
+
+    .blogContainer {
+        display: flex;
+        flex-direction: column;
+        
+        .blogItems {
+            display: flex;
+            margin: 15px 20px 10px 5px;
+
+            .blogTextContainer {
+                margin: 15px 0 0 25px;
+
+                .blogItemsHeading {
+                    color: orange;
+                }
+                
+                .blogItemsTags {
+                    justify-content: unset;
+                }
+                
+                .blogPostDate {
+                    position: relative;
+                    top: 10px;
+                    color: orange;
+                    font-size: 18px;
+                }
+
+                .blogItemsText {
+                    font-size: 20px;
+                    padding: 5px 0 10px 0;
+                }
+
+                .readArticle {
+                    color: white;
+                    background-color: brown;
+                    padding: 8px;
+                    box-shadow: inset 0 0 0 0 black;
+                    transition: color .8s ease-in-out, box-shadow .3s ease-in-out;
+
+                    &:hover {
+                        color: #fff;
+                        box-shadow: inset 200px 0 0 0 black;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Nested Pages */
+
+    #goBack {
+        background-color: brown;
+        padding: 5px;
+    }
+
+    #goBackText {
+        color: white;
+        font-size: 20px;
+    }
+
+    /* venn-diagram-blog.html */
+
+    #venn-diagram-content {
+        font-size: 18px;
+
+        .vennDiagramImgs {
+            width: 40%;
+            margin-right: 15px;
+        }
+    
+        #vennDiagramImg1 {
+            width: 34.15%;
+        }
+    
+        #vennDiagramImg3 {
+            float: left;
+            margin-right: 5vh;
+        }
+
+        #intersections {
+            padding-top: 15px;
+        }
+
+        #conclusion {
+            padding-top: 5px;
+        }
+    }
+
+
+    /* video-games.html */
+
+    #video-games-content {
+
+        img {
+            width: 30%;
+            background: cover;
+            margin-right: 15px;
+        }
+        
+        #trueCrimeGameStory {
+            padding-top: 5px;
+        }
+
+        #trueCrimeGameImg {
+            float: left;
+        }
+
+        #farCryImg {
+            float: right;
+        }
+
+        #csSourceImg,
+        #csGoImg {
+            float: left;
+        }
+
+        #mobileGamesImg {
+            float: right;
+        }
+    }
+}
+
+#blogMain {
+    margin: 10px;
+}
+
+#blogPage {
+    overflow-x: hidden;
+}

@@ -1,0 +1,263 @@
+#csSourceMobileHeading {
+    display: none;
+}
+
+@media only screen and (max-width: 1252px) and (prefers-color-scheme: dark) {
+
+    #aboutMe {
+        flex-direction: column;
+        height: unset;
+    }
+
+    #aboutMeContent {
+        width: 100%;
+        height: unset;
+    }
+
+    .marquee {
+        width: 100%;
+    }
+
+    .svg-container {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+/* Decorations for Mobile Version */
+
+@media only screen and (max-width: 800px) and (prefers-color-scheme: dark) {
+    /* Styles for typical tablets and mobiles screens */
+
+    header {
+        display: flex;
+        align-items: center;
+        padding: 3vh;
+    }
+
+    #mainContent {
+        margin: 14px;
+        background-color: unset;
+        width: unset;
+    }
+
+    #frontBannerBox {
+        flex-direction: column;
+        gap: unset;
+        top: unset;
+    }
+
+    .username {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) skewX(15deg);
+        z-index: 1003;
+    }
+
+    /* burger menu */
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 0;
+        position: relative;
+        z-index: 1002;
+    }
+
+    .line {
+        width: 40px;
+        height: 3px;
+        background-color: white;
+        margin: 4px 0;
+        transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+        transform-origin: center;
+    }
+
+    /* Initial state of the lines */
+    .burger-menu .line:nth-child(1) {
+        top: 0px;
+    }
+
+    .burger-menu .line:nth-child(2) {
+        top: 13px;
+        opacity: 1;
+    }
+
+    .burger-menu .line:nth-child(3) {
+        bottom: 0px;
+    }
+
+    /* State of the lines when the menu is open */
+    .burger-menu.open .line:nth-child(1) {
+        transform: translateY(11px) rotate(45deg);
+    }
+
+    .burger-menu.open .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-menu.open .line:nth-child(3) {
+        transform: translateY(-11px) rotate(-45deg);
+    }
+
+    /* nav-menu for mobile view */
+    .nav-menu {
+        display: none; /* Hide the mobile menu by default */
+        background-color: black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 21vh; /* Adjust the width of the menu as needed */
+        height: 100vh;
+        padding-top: 60px; /* Adjust the padding to avoid overlapping with the header */
+        padding-left: 10px;
+        z-index: 1000; /* Increase if necessary */
+    }
+
+    .nav-menu ul {
+        display: inline-block;
+        list-style: none;
+        padding: 0;
+        margin-top: 40px;
+    }
+
+    .nav-menu ul li {
+        margin-bottom: 20px;
+        display: block;
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 10px 7.5vh 10px 15px;
+        color: white;
+        border: none; /* No border */
+        cursor: pointer; /* Cursor style */
+    }
+
+    .social-links {
+        display: none; /* Hide the social links by default */
+        position: absolute;
+        top: 70vh; /* Adjust if necessary */
+        z-index: 1001; /* Increase if necessary */
+        padding-left: 0;
+    }
+
+    .social-links li {
+        padding: 5px;
+    }
+
+    .bothArrowButtons {
+        display: none;
+    }
+
+    #blogPage {
+        overflow-x: hidden;
+    }
+
+    #blogText {
+        font-size: 80px;
+    }
+
+    .blogBanner {
+        padding: 10px 40px 9px 18px;
+    }
+
+    .projects-container, .blogContainer {
+        flex-direction: column;
+    }
+
+    #vennDiagramHead, #videoGamesHeading {
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .vennDiagramImgs, #vennDiagramImg1, video-games-content img {
+        width: 100%;
+    }
+
+    #intersections {
+        clear: left;
+    }
+
+    #video-games-content img {
+        width: 100%;
+        float: unset;
+    }
+
+    #csSourceMobileHeading {
+        display: block;
+    }
+
+    #csSourceDesktopHeading {
+        display: none;
+    }
+
+    .projects-items, .blogItems {
+        text-align: center;
+        align-items: center;
+        margin: unset;
+        flex-direction: column;
+    }
+
+    .project-items {
+        margin-bottom: 20px;
+    }
+
+    .blogItems {
+        padding: 40px 0 20px 0;
+    }
+
+    .projects-items img, .blogItems img {
+        max-width: 100%;
+        height: unset; /* Maintain the aspect ratio of the image */
+    }
+
+    .projects-items img {
+        margin-bottom: 10px; /* Add some space between the image and the text */
+    }
+
+    .projects-items-heading {
+        padding-top: unset;
+    }
+
+    .projects-items-text {
+        font-size: 18px;
+        margin-bottom: 40px;
+        width: unset;
+    }
+
+    .text-container, .blogTextContainer {
+        margin-left: 0;
+    }
+
+    .tags {
+        width: 100%;
+    }
+
+    .blogItemsTags {
+        display: unset;
+    }
+
+    .blogItemsText {
+        font-size: 18px;
+    }
+
+    #skillsAndTools img {
+        width: 55px;
+    }
+
+    #windows11Text {
+        margin-left: -38px;
+    }
+
+    .show {
+        display: flex !important;
+        flex-wrap: wrap;
+        width: 140px;
+    }
+
+    footer {
+        position: relative;
+        top: 5px;
+    }
+}
