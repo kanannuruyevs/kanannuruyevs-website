@@ -1,13 +1,13 @@
 // Select the body or a larger container
-var container = document.body; // or document.querySelector('.your-container');
+const container = document.body; // or document.querySelector('.your-container');
 
 // Select the burger menu and the elements you want to show/hide
-var burgerMenu = document.querySelector('.burger-menu');
-var navMenu = document.querySelector('.nav-menu');
-var socialLinks = document.querySelector('.social-links');
+const burgerMenu = document.querySelector('.burger-menu');
+const navMenu = document.querySelector('.nav-menu');
+const socialLinks = document.querySelector('.social-links');
 
 // Create a new instance of Hammer on the container
-var hammer = new Hammer(container);
+const hammer = new Hammer(container);
 
 // Function to open the menu
 function openMenu() {
@@ -44,24 +44,17 @@ document.addEventListener('click', function(event) {
   }
 });
 
-// Left and right arrow buttons for scrolling through projects
-const scrollContainer = document.querySelector('.scrollContainer'); // Modify based on your chosen element
-
-if (scrollContainer) {
-  const arrowLeft = document.getElementById('arrowLeftButton'); // Replace with your arrow element IDs
-  const arrowRight = document.getElementById('arrowRightButton');
-
-  arrowLeft.addEventListener('click', () => {
-    scrollContainer.scrollLeft -= 200; // Adjust scroll distance
-  });
-
-  arrowRight.addEventListener('click', () => {
-    scrollContainer.scrollLeft += 200; // Adjust scroll distance
-  });
-}
-
 // Update year in footer tag
 const updateYear = new Date().getFullYear();
 const copyrightElement = document.getElementById("copyright");
 
-copyrightElement.innerHTML = "© 2023 - " + updateYear + " Kanan N. All rights reserved.";
+copyrightElement.innerHTML = "© 2023 - " + updateYear + " kanansnote. All rights reserved.";
+
+const projectsSwiper = new Swiper('.projects-container', {
+  slidesPerView: '3', // Adjust this value to control how many slides are visible at a time
+  navigation: {
+    prevEl: '.arrowLeftButton',
+    nextEl: '.arrowRightButton',
+  },
+});
+

@@ -7,6 +7,9 @@
     <title>Home</title>
     <link rel="icon" id="favicon" href="./src/media/home/my-picture.jpg" type="image/jpg">
     <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
 </head>
 
@@ -166,83 +169,135 @@
                 </div>
             </div>
             <div id="underFrontBanner">
-                <h2 class="underFrontBannerText">Discover My Latest Projects</h2>
-                <button id="arrowLeftButton" class="bothArrowButtons" title="arrowButton">
-                    <i id="arrow-left" class="arrow"></i>
-                </button>
-                <button id="arrowRightButton" class="bothArrowButtons" title="arrowButton">
-                    <i id="arrow-right" class="arrow"></i>
-                </button>
+                <h2 class="underFrontBannerText">Projects</h2>
             </div>
-            <div class="projects-container scrollContainer">
-                <div class="projects-items firstItem">
-                    <img src="./src/media/projects-covers/venn-diagram-project.jpeg" alt="Venn Diagram Project"
-                        media="(max-width: 768px)" />
-                    <div class="text-container">
-                        <details>
-                            <summary>
-                                <h1 class="projects-items-heading">Venn Diagram</h1>
-                            </summary>
-                            <div class="projects-items-links">
-                                <a rel="noopener" target="_blank"
-                                    href="https://github.com/kanansnote/Venn-Diagram">Software</a>
-                                <a href="venn-diagram-project.html">Web (Work in Progress)</a>
-                            </div>
-                        </details>
-                        <div class="tags">
-                            <span class="first-tag">MBTI</span>
-                            <span class="otherTags">Career Options</span>
-                            <span class="otherTags">Cognitive Functions</span>
+            <div class="projects-container swiper-container">
+                <div class="arrowLeftButton bothArrowButtons">
+                    <i class="fa-solid fa-angle-left arrows"></i>
+                </div>
+                <div class="arrowRightButton bothArrowButtons">
+                    <i class="fa-solid fa-angle-right arrows"></i>
+                </div>
+                <div class="projects-items swiper-wrapper">
+                    <div class="projects-item swiper-slide">
+                        <img src="./src/media/projects-covers/hivency-template-task.png" alt="Hivency Project Cover"
+                            media="(max-width: 768px)" />
+                        <div class="projects-item__text">
+                            <a rel="noopener" target="_blank" 
+                                href="https://github.com/kanansnote/hivency-template-task">
+                                <h2 class="projects-items__heading">Hivency Template Task</h2>
+                            </a>
                         </div>
-                        <p class="projects-items-text">The project focuses on a career path exploration, including MBTI
-                            Cognitive Functions. That was the main cause for returning to programming stuff after 6 months of delay.
-                        </p>
+                    </div>
+                    <div class="projects-item swiper-slide">
+                        <img src="./src/media/projects-covers/ogenix-template-task.png" alt="Business Calendar Project"
+                            media="(max-width: 768px)" />
+                        <div class="projects-item__text">
+                            <a rel="noopener" target="_blank" 
+                                href="https://github.com/kanansnote/ogenix-template-task">
+                                <h2 class="projects-items__heading">Ogenix Template Task</h2>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="projects-item swiper-slide">
+                        <img src="./src/media/projects-covers/xhibiter-template-task.png" alt="Programming Exercises Project"
+                            media="(max-width: 768px)" />
+                        <div class="projects-item__text">
+                            <a rel="noopener" target="_blank"
+                                href="https://github.com/kanansnote/xhibiter-template-task">
+                                <h2 class="projects-items__heading">Xhibiter Template Task</h2>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="projects-item swiper-slide">
+                        <img src="./src/media/projects-covers/themedox-template-task.png" alt="Programming Exercises Project"
+                            media="(max-width: 768px)" />
+                        <div class="projects-item__text">
+                            <a rel="noopener" target="_blank"
+                                href="https://github.com/kanansnote/xhibiter-template-task">
+                                <h2 class="projects-items__heading">Themedox Template Task</h2>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="projects-item swiper-slide">
+                        <img src="./src/media/projects-covers/startbootstrap-template-task.png" alt="Programming Exercises Project"
+                            media="(max-width: 768px)" />
+                        <div class="projects-item__text">
+                            <a rel="noopener" target="_blank"
+                                href="https://github.com/kanansnote/startbootstrap-template-task">
+                                <h2 class="projects-items__heading">Start Bootstrap Template Task</h2>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="projects-items secondItem">
-                    <img src="./src/media/projects-covers/business-calendar.jpeg" alt="Business Calendar Project"
-                        media="(max-width: 768px)" />
-                    <div class="text-container">
-                        <details>
-                            <summary>
-                                <h1 class="projects-items-heading">Business Calendar</h1>
-                            </summary>
-                            <div class="projects-items-links">
-                                <a rel="noopener" target="_blank"
-                                    href="https://github.com/kanansnote/Business-Calendar">Software</a>
-                                <a href="business-calendar.html">Web (Work in Progress)</a>
-                            </div>
-                        </details>
-                        <div class="tags">
-                            <span class="first-tag">Business</span>
-                            <span class="otherTags">Calendar</span>
-                            <span class="otherTags">PowerPoint</span>
-                        </div>
-                        <p class="projects-items-text">The project is designed to provide a personalized calendar
-                            experience. Inspired by the idea of creating a business calendar with PowerPoint Slides in accordance with client's specifications working at Upwork.
-                        </p>
-                    </div>
+            </div>
+            <div class="mini-projects">
+                <div class=".mini-projects__header containers-header">
+                    <h2>Mini Projects</h2>
                 </div>
-                <div class="projects-items thirdItem">
-                    <img src="./src/media/projects-covers/programming.jpeg" alt="Programming Exercises Project"
-                        media="(max-width: 768px)" />
-                    <div class="text-container">
-                        <a rel="noopener" target="_blank"
-                            href="https://github.com/kanansnote/Basic-Programming-Exercises">
-                            <h1 class="projects-items-heading">Basic Programming Exercises</h1>
-                        </a>
-                        <div class="tags">
-                            <span class="first-tag">Programming</span>
-                            <span class="otherTags">Python</span>
-                            <span class="otherTags">JavaScript</span>
-                            <span class="otherTags">Java</span>
-                            <span class="otherTags">C++</span>
-                            <span class="otherTags">HTML</span>
-                            <span class="otherTags">CSS</span>
+                <div class="mini-projects-items">
+                    <div class="mini-projects-item">
+                        <img src="./src/media/projects-covers/venn-diagram-project.jpeg" alt="Venn Diagram Cover">
+                        <div class="mini-projects-item__text">
+                            <details>
+                                <summary>
+                                    <h2 class="mini-projects-items__heading">Venn Diagram</h2>
+                                </summary>
+                                <div class="mini-projects-items__links">
+                                    <a rel="noopener" target="_blank"
+                                        href="https://github.com/kanansnote/Venn-Diagram">Software</a>
+                                    <a href="venn-diagram-project.html">Web (Work in Progress)</a>
+                                </div>
+                            </details>
+                            <div class="mini-projects-item__tags">
+                                <span>MBTI</span>
+                                <span>Career Options</span>
+                                <span>Cognitive Functions</span>
+                            </div>
+                            <p>The project focuses on a career path exploration, including MBTI
+                                Cognitive Functions. That was the main cause for returning to programming stuff after 6 months of delay.</p>
                         </div>
-                        <p class="projects-items-text">Small coding projects for learning and exercising in some
-                            programming & markup languages. It includes Python, JavaScript, C++, Java, HTML, and CSS.
-                        </p>
+                    </div>
+                    <div class="mini-projects-item">
+                        <img src="./src/media/projects-covers/business-calendar.jpeg" alt="Business Calendar Cover">
+                        <div class="mini-projects-item__text">
+                            <details>
+                                <summary>
+                                    <h2 class="mini-projects-items__heading">Business Calendar</h2>
+                                </summary>
+                                <div class="mini-projects-items__links">
+                                    <a rel="noopener" target="_blank"
+                                        href="https://github.com/kanansnote/Business-Calendar">Software</a>
+                                    <a href="business-calendar.html">Web (Work in Progress)</a>
+                                </div>
+                            </details>
+                            <div class="mini-projects-item__tags">
+                                <span>Business</span>
+                                <span>Calendar</span>
+                                <span>PowerPoint</span>
+                            </div>
+                            <p>The project is designed to provide a personalized calendar
+                                experience. Inspired by the idea of creating a business calendar with PowerPoint Slides in accordance with client's specifications working at Upwork.</p>
+                        </div>
+                    </div>
+                    <div class="mini-projects-item">
+                        <img src="./src/media/projects-covers/programming.jpeg" alt="Programming Projects Cover">
+                        <div class="mini-projects-item__text">
+                            <a href="https://github.com/kanansnote/Basic-Programming-Exercises">
+                                <h2 class="mini-projects-items__heading">Basic Programming Exercises</h2>
+                            </a>
+                            <div class="mini-projects-item__tags">
+                                <span>Programming</span>
+                                <span>Python</span>
+                                <span>C++</span>
+                                <span>Java</span>
+                                <span>JavaScript</span>
+                                <span>HTML</span>
+                                <span>CSS</span>
+                            </div>
+                            <p>Small coding projects for learning and exercising in some
+                                programming & markup languages. It includes Python, JavaScript, C++, Java, HTML, and CSS.</p>
+                        </div>
                     </div>
                 </div>
             </div>

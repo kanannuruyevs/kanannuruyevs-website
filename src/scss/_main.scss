@@ -44,7 +44,6 @@ main {
         max-width: 80rem;
         z-index: 2000;
 
-
         #underFrontBanner {
             position: relative;
             top: 15%;
@@ -60,65 +59,10 @@ main {
             text-transform: uppercase;
         }
 
-        .bothArrowButtons {
-            position: absolute;
-            background: none;
-            border: none;
-            top: 77%;
-            transition: all 0.25s ease-in-out;
-            z-index: 1500;
-        }
-
-        .bothArrowButtons:hover {
-            transition: all 0.25s ease-in-out;
-            background: 3px solid black;
-        }
-
-        .bothArrowButtons:active {
-            .arrow {
-                border-right: 3px solid black;
-                border-bottom: 3px solid black;
-            }
-        }
-
-        @keyframes shadow-inset-center {
-            0% {
-                box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
-            }
-
-            100% {
-                box-shadow: inset 0 0 39px 0px rgba(0, 0, 0, 0.5);
-            }
-        }
-
-        #arrowLeftButton {
-            left: 1%;
-            padding: 10px 6px 7px 11px;
-        }
-
-        #arrowRightButton {
-            right: 1%;
-            padding: 10px 11px 7px 6px;
-        }
-
-        .arrow {
-            border: solid white;
-            border-width: 0 4px 4px 0;
-            display: inline-block;
-            padding: 5px;
-        }
-
-        #arrow-left {
-            transform: rotate(135deg);
-        }
-
-        #arrow-right {
-            transform: rotate(-45deg);
-        }
-
         .projects-container {
             display: flex;
             position: relative;
+            margin: 2vh 2vh 8vh;
             overflow-x: scroll;
             scrollbar-width: none;
             /* Hide scrollbar for Firefox */
@@ -128,65 +72,70 @@ main {
                 /* Hide scrollbar for Edge, Chrome, Safari and Opera */
             }
             
-            .projects-items {
-                display: flex;
-                flex-direction: column;
-                margin: 15px 12vh 10px 12vh;
-
-                .text-container {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    text-align: center;
-
-                    .tags {
-                        display: inline-flex;
-                        justify-content: center;
-                        gap: 5px;
-                        flex-wrap: wrap;
-                        color: white;
-                        width: 120%;
-            
-                        .otherTags,
-                        .first-tag {
-                            border: solid 1px;
-                            padding: 5px;
-                        }
-                    }
-
-                    .projects-items-heading {
-                        color: orange;
-                        padding-top: 3px;
-                    }
-            
-                    .projects-items-links {
-                        list-style: none;
-                        padding-bottom: 2.5vh;
-
-                        a {
-                            color: orange;
-                            margin: 5px;
-                        }
-                    }
-
-                    .projects-items-heading:hover,
-                    .projects-items-links a:hover {
-                        color: black;
-                        /* New color on hover */
-                        transition: color 0.3s;
-                    }
-
-                    .projects-items-text {
-                        padding-top: 5px;
-                        font-size: 20px;
-                        width: 120%;
-                    }
+            .bothArrowButtons {
+                position: absolute;
+                top: -2vh;
+                transition: all 0.25s ease-in-out;
+                z-index: 1500;
+                
+                &:hover {
+                    color: black;
                 }
             }
+    
+    
+            @keyframes shadow-inset-center {
+                0% {
+                    box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
+                }
+    
+                100% {
+                    box-shadow: inset 0 0 39px 0px rgba(0, 0, 0, 0.5);
+                }
+            }
+    
+            .arrowLeftButton {
+                left: 3%;
+                padding: 10px 6px 7px 11px;
+            }
+    
+            .arrowRightButton {
+                right: 3%;
+                padding: 10px 11px 7px 6px;
+            }
 
-            .firstItem {
-                margin-left: 7vh;
+            .projects-items {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                
+                .projects-item {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 20%;
+
+                    img {
+                        object-fit: cover;
+                    }
+                    
+                    .projects-item__text {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+
+                        a {
+                            color: white;
+                            transition: color 0.3s;
+                            
+                            &:hover {
+                                color: orange;
+                            }
+                        }
+                    }
+                }
             }
         }
 
@@ -196,6 +145,79 @@ main {
             height: 300px;
             object-fit: cover;
             /* This will prevent distortion */
+        }
+
+        .mini-projects {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 2vh;
+            
+            .mini-projects-items {
+                display: flex;
+
+                .mini-projects-item {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 2vh;
+
+                    img {
+                        width: 55vh;
+                        height: 55vh;
+                        object-fit: contain;
+                    }
+    
+                    .mini-projects-item__text {
+                        display: flex;
+                        text-align: center;
+                        align-items: center;
+                        flex-direction: column;
+
+                        .mini-projects-items__heading {
+                            color: orange;
+                            padding-top: 3px;
+                            cursor: pointer;
+                        }
+                
+                        .mini-projects-items__links {
+                            list-style: none;
+                            padding: 2vh 2vh 0;
+    
+                            a {
+                                color: orange;
+                                margin: 5px;
+                            }
+                        }
+
+                        .mini-projects-items__heading:hover,
+                        .mini-projects-items__links a:hover {
+                            color: black;
+                            /* New color on hover */
+                            transition: color 0.3s;
+                        }
+
+                        .mini-projects-item__tags {
+                            padding: 3vh 0 3vh 0;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-wrap: wrap;
+                            gap: 1vh;
+
+                            span {
+                                border: solid 1px white;
+                                padding: 1vh;
+                            }
+                        }
+
+                        p {
+                            width: 70%;
+                        }
+                    }
+                }
+
+            }
         }
 
         .contributeTable {

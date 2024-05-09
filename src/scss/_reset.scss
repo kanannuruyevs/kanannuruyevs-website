@@ -47,6 +47,14 @@ body {
 	color: white;
 }
 
+.containers-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    text-transform: uppercase;
+}
+
 @keyframes move {
     100% {
         transform: translate3d(0, 0, 1px) rotate(360deg);

@@ -44,6 +44,14 @@ body {
   color: white;
 }
 
+.containers-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  text-transform: uppercase;
+}
+
 @keyframes move {
   100% {
     transform: translate3d(0, 0, 1px) rotate(360deg);
@@ -458,21 +466,26 @@ main #mainContent #skillsAndTools h2 {
   text-align: center;
   text-transform: uppercase;
 }
-main #mainContent .bothArrowButtons {
+main #mainContent .projects-container {
+  display: flex;
+  position: relative;
+  margin: 2vh 2vh 8vh;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  /* Hide scrollbar for Firefox */
+}
+main #mainContent .projects-container::-webkit-scrollbar {
+  display: none;
+  /* Hide scrollbar for Edge, Chrome, Safari and Opera */
+}
+main #mainContent .projects-container .bothArrowButtons {
   position: absolute;
-  background: none;
-  border: none;
-  top: 77%;
+  top: -2vh;
   transition: all 0.25s ease-in-out;
   z-index: 1500;
 }
-main #mainContent .bothArrowButtons:hover {
-  transition: all 0.25s ease-in-out;
-  background: 3px solid black;
-}
-main #mainContent .bothArrowButtons:active .arrow {
-  border-right: 3px solid black;
-  border-bottom: 3px solid black;
+main #mainContent .projects-container .bothArrowButtons:hover {
+  color: black;
 }
 @keyframes shadow-inset-center {
   0% {
@@ -482,87 +495,42 @@ main #mainContent .bothArrowButtons:active .arrow {
     box-shadow: inset 0 0 39px 0px rgba(0, 0, 0, 0.5);
   }
 }
-main #mainContent #arrowLeftButton {
-  left: 1%;
+main #mainContent .projects-container .arrowLeftButton {
+  left: 3%;
   padding: 10px 6px 7px 11px;
 }
-main #mainContent #arrowRightButton {
-  right: 1%;
+main #mainContent .projects-container .arrowRightButton {
+  right: 3%;
   padding: 10px 11px 7px 6px;
-}
-main #mainContent .arrow {
-  border: solid white;
-  border-width: 0 4px 4px 0;
-  display: inline-block;
-  padding: 5px;
-}
-main #mainContent #arrow-left {
-  transform: rotate(135deg);
-}
-main #mainContent #arrow-right {
-  transform: rotate(-45deg);
-}
-main #mainContent .projects-container {
-  display: flex;
-  position: relative;
-  overflow-x: scroll;
-  scrollbar-width: none;
-  /* Hide scrollbar for Firefox */
-}
-main #mainContent .projects-container::-webkit-scrollbar {
-  display: none;
-  /* Hide scrollbar for Edge, Chrome, Safari and Opera */
 }
 main #mainContent .projects-container .projects-items {
   display: flex;
-  flex-direction: column;
-  margin: 15px 12vh 10px 12vh;
+  justify-content: space-between;
+  width: 100%;
 }
-main #mainContent .projects-container .projects-items .text-container {
+main #mainContent .projects-container .projects-items .projects-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+}
+main #mainContent .projects-container .projects-items .projects-item img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main #mainContent .projects-container .projects-items .projects-item .projects-item__text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-main #mainContent .projects-container .projects-items .text-container .tags {
-  display: inline-flex;
-  justify-content: center;
-  gap: 5px;
-  flex-wrap: wrap;
+main #mainContent .projects-container .projects-items .projects-item .projects-item__text a {
   color: white;
-  width: 120%;
-}
-main #mainContent .projects-container .projects-items .text-container .tags .otherTags,
-main #mainContent .projects-container .projects-items .text-container .tags .first-tag {
-  border: solid 1px;
-  padding: 5px;
-}
-main #mainContent .projects-container .projects-items .text-container .projects-items-heading {
-  color: orange;
-  padding-top: 3px;
-}
-main #mainContent .projects-container .projects-items .text-container .projects-items-links {
-  list-style: none;
-  padding-bottom: 2.5vh;
-}
-main #mainContent .projects-container .projects-items .text-container .projects-items-links a {
-  color: orange;
-  margin: 5px;
-}
-main #mainContent .projects-container .projects-items .text-container .projects-items-heading:hover,
-main #mainContent .projects-container .projects-items .text-container .projects-items-links a:hover {
-  color: black;
-  /* New color on hover */
   transition: color 0.3s;
 }
-main #mainContent .projects-container .projects-items .text-container .projects-items-text {
-  padding-top: 5px;
-  font-size: 20px;
-  width: 120%;
-}
-main #mainContent .projects-container .firstItem {
-  margin-left: 7vh;
+main #mainContent .projects-container .projects-items .projects-item .projects-item__text a:hover {
+  color: orange;
 }
 main #mainContent .projects-items img,
 main #mainContent .blogItems img {
@@ -571,6 +539,67 @@ main #mainContent .blogItems img {
   -o-object-fit: cover;
      object-fit: cover;
   /* This will prevent distortion */
+}
+main #mainContent .mini-projects {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2vh;
+}
+main #mainContent .mini-projects .mini-projects-items {
+  display: flex;
+}
+main #mainContent .mini-projects .mini-projects-items .mini-projects-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vh;
+}
+main #mainContent .mini-projects .mini-projects-items .mini-projects-item img {
+  width: 55vh;
+  height: 55vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main #mainContent .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+main #mainContent .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-items__heading {
+  color: orange;
+  padding-top: 3px;
+  cursor: pointer;
+}
+main #mainContent .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-items__links {
+  list-style: none;
+  padding: 2vh 2vh 0;
+}
+main #mainContent .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-items__links a {
+  color: orange;
+  margin: 5px;
+}
+main #mainContent .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-items__heading:hover,
+main #mainContent .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-items__links a:hover {
+  color: black;
+  /* New color on hover */
+  transition: color 0.3s;
+}
+main #mainContent .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-item__tags {
+  padding: 3vh 0 3vh 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1vh;
+}
+main #mainContent .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-item__tags span {
+  border: solid 1px white;
+  padding: 1vh;
+}
+main #mainContent .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text p {
+  width: 70%;
 }
 main #mainContent .contributeTable {
   align-items: center;
