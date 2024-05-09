@@ -276,22 +276,22 @@ main {
             display: flex;
             align-items: center;
             gap: 3vh;
-            height: 80vh;
-            overflow-y: auto;
             margin: 14px;
 
             img {
-                max-width: 60vh;
-                max-height: 67.5vh;
-                object-fit: cover;
+                width: 60vh;
+                height: 60vh;
+                object-fit: contain;
             }
 
             #aboutMeContent {
-                width: 70%;
+                display: flex;
     
                 p {
                     font-size: 18px;
-                    margin: 1.5vh auto;
+                    margin-right: 3vh;
+                    width: 100%;
+                    text-align: center;
                 }
             }
         }
@@ -518,6 +518,10 @@ main {
         #csGoImg {
             float: left;
         }
+
+        #csSourceMobileHeading {
+            display: none;
+        }        
 
         #mobileGamesImg {
             float: right;
