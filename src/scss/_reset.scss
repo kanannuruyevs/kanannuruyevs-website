@@ -89,7 +89,7 @@ body {
     left: 0;
     background: #1e1f2f;
     overflow: hidden;
-    z-index: -1;
+    z-index: 1;
 }
 
 .animatedBack span {
@@ -311,6 +311,7 @@ details>summary::marker {
     top: 12vh;
     overflow: hidden;
     background-color: yellow;
+    z-index: 2;
     
     li {
         padding: 2vh;

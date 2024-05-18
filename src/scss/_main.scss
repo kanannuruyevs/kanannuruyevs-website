@@ -1,5 +1,5 @@
 main {
-    margin: 0;
+    background-color: black;
 
     /* index.html */
 
@@ -31,8 +31,6 @@ main {
     }
 
     #mainContent {
-        background-color: black;
-        margin: 0 auto;
         position: relative;
         top: 20vh;
         z-index: 2000;
@@ -354,49 +352,18 @@ main {
 
     /* blog.html */
 
-    .blogBanner {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: #ffffff;
-        padding: 10px 20px;
-        margin: 3vh;
-        
-        #blogText {
-            font-size: 80px;
-            margin: 0;
-            text-transform: uppercase;
-        }
-
-        .blogLinesContainer {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            height: 50px;
-            width: 100%;
-
-            div {
-                width: 98%;
-                height: 5px;
-                background-color: #ffffff;
-                /* White */
-                margin: 9px;
-                padding: 5px;
-            }
-        }
-    }
-
     .blogContainer {
         display: flex;
         flex-direction: column;
+        background-color: black;
         
         .blogItems {
             display: flex;
             margin: 15px 20px 10px 5px;
-
+            
             .blogTextContainer {
                 margin: 15px 0 0 25px;
-
+                
                 .blogItemsHeading {
                     color: orange;
                 }

@@ -85,7 +85,7 @@ body {
   left: 0;
   background: #1e1f2f;
   overflow: hidden;
-  z-index: -1;
+  z-index: 1;
 }
 
 .animatedBack span {
@@ -324,6 +324,7 @@ details > summary::marker {
   top: 12vh;
   overflow: hidden;
   background-color: yellow;
+  z-index: 2;
   /* Marquee Animation */
 }
 .marqueeEffect li {
@@ -460,7 +461,7 @@ header .social-links li a img:hover {
 }
 
 main {
-  margin: 0;
+  background-color: black;
   /* index.html */
   /* blog.html */
   /* Nested Pages */
@@ -491,8 +492,6 @@ main .frontBanner #frontBannerText p {
   font-size: 26px;
 }
 main #mainContent {
-  background-color: black;
-  margin: 0 auto;
   position: relative;
   top: 20vh;
   z-index: 2000;
@@ -757,37 +756,10 @@ main #mainContent #skillsAndTools #skillsAndToolsList .listTooltip #windows11Tex
 main #mainContent #skillsAndTools #skillsAndToolsList .listTooltip #edgeText {
   margin-left: -23px;
 }
-main .blogBanner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #ffffff;
-  padding: 10px 20px;
-  margin: 3vh;
-}
-main .blogBanner #blogText {
-  font-size: 80px;
-  margin: 0;
-  text-transform: uppercase;
-}
-main .blogBanner .blogLinesContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 50px;
-  width: 100%;
-}
-main .blogBanner .blogLinesContainer div {
-  width: 98%;
-  height: 5px;
-  background-color: #ffffff;
-  /* White */
-  margin: 9px;
-  padding: 5px;
-}
 main .blogContainer {
   display: flex;
   flex-direction: column;
+  background-color: black;
 }
 main .blogContainer .blogItems {
   display: flex;
@@ -886,8 +858,14 @@ main #video-games-content #mobileGamesImg {
 
 footer {
   text-align: center;
-  margin-top: 15vh;
-  clear: left;
+  position: relative;
+  padding: 15vh 0 2vh;
+  background-color: black;
+  color: white;
+  z-index: 1500;
+}
+footer p {
+  padding-top: 5vh;
 }
 
 @media only screen and (max-width: 1252px) and (prefers-color-scheme: dark) {
