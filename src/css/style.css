@@ -352,6 +352,16 @@ details > summary::marker {
   }
 }
 
+/* Scroll to Top Button */
+#topBtn {
+  z-index: 10;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+#topBtn:hover {
+  color: #f9f9f9;
+}
+
 header {
   color: white;
   display: flex;
@@ -361,6 +371,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 2500;
+  transition: 0.1s ease-in-out;
   /* Navigation Menu Decoration */
 }
 header .username {
@@ -857,14 +868,16 @@ main #video-games-content #mobileGamesImg {
 }
 
 footer {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
-  padding: 15vh 0 2vh;
+  padding: 15vh 2vh 2vh;
   background-color: black;
   color: white;
   z-index: 1500;
 }
-footer p {
+footer div {
   padding-top: 5vh;
 }
 

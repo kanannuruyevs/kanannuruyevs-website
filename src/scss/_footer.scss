@@ -1,12 +1,14 @@
 footer {
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
-    padding: 15vh 0 2vh;
+    padding: 15vh 2vh 2vh;
     background-color: black;
     color: white;
     z-index: 1500;
 
-    p {
+    div {
         padding-top: 5vh;
     }
 }
