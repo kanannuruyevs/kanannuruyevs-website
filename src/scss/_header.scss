@@ -1,6 +1,5 @@
 header {
     color: white;
-    background-color: black;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -25,9 +24,6 @@ header {
         left: 27vh;
 
         ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
 
             li {
                 display: inline-block;

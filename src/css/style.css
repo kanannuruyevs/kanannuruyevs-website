@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /* First things first */
 @import url("https://use.typekit.net/ovt6ynt.css");
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Oswald:wght@200;300;400;500;600;700&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Spectral:wght@200;300;400;500;600;700;800&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,100..900&family=Sora:wght@100..800&display=swap");
 @font-face {
   font-family: "Techno Race Italic";
   src: url("/src/media/fonts/technoraceitalic.woff") format("woff"), url("/src/media/fonts/technoraceitalic.ttf") format("truetype");
@@ -13,8 +13,27 @@
   box-sizing: border-box;
 }
 
+:root {
+  --persian-green: #009899;
+  --lotion-white: #fcfcfc;
+  --mango-yellow: #ffc829;
+}
+
 a {
   text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h2 {
+  font-family: "Imbue";
+  color: var(--persianGreen);
+  font-size: 64px;
+  line-height: 80%;
+  text-transform: uppercase;
+  margin: 5vh 0 5vh 0;
 }
 
 ::-webkit-scrollbar {
@@ -40,7 +59,7 @@ html {
 body {
   margin: 0;
   height: 100%;
-  font-family: "Lato", sans-serif;
+  font-family: "Sora", sans-serif;
   color: white;
 }
 
@@ -59,9 +78,9 @@ body {
 }
 /* Website Background */
 .animatedBack {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
+  position: absolute;
+  width: 100%;
+  height: 65vh;
   top: 0;
   left: 0;
   background: #1e1f2f;
@@ -296,9 +315,44 @@ details > summary::marker {
   display: none;
 }
 
+/* Marquee Effect */
+.marqueeEffect {
+  display: flex;
+  align-items: center;
+  -webkit-mask-image-: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%);
+  position: relative;
+  top: 12vh;
+  overflow: hidden;
+  background-color: yellow;
+  /* Marquee Animation */
+}
+.marqueeEffect li {
+  padding: 2vh;
+  flex-shrink: 0;
+  width: 64%;
+  animation: marquee 10s infinite linear;
+  color: black;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-25%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  75% {
+    transform: translateX(-75%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 header {
   color: white;
-  background-color: black;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -320,11 +374,6 @@ header .username {
 header .nav-menu {
   position: absolute;
   left: 27vh;
-}
-header .nav-menu ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
 }
 header .nav-menu ul li {
   display: inline-block;
@@ -422,47 +471,36 @@ main .frontBanner {
   text-align: center;
   position: relative;
   width: 100%;
+  top: 0;
   background-size: cover;
 }
-main .frontBanner #frontBannerBox {
+main .frontBanner #frontBannerText {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10vh;
+  flex-direction: column;
   position: relative;
-  top: 10vh;
-  margin: 5vh;
+  top: 8vh;
   z-index: 1100;
 }
 main .frontBanner #frontBannerText h1 {
-  font-size: 36px;
+  font-size: 100px;
+  font-family: "Imbue";
 }
 main .frontBanner #frontBannerText p {
   font-size: 26px;
 }
 main #mainContent {
-  background-image: url("../media/home/ashley-whitlatch-36aGnv29Ss0-unsplash.jpg");
-  background-attachment: fixed;
-  background-size: cover;
+  background-color: black;
   margin: 0 auto;
   position: relative;
-  top: 10vh;
-  width: calc(100% - 4rem);
-  max-width: 80rem;
+  top: 20vh;
   z-index: 2000;
+  padding: 14px;
 }
 main #mainContent #underFrontBanner {
   position: relative;
   top: 15%;
-}
-main #mainContent .underFrontBannerText,
-main #mainContent .contributeText,
-main #mainContent #aboutMeHeading,
-main #mainContent #skillsAndTools h2 {
-  padding: 6vh 0 5vh 0;
-  margin: 0 auto;
-  text-align: center;
-  text-transform: uppercase;
 }
 main #mainContent .projects-container {
   display: flex;
@@ -565,6 +603,9 @@ main #mainContent .mini-projects .mini-projects-items .mini-projects-item .mini-
   align-items: center;
   flex-direction: column;
 }
+main #mainContent .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text h3 {
+  color: white;
+}
 main #mainContent .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-items__heading {
   color: orange;
   padding-top: 3px;
@@ -621,7 +662,7 @@ main #mainContent .contributeTable td:nth-child(1), main #mainContent .contribut
   background-color: black;
   padding: 12px;
 }
-main #mainContent .contributeTable td::nth-child(1) {
+main #mainContent .contributeTable td:nth-child(1) {
   border-right: 1px solid;
 }
 main #mainContent .contributeTable td:nth-child(3) {
@@ -637,15 +678,10 @@ main #mainContent .contributeTable tr:hover {
   background-color: black;
   /* Add a hover effect to rows */
 }
-main #mainContent #aboutMeHeading,
-main #mainContent #skillsAndTools h2 {
-  margin-top: 5vh;
-}
 main #mainContent #aboutMe {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: 3vh;
-  margin: 14px;
 }
 main #mainContent #aboutMe img {
   width: 60vh;

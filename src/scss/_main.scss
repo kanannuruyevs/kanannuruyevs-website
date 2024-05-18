@@ -7,56 +7,40 @@ main {
         text-align: center;
         position: relative;
         width: 100%;
+        top: 0;
         background-size: cover;
 
-        #frontBannerBox {
+        #frontBannerText {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 10vh;
+            flex-direction: column;
             position: relative;
-            top: 10vh;
-            margin: 5vh;
+            top: 8vh;
             z-index: 1100;
-        }
-
-        #frontBannerText {
 
             h1 {
-                font-size: 36px;
+                font-size: 100px;
+                font-family: 'Imbue';
             }
 
             p {
                 font-size: 26px;
             }
         }
-
     }
 
     #mainContent {
-        background-image: url('../media/home/ashley-whitlatch-36aGnv29Ss0-unsplash.jpg');
-        background-attachment: fixed;
-        background-size: cover;
+        background-color: black;
         margin: 0 auto;
         position: relative;
-        top: 10vh;
-        width: calc(100% - 4rem);
-        max-width: 80rem;
+        top: 20vh;
         z-index: 2000;
+        padding: 14px;
 
         #underFrontBanner {
             position: relative;
             top: 15%;
-        }
-
-        .underFrontBannerText,
-        .contributeText,
-        #aboutMeHeading,
-        #skillsAndTools h2 {
-            padding: 6vh 0 5vh 0;
-            margin: 0 auto;
-            text-align: center;
-            text-transform: uppercase;
         }
 
         .projects-container {
@@ -174,6 +158,10 @@ main {
                         align-items: center;
                         flex-direction: column;
 
+                        h3 {
+                            color: white;
+                        }
+
                         .mini-projects-items__heading {
                             color: orange;
                             padding-top: 3px;
@@ -244,7 +232,7 @@ main {
                     padding: 12px;
                 }
 
-                &::nth-child(1) {
+                &:nth-child(1) {
                     border-right: 1px solid;
                 }
 
@@ -267,16 +255,10 @@ main {
             }
         }
 
-        #aboutMeHeading,
-        #skillsAndTools h2 {
-            margin-top: 5vh;
-        }
-
         #aboutMe {
             display: flex;
-            align-items: center;
+            flex-direction: column;
             gap: 3vh;
-            margin: 14px;
 
             img {
                 width: 60vh;
