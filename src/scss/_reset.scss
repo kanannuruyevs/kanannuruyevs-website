@@ -39,6 +39,11 @@ h2 {
     margin: 5vh 0 5vh 0;
 }
 
+section {
+    position: relative;
+    top: 22vh;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -304,11 +309,12 @@ details>summary::marker {
 /* Marquee Effect */
 
 .marqueeEffect {
+    margin: -2.3vh;
     display: flex;
     align-items: center;
     -webkit-mask-image-: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%);
     position: relative;
-    top: 12vh;
+    top: 15vh;
     overflow: hidden;
     background-color: yellow;
     z-index: 2;

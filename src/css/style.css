@@ -36,6 +36,11 @@ h2 {
   margin: 5vh 0 5vh 0;
 }
 
+section {
+  position: relative;
+  top: 22vh;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -317,11 +322,12 @@ details > summary::marker {
 
 /* Marquee Effect */
 .marqueeEffect {
+  margin: -2.3vh;
   display: flex;
   align-items: center;
   -webkit-mask-image-: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%);
   position: relative;
-  top: 12vh;
+  top: 15vh;
   overflow: hidden;
   background-color: yellow;
   z-index: 2;
@@ -453,17 +459,16 @@ header .social-links {
   list-style: none;
   margin-right: 5vh;
 }
-header .social-links li {
-  background-color: #544F92;
-}
 header .social-links li a {
   text-decoration: none;
 }
 header .social-links li a img {
   padding: 5px 5px 3px;
-  width: 35px;
-  height: 25px;
+  width: 45px;
+  height: 35px;
   transition: transform 0.3s ease-in-out;
+  -o-object-fit: contain;
+     object-fit: contain;
   /* Adds a smooth transition effect */
 }
 header .social-links li a img:hover {
@@ -473,20 +478,22 @@ header .social-links li a img:hover {
 
 main {
   background-color: black;
+  z-index: 2000;
+  padding: 14px;
   /* index.html */
   /* blog.html */
   /* Nested Pages */
   /* venn-diagram-blog.html */
   /* video-games.html */
 }
-main .frontBanner {
+main #home {
   text-align: center;
   position: relative;
   width: 100%;
   top: 0;
   background-size: cover;
 }
-main .frontBanner #frontBannerText {
+main #home #homeText {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -495,24 +502,14 @@ main .frontBanner #frontBannerText {
   top: 8vh;
   z-index: 1100;
 }
-main .frontBanner #frontBannerText h1 {
+main #home #homeText h1 {
   font-size: 100px;
   font-family: "Imbue";
 }
-main .frontBanner #frontBannerText p {
+main #home #homeText p {
   font-size: 26px;
 }
-main #mainContent {
-  position: relative;
-  top: 20vh;
-  z-index: 2000;
-  padding: 14px;
-}
-main #mainContent #underFrontBanner {
-  position: relative;
-  top: 15%;
-}
-main #mainContent .projects-container {
+main .projects-container {
   display: flex;
   position: relative;
   margin: 2vh 2vh 8vh;
@@ -520,17 +517,17 @@ main #mainContent .projects-container {
   scrollbar-width: none;
   /* Hide scrollbar for Firefox */
 }
-main #mainContent .projects-container::-webkit-scrollbar {
+main .projects-container::-webkit-scrollbar {
   display: none;
   /* Hide scrollbar for Edge, Chrome, Safari and Opera */
 }
-main #mainContent .projects-container .bothArrowButtons {
+main .projects-container .bothArrowButtons {
   position: absolute;
   top: -2vh;
   transition: all 0.25s ease-in-out;
   z-index: 1500;
 }
-main #mainContent .projects-container .bothArrowButtons:hover {
+main .projects-container .bothArrowButtons:hover {
   color: black;
 }
 @keyframes shadow-inset-center {
@@ -541,101 +538,101 @@ main #mainContent .projects-container .bothArrowButtons:hover {
     box-shadow: inset 0 0 39px 0px rgba(0, 0, 0, 0.5);
   }
 }
-main #mainContent .projects-container .arrowLeftButton {
+main .projects-container .arrowLeftButton {
   left: 3%;
   padding: 10px 6px 7px 11px;
 }
-main #mainContent .projects-container .arrowRightButton {
+main .projects-container .arrowRightButton {
   right: 3%;
   padding: 10px 11px 7px 6px;
 }
-main #mainContent .projects-container .projects-items {
+main .projects-container .projects-items {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-main #mainContent .projects-container .projects-items .projects-item {
+main .projects-container .projects-items .projects-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 20%;
 }
-main #mainContent .projects-container .projects-items .projects-item img {
+main .projects-container .projects-items .projects-item img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-main #mainContent .projects-container .projects-items .projects-item .projects-item__text {
+main .projects-container .projects-items .projects-item .projects-item__text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-main #mainContent .projects-container .projects-items .projects-item .projects-item__text a {
+main .projects-container .projects-items .projects-item .projects-item__text a {
   color: white;
   transition: color 0.3s;
 }
-main #mainContent .projects-container .projects-items .projects-item .projects-item__text a:hover {
+main .projects-container .projects-items .projects-item .projects-item__text a:hover {
   color: orange;
 }
-main #mainContent .projects-items img,
-main #mainContent .blogItems img {
+main .projects-items img,
+main .blogItems img {
   width: 300px;
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
   /* This will prevent distortion */
 }
-main #mainContent .mini-projects {
+main .mini-projects {
   display: flex;
   flex-direction: column;
   width: 100%;
   gap: 2vh;
 }
-main #mainContent .mini-projects .mini-projects-items {
+main .mini-projects .mini-projects-items {
   display: flex;
 }
-main #mainContent .mini-projects .mini-projects-items .mini-projects-item {
+main .mini-projects .mini-projects-items .mini-projects-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2vh;
 }
-main #mainContent .mini-projects .mini-projects-items .mini-projects-item img {
+main .mini-projects .mini-projects-items .mini-projects-item img {
   width: 55vh;
   height: 55vh;
   -o-object-fit: contain;
      object-fit: contain;
 }
-main #mainContent .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text {
+main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text {
   display: flex;
   text-align: center;
   align-items: center;
   flex-direction: column;
 }
-main #mainContent .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text h3 {
+main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text h3 {
   color: white;
 }
-main #mainContent .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-items__heading {
+main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-items__heading {
   color: orange;
   padding-top: 3px;
   cursor: pointer;
 }
-main #mainContent .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-items__links {
+main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-items__links {
   list-style: none;
   padding: 2vh 2vh 0;
 }
-main #mainContent .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-items__links a {
+main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-items__links a {
   color: orange;
   margin: 5px;
 }
-main #mainContent .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-items__heading:hover,
-main #mainContent .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-items__links a:hover {
+main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-items__heading:hover,
+main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-items__links a:hover {
   color: black;
   /* New color on hover */
   transition: color 0.3s;
 }
-main #mainContent .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-item__tags {
+main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-item__tags {
   padding: 3vh 0 3vh 0;
   display: flex;
   justify-content: center;
@@ -643,14 +640,14 @@ main #mainContent .mini-projects .mini-projects-items .mini-projects-item .mini-
   flex-wrap: wrap;
   gap: 1vh;
 }
-main #mainContent .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-item__tags span {
+main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-item__tags span {
   border: solid 1px white;
   padding: 1vh;
 }
-main #mainContent .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text p {
+main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text p {
   width: 70%;
 }
-main #mainContent .contributeTable {
+main .contributeTable {
   align-items: center;
   text-align: center;
   width: 100%;
@@ -659,74 +656,74 @@ main #mainContent .contributeTable {
   /* Collapse borders */
   border: 1px solid;
 }
-main #mainContent .contributeTable th {
+main .contributeTable th {
   background-color: black;
   color: white;
   padding: 15px;
   border: 1px solid;
 }
-main #mainContent .contributeTable td {
+main .contributeTable td {
   padding: 12px;
 }
-main #mainContent .contributeTable td:nth-child(1), main #mainContent .contributeTable td:nth-child(3) {
+main .contributeTable td:nth-child(1), main .contributeTable td:nth-child(3) {
   background-color: black;
   padding: 12px;
 }
-main #mainContent .contributeTable td:nth-child(1) {
+main .contributeTable td:nth-child(1) {
   border-right: 1px solid;
 }
-main #mainContent .contributeTable td:nth-child(3) {
+main .contributeTable td:nth-child(3) {
   border-left: 1px solid;
 }
-main #mainContent .contributeTable td a {
+main .contributeTable td a {
   color: orange;
 }
-main #mainContent .contributeTable td a:hover {
+main .contributeTable td a:hover {
   color: #0056b3;
 }
-main #mainContent .contributeTable tr:hover {
+main .contributeTable tr:hover {
   background-color: black;
   /* Add a hover effect to rows */
 }
-main #mainContent #aboutMe {
+main #aboutMe {
   display: flex;
   flex-direction: column;
   gap: 3vh;
 }
-main #mainContent #aboutMe img {
+main #aboutMe img {
   width: 60vh;
   height: 60vh;
   -o-object-fit: contain;
      object-fit: contain;
 }
-main #mainContent #aboutMe #aboutMeContent {
+main #aboutMe #aboutMeContent {
   display: flex;
 }
-main #mainContent #aboutMe #aboutMeContent p {
+main #aboutMe #aboutMeContent p {
   font-size: 18px;
   margin-right: 3vh;
   width: 100%;
   text-align: center;
 }
-main #mainContent #skillsAndTools {
+main #skillsAndTools {
   display: flex;
   flex-direction: column;
 }
-main #mainContent #skillsAndTools #skillsAndToolsList {
+main #skillsAndTools #skillsAndToolsList {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
 }
-main #mainContent #skillsAndTools #skillsAndToolsList img {
+main #skillsAndTools #skillsAndToolsList img {
   margin: 25px;
   width: 90px;
 }
-main #mainContent #skillsAndTools #skillsAndToolsList .listTooltip {
+main #skillsAndTools #skillsAndToolsList .listTooltip {
   position: relative;
   display: inline;
 }
-main #mainContent #skillsAndTools #skillsAndToolsList .listTooltip .listTooltipText {
+main #skillsAndTools #skillsAndToolsList .listTooltip .listTooltipText {
   visibility: hidden;
   background-color: #555;
   color: #fff;
@@ -745,32 +742,33 @@ main #mainContent #skillsAndTools #skillsAndToolsList .listTooltip .listTooltipT
   opacity: 0;
   transition: opacity 0.3s;
 }
-main #mainContent #skillsAndTools #skillsAndToolsList .listTooltip:hover .listTooltipText {
+main #skillsAndTools #skillsAndToolsList .listTooltip:hover .listTooltipText {
   visibility: visible;
   opacity: 1;
 }
-main #mainContent #skillsAndTools #skillsAndToolsList .listTooltip #javascriptText {
+main #skillsAndTools #skillsAndToolsList .listTooltip #javascriptText {
   margin-left: -45px;
 }
-main #mainContent #skillsAndTools #skillsAndToolsList .listTooltip #htmlText {
+main #skillsAndTools #skillsAndToolsList .listTooltip #htmlText {
   margin-left: -27px;
 }
-main #mainContent #skillsAndTools #skillsAndToolsList .listTooltip #cssText {
+main #skillsAndTools #skillsAndToolsList .listTooltip #cssText {
   margin-left: -20px;
 }
-main #mainContent #skillsAndTools #skillsAndToolsList .listTooltip #pycharmText {
+main #skillsAndTools #skillsAndToolsList .listTooltip #pycharmText {
   margin-left: -39px;
 }
-main #mainContent #skillsAndTools #skillsAndToolsList .listTooltip #windows11Text {
+main #skillsAndTools #skillsAndToolsList .listTooltip #windows11Text {
   margin-left: -50px;
 }
-main #mainContent #skillsAndTools #skillsAndToolsList .listTooltip #edgeText {
+main #skillsAndTools #skillsAndToolsList .listTooltip #edgeText {
   margin-left: -23px;
 }
 main .blogContainer {
   display: flex;
   flex-direction: column;
   background-color: black;
+  z-index: 1900;
 }
 main .blogContainer .blogItems {
   display: flex;
@@ -872,6 +870,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   position: relative;
+  top: 0;
   padding: 15vh 2vh 2vh;
   background-color: black;
   color: white;

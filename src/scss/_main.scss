@@ -1,487 +1,475 @@
 main {
-    background-color: black;
-
-    /* index.html */
-
-    .frontBanner {
-        text-align: center;
-        position: relative;
-        width: 100%;
-        top: 0;
-        background-size: cover;
-
-        #frontBannerText {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            position: relative;
-            top: 8vh;
-            z-index: 1100;
-
-            h1 {
-                font-size: 100px;
-                font-family: 'Imbue';
-            }
-
-            p {
-                font-size: 26px;
-            }
-        }
-    }
-
-    #mainContent {
-        position: relative;
-        top: 20vh;
-        z-index: 2000;
-        padding: 14px;
-
-        #underFrontBanner {
-            position: relative;
-            top: 15%;
-        }
-
-        .projects-container {
-            display: flex;
-            position: relative;
-            margin: 2vh 2vh 8vh;
-            overflow-x: scroll;
-            scrollbar-width: none;
-            /* Hide scrollbar for Firefox */
-
-            &::-webkit-scrollbar {
-                display: none;
-                /* Hide scrollbar for Edge, Chrome, Safari and Opera */
-            }
-            
-            .bothArrowButtons {
-                position: absolute;
-                top: -2vh;
-                transition: all 0.25s ease-in-out;
-                z-index: 1500;
-                
-                &:hover {
-                    color: black;
-                }
-            }
-    
-    
-            @keyframes shadow-inset-center {
-                0% {
-                    box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
-                }
-    
-                100% {
-                    box-shadow: inset 0 0 39px 0px rgba(0, 0, 0, 0.5);
-                }
-            }
-    
-            .arrowLeftButton {
-                left: 3%;
-                padding: 10px 6px 7px 11px;
-            }
-    
-            .arrowRightButton {
-                right: 3%;
-                padding: 10px 11px 7px 6px;
-            }
-
-            .projects-items {
-                display: flex;
-                justify-content: space-between;
-                width: 100%;
-                
-                .projects-item {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    width: 20%;
-
-                    img {
-                        object-fit: cover;
-                    }
-                    
-                    .projects-item__text {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        text-align: center;
-
-                        a {
-                            color: white;
-                            transition: color 0.3s;
-                            
-                            &:hover {
-                                color: orange;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        .projects-items img,
-        .blogItems img {
-            width: 300px;
-            height: 300px;
-            object-fit: cover;
-            /* This will prevent distortion */
-        }
-
-        .mini-projects {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            gap: 2vh;
-            
-            .mini-projects-items {
-                display: flex;
-
-                .mini-projects-item {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    gap: 2vh;
-
-                    img {
-                        width: 55vh;
-                        height: 55vh;
-                        object-fit: contain;
-                    }
-    
-                    .mini-projects-item__text {
-                        display: flex;
-                        text-align: center;
-                        align-items: center;
-                        flex-direction: column;
-
-                        h3 {
-                            color: white;
-                        }
-
-                        .mini-projects-items__heading {
-                            color: orange;
-                            padding-top: 3px;
-                            cursor: pointer;
-                        }
-                
-                        .mini-projects-items__links {
-                            list-style: none;
-                            padding: 2vh 2vh 0;
-    
-                            a {
-                                color: orange;
-                                margin: 5px;
-                            }
-                        }
-
-                        .mini-projects-items__heading:hover,
-                        .mini-projects-items__links a:hover {
-                            color: black;
-                            /* New color on hover */
-                            transition: color 0.3s;
-                        }
-
-                        .mini-projects-item__tags {
-                            padding: 3vh 0 3vh 0;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            flex-wrap: wrap;
-                            gap: 1vh;
-
-                            span {
-                                border: solid 1px white;
-                                padding: 1vh;
-                            }
-                        }
-
-                        p {
-                            width: 70%;
-                        }
-                    }
-                }
-
-            }
-        }
-
-        .contributeTable {
-            align-items: center;
-            text-align: center;
-            width: 100%;
-            /* Full-width table */
-            border-collapse: collapse;
-            /* Collapse borders */
-            border: 1px solid;
-
-            th {
-                background-color: black;
-                color: white;
-                padding: 15px;
-                border: 1px solid;
-            }
-
-            td {
-                padding: 12px;
-
-                &:nth-child(1), &:nth-child(3) {
-                    background-color: black;
-                    padding: 12px;
-                }
-
-                &:nth-child(1) {
-                    border-right: 1px solid;
-                }
-
-                &:nth-child(3) {
-                    border-left: 1px solid;
-                }
-
-                a {
-                    color: orange;
-
-                    &:hover {
-                        color: #0056b3;
-                    }
-                }
-            }
-
-            tr:hover {
-                background-color: black;
-                /* Add a hover effect to rows */
-            }
-        }
-
-        #aboutMe {
-            display: flex;
-            flex-direction: column;
-            gap: 3vh;
-
-            img {
-                width: 60vh;
-                height: 60vh;
-                object-fit: contain;
-            }
-
-            #aboutMeContent {
-                display: flex;
-    
-                p {
-                    font-size: 18px;
-                    margin-right: 3vh;
-                    width: 100%;
-                    text-align: center;
-                }
-            }
-        }
-
-        #skillsAndTools {
-            display: flex;
-            flex-direction: column;
-
-            #skillsAndToolsList {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-wrap: wrap;
-
-                img {
-                    margin: 25px;
-                    width: 90px;
-                }
-
-                .listTooltip {
-                    position: relative;
-                    display: inline;
-
-                    .listTooltipText {
-                        visibility: hidden;
-                        background-color: #555;
-                        color: #fff;
-                        text-align: center;
-                        padding: 5px 5px;
-                        border-radius: 6px;
-            
-                        /* Position the tooltip text */
-                        position: absolute;
-                        z-index: 1009;
-                        top: 50%;
-                        /* Place the tooltip text above the tooltip */
-                        left: 50%;
-                        margin-left: -30px;
-                        /* Use half of the width to center the tooltip text */
-            
-                        /* Fade in tooltip */
-                        opacity: 0;
-                        transition: opacity 0.3s;
-                    }
-
-                    &:hover .listTooltipText {
-                        visibility: visible;
-                        opacity: 1;
-                    }
-
-                    #javascriptText {
-                        margin-left: -45px;
-                    }
-            
-                    #htmlText {
-                        margin-left: -27px;
-                    }
-            
-                    #cssText {
-                        margin-left: -20px;
-                    }
-            
-                    #pycharmText {
-                        margin-left: -39px;
-                    }
-            
-                    #windows11Text {
-                        margin-left: -50px;
-                    }
-            
-                    #edgeText {
-                        margin-left: -23px;
-                    }
-                }
-            }
-        }
-    }
-
-    /* blog.html */
-
-    .blogContainer {
-        display: flex;
-        flex-direction: column;
-        background-color: black;
-        
-        .blogItems {
-            display: flex;
-            margin: 15px 20px 10px 5px;
-            
-            .blogTextContainer {
-                margin: 15px 0 0 25px;
-                
-                .blogItemsHeading {
-                    color: orange;
-                }
-                
-                .blogItemsTags {
-                    justify-content: unset;
-                }
-                
-                .blogPostDate {
-                    position: relative;
-                    top: 10px;
-                    color: orange;
-                    font-size: 18px;
-                }
-
-                .blogItemsText {
-                    font-size: 20px;
-                    padding: 5px 0 10px 0;
-                }
-
-                .readArticle {
-                    color: white;
-                    background-color: brown;
-                    padding: 8px;
-                    box-shadow: inset 0 0 0 0 black;
-                    transition: color .8s ease-in-out, box-shadow .3s ease-in-out;
-
-                    &:hover {
-                        color: #fff;
-                        box-shadow: inset 200px 0 0 0 black;
-                    }
-                }
-            }
-        }
-    }
-
-    /* Nested Pages */
-
-    #goBack {
-        background-color: brown;
-        padding: 5px;
-    }
-
-    #goBackText {
-        color: white;
-        font-size: 20px;
-    }
-
-    /* venn-diagram-blog.html */
-
-    #venn-diagram-content {
-        font-size: 18px;
-
-        .vennDiagramImgs {
-            width: 40%;
-            margin-right: 15px;
-        }
-    
-        #vennDiagramImg1 {
-            width: 34.15%;
-        }
-    
-        #vennDiagramImg3 {
-            float: left;
-            margin-right: 5vh;
-        }
-
-        #intersections {
-            padding-top: 15px;
-        }
-
-        #conclusion {
-            padding-top: 5px;
-        }
-    }
-
-
-    /* video-games.html */
-
-    #video-games-content {
-
-        img {
-            width: 30%;
-            background: cover;
-            margin-right: 15px;
-        }
-        
-        #trueCrimeGameStory {
-            padding-top: 5px;
-        }
-
-        #trueCrimeGameImg {
-            float: left;
-        }
-
-        #farCryImg {
-            float: right;
-        }
-
-        #csSourceImg,
-        #csGoImg {
-            float: left;
-        }
-
-        #csSourceMobileHeading {
-            display: none;
-        }        
-
-        #mobileGamesImg {
-            float: right;
-        }
-    }
+	background-color: black;
+	z-index: 2000;
+	padding: 14px;
+
+	/* index.html */
+
+	#home {
+		text-align: center;
+		position: relative;
+		width: 100%;
+		top: 0;
+		background-size: cover;
+
+		#homeText {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			position: relative;
+			top: 8vh;
+			z-index: 1100;
+
+			h1 {
+				font-size: 100px;
+				font-family: "Imbue";
+			}
+
+			p {
+				font-size: 26px;
+			}
+		}
+	}
+
+	.projects-container {
+		display: flex;
+		position: relative;
+		margin: 2vh 2vh 8vh;
+		overflow-x: scroll;
+		scrollbar-width: none;
+		/* Hide scrollbar for Firefox */
+
+		&::-webkit-scrollbar {
+			display: none;
+			/* Hide scrollbar for Edge, Chrome, Safari and Opera */
+		}
+
+		.bothArrowButtons {
+			position: absolute;
+			top: -2vh;
+			transition: all 0.25s ease-in-out;
+			z-index: 1500;
+
+			&:hover {
+				color: black;
+			}
+		}
+
+		@keyframes shadow-inset-center {
+			0% {
+				box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
+			}
+
+			100% {
+				box-shadow: inset 0 0 39px 0px rgba(0, 0, 0, 0.5);
+			}
+		}
+
+		.arrowLeftButton {
+			left: 3%;
+			padding: 10px 6px 7px 11px;
+		}
+
+		.arrowRightButton {
+			right: 3%;
+			padding: 10px 11px 7px 6px;
+		}
+
+		.projects-items {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+
+			.projects-item {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				width: 20%;
+
+				img {
+					object-fit: cover;
+				}
+
+				.projects-item__text {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					text-align: center;
+
+					a {
+						color: white;
+						transition: color 0.3s;
+
+						&:hover {
+							color: orange;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.projects-items img,
+	.blogItems img {
+		width: 300px;
+		height: 300px;
+		object-fit: cover;
+		/* This will prevent distortion */
+	}
+
+	.mini-projects {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		gap: 2vh;
+
+		.mini-projects-items {
+			display: flex;
+
+			.mini-projects-item {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 2vh;
+
+				img {
+					width: 55vh;
+					height: 55vh;
+					object-fit: contain;
+				}
+
+				.mini-projects-item__text {
+					display: flex;
+					text-align: center;
+					align-items: center;
+					flex-direction: column;
+
+					h3 {
+						color: white;
+					}
+
+					.mini-projects-items__heading {
+						color: orange;
+						padding-top: 3px;
+						cursor: pointer;
+					}
+
+					.mini-projects-items__links {
+						list-style: none;
+						padding: 2vh 2vh 0;
+
+						a {
+							color: orange;
+							margin: 5px;
+						}
+					}
+
+					.mini-projects-items__heading:hover,
+					.mini-projects-items__links a:hover {
+						color: black;
+						/* New color on hover */
+						transition: color 0.3s;
+					}
+
+					.mini-projects-item__tags {
+						padding: 3vh 0 3vh 0;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						flex-wrap: wrap;
+						gap: 1vh;
+
+						span {
+							border: solid 1px white;
+							padding: 1vh;
+						}
+					}
+
+					p {
+						width: 70%;
+					}
+				}
+			}
+		}
+	}
+
+	.contributeTable {
+		align-items: center;
+		text-align: center;
+		width: 100%;
+		/* Full-width table */
+		border-collapse: collapse;
+		/* Collapse borders */
+		border: 1px solid;
+
+		th {
+			background-color: black;
+			color: white;
+			padding: 15px;
+			border: 1px solid;
+		}
+
+		td {
+			padding: 12px;
+
+			&:nth-child(1),
+			&:nth-child(3) {
+				background-color: black;
+				padding: 12px;
+			}
+
+			&:nth-child(1) {
+				border-right: 1px solid;
+			}
+
+			&:nth-child(3) {
+				border-left: 1px solid;
+			}
+
+			a {
+				color: orange;
+
+				&:hover {
+					color: #0056b3;
+				}
+			}
+		}
+
+		tr:hover {
+			background-color: black;
+			/* Add a hover effect to rows */
+		}
+	}
+
+	#aboutMe {
+		display: flex;
+		flex-direction: column;
+		gap: 3vh;
+
+		img {
+			width: 60vh;
+			height: 60vh;
+			object-fit: contain;
+		}
+
+		#aboutMeContent {
+			display: flex;
+
+			p {
+				font-size: 18px;
+				margin-right: 3vh;
+				width: 100%;
+				text-align: center;
+			}
+		}
+	}
+
+	#skillsAndTools {
+		display: flex;
+		flex-direction: column;
+
+		#skillsAndToolsList {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-wrap: wrap;
+
+			img {
+				margin: 25px;
+				width: 90px;
+			}
+
+			.listTooltip {
+				position: relative;
+				display: inline;
+
+				.listTooltipText {
+					visibility: hidden;
+					background-color: #555;
+					color: #fff;
+					text-align: center;
+					padding: 5px 5px;
+					border-radius: 6px;
+
+					/* Position the tooltip text */
+					position: absolute;
+					z-index: 1009;
+					top: 50%;
+					/* Place the tooltip text above the tooltip */
+					left: 50%;
+					margin-left: -30px;
+					/* Use half of the width to center the tooltip text */
+
+					/* Fade in tooltip */
+					opacity: 0;
+					transition: opacity 0.3s;
+				}
+
+				&:hover .listTooltipText {
+					visibility: visible;
+					opacity: 1;
+				}
+
+				#javascriptText {
+					margin-left: -45px;
+				}
+
+				#htmlText {
+					margin-left: -27px;
+				}
+
+				#cssText {
+					margin-left: -20px;
+				}
+
+				#pycharmText {
+					margin-left: -39px;
+				}
+
+				#windows11Text {
+					margin-left: -50px;
+				}
+
+				#edgeText {
+					margin-left: -23px;
+				}
+			}
+		}
+	}
+
+	/* blog.html */
+
+	.blogContainer {
+		display: flex;
+		flex-direction: column;
+		background-color: black;
+        z-index: 1900;
+
+		.blogItems {
+			display: flex;
+			margin: 15px 20px 10px 5px;
+
+			.blogTextContainer {
+				margin: 15px 0 0 25px;
+
+				.blogItemsHeading {
+					color: orange;
+				}
+
+				.blogItemsTags {
+					justify-content: unset;
+				}
+
+				.blogPostDate {
+					position: relative;
+					top: 10px;
+					color: orange;
+					font-size: 18px;
+				}
+
+				.blogItemsText {
+					font-size: 20px;
+					padding: 5px 0 10px 0;
+				}
+
+				.readArticle {
+					color: white;
+					background-color: brown;
+					padding: 8px;
+					box-shadow: inset 0 0 0 0 black;
+					transition: color 0.8s ease-in-out, box-shadow 0.3s ease-in-out;
+
+					&:hover {
+						color: #fff;
+						box-shadow: inset 200px 0 0 0 black;
+					}
+				}
+			}
+		}
+	}
+
+	/* Nested Pages */
+
+	#goBack {
+		background-color: brown;
+		padding: 5px;
+	}
+
+	#goBackText {
+		color: white;
+		font-size: 20px;
+	}
+
+	/* venn-diagram-blog.html */
+
+	#venn-diagram-content {
+		font-size: 18px;
+
+		.vennDiagramImgs {
+			width: 40%;
+			margin-right: 15px;
+		}
+
+		#vennDiagramImg1 {
+			width: 34.15%;
+		}
+
+		#vennDiagramImg3 {
+			float: left;
+			margin-right: 5vh;
+		}
+
+		#intersections {
+			padding-top: 15px;
+		}
+
+		#conclusion {
+			padding-top: 5px;
+		}
+	}
+
+	/* video-games.html */
+
+	#video-games-content {
+		img {
+			width: 30%;
+			background: cover;
+			margin-right: 15px;
+		}
+
+		#trueCrimeGameStory {
+			padding-top: 5px;
+		}
+
+		#trueCrimeGameImg {
+			float: left;
+		}
+
+		#farCryImg {
+			float: right;
+		}
+
+		#csSourceImg,
+		#csGoImg {
+			float: left;
+		}
+
+		#csSourceMobileHeading {
+			display: none;
+		}
+
+		#mobileGamesImg {
+			float: right;
+		}
+	}
 }
 
 #blogMain {
-    margin: 10px;
+	margin: 10px;
 }
 
 #blogPage {
-    overflow-x: hidden;
+	overflow-x: hidden;
 }
