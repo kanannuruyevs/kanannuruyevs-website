@@ -29,7 +29,7 @@ ul {
 
 h2 {
   font-family: "Imbue";
-  color: var(--persianGreen);
+  color: var(--persian-green);
   font-size: 64px;
   line-height: 80%;
   text-transform: uppercase;
@@ -362,10 +362,10 @@ details > summary::marker {
 #topBtn {
   z-index: 10;
   cursor: pointer;
-  transition: 0.5s ease-in-out;
+  transition: 0.32s ease-in-out;
 }
 #topBtn:hover {
-  color: #f9f9f9;
+  color: var(--mango-yellow);
 }
 
 header {
@@ -404,7 +404,7 @@ header .nav-menu ul li a {
   font-size: large;
 }
 header .nav-menu ul li a:hover {
-  color: #544F92;
+  color: var(--mango-yellow);
   transition: transform 0.3s ease-in-out;
 }
 header .nav-menu ul li a::before {
@@ -523,12 +523,20 @@ main .projects-container::-webkit-scrollbar {
 }
 main .projects-container .bothArrowButtons {
   position: absolute;
-  top: -2vh;
+  top: 20vh;
   transition: all 0.25s ease-in-out;
   z-index: 1500;
 }
 main .projects-container .bothArrowButtons:hover {
-  color: black;
+  color: var(--persian-green);
+}
+main .projects-container .arrowLeftButton {
+  left: 0;
+  padding: 10px 6px 7px 11px;
+}
+main .projects-container .arrowRightButton {
+  right: 0;
+  padding: 10px 11px 7px 6px;
 }
 @keyframes shadow-inset-center {
   0% {
@@ -537,14 +545,6 @@ main .projects-container .bothArrowButtons:hover {
   100% {
     box-shadow: inset 0 0 39px 0px rgba(0, 0, 0, 0.5);
   }
-}
-main .projects-container .arrowLeftButton {
-  left: 3%;
-  padding: 10px 6px 7px 11px;
-}
-main .projects-container .arrowRightButton {
-  right: 3%;
-  padding: 10px 11px 7px 6px;
 }
 main .projects-container .projects-items {
   display: flex;
@@ -610,25 +610,31 @@ main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item
   align-items: center;
   flex-direction: column;
 }
-main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text h3 {
-  color: white;
-}
-main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-items__heading {
-  color: orange;
-  padding-top: 3px;
+main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text summary h3 {
   cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text summary h3:hover {
+  color: var(--mango-yellow) !important;
+}
+main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text a h3 {
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text a h3:hover {
+  color: var(--mango-yellow);
 }
 main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-items__links {
   list-style: none;
   padding: 2vh 2vh 0;
 }
 main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-items__links a {
-  color: orange;
+  color: white;
   margin: 5px;
 }
 main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-items__heading:hover,
 main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-items__links a:hover {
-  color: black;
+  color: var(--mango-yellow);
   /* New color on hover */
   transition: color 0.3s;
 }
@@ -677,9 +683,10 @@ main .contributeTable td:nth-child(3) {
 }
 main .contributeTable td a {
   color: orange;
+  transition: 0.25s ease-in-out;
 }
 main .contributeTable td a:hover {
-  color: #0056b3;
+  color: var(--persian-green);
 }
 main .contributeTable tr:hover {
   background-color: black;
@@ -703,7 +710,6 @@ main #aboutMe #aboutMeContent p {
   font-size: 18px;
   margin-right: 3vh;
   width: 100%;
-  text-align: center;
 }
 main #skillsAndTools {
   display: flex;
@@ -775,13 +781,17 @@ main .blogContainer .blogItems {
   margin: 15px 20px 10px 5px;
 }
 main .blogContainer .blogItems .blogTextContainer {
-  margin: 15px 0 0 25px;
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+  line-height: 45px;
 }
 main .blogContainer .blogItems .blogTextContainer .blogItemsHeading {
   color: orange;
 }
-main .blogContainer .blogItems .blogTextContainer .blogItemsTags {
-  justify-content: unset;
+main .blogContainer .blogItems .blogTextContainer .blogItemsTags .first-tag, main .blogContainer .blogItems .blogTextContainer .blogItemsTags .otherTags {
+  border: solid 1px white;
+  padding: 1vh;
 }
 main .blogContainer .blogItems .blogTextContainer .blogPostDate {
   position: relative;
@@ -794,15 +804,14 @@ main .blogContainer .blogItems .blogTextContainer .blogItemsText {
   padding: 5px 0 10px 0;
 }
 main .blogContainer .blogItems .blogTextContainer .readArticle {
-  color: white;
-  background-color: brown;
+  color: var(--persian-green);
+  background-color: var(--lotion-white);
   padding: 8px;
-  box-shadow: inset 0 0 0 0 black;
-  transition: color 0.8s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: color 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
 }
 main .blogContainer .blogItems .blogTextContainer .readArticle:hover {
-  color: #fff;
-  box-shadow: inset 200px 0 0 0 black;
+  color: var(--lotion-white);
+  box-shadow: inset 200px 0 0 0 var(--persian-green);
 }
 main #goBack {
   background-color: brown;

@@ -37,7 +37,7 @@ header {
                     font-size: large;
                     
                     &:hover {
-                        color: #544F92;
+                        color: var(--mango-yellow);
                         transition: transform 0.3s ease-in-out;
                     }
 
