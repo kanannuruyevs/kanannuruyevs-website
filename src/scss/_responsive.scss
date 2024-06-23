@@ -1,3 +1,7 @@
+.otherTagsMobile {
+    display: none;
+}
+
 @media only screen and (max-width: 1252px) and (prefers-color-scheme: dark) {
 
     #aboutMe {
@@ -6,6 +10,7 @@
     }
 
     #aboutMeContent {
+        flex-direction: column;
         width: 100%;
         height: unset;
     }
@@ -15,6 +20,48 @@
 
 @media only screen and (max-width: 800px) and (prefers-color-scheme: dark) {
     /* Styles for typical tablets and mobiles screens */
+
+    #home {
+
+        h1 {
+            font-size: 60px !important;
+        }
+
+        p {
+            font-size: 24px !important;
+        }
+    }
+
+    .marqueeEffect li {
+        width: unset;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 55px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    #aboutMeContent {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    #aboutMe img {
+        margin: 2vh auto;
+    }
+
+    table {
+        font-size: small;
+    }
+
+    .mini-projects-item img {
+        height: unset !important;
+        margin-top: 2vh;
+    }
 
     header {
         display: flex;
@@ -132,7 +179,7 @@
             padding: 5px;
         }
     }
-
+    
     .bothArrowButtons {
         display: none !important;
     }
@@ -149,16 +196,12 @@
         padding: 10px 40px 9px 18px;
     }
 
-    .projects-container, .blogContainer {
-        flex-direction: column;
-    }
-
     .projects-container {
 
         .projects-items {
             display: flex;
             flex-direction: column;
-            gap: 4vh;
+            gap: 10vh;
 
             .projects-item {
                 width: 100% !important;
@@ -196,16 +239,25 @@
     .projects-items, .blogItems {
         text-align: center;
         align-items: center;
-        margin: unset;
+        margin: unset !important;
         flex-direction: column;
+    }
+
+    .blogTextContainer {
+        padding: unset !important;
+        margin-bottom: 5vh;
+
+        .blogItemsHeading {
+            margin-top: 2vh;
+        }
+
+        .blogPostDate {
+            top: 14px !important;
+        }
     }
 
     .project-items {
         margin-bottom: 20px;
-    }
-
-    .blogItems {
-        padding: 40px 0 20px 0;
     }
 
     .projects-items img, .blogItems img {
@@ -223,20 +275,19 @@
         width: unset;
     }
 
-    .text-container, .blogTextContainer {
-        margin-left: 0;
-    }
-
     .tags {
         width: 100%;
     }
 
-    .blogItemsTags {
-        display: unset;
+    .otherTagsMBTI {
+        display: none;
     }
 
     .blogItemsText {
-        font-size: 18px;
+        font-size: 18px !important;
+        line-height: 5vh !important;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
     }
 
     .mini-projects-items {
@@ -260,7 +311,7 @@
     }
 
     #skillsAndTools img {
-        width: 55px;
+        width: 80px !important;
     }
 
     #windows11Text {
@@ -274,7 +325,10 @@
     }
 
     footer {
-        position: relative;
-        top: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
 }

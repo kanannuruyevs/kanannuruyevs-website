@@ -610,11 +610,11 @@ main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item
   align-items: center;
   flex-direction: column;
 }
-main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text summary h3 {
+main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text h3 {
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
-main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text summary h3:hover {
+main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text h3:hover {
   color: var(--mango-yellow) !important;
 }
 main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text a h3 {
@@ -651,7 +651,7 @@ main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item
   padding: 1vh;
 }
 main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text p {
-  width: 70%;
+  width: 85%;
 }
 main .contributeTable {
   align-items: center;
@@ -801,7 +801,8 @@ main .blogContainer .blogItems .blogTextContainer .blogPostDate {
 }
 main .blogContainer .blogItems .blogTextContainer .blogItemsText {
   font-size: 20px;
-  padding: 5px 0 10px 0;
+  padding: 10px 0 10px 0;
+  line-height: 6vh;
 }
 main .blogContainer .blogItems .blogTextContainer .readArticle {
   color: var(--persian-green);
@@ -889,12 +890,17 @@ footer div {
   padding-top: 5vh;
 }
 
+.otherTagsMobile {
+  display: none;
+}
+
 @media only screen and (max-width: 1252px) and (prefers-color-scheme: dark) {
   #aboutMe {
     flex-direction: column;
     height: unset;
   }
   #aboutMeContent {
+    flex-direction: column;
     width: 100%;
     height: unset;
   }
@@ -902,6 +908,36 @@ footer div {
 /* Decorations for Mobile Version */
 @media only screen and (max-width: 800px) and (prefers-color-scheme: dark) {
   /* Styles for typical tablets and mobiles screens */
+  #home h1 {
+    font-size: 60px !important;
+  }
+  #home p {
+    font-size: 24px !important;
+  }
+  .marqueeEffect li {
+    width: unset;
+  }
+  h2 {
+    text-align: center;
+    font-size: 55px;
+  }
+  h3 {
+    font-size: 22px;
+  }
+  #aboutMeContent {
+    text-align: center;
+    font-size: 16px;
+  }
+  #aboutMe img {
+    margin: 2vh auto;
+  }
+  table {
+    font-size: small;
+  }
+  .mini-projects-item img {
+    height: unset !important;
+    margin-top: 2vh;
+  }
   header {
     display: flex;
     align-items: center;
@@ -1012,13 +1048,10 @@ footer div {
   .blogBanner {
     padding: 10px 40px 9px 18px;
   }
-  .projects-container, .blogContainer {
-    flex-direction: column;
-  }
   .projects-container .projects-items {
     display: flex;
     flex-direction: column;
-    gap: 4vh;
+    gap: 10vh;
   }
   .projects-container .projects-items .projects-item {
     width: 100% !important;
@@ -1047,14 +1080,21 @@ footer div {
   .projects-items, .blogItems {
     text-align: center;
     align-items: center;
-    margin: unset;
+    margin: unset !important;
     flex-direction: column;
+  }
+  .blogTextContainer {
+    padding: unset !important;
+    margin-bottom: 5vh;
+  }
+  .blogTextContainer .blogItemsHeading {
+    margin-top: 2vh;
+  }
+  .blogTextContainer .blogPostDate {
+    top: 14px !important;
   }
   .project-items {
     margin-bottom: 20px;
-  }
-  .blogItems {
-    padding: 40px 0 20px 0;
   }
   .projects-items img, .blogItems img {
     max-width: 100%;
@@ -1068,17 +1108,17 @@ footer div {
     margin-bottom: 40px;
     width: unset;
   }
-  .text-container, .blogTextContainer {
-    margin-left: 0;
-  }
   .tags {
     width: 100%;
   }
-  .blogItemsTags {
-    display: unset;
+  .otherTagsMBTI {
+    display: none;
   }
   .blogItemsText {
-    font-size: 18px;
+    font-size: 18px !important;
+    line-height: 5vh !important;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
   }
   .mini-projects-items {
     display: flex;
@@ -1094,7 +1134,7 @@ footer div {
     width: 100% !important;
   }
   #skillsAndTools img {
-    width: 55px;
+    width: 80px !important;
   }
   #windows11Text {
     margin-left: -38px;
@@ -1105,8 +1145,11 @@ footer div {
     width: 145px;
   }
   footer {
-    position: relative;
-    top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 }
 /* Venn Diagram */

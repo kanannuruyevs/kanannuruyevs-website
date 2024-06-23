@@ -146,15 +146,12 @@ main {
 					align-items: center;
 					flex-direction: column;
 
-					summary {
-
-						h3 {
-							cursor: pointer;
-							transition: 0.3s ease-in-out;
-						
-							&:hover {
-								color: var(--mango-yellow) !important;
-							}
+					h3 {
+						cursor: pointer;
+						transition: 0.3s ease-in-out;
+					
+						&:hover {
+							color: var(--mango-yellow) !important;
 						}
 					}
 
@@ -201,7 +198,7 @@ main {
 					}
 
 					p {
-						width: 70%;
+						width: 85%;
 					}
 				}
 			}
@@ -391,7 +388,8 @@ main {
 
 				.blogItemsText {
 					font-size: 20px;
-					padding: 5px 0 10px 0;
+					padding: 10px 0 10px 0;
+					line-height: 6vh;
 				}
 
 				.readArticle {

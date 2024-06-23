@@ -61,13 +61,40 @@ document.onscroll = function () {
     }
 };
 
-const projectsSwiper = new Swiper('.projects-container', {
+let projectsSwiper = new Swiper('.projects-container', {
   slidesPerView: '3', // Adjust this value to control how many slides are visible at a time
   navigation: {
     prevEl: '.arrowLeftButton',
     nextEl: '.arrowRightButton',
+    breakpoints: {
+      // When the screen width is less than 768px
+      800: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+          enabled: false, // Disable Swiper on small screens
+      }
+    },
   },
 });
+
+function checkScreenSize() {
+  if (window.innerWidth <= 800) {
+      if (projectsSwiper) {
+          projectsSwiper.destroy(true, true); // Destroy the Swiper instance
+          projectsSwiper = null;
+      }
+  } else {
+      if (!projectsSwiper) {
+          initSwiper(); // Initialize Swiper
+      }
+  }
+}
+
+// Initialize Swiper or destroy it based on the initial screen size
+checkScreenSize();
+
+// Add event listener to check screen size on resize
+window.addEventListener('resize', checkScreenSize);
 
 // Update year in footer tag
 const updateYear = new Date().getFullYear();
