@@ -1,6 +1,9 @@
 // Select the body or a larger container
 const container = document.body; // or document.querySelector('.your-container');
 
+// Header background appearing by scrolling
+const header = document.querySelector('header');
+
 // Select the burger menu and the elements you want to show/hide
 const burgerMenu = document.querySelector('.burger-menu');
 const navMenu = document.querySelector('.nav-menu');
@@ -44,9 +47,6 @@ document.addEventListener('click', function(event) {
   }
 });
 
-// Header background appearing by scrolling
-const header = document.querySelector('header');
-
 // Make headline id element disappear when scrolling down
 document.onscroll = function () {
     const scrollPosition = window.scrollY;
@@ -80,12 +80,12 @@ let projectsSwiper = new Swiper('.projects-container', {
 function checkScreenSize() {
   if (window.innerWidth <= 800) {
       if (projectsSwiper) {
-          projectsSwiper.destroy(true, true); // Destroy the Swiper instance
-          projectsSwiper = null;
+        projectsSwiper.destroy(true, true); // Destroy the Swiper instance
+        projectsSwiper = null;
       }
   } else {
       if (!projectsSwiper) {
-          initSwiper(); // Initialize Swiper
+        initSwiper(); // Initialize Swiper
       }
   }
 }

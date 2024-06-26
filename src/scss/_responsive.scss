@@ -136,21 +136,21 @@
     /* nav-menu for mobile view */
     .nav-menu {
         display: none; /* Hide the mobile menu by default */
-        background-color: black;
+        background-color: rgb(33, 37, 41);
         position: absolute !important;
-        top: 5vh !important;
+        top: 0 !important;
         left: -1vh !important;
         width: 21vh; /* Adjust the width of the menu as needed */
         height: 100vh;
-        padding-top: 60px; /* Adjust the padding to avoid overlapping with the header */
+        padding-top: 40px; /* Adjust the padding to avoid overlapping with the header */
         padding-left: 10px;
         z-index: 1000; /* Increase if necessary */
 
         ul {
             display: inline-block;
             list-style: none;
-            padding: 0;
-            margin-top: 40px;
+            padding-left: 1px;
+            margin-top: 30px;
 
             li {
                 margin-bottom: 20px;
@@ -158,10 +158,10 @@
 
                 a {
                     display: block;
-                    padding: 10px 7.5vh 10px 15px;
+                    padding: 10px 7.5vh 0px 15px !important;
                     color: white;
+                    font-size: medium !important;
                     border: none; /* No border */
-                    cursor: pointer; /* Cursor style */
                 }
             
             }
@@ -171,12 +171,12 @@
     .social-links {
         display: none !important; /* Hide the social links by default */
         position: absolute;
-        top: 70vh; /* Adjust if necessary */
-        left: 4vh;
+        top: 75vh; /* Adjust if necessary */
+        left: 0;
         z-index: 1001; /* Increase if necessary */
 
         li {
-            padding: 5px;
+            padding: 8px 12px;
         }
     }
     
@@ -321,7 +321,7 @@
     .show {
         display: flex !important;
         flex-wrap: wrap;
-        width: 145px;
+        width: 160px;
     }
 
     footer {
