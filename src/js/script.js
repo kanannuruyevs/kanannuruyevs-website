@@ -3,6 +3,7 @@ const container = document.body; // or document.querySelector('.your-container')
 
 // Header background appearing by scrolling
 const header = document.querySelector('header');
+const homeHeader = document.getElementById('homeHeader');
 
 // Select the burger menu and the elements you want to show/hide
 const burgerMenu = document.querySelector('.burger-menu');
@@ -56,8 +57,10 @@ document.onscroll = function () {
 
     if (scrollPosition > threshold) {
         header.style.backgroundColor = '#212529';
+        homeHeader.style.backgroundColor = '#212529';
     } else {
-        header.style.backgroundColor = 'transparent';
+        header.style.backgroundColor = 'black';
+        homeHeader.style.backgroundColor = 'transparent';
     }
 };
 

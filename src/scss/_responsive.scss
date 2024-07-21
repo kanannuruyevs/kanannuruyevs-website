@@ -1,7 +1,3 @@
-.otherTagsMobile {
-    display: none;
-}
-
 @media only screen and (max-width: 1252px) and (prefers-color-scheme: dark) {
 
     #aboutMe {
@@ -275,12 +271,17 @@
         width: unset;
     }
 
-    .tags {
-        width: 100%;
-    }
+    .blogItemsTags {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 7px;
+        padding-top: 10px;
 
-    .otherTagsMBTI {
-        display: none;
+        .first-tag, .otherTags {
+            line-height: 20px;
+        }
     }
 
     .blogItemsText {

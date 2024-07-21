@@ -370,11 +370,12 @@ details > summary::marker {
 
 header {
   color: white;
+  background-color: black;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 3vh;
   position: sticky;
+  padding: 3vh;
   top: 0;
   z-index: 2500;
   transition: 0.1s ease-in-out;
@@ -474,6 +475,10 @@ header .social-links li a img {
 header .social-links li a img:hover {
   transform: scale(1.2);
   /* Scales the icon up when hovered over */
+}
+
+#homeHeader {
+  background-color: unset;
 }
 
 main {
@@ -764,7 +769,7 @@ main #skillsAndTools #skillsAndToolsList .listTooltip #cssText {
 main #skillsAndTools #skillsAndToolsList .listTooltip #pycharmText {
   margin-left: -39px;
 }
-main #skillsAndTools #skillsAndToolsList .listTooltip #windows11Text {
+main #skillsAndTools #skillsAndToolsList .listTooltip #windows10Text {
   margin-left: -50px;
 }
 main #skillsAndTools #skillsAndToolsList .listTooltip #edgeText {
@@ -867,10 +872,6 @@ main #video-games-content #mobileGamesImg {
   float: right;
 }
 
-#blogMain {
-  margin: 10px;
-}
-
 #blogPage {
   overflow-x: hidden;
 }
@@ -888,10 +889,6 @@ footer {
 }
 footer div {
   padding-top: 5vh;
-}
-
-.otherTagsMobile {
-  display: none;
 }
 
 @media only screen and (max-width: 1252px) and (prefers-color-scheme: dark) {
@@ -1108,11 +1105,16 @@ footer div {
     margin-bottom: 40px;
     width: unset;
   }
-  .tags {
-    width: 100%;
+  .blogItemsTags {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 7px;
+    padding-top: 10px;
   }
-  .otherTagsMBTI {
-    display: none;
+  .blogItemsTags .first-tag, .blogItemsTags .otherTags {
+    line-height: 20px;
   }
   .blogItemsText {
     font-size: 18px !important;
