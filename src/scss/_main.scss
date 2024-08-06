@@ -22,8 +22,8 @@ main {
 			z-index: 1100;
 
 			h1 {
-				font-size: 100px;
-				font-family: "Imbue";
+				font-size: 85px;
+				font-family: "Raleway";
 			}
 
 			p {
@@ -52,7 +52,7 @@ main {
 			z-index: 1500;
 
 			&:hover {
-				color: var(--persian-green);
+				color: var(--royal-blue);
 			}
 		}
 
@@ -149,9 +149,10 @@ main {
 					h3 {
 						cursor: pointer;
 						transition: 0.3s ease-in-out;
+						font-size: 26px;
 					
 						&:hover {
-							color: var(--mango-yellow) !important;
+							color: var(--light-lemon-yellow) !important;
 						}
 					}
 
@@ -160,8 +161,8 @@ main {
 							color: white;
 							transition: 0.3s ease-in-out;
 
-							&:hover{
-								color: var(--mango-yellow);
+							&:hover {
+								color: var(--light-lemon-yellow);
 							}
 						}
 					}
@@ -178,7 +179,7 @@ main {
 
 					.mini-projects-items__heading:hover,
 					.mini-projects-items__links a:hover {
-						color: var(--mango-yellow);
+						color: var(--light-lemon-yellow);
 						/* New color on hover */
 						transition: color 0.3s;
 					}
@@ -243,7 +244,7 @@ main {
 				transition: 0.25s ease-in-out;
 
 				&:hover {
-					color: var(--persian-green);
+					color: var(--royal-blue);
 				}
 			}
 		}
@@ -254,7 +255,7 @@ main {
 		}
 	}
 
-	#aboutMe {
+	#about {
 		display: flex;
 		flex-direction: column;
 		gap: 3vh;
@@ -369,9 +370,12 @@ main {
 
 				.blogItemsHeading {
 					color: orange;
+					font-size: 28px;
+
 				}
 
 				.blogItemsTags {
+					margin: 5px 0;
 
 					.first-tag, .otherTags {
 						border: solid 1px white;
@@ -388,19 +392,19 @@ main {
 
 				.blogItemsText {
 					font-size: 20px;
-					padding: 10px 0 10px 0;
+					margin: 5px 0;
 					line-height: 6vh;
 				}
 
 				.readArticle {
-					color: var(--persian-green);
-					background-color: var(--lotion-white);
+					color: var(--royal-blue);
+					background-color: var(--light-gray);
 					padding: 8px;
 					transition: color 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
 
 					&:hover {
-						color: var(--lotion-white);
-						box-shadow: inset 200px 0 0 0 var(--persian-green);
+						color: var(--light-gray);
+						box-shadow: inset 200px 0 0 0 var(--royal-blue);
 					}
 				}
 			}
@@ -425,26 +429,18 @@ main {
 		font-size: 18px;
 
 		.vennDiagramImgs {
-			width: 40%;
-			margin-right: 15px;
+			width: 50%;
+			margin: 3vh 0;
 		}
 
-		#vennDiagramImg1 {
-			width: 34.15%;
+		h2 {
+			margin: 4vh 0;
 		}
 
-		#vennDiagramImg3 {
-			float: left;
-			margin-right: 5vh;
+		p {
+			margin: 2vh 0;
 		}
 
-		#intersections {
-			padding-top: 15px;
-		}
-
-		#conclusion {
-			padding-top: 5px;
-		}
 	}
 
 	/* video-games.html */
