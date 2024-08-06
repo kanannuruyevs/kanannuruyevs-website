@@ -16,6 +16,8 @@
     }
 }
 
+// Implementing burger menu for max-width: 1067px
+
 /* Decorations for Mobile Version */
 
 @media only screen and (max-width: 800px) and (prefers-color-scheme: dark) {
@@ -55,6 +57,11 @@
 
     table {
         font-size: small;
+
+        td:nth-child(1):before {
+            margin-right: 0 !important;
+            content: counter(my-sec-counter) ". " !important;
+        }
     }
 
     header {
