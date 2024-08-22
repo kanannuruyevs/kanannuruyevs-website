@@ -31,11 +31,7 @@ h2 {
   color: var(--royal-blue);
   font-size: 34px;
   text-transform: uppercase;
-}
-
-section {
-  position: relative;
-  top: 22vh;
+  margin: 5vh 0 2vh;
 }
 
 ::-webkit-scrollbar {
@@ -61,8 +57,13 @@ html {
 body {
   margin: 0;
   height: 100%;
+  width: 100%;
   font-family: "Lato", sans-serif;
   color: white;
+}
+
+section {
+	padding: 0 14px;
 }
 
 .containers-header {
@@ -81,11 +82,11 @@ body {
 
 /* Website Background */
 .animatedBack {
-  position: absolute;
-  width: 100%;
+  position: relative;
+  width: 101%;
   height: 55vh;
-  top: 0;
-  left: 0;
+  top: -14px;
+  left: -14px;
   background: #1e1f2f;
   overflow: hidden;
   z-index: 1;
@@ -303,7 +304,6 @@ details > summary::marker {
 /* Marquee Effect */
 
 .marqueeEffect {
-  margin: -2.3vh;
   display: flex;
   align-items: center;
   -webkit-mask-image-: linear-gradient(
@@ -314,15 +314,17 @@ details > summary::marker {
     rgba(0, 0, 0, 0) 100%
   );
   position: relative;
-  top: 15vh;
+  top: 13vh;
+  left: -2.3vh;
   overflow: hidden;
   background-color: yellow;
   z-index: 2;
+  width: 102.1%;
 
   li {
     padding: 2vh;
     flex-shrink: 0;
-    width: 64%;
+    width: 50%;
     animation: marquee 10s infinite linear;
     color: black;
   }

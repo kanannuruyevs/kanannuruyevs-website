@@ -30,11 +30,7 @@ h2 {
   color: var(--royal-blue);
   font-size: 34px;
   text-transform: uppercase;
-}
-
-section {
-  position: relative;
-  top: 22vh;
+  margin: 5vh 0 2vh;
 }
 
 ::-webkit-scrollbar {
@@ -60,8 +56,13 @@ html {
 body {
   margin: 0;
   height: 100%;
+  width: 100%;
   font-family: "Lato", sans-serif;
   color: white;
+}
+
+section {
+  padding: 0 14px;
 }
 
 .containers-header {
@@ -79,11 +80,11 @@ body {
 }
 /* Website Background */
 .animatedBack {
-  position: absolute;
-  width: 100%;
+  position: relative;
+  width: 101%;
   height: 55vh;
-  top: 0;
-  left: 0;
+  top: -14px;
+  left: -14px;
   background: #1e1f2f;
   overflow: hidden;
   z-index: 1;
@@ -318,21 +319,22 @@ details > summary::marker {
 
 /* Marquee Effect */
 .marqueeEffect {
-  margin: -2.3vh;
   display: flex;
   align-items: center;
   -webkit-mask-image-: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%);
   position: relative;
-  top: 15vh;
+  top: 13vh;
+  left: -2.3vh;
   overflow: hidden;
   background-color: yellow;
   z-index: 2;
+  width: 102.1%;
   /* Marquee Animation */
 }
 .marqueeEffect li {
   padding: 2vh;
   flex-shrink: 0;
-  width: 64%;
+  width: 50%;
   animation: marquee 10s infinite linear;
   color: black;
 }
@@ -366,7 +368,7 @@ details > summary::marker {
 
 header {
   color: white;
-  background-color: black;
+  background-color: black !important;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -480,8 +482,6 @@ header .social-links li a img:hover {
 
 main {
   background-color: black;
-  z-index: 2000;
-  padding: 14px;
   /* index.html */
   /* blog.html */
   /* Nested Pages */
@@ -490,18 +490,13 @@ main {
 }
 main #home {
   text-align: center;
-  position: relative;
+  position: absolute;
+  top: 30vh;
   width: 100%;
-  top: 0;
   background-size: cover;
 }
 main #home #homeText {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   position: relative;
-  top: 8vh;
   z-index: 1100;
 }
 main #home #homeText h1 {
@@ -512,69 +507,36 @@ main #home #homeText p {
   font-size: 26px;
 }
 main .projects-container {
-  display: flex;
   position: relative;
-  margin: 2vh 2vh 8vh;
-  overflow-x: scroll;
-  scrollbar-width: none;
-  /* Hide scrollbar for Firefox */
-}
-main .projects-container::-webkit-scrollbar {
-  display: none;
-  /* Hide scrollbar for Edge, Chrome, Safari and Opera */
-}
-main .projects-container .bothArrowButtons {
-  position: absolute;
-  top: 20vh;
-  transition: all 0.25s ease-in-out;
-  z-index: 1500;
-}
-main .projects-container .bothArrowButtons:hover {
-  color: var(--royal-blue);
-}
-main .projects-container .arrowLeftButton {
-  left: 0;
-  padding: 10px 6px 7px 11px;
-}
-main .projects-container .arrowRightButton {
-  right: 0;
-  padding: 10px 11px 7px 6px;
-}
-@keyframes shadow-inset-center {
-  0% {
-    box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
-  }
-  100% {
-    box-shadow: inset 0 0 39px 0px rgba(0, 0, 0, 0.5);
-  }
-}
-main .projects-container .projects-items {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 5vh;
 }
-main .projects-container .projects-items .projects-item {
+main .projects-container .projects-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 20%;
+  gap: 2vh;
+  width: 30%;
 }
-main .projects-container .projects-items .projects-item img {
+main .projects-container .projects-item img {
   -o-object-fit: cover;
      object-fit: cover;
+  width: 80%;
 }
-main .projects-container .projects-items .projects-item .projects-item__text {
+main .projects-container .projects-item .projects-item__text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-main .projects-container .projects-items .projects-item .projects-item__text a {
+main .projects-container .projects-item .projects-item__text a {
   color: white;
   transition: color 0.3s;
 }
-main .projects-container .projects-items .projects-item .projects-item__text a:hover {
+main .projects-container .projects-item .projects-item__text a:hover {
   color: orange;
 }
 main .projects-items img,
@@ -589,7 +551,6 @@ main .mini-projects {
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 2vh;
 }
 main .mini-projects .mini-projects-items {
   display: flex;
@@ -702,10 +663,11 @@ main #about img {
 }
 main #about #aboutMeContent {
   display: flex;
+  align-items: center;
+  margin-top: -5vh;
 }
 main #about #aboutMeContent p {
-  font-size: 18px;
-  margin-right: 3vh;
+  font-size: 21px;
   width: 100%;
 }
 main #skillsAndTools {
@@ -771,7 +733,6 @@ main .blogContainer {
   display: flex;
   flex-direction: column;
   background-color: black;
-  z-index: 1900;
 }
 main .blogContainer .blogItems {
   display: flex;
@@ -790,7 +751,8 @@ main .blogContainer .blogItems .blogTextContainer .blogItemsHeading {
 main .blogContainer .blogItems .blogTextContainer .blogItemsTags {
   margin: 5px 0;
 }
-main .blogContainer .blogItems .blogTextContainer .blogItemsTags .first-tag, main .blogContainer .blogItems .blogTextContainer .blogItemsTags .otherTags {
+main .blogContainer .blogItems .blogTextContainer .blogItemsTags .first-tag,
+main .blogContainer .blogItems .blogTextContainer .blogItemsTags .otherTags {
   border: solid 1px white;
   padding: 1vh;
 }
@@ -871,10 +833,10 @@ footer {
   align-items: center;
   position: relative;
   top: 0;
-  padding: 15vh 2vh 2vh;
+  padding: 2vh;
   background-color: black;
   color: white;
-  z-index: 1500;
+  z-index: 15000;
 }
 footer div {
   padding-top: 5vh;
@@ -894,14 +856,17 @@ footer div {
     margin: 2vh 0;
   }
 }
-/* Decorations for Mobile Version */
-@media only screen and (max-width: 800px) and (prefers-color-scheme: dark) {
-  /* Styles for typical tablets and mobiles screens */
+@media only screen and (max-width: 1100px) and (prefers-color-scheme: dark) {
   #home h1 {
     font-size: 60px !important;
   }
   #home p {
     font-size: 24px !important;
+  }
+  .marqueeEffect {
+    top: 11.5vh;
+    left: -1.4vh;
+    width: 106.6%;
   }
   .marqueeEffect li {
     width: unset;
@@ -909,10 +874,9 @@ footer div {
   h2 {
     text-align: center;
     font-size: 35px;
-    margin: 3vh 0;
   }
   #about {
-    gap: unset !important;
+    margin-top: 3vh;
   }
   #about #aboutMeContent {
     text-align: center;
@@ -1011,11 +975,36 @@ footer div {
     font-size: medium !important;
     border: none; /* No border */
   }
+  .show {
+    display: flex !important;
+    flex-wrap: wrap;
+    width: 200px;
+    height: 59rem;
+  }
+  .social-links {
+    display: none; /* Hide the social links by default */
+    position: absolute;
+    top: 75vh; /* Adjust if necessary */
+    left: 2vh;
+    z-index: 1001; /* Increase if necessary */
+    height: 0;
+  }
+  .social-links li {
+    padding: 8px 12px !important;
+    height: 10vh;
+  }
+}
+/* Decorations for Mobile Version */
+@media only screen and (max-width: 800px) and (prefers-color-scheme: dark) {
+  /* Styles for typical tablets and mobiles screens */
+  .animatedBack {
+    width: 103.2%;
+  }
   .social-links {
     display: none !important; /* Hide the social links by default */
     position: absolute;
-    top: 75vh; /* Adjust if necessary */
-    left: 0;
+    top: 76vh; /* Adjust if necessary */
+    left: 2vh;
     z-index: 1001; /* Increase if necessary */
   }
   .social-links li {
@@ -1035,16 +1024,11 @@ footer div {
   }
   .projects-container {
     margin: unset !important;
-    overflow-x: hidden !important;
-  }
-  .projects-container .projects-items {
     display: flex;
     flex-direction: column;
   }
-  .projects-container .projects-items .projects-item {
+  .projects-container .projects-item {
     width: 100% !important;
-    height: 100% !important;
-    margin-bottom: 10vh;
   }
   #vennDiagramHead, #videoGamesHeading {
     text-align: center;
@@ -1133,12 +1117,6 @@ footer div {
   }
   #windows11Text {
     margin-left: -38px;
-  }
-  .show {
-    display: flex !important;
-    flex-wrap: wrap;
-    width: 160px;
-    max-height: 140vh;
   }
   footer {
     display: flex;
@@ -1286,9 +1264,6 @@ footer div {
   .keywords {
     left: -7%;
     top: 101%;
-  }
-  footer {
-    margin-top: 80px;
   }
 }
 @media only screen and (max-width: 1032px) and (prefers-color-scheme: dark) {

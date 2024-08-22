@@ -8,8 +8,8 @@
     <link rel="icon" id="favicon" href="./src/media/home/my-picture-favicon.jpeg" type="image/jpeg">
     <link rel="stylesheet" href="./src/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
     <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
 </head>
 
@@ -153,10 +153,6 @@
                     <span id="windows10Text" class="listTooltipText">Windows 10</span>
                 </div>
                 <div class="listTooltip">
-                    <img alt="Firefox" src="./src/media/skills-and-tools/firefox-svgrepo-com.svg" />
-                    <span class="listTooltipText">Firefox</span>
-                </div>
-                <div class="listTooltip">
                     <img alt="Edge" src="./src/media/skills-and-tools/edge-svgrepo-com.svg" />
                     <span id="edgeText" class="listTooltipText">Edge</span>
                 </div>
@@ -164,79 +160,71 @@
         </section>
         <section id="projects">
             <h2>Projects</h2>
-            <div class="projects-container swiper-container">
-                <div class="arrowLeftButton bothArrowButtons">
-                    <i class="fa-solid fa-angle-left arrows"></i>
+            <div class="projects-container">
+                <div class="projects-item">
+                    <img src="./src/media/projects-covers/hivency-template-task.png" alt="Hivency Project Cover"
+                        media="(max-width: 768px)" />
+                    <div class="projects-item__text">
+                        <a rel="noopener" target="_blank" 
+                            href="https://github.com/kanansnote/hivency-template-task">
+                            <h3>Hivency Template Task</h3>
+                        </a>
+                    </div>
                 </div>
-                <div class="arrowRightButton bothArrowButtons">
-                    <i class="fa-solid fa-angle-right arrows"></i>
+                <div class="projects-item">
+                    <img src="./src/media/projects-covers/ogenix-template-task.png" alt="Business Calendar Project"
+                        media="(max-width: 768px)" />
+                    <div class="projects-item__text">
+                        <a rel="noopener" target="_blank" 
+                            href="https://github.com/kanansnote/ogenix-template-task">
+                            <h3>Ogenix Template Task</h3>
+                        </a>
+                    </div>
                 </div>
-                <div class="projects-items swiper-wrapper">
-                    <div class="projects-item swiper-slide">
-                        <img src="./src/media/projects-covers/hivency-template-task.png" alt="Hivency Project Cover"
-                            media="(max-width: 768px)" />
-                        <div class="projects-item__text">
-                            <a rel="noopener" target="_blank" 
-                                href="https://github.com/kanansnote/hivency-template-task">
-                                <h3>Hivency Template Task</h3>
-                            </a>
-                        </div>
+                <div class="projects-item">
+                    <img src="./src/media/projects-covers/xhibiter-template-task.png" alt="Programming Exercises Project"
+                        media="(max-width: 768px)" />
+                    <div class="projects-item__text">
+                        <a rel="noopener" target="_blank"
+                            href="https://github.com/kanansnote/xhibiter-template-task">
+                            <h3>Xhibiter Template Task</h3>
+                        </a>
                     </div>
-                    <div class="projects-item swiper-slide">
-                        <img src="./src/media/projects-covers/ogenix-template-task.png" alt="Business Calendar Project"
-                            media="(max-width: 768px)" />
-                        <div class="projects-item__text">
-                            <a rel="noopener" target="_blank" 
-                                href="https://github.com/kanansnote/ogenix-template-task">
-                                <h3>Ogenix Template Task</h3>
-                            </a>
-                        </div>
+                </div>
+                <div class="projects-item">
+                    <img src="./src/media/projects-covers/themedox-template-task.png" alt="Programming Exercises Project"
+                        media="(max-width: 768px)" />
+                    <div class="projects-item__text">
+                        <a rel="noopener" target="_blank"
+                            href="https://github.com/kanansnote/xhibiter-template-task">
+                            <h3>Themedox Template Task</h3>
+                        </a>
                     </div>
-                    <div class="projects-item swiper-slide">
-                        <img src="./src/media/projects-covers/xhibiter-template-task.png" alt="Programming Exercises Project"
-                            media="(max-width: 768px)" />
-                        <div class="projects-item__text">
-                            <a rel="noopener" target="_blank"
-                                href="https://github.com/kanansnote/xhibiter-template-task">
-                                <h3>Xhibiter Template Task</h3>
-                            </a>
-                        </div>
+                </div>
+                <div class="projects-item">
+                    <img src="./src/media/projects-covers/startbootstrap-template-task.png" alt="Programming Exercises Project"
+                        media="(max-width: 768px)" />
+                    <div class="projects-item__text">
+                        <a rel="noopener" target="_blank"
+                            href="https://github.com/kanansnote/startbootstrap-template-task">
+                            <h3>Start Bootstrap Template Task</h3>
+                        </a>
                     </div>
-                    <div class="projects-item swiper-slide">
-                        <img src="./src/media/projects-covers/themedox-template-task.png" alt="Programming Exercises Project"
-                            media="(max-width: 768px)" />
-                        <div class="projects-item__text">
-                            <a rel="noopener" target="_blank"
-                                href="https://github.com/kanansnote/xhibiter-template-task">
-                                <h3>Themedox Template Task</h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="projects-item swiper-slide">
-                        <img src="./src/media/projects-covers/startbootstrap-template-task.png" alt="Programming Exercises Project"
-                            media="(max-width: 768px)" />
-                        <div class="projects-item__text">
-                            <a rel="noopener" target="_blank"
-                                href="https://github.com/kanansnote/startbootstrap-template-task">
-                                <h3>Start Bootstrap Template Task</h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="projects-item swiper-slide">
-                        <img src="./src/media/projects-covers/stag-template-task.jpeg" alt="Programming Exercises Project"
-                            media="(max-width: 768px)" />
-                        <div class="projects-item__text">
-                            <a rel="noopener" target="_blank"
-                                href="https://github.com/kanansnote/stag-template-task">
-                                <h3>Stag Template Task</h3>
-                            </a>
-                        </div>
+                </div>
+                <div class="projects-item">
+                    <img src="./src/media/projects-covers/stag-template-task.jpeg" alt="Programming Exercises Project"
+                        media="(max-width: 768px)" />
+                    <div class="projects-item__text">
+                        <a rel="noopener" target="_blank"
+                            href="https://github.com/kanansnote/stag-template-task">
+                            <h3>Stag Template Task</h3>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
         <section class="mini-projects">
-            <div class=".mini-projects__header">
+            <div class="mini-projects__header">
                 <h2>Mini Projects</h2>
             </div>
             <div class="mini-projects-items">

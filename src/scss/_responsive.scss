@@ -16,13 +16,7 @@
     }
 }
 
-// Implementing burger menu for max-width: 1067px
-
-/* Decorations for Mobile Version */
-
-@media only screen and (max-width: 800px) and (prefers-color-scheme: dark) {
-    /* Styles for typical tablets and mobiles screens */
-
+@media only screen and (max-width: 1100px) and (prefers-color-scheme: dark) {
     #home {
 
         h1 {
@@ -34,19 +28,23 @@
         }
     }
 
-    .marqueeEffect li {
-        width: unset;
+    .marqueeEffect {
+        top: 11.5vh;
+        left: -1.4vh;
+        width: 106.6%;
+
+        li {
+            width: unset;
+        }
     }
 
     h2 {
         text-align: center;
         font-size: 35px;
-        margin: 3vh 0;
-
     }
 
     #about {
-        gap: unset !important;
+        margin-top: 3vh;
 
         #aboutMeContent {
             text-align: center;
@@ -167,11 +165,44 @@
         }
     }
 
+    .show {
+        display: flex !important;
+        flex-wrap: wrap;
+        width: 200px;
+        height: 59rem;
+    }
+
+    .social-links {
+        display: none; /* Hide the social links by default */
+        position: absolute;
+        top: 75vh; /* Adjust if necessary */
+        left: 2vh;
+        z-index: 1001; /* Increase if necessary */
+        height: 0;
+
+        li {
+            padding: 8px 12px !important;
+            height: 10vh;
+        }
+    }
+
+}
+
+
+/* Decorations for Mobile Version */
+
+@media only screen and (max-width: 800px) and (prefers-color-scheme: dark) {
+    /* Styles for typical tablets and mobiles screens */
+
+    .animatedBack {
+        width: 103.2%;
+    }
+
     .social-links {
         display: none !important; /* Hide the social links by default */
         position: absolute;
-        top: 75vh; /* Adjust if necessary */
-        left: 0;
+        top: 76vh; /* Adjust if necessary */
+        left: 2vh;
         z-index: 1001; /* Increase if necessary */
 
         li {
@@ -197,17 +228,11 @@
 
     .projects-container {
         margin: unset !important;
-        overflow-x: hidden !important;
+        display: flex;
+        flex-direction: column;
 
-        .projects-items {
-            display: flex;
-            flex-direction: column;
-
-            .projects-item {
-                width: 100% !important;
-                height: 100% !important;
-                margin-bottom: 10vh;
-            }
+        .projects-item {
+            width: 100% !important;
         }
     }
 
@@ -324,13 +349,6 @@
 
     #windows11Text {
         margin-left: -38px;
-    }
-
-    .show {
-        display: flex !important;
-        flex-wrap: wrap;
-        width: 160px;
-        max-height: 140vh;
     }
 
     footer {
