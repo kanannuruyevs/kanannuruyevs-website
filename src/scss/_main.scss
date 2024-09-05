@@ -383,10 +383,10 @@ main {
 
 	/* venn-diagram-blog.html */
 
-	#venn-diagram-content {
+	.blogPageContent {
 		font-size: 18px;
 
-		.vennDiagramImgs {
+		img {
 			width: 50%;
 			margin: 3vh 0;
 		}
@@ -399,44 +399,17 @@ main {
 			margin: 2vh 0;
 		}
 
-	}
-
-	/* video-games.html */
-
-	#video-games-content {
-		img {
-			width: 30%;
-			background: cover;
-			margin-right: 15px;
-		}
-
-		#trueCrimeGameStory {
-			padding-top: 5px;
-		}
-
-		#trueCrimeGameImg {
-			float: left;
-		}
-
-		#farCryImg {
-			float: right;
-		}
-
-		#csSourceImg,
-		#csGoImg {
-			float: left;
-		}
-
-		#csSourceMobileHeading {
-			display: none;
-		}
-
-		#mobileGamesImg {
-			float: right;
+		.videoGamesBlogPart {
+			margin: unset;
 		}
 	}
+
 }
 
 #blogPage {
 	overflow-x: hidden;
+}
+
+.burgerMenuDisabled {
+	visibility: hidden;
 }

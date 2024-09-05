@@ -400,7 +400,7 @@ header .nav-menu ul li a {
   position: relative;
   color: white;
   text-decoration: none;
-  padding: 15px;
+  padding: 0 15px;
   font-size: large;
 }
 header .nav-menu ul li a:hover {
@@ -458,6 +458,7 @@ header .social-links {
   gap: 1vh;
   list-style: none;
   margin-right: 5vh;
+  margin-top: 0.7vh;
 }
 header .social-links li a {
   text-decoration: none;
@@ -486,7 +487,6 @@ main {
   /* blog.html */
   /* Nested Pages */
   /* venn-diagram-blog.html */
-  /* video-games.html */
 }
 main #home {
   text-align: center;
@@ -785,46 +785,29 @@ main #goBackText {
   color: white;
   font-size: 20px;
 }
-main #venn-diagram-content {
+main .blogPageContent {
   font-size: 18px;
 }
-main #venn-diagram-content .vennDiagramImgs {
+main .blogPageContent img {
   width: 50%;
   margin: 3vh 0;
 }
-main #venn-diagram-content h2 {
+main .blogPageContent h2 {
   margin: 4vh 0;
 }
-main #venn-diagram-content p {
+main .blogPageContent p {
   margin: 2vh 0;
 }
-main #video-games-content img {
-  width: 30%;
-  background: cover;
-  margin-right: 15px;
-}
-main #video-games-content #trueCrimeGameStory {
-  padding-top: 5px;
-}
-main #video-games-content #trueCrimeGameImg {
-  float: left;
-}
-main #video-games-content #farCryImg {
-  float: right;
-}
-main #video-games-content #csSourceImg,
-main #video-games-content #csGoImg {
-  float: left;
-}
-main #video-games-content #csSourceMobileHeading {
-  display: none;
-}
-main #video-games-content #mobileGamesImg {
-  float: right;
+main .blogPageContent .videoGamesBlogPart {
+  margin: unset;
 }
 
 #blogPage {
   overflow-x: hidden;
+}
+
+.burgerMenuDisabled {
+  visibility: hidden;
 }
 
 footer {
@@ -839,7 +822,7 @@ footer {
   z-index: 15000;
 }
 footer div {
-  padding-top: 5vh;
+  padding-top: 2vh;
 }
 
 @media only screen and (max-width: 1252px) and (prefers-color-scheme: dark) {
@@ -856,7 +839,7 @@ footer div {
     margin: 2vh 0;
   }
 }
-@media only screen and (max-width: 1100px) and (prefers-color-scheme: dark) {
+@media only screen and (max-width: 1120px) and (prefers-color-scheme: dark) {
   #home h1 {
     font-size: 60px !important;
   }
@@ -885,7 +868,7 @@ footer div {
   table {
     font-size: small;
   }
-  table td:nth-child(1):before {
+  .contributeTable td:nth-child(1):before {
     margin-right: 0 !important;
     content: counter(my-sec-counter) ". " !important;
   }
@@ -1016,6 +999,13 @@ footer div {
   #blogPage {
     overflow-x: hidden;
   }
+  .blogPageContent {
+    text-align: center;
+  }
+  .blogPageContent img {
+    width: 100% !important;
+    margin: unset !important;
+  }
   #blogText {
     font-size: 80px;
   }
@@ -1129,18 +1119,14 @@ footer div {
 /* Venn Diagram */
 #vennDiagramMain {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-#venn {
-  max-width: 100%;
-  margin-left: 0;
-}
-
-#venn h1, #content h1 {
+#vennH1 {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 25px;
-  line-height: 30px;
   text-align: center;
 }
 
@@ -1194,132 +1180,29 @@ footer div {
   background: #a3b48b;
 }
 
-/* Separate Circles */
-#content {
-  display: flex;
-  flex-direction: column;
-  margin: 15px auto;
-  text-align: center;
-}
-
-#content h1 {
-  margin-bottom: 40px;
-}
-
-.circles-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.circle {
-  width: 200px;
-  height: 200px;
-  line-height: 200px;
-  border-radius: 50%;
-  text-align: center;
-  color: white;
-  font-size: 16px;
-  text-transform: uppercase;
-  font-weight: 700;
-  margin: 0 15px 15px 10px;
-}
-
-.blue {
-  background-color: #3498db;
-}
-
-.green {
-  background-color: #16a085;
-}
-
-.red {
-  background-color: #e74c3c;
-}
-
 /* Keywords */
 .keywords {
   display: flex;
-  justify-content: center;
-  position: absolute;
-  right: 8%;
-  top: 70%;
+  flex-direction: column;
+  gap: 10vh;
+  margin: 5vh;
 }
-
 .keywords ul {
-  list-style: none;
-  text-align: left;
-  margin-left: 10vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
 }
-
 .keywords ul li {
-  line-height: 2em;
+  display: flex;
+  gap: 1vh;
 }
 
-.keywords ul li span {
-  margin-right: 5px;
-}
-
-@media only screen and (max-width: 1200px) and (prefers-color-scheme: dark) {
-  .keywords {
-    left: -7%;
-    top: 101%;
-  }
-}
-@media only screen and (max-width: 1032px) and (prefers-color-scheme: dark) {
-  .keywords {
-    top: 110%;
-    margin-right: 35vh;
-  }
-  .keywords ul {
-    margin-left: 3vh;
-  }
-  footer {
-    margin-top: unset;
-  }
-}
-@media only screen and (max-width: 800px) and (prefers-color-scheme: dark) {
+@media only screen and (max-width: 600px) and (prefers-color-scheme: dark) {
   #vennDiagramMain {
     flex-direction: column;
   }
-  #venn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  #venn h1 {
-    margin-bottom: 10px;
-  }
-  #content {
-    margin: 0;
-  }
-  #content h1 {
-    margin: 80vh 0 10px 0;
-  }
-  .circles-container {
-    margin-top: 20px;
-    justify-content: center;
-  }
-  .circle {
-    margin: 5px 5px;
-  }
   .keywords {
-    position: relative;
     flex-direction: row;
-    flex-wrap: wrap;
-    margin-right: unset;
-  }
-  .keywords ul, #venn {
-    margin-left: unset;
-  }
-}
-@media only screen and (max-width: 650px) and (prefers-color-scheme: dark) {
-  #venn h1 {
-    margin: -15vh 0 0 10px;
-  }
-  #content h1 {
-    margin-top: 63vh;
   }
 }
 #bizCalMain {

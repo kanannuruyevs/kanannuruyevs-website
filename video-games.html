@@ -12,18 +12,12 @@
 
 <body>
     <header>
-        <div class="burger-menu">
+        <div class="burger-menu burgerMenuDisabled">
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
         </div>
         <a class="username" href="index.html">kanansnote</a>
-        <nav class="nav-menu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
-        </nav>
         <ul class="social-links">
             <li><a href="mailto:kanansnote@gmail.com">
                     <img src="./src/media/social-links/gmail1-svgrepo-com.svg" alt="Gmail">
@@ -37,47 +31,29 @@
                     <img src="./src/media/social-links/telegram1-svgrepo-com.svg" alt="Telegram">
                 </a>
             </li>
+            <li><a href="https://www.instagram.com/kanansnote/">
+                    <img src="./src/media/social-links/instagram-svgrepo-com.svg" alt="Instagram">
+                </a>
+            </li>
             <li><a href="https://github.com/kanansnote">
                     <img src="./src/media/social-links/github1-svgrepo-com.svg" alt="GitHub">
                 </a>
             </li>
         </ul>
     </header>
-    <main id="blogMain">
-        <div class="animatedBack">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="blog-video-games">
-            <div id="video-games-content">
-                <h1 id="videoGamesHeading">Video Games interaction, since childhood. Occasionally.</h1>
-                <h3>True Crime: Streets of LA</h3>
-                <p id="trueCrimeGameStory">
+    <main>
+        <section class="blogPageContent">
+            <h1>Video Games interaction, since childhood. Occasionally.</h1>
+            <div class="videoGamesBlogPart">
+                <h2>True Crime: Streets of LA</h2>
+                <p>
                     One of my earliest memories of gaming is playing "True Crime: Streets of LA", a police detective game that was rated 16+. 
                     I was too young to play it, but I was fascinated by the story and the gameplay. I loved chasing down criminals, fighting them, and arresting them. 
                     I felt like I was making a difference in the city and bringing justice to the people.
                 </p>
-                <img id="trueCrimeGameImg" src="./src/media/video-games-blog/true-crime-streets-of-la.jpg"
+                <img src="./src/media/video-games-blog/true-crime-streets-of-la.jpg"
                     alt="True Crime: Streets of LA" />
-                <p class="videoGamesBlogP">
+                <p>
                     When I was in primary school, taking 4th class, a teacher gave us a task to make true and false statements about certain actions and what I did is saying something like this:<br><br>
 
                     <code>True Statement: I am 10 years old<br>
@@ -95,14 +71,16 @@
                     Lol, but obviously I wasn't become a person who works for law enforcement area. 
                     Maybe, I just was up to understanding the teacher's assignment better that lead me to handle it "professionally", so that I could get her attention in that way.
                 </p>
-                <h3>Far Cry</h3>
-                <img id="farCryImg" src="./src/media/video-games-blog/far-cry-1.jpg" alt="Far Cry" />
-                <p class="farCryGameStory">
+            </div>
+            <div class="videoGamesBlogPart">
+                <h2>Far Cry</h2>
+                <img src="./src/media/video-games-blog/far-cry-1.jpg" alt="Far Cry" />
+                <p>
                     The next game that I enjoyed playing a lot was Far Cry 1 and its modifications. 
                     This game offered me a great experience of exploring different locations and applying strategic thinking to overcome the challenges by using various weapons effectively.
                     I also liked how the game had missions that required me to succeed in different objectives.
                 </p>
-                <p class="farCryGameStory">
+                <p>
                     One of the aspects that I found both amusing and terrifying was the presence of mutants 
                     and the reactions of the human enemies that included a lot of weird cursing words against my game characters. 
                     I recall once where I encountered a mutant downstairs, and I threw a grenade at it, the grenade caused a glitch
@@ -114,25 +92,30 @@
                     This was a fun hobby for me, but I did not go too deep into it.
                     I was satisfied with the basic features that I had at my disposal.
                 </p>
-                <h3 id="csSourceMobileHeading">Counter Strike: Source</h3>
-                <img id="csSourceImg" src="./src/media/video-games-blog/counter-strike-source.png"
+            </div>
+            <div class="videoGamesBlogPart">
+                <h2>Counter Strike: Source</h2>
+                <img src="./src/media/video-games-blog/counter-strike-source.png"
                     alt="Counter-Strike: Source" />
-                <h3 id="csSourceDesktopHeading">Counter Strike: Source</h3>
-                <p class="csSourceStory">
+                <p>
                     Counter-Strike: Source was a great game, but I began to feel that I was investing too much time without much value. 
                     Although playing on community servers was enjoyable, I decided to shift to mobile games.
                 </p>
-                <h3>Mobile Games</h3>
-                <img id="mobileGamesImg" src="./src/media/video-games-blog/mobile-games-on-android.jpg"
+            </div>
+            <div class="videoGamesBlogPart">
+                <h2>Mobile Games</h2>
+                <img src="./src/media/video-games-blog/mobile-games-on-android.jpg"
                     alt="Mobile Games" />
-                <p id="mobileGamesStory">
+                <p>
                     During the era of mobile games, I sought to achieve small accomplishments to feel fulfilled during moments of boredom.
                     Consequently, I primarily engaged in RPG games, viewing them as a form of relaxation. 
                     However, I eventually quit as I found them to require too much thinking and focus, contrary to my initial goal of simply having fun and experiencing gameplay.
                 </p>
-                <h3 id="csGoHeading">Counter Strike: Global Offensive</h3>
-                <img id="csGoImg" src="./src/media/video-games-blog/cs-go.png" alt="Video Games" />
-                <p id="csGoStory">
+            </div>
+            <div class="videoGamesBlogPart">
+                <h2>Counter Strike: Global Offensive</h2>
+                <img src="./src/media/video-games-blog/cs-go.png" alt="Video Games" />
+                <p>
                     Counter-Strike: Global Offensive became my choice after taking a break. Playing this game, I sensed
                     a more mature gaming experience. Although I concentrated on improving my skills and understanding gameplay better, 
                     dealing with annoying and toxic players in random matches proved challenging, often leaving me frustrated and struggling to keep my composure.
@@ -147,10 +130,11 @@
                     I had to quit due to my current laptop not supporting CS2.
                 </p>
             </div>
-        </div>
+        </section>
     </main>
     <footer>
-        <p id="copyright"></p>
+        <div id="copyright"></div>
+        <div id="topBtn">Scroll to Top ↑</div>
     </footer>
     <script src="./src/js/script.js"></script>
 </body>

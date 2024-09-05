@@ -49,20 +49,21 @@ document.addEventListener('click', function(event) {
 });
 
 // Make headline id element disappear when scrolling down
-document.onscroll = function () {
-    const scrollPosition = window.scrollY;
 
-    // Determine desired scroll threshold (e.g., 50px):
-    const threshold = 50;
+// document.onscroll = function () {
+//     const scrollPosition = window.scrollY;
 
-    if (scrollPosition > threshold) {
-        header.style.backgroundColor = '#212529';
-        homeHeader.style.backgroundColor = '#212529';
-    } else {
-        header.style.backgroundColor = 'black';
-        homeHeader.style.backgroundColor = 'transparent';
-    }
-};
+//     // Determine desired scroll threshold (e.g., 50px):
+//     const threshold = 50;
+
+//     if (scrollPosition > threshold) {
+//         header.style.backgroundColor = '#212529';
+//         homeHeader.style.backgroundColor = '#212529';
+//     } else {
+//         header.style.backgroundColor = 'black';
+//         homeHeader.style.backgroundColor = 'transparent';
+//     }
+// };
 
 // Update year in footer tag
 const updateYear = new Date().getFullYear();

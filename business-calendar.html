@@ -12,7 +12,7 @@
 
 <body>
     <header>
-        <div class="burger-menu">
+        <div class="burger-menu burgerMenuDisabled">
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
@@ -44,28 +44,6 @@
         </ul>
     </header>
     <main id="bizCalMain">
-        <div class="animatedBack">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
         <table class="calendar JuneMonth">
             <div class="overlay-shape"></div>
             <caption class="calendarMonthBanner JuneMonthBanner">
@@ -567,7 +545,8 @@
             </tbody>
         </table>
         <footer>
-            <p id="copyright"></p>
+            <div id="copyright"></div>
+            <div id="topBtn">Scroll to Top ↑</div>
         </footer>
         <script src="./src/js/script.js"></script>
         <script src="./src/js/business-calendar.js"></script>
