@@ -158,25 +158,11 @@ main {
 	}
 
 	.contributeTable {
-		counter-reset: my-sec-counter;
 		width: 100%;
 		border: 1px solid;
 
-		// thead tr {
-		// 	background-color: unset !important;
-		// }
-
-		// tr:nth-child(odd) {
-		// 	background-color: #242424;
-		// }
-
-		// tr:nth-child(even) {
-		// 	background-color: #292929;
-		// }
-
 		th {
 			color: white;
-			// background-color: #333333;
 			padding: 15px;
 			text-align: left;
 			padding-left: 2vh;
@@ -187,12 +173,7 @@ main {
 		}
 
 		td {
-			padding: 12px;
-
-			&:nth-child(1),
-			&:nth-child(3) {
-				padding: 12px;
-			}
+			padding: 13px;
 
 			a {
 				color: orange;
@@ -201,13 +182,6 @@ main {
 				&:hover {
 					color: var(--royal-blue);
 				}
-			}
-
-			&:nth-child(1):before {
-				counter-increment: my-sec-counter;
-				content: counter(my-sec-counter) " ";
-				color: orange;
-				margin-right: 3vh;
 			}
 		}
 	}

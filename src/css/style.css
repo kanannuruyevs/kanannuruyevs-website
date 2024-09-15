@@ -618,7 +618,6 @@ main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item
   width: 85%;
 }
 main .contributeTable {
-  counter-reset: my-sec-counter;
   width: 100%;
   border: 1px solid;
 }
@@ -632,10 +631,7 @@ main .contributeTable th:nth-child(3) {
   padding-left: 1.85vh;
 }
 main .contributeTable td {
-  padding: 12px;
-}
-main .contributeTable td:nth-child(1), main .contributeTable td:nth-child(3) {
-  padding: 12px;
+  padding: 13px;
 }
 main .contributeTable td a {
   color: orange;
@@ -643,12 +639,6 @@ main .contributeTable td a {
 }
 main .contributeTable td a:hover {
   color: var(--royal-blue);
-}
-main .contributeTable td:nth-child(1):before {
-  counter-increment: my-sec-counter;
-  content: counter(my-sec-counter) " ";
-  color: orange;
-  margin-right: 3vh;
 }
 main #about {
   display: flex;
@@ -868,10 +858,6 @@ footer div {
   }
   table {
     font-size: small;
-  }
-  .contributeTable td:nth-child(1):before {
-    margin-right: 0 !important;
-    content: counter(my-sec-counter) ". " !important;
   }
   header {
     display: flex;

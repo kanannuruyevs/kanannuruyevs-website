@@ -17,6 +17,7 @@
 }
 
 @media only screen and (max-width: 1120px) and (prefers-color-scheme: dark) {
+    
     #home {
 
         h1 {
@@ -56,11 +57,6 @@
 
     table {
         font-size: small;
-    }
-
-    .contributeTable td:nth-child(1):before {
-        margin-right: 0 !important;
-        content: counter(my-sec-counter) ". " !important;
     }
 
     header {
