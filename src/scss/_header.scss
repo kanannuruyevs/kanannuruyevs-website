@@ -46,51 +46,35 @@ header {
                     &::before {
                         content: "";
                         position: absolute;
-                        bottom: 0;
-                        /* Text-in altından hərəkət etmək üçün */
+                        bottom: -5px;
                         left: 50%;
-                        /* Mərkəzdən başlamaq üçün */
                         width: 0;
                         height: 1px;
-                        /* Xətt uzunluğu */
                         background-color: white;
-                        /* Xətt rəngi */
                         transition: width 0.3s ease, left 0.3s ease;
-                        /* Animasiya üçün */
                         transform: translateX(-15%);
-                        /* Mərkəzi düzəltmək üçün */
                     }
 
                     &:hover::before {
                         width: 100%;
-                        /* Hover edildiyi zaman xəttin genişliyi 100% olacaq */
                         left: 0;
-                        /* Mərkəzə doğru */
                     }
 
                     &::after {
                         content: "";
                         position: absolute;
-                        bottom: 0;
-                        /* Text-in altından hərəkət etmək üçün */
+                        bottom: -5px;
                         right: 50%;
-                        /* Mərkəzdən başlamaq üçün */
                         width: 0;
                         height: 1px;
-                        /* Xətt uzunluğu */
                         background-color: white;
-                        /* Xətt rəngi */
                         transition: width 0.3s ease, right 0.3s ease;
-                        /* Animasiya üçün */
                         transform: translateX(15%);
-                        /* Mərkəzi düzəltmək üçün */
                     }
 
                     &:hover::after {
                         width: 100%;
-                        /* Hover edildiyi zaman xəttin genişliyi 100% olacaq */
                         right: 0;
-                        /* Mərkəzə doğru */
                     }
                 }
             }
@@ -101,7 +85,6 @@ header {
         display: flex;
         gap: 1vh;
         list-style: none;
-        margin-right: 5vh;
         margin-top: 0.7vh;
 
         li {
@@ -125,8 +108,4 @@ header {
             }
         }
     }
-}
-
-#homeHeader {
-    background-color: unset;
 }

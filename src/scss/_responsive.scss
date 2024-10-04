@@ -131,7 +131,7 @@
     /* nav-menu for mobile view */
     .nav-menu {
         display: none; /* Hide the mobile menu by default */
-        background-color: rgb(33, 37, 41);
+        background-color: black;
         position: absolute !important;
         top: 0 !important;
         left: -1vh !important;
@@ -156,8 +156,11 @@
                     color: white;
                     font-size: medium !important;
                     border: none; /* No border */
+
+                    &::before, &::after {
+                        background-color: unset !important;
+                    }
                 }
-            
             }
         }
     }
@@ -190,6 +193,17 @@
 
 @media only screen and (max-width: 800px) and (prefers-color-scheme: dark) {
     /* Styles for typical tablets and mobiles screens */
+
+    #home {
+
+        h1 {
+            font-size: 40px !important;
+        }
+
+        img {
+            width: 20% !important;
+        }
+    }
 
     .animatedBack {
         width: 103.2%;
@@ -362,6 +376,16 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 550px) and (prefers-color-scheme: dark) {
+    /* Styles for typical tablets and mobiles screens */
+
+    #home {
+        display: flex;
+        flex-direction: column;
         text-align: center;
     }
 }

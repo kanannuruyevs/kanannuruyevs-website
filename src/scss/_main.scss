@@ -1,80 +1,170 @@
 main {
-	background-color: black;
 
-	/* index.html */
+    #home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5vh;
+        position: absolute;
+        top: 18%;
+        z-index: 1;
 
-	#home {
-		text-align: center;
-		position: absolute;
-		top: 25vh;
-		width: 100%;
-		background-size: cover;
+        img {
+            width: 15%;
+        }
 
-		#homeText {
-			position: relative;
-			z-index: 1100;
+        #homeText {
+            
+            h1 {
+                font-size: 85px;
+                font-family: "Raleway";
+            }
+    
+            p {
+                font-size: 26px;
+            }
+        }
+    }
 
-			h1 {
-				font-size: 85px;
-				font-family: "Raleway";
-			}
+    #about {
+		display: flex;
+		flex-direction: column;
+		gap: 3vh;
+
+        h2 {
+            margin-bottom: -2vh;
+        }
+
+		#aboutMeContent {
+			display: flex;
+			align-items: center;
 
 			p {
-				font-size: 26px;
+				font-size: 21px;
+				width: 100%;
 			}
 		}
 	}
 
-	.projects-container {
-		position: relative;
+	#skillsAndTools {
 		display: flex;
-		justify-content: space-evenly;
-		flex-wrap: wrap;
-		gap: 5vh;
-		
-		.projects-item {
+		flex-direction: column;
+
+		#skillsAndToolsList {
 			display: flex;
-			flex-direction: column;
+            justify-content: center;
 			align-items: center;
-			gap: 2vh;
-			width: 30%;
+			flex-wrap: wrap;
 
 			img {
-				object-fit: cover;
-				width: 80%;
+				margin: 15px;
+				width: 90px;
 			}
 
-			.projects-item__text {
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
-				text-align: center;
+			.listTooltip {
+				position: relative;
+				display: inline;
 
-				a {
-					color: white;
-					transition: color 0.3s;
+				.listTooltipText {
+					visibility: hidden;
+					background-color: #555;
+					color: #fff;
+					text-align: center;
+					padding: 5px 5px;
+					border-radius: 6px;
 
-					&:hover {
-						color: orange;
-					}
+					/* Position the tooltip text */
+					position: absolute;
+					z-index: 1009;
+					top: 50%;
+					/* Place the tooltip text above the tooltip */
+					left: 50%;
+					margin-left: -30px;
+					/* Use half of the width to center the tooltip text */
+
+					/* Fade in tooltip */
+					opacity: 0;
+					transition: opacity 0.3s;
+				}
+
+				&:hover .listTooltipText {
+					visibility: visible;
+					opacity: 1;
+				}
+
+				#javascriptText {
+					margin-left: -45px;
+				}
+
+				#htmlText {
+					margin-left: -27px;
+				}
+
+				#cssText {
+					margin-left: -20px;
+				}
+
+				#pycharmText {
+					margin-left: -39px;
+				}
+
+				#windows10Text {
+					margin-left: -50px;
+				}
+
+				#edgeText {
+					margin-left: -23px;
 				}
 			}
 		}
 	}
 
-	.projects-items img,
-	.blogItems img {
-		width: 300px;
-		height: 300px;
-		object-fit: cover;
-		/* This will prevent distortion */
-	}
+    #projects {
+        display: flex;
+        flex-direction: column;
 
-	.mini-projects {
+        .projects-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5vh;
+            flex-wrap: wrap;
+            
+            .projects-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 2vh;
+                width: 30%;
+    
+                img {
+                    object-fit: cover;
+                    width: 80%;
+                }
+    
+                .projects-item__text {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+    
+                    a {
+                        color: white;
+                        transition: color 0.3s;
+    
+                        &:hover {
+                            color: orange;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .mini-projects {
 		display: flex;
 		flex-direction: column;
-		width: 100%;
 
 		.mini-projects-items {
 			display: flex;
@@ -157,7 +247,7 @@ main {
 		}
 	}
 
-	.contributeTable {
+    .contributeTable {
 		width: 100%;
 		border: 1px solid;
 
@@ -186,105 +276,7 @@ main {
 		}
 	}
 
-	#about {
-		display: flex;
-		flex-direction: column;
-		gap: 3vh;
-
-		img {
-			width: 60vh;
-			height: 60vh;
-			object-fit: contain;
-		}
-
-		#aboutMeContent {
-			display: flex;
-			align-items: center;
-			margin-top: -5vh;
-
-			p {
-				font-size: 21px;
-				width: 100%;
-			}
-		}
-	}
-
-	#skillsAndTools {
-		display: flex;
-		flex-direction: column;
-
-		#skillsAndToolsList {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex-wrap: wrap;
-
-			img {
-				margin: 25px;
-				width: 90px;
-			}
-
-			.listTooltip {
-				position: relative;
-				display: inline;
-
-				.listTooltipText {
-					visibility: hidden;
-					background-color: #555;
-					color: #fff;
-					text-align: center;
-					padding: 5px 5px;
-					border-radius: 6px;
-
-					/* Position the tooltip text */
-					position: absolute;
-					z-index: 1009;
-					top: 50%;
-					/* Place the tooltip text above the tooltip */
-					left: 50%;
-					margin-left: -30px;
-					/* Use half of the width to center the tooltip text */
-
-					/* Fade in tooltip */
-					opacity: 0;
-					transition: opacity 0.3s;
-				}
-
-				&:hover .listTooltipText {
-					visibility: visible;
-					opacity: 1;
-				}
-
-				#javascriptText {
-					margin-left: -45px;
-				}
-
-				#htmlText {
-					margin-left: -27px;
-				}
-
-				#cssText {
-					margin-left: -20px;
-				}
-
-				#pycharmText {
-					margin-left: -39px;
-				}
-
-				#windows10Text {
-					margin-left: -50px;
-				}
-
-				#edgeText {
-					margin-left: -23px;
-				}
-			}
-		}
-	}
-
-	/* blog.html */
-
-	.blogContainer {
+    .blogContainer {
 		display: flex;
 		flex-direction: column;
 		background-color: black;
@@ -292,6 +284,10 @@ main {
 		.blogItems {
 			display: flex;
 			margin: 15px 20px 10px 5px;
+
+            img {
+                width: 25%;
+            }
 
 			.blogTextContainer {
 				width: 100%;
@@ -343,47 +339,10 @@ main {
 		}
 	}
 
-	/* Nested Pages */
-
-	#goBack {
-		background-color: brown;
-		padding: 5px;
-	}
-
-	#goBackText {
-		color: white;
-		font-size: 20px;
-	}
-
-	/* venn-diagram-blog.html */
-
 	.blogPageContent {
-		font-size: 18px;
 
 		img {
 			width: 50%;
-			margin: 3vh 0;
-		}
-
-		h2 {
-			margin: 4vh 0;
-		}
-
-		p {
-			margin: 2vh 0;
-		}
-
-		.videoGamesBlogPart {
-			margin: unset;
 		}
 	}
-
-}
-
-#blogPage {
-	overflow-x: hidden;
-}
-
-.burgerMenuDisabled {
-	visibility: hidden;
 }
