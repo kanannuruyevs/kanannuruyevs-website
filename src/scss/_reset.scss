@@ -120,6 +120,12 @@ details > summary::marker {
     flex-shrink: 0;
     animation: marquee 10s infinite linear;
     color: black;
+
+    &::before {
+      content: "•";
+      position: absolute;
+      left: -0.8vh;
+    }
   }
 
   /* Marquee Animation */
