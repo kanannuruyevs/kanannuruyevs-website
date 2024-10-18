@@ -137,9 +137,8 @@
         left: -1vh !important;
         width: 21vh; /* Adjust the width of the menu as needed */
         height: 100vh;
-        padding-top: 40px; /* Adjust the padding to avoid overlapping with the header */
-        padding-left: 10px;
-        z-index: 1000; /* Increase if necessary */
+        padding-top: 30px; /* Adjust the padding to avoid overlapping with the header */
+        padding-left: 0 !important;
 
         ul {
             display: inline-block;
@@ -165,7 +164,7 @@
         }
     }
 
-    .show {
+    .showNavMenu {
         display: flex !important;
         flex-wrap: wrap;
         width: 200px;
@@ -173,17 +172,19 @@
     }
 
     .social-links {
-        display: none; /* Hide the social links by default */
-        position: absolute;
-        top: 75vh; /* Adjust if necessary */
-        left: 2vh;
-        z-index: 1001; /* Increase if necessary */
-        height: 0;
+        display: none;
 
         li {
-            padding: 8px 12px !important;
-            height: 10vh;
+            padding: 3vh 1vh 0 0;
         }
+    }
+
+    .showSocialLinks {
+        display: flex;
+        flex-wrap: wrap;
+        width: 170px;
+        position: fixed;
+        top: 72.5vh;
     }
 
 }
@@ -209,16 +210,23 @@
         width: 103.2%;
     }
 
-    .social-links {
-        display: none !important; /* Hide the social links by default */
-        position: absolute;
-        top: 76vh; /* Adjust if necessary */
-        left: 2vh;
-        z-index: 1001; /* Increase if necessary */
+    .nav-menu {
+        padding-left: 15px;
+        padding-top: 50px;
+    }
 
+    .social-links {
+        display: none; /* Hide the social links by default */
+ 
         li {
             padding: 8px 12px;
         }
+    }
+
+    .showSocialLinks {
+        position: fixed;
+        top: 65vh; /* Adjust if necessary */
+        left: 2vh;
     }
     
     .bothArrowButtons {

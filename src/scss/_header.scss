@@ -5,7 +5,7 @@ header {
     align-items: center;
     justify-content: space-between;
     position: sticky;
-    padding: 3vh;
+    padding: 3.5vh;
     top: 0;
     z-index: 2500;
     transition: 0.1s ease-in-out;
@@ -14,16 +14,13 @@ header {
         text-decoration: none;
         color: white;
         font-size: 24px;
-        position: absolute;
-        left: 4vh;
         font-family: "Raleway";
         font-weight: bold;
+        position: absolute;
     }
 
     /* Navigation Menu Decoration */
     .nav-menu {
-        position: absolute;
-        left: 27vh;
 
         ul {
 
@@ -75,34 +72,6 @@ header {
                     &:hover::after {
                         width: 100%;
                         right: 0;
-                    }
-                }
-            }
-        }
-    }
-
-    .social-links {
-        display: flex;
-        gap: 1vh;
-        list-style: none;
-        margin-top: 0.7vh;
-
-        li {
-
-            a {
-                text-decoration: none;
-
-                img {
-                    padding: 5px 5px 3px;
-                    width: 45px;
-                    height: 35px;
-                    transition: transform 0.3s ease-in-out;
-                    object-fit: contain;
-                    /* Adds a smooth transition effect */
-
-                    &:hover {
-                        transform: scale(1.2);
-                        /* Scales the icon up when hovered over */
                     }
                 }
             }

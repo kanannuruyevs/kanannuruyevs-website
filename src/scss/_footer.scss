@@ -12,4 +12,32 @@ footer {
     div {
         padding-top: 2vh;
     }
+
+    .social-links {
+        display: flex;
+        gap: 1vh;
+        list-style: none;
+        margin-top: 0.7vh;
+
+        li {
+
+            a {
+                text-decoration: none;
+
+                img {
+                    padding: 5px 5px 3px;
+                    width: 45px;
+                    height: 35px;
+                    transition: transform 0.3s ease-in-out;
+                    object-fit: contain;
+                    /* Adds a smooth transition effect */
+
+                    &:hover {
+                        transform: scale(1.2);
+                        /* Scales the icon up when hovered over */
+                    }
+                }
+            }
+        }
+    }
 }

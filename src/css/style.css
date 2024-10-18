@@ -142,7 +142,7 @@ details > summary::marker {
   transition: 0.32s ease-in-out;
 }
 #topBtn:hover {
-  color: var(--mango-yellow);
+  color: var(--light-lemon-yellow);
 }
 
 header {
@@ -152,7 +152,7 @@ header {
   align-items: center;
   justify-content: space-between;
   position: sticky;
-  padding: 3vh;
+  padding: 3.5vh;
   top: 0;
   z-index: 2500;
   transition: 0.1s ease-in-out;
@@ -162,14 +162,9 @@ header .username {
   text-decoration: none;
   color: white;
   font-size: 24px;
-  position: absolute;
-  left: 4vh;
   font-family: "Raleway";
   font-weight: bold;
-}
-header .nav-menu {
   position: absolute;
-  left: 27vh;
 }
 header .nav-menu ul li {
   display: inline-block;
@@ -215,28 +210,6 @@ header .nav-menu ul li a::after {
 header .nav-menu ul li a:hover::after {
   width: 100%;
   right: 0;
-}
-header .social-links {
-  display: flex;
-  gap: 1vh;
-  list-style: none;
-  margin-top: 0.7vh;
-}
-header .social-links li a {
-  text-decoration: none;
-}
-header .social-links li a img {
-  padding: 5px 5px 3px;
-  width: 45px;
-  height: 35px;
-  transition: transform 0.3s ease-in-out;
-  -o-object-fit: contain;
-     object-fit: contain;
-  /* Adds a smooth transition effect */
-}
-header .social-links li a img:hover {
-  transform: scale(1.2);
-  /* Scales the icon up when hovered over */
 }
 
 main #home {
@@ -531,6 +504,28 @@ footer {
 footer div {
   padding-top: 2vh;
 }
+footer .social-links {
+  display: flex;
+  gap: 1vh;
+  list-style: none;
+  margin-top: 0.7vh;
+}
+footer .social-links li a {
+  text-decoration: none;
+}
+footer .social-links li a img {
+  padding: 5px 5px 3px;
+  width: 45px;
+  height: 35px;
+  transition: transform 0.3s ease-in-out;
+  -o-object-fit: contain;
+     object-fit: contain;
+  /* Adds a smooth transition effect */
+}
+footer .social-links li a img:hover {
+  transform: scale(1.2);
+  /* Scales the icon up when hovered over */
+}
 
 @media only screen and (max-width: 1252px) and (prefers-color-scheme: dark) {
   #about {
@@ -642,9 +637,8 @@ footer div {
     left: -1vh !important;
     width: 21vh; /* Adjust the width of the menu as needed */
     height: 100vh;
-    padding-top: 40px; /* Adjust the padding to avoid overlapping with the header */
-    padding-left: 10px;
-    z-index: 1000; /* Increase if necessary */
+    padding-top: 30px; /* Adjust the padding to avoid overlapping with the header */
+    padding-left: 0 !important;
   }
   .nav-menu ul {
     display: inline-block;
@@ -665,23 +659,24 @@ footer div {
   .nav-menu ul li a::before, .nav-menu ul li a::after {
     background-color: unset !important;
   }
-  .show {
+  .showNavMenu {
     display: flex !important;
     flex-wrap: wrap;
     width: 200px;
     height: 59rem;
   }
   .social-links {
-    display: none; /* Hide the social links by default */
-    position: absolute;
-    top: 75vh; /* Adjust if necessary */
-    left: 2vh;
-    z-index: 1001; /* Increase if necessary */
-    height: 0;
+    display: none;
   }
   .social-links li {
-    padding: 8px 12px !important;
-    height: 10vh;
+    padding: 3vh 1vh 0 0;
+  }
+  .showSocialLinks {
+    display: flex;
+    flex-wrap: wrap;
+    width: 170px;
+    position: fixed;
+    top: 72.5vh;
   }
 }
 /* Decorations for Mobile Version */
@@ -696,15 +691,20 @@ footer div {
   .animatedBack {
     width: 103.2%;
   }
+  .nav-menu {
+    padding-left: 15px;
+    padding-top: 50px;
+  }
   .social-links {
-    display: none !important; /* Hide the social links by default */
-    position: absolute;
-    top: 76vh; /* Adjust if necessary */
-    left: 2vh;
-    z-index: 1001; /* Increase if necessary */
+    display: none; /* Hide the social links by default */
   }
   .social-links li {
     padding: 8px 12px;
+  }
+  .showSocialLinks {
+    position: fixed;
+    top: 65vh; /* Adjust if necessary */
+    left: 2vh;
   }
   .bothArrowButtons {
     display: none !important;

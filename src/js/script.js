@@ -15,15 +15,15 @@ const hammer = new Hammer(container);
 
 // Function to open the menu
 function openMenu() {
-  navMenu.classList.add('show');
-  socialLinks.classList.add('show');
+  navMenu.classList.add('showNavMenu');
+  socialLinks.classList.add('showSocialLinks');
   burgerMenu.classList.add('open');
 }
 
 // Function to close the menu
 function closeMenu() {
-  navMenu.classList.remove('show');
-  socialLinks.classList.remove('show');
+  navMenu.classList.remove('showNavMenu');
+  socialLinks.classList.remove('showSocialLinks');
   burgerMenu.classList.remove('open');
 }
 
