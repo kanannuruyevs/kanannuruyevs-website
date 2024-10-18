@@ -692,8 +692,8 @@ footer .social-links li a img:hover {
     width: 103.2%;
   }
   .nav-menu {
-    margin-left: 10px;
-    margin-top: 50px;
+    padding-left: 5px !important;
+    padding-top: 50px !important;
   }
   .social-links {
     display: none; /* Hide the social links by default */
