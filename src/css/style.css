@@ -637,13 +637,13 @@ footer .social-links li a img:hover {
     left: -1vh !important;
     width: 21vh; /* Adjust the width of the menu as needed */
     height: 100vh;
-    padding-top: 30px; /* Adjust the padding to avoid overlapping with the header */
+    padding-top: 30px !important; /* Adjust the padding to avoid overlapping with the header */
     padding-left: 0 !important;
   }
   .nav-menu ul {
     display: inline-block;
     list-style: none;
-    margin-top: 60px;
+    margin-top: 50px;
   }
   .nav-menu ul li {
     margin-bottom: 20px;
@@ -669,7 +669,7 @@ footer .social-links li a img:hover {
     display: none;
   }
   .social-links li {
-    padding: 3vh 1vh 0 0;
+    padding: 8px 12px;
   }
   .showSocialLinks {
     display: flex;
@@ -692,8 +692,8 @@ footer .social-links li a img:hover {
     width: 103.2%;
   }
   .nav-menu {
-    padding-left: 15px;
-    padding-top: 50px;
+    margin-left: 10px;
+    margin-top: 50px;
   }
   .social-links {
     display: none; /* Hide the social links by default */
@@ -704,7 +704,7 @@ footer .social-links li a img:hover {
   .showSocialLinks {
     position: fixed;
     top: 65vh; /* Adjust if necessary */
-    left: 2vh;
+    left: 1vh;
   }
   .bothArrowButtons {
     display: none !important;

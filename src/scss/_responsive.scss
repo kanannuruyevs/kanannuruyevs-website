@@ -137,13 +137,13 @@
         left: -1vh !important;
         width: 21vh; /* Adjust the width of the menu as needed */
         height: 100vh;
-        padding-top: 30px; /* Adjust the padding to avoid overlapping with the header */
+        padding-top: 30px !important; /* Adjust the padding to avoid overlapping with the header */
         padding-left: 0 !important;
 
         ul {
             display: inline-block;
             list-style: none;
-            margin-top: 60px;
+            margin-top: 50px;
 
             li {
                 margin-bottom: 20px;
@@ -173,9 +173,9 @@
 
     .social-links {
         display: none;
-
+         
         li {
-            padding: 3vh 1vh 0 0;
+            padding: 8px 12px;
         }
     }
 
@@ -211,8 +211,8 @@
     }
 
     .nav-menu {
-        padding-left: 15px;
-        padding-top: 50px;
+        margin-left: 10px;
+        margin-top: 50px;
     }
 
     .social-links {
@@ -226,7 +226,7 @@
     .showSocialLinks {
         position: fixed;
         top: 65vh; /* Adjust if necessary */
-        left: 2vh;
+        left: 1vh;
     }
     
     .bothArrowButtons {
