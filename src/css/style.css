@@ -4,6 +4,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@font-face {
+  font-family: "Techno Race Italic";
+  src: url("/src/fonts/technoraceitalic.woff") format("woff"), url("/src/fonts/technoraceitalic.ttf") format("truetype");
+}
 * {
   margin: 0;
   padding: 0;
@@ -99,7 +103,6 @@ details > summary::marker {
 /* Marquee Effect */
 .marqueeEffect {
   display: flex;
-  -webkit-mask-image-: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%);
   overflow: hidden;
   background-color: yellow;
   z-index: 2;
@@ -162,9 +165,17 @@ header .username {
   text-decoration: none;
   color: white;
   font-size: 24px;
-  font-family: "Raleway";
-  font-weight: bold;
+  padding: 15px 0;
+  font-family: "Techno Race Italic";
   position: absolute;
+  transform: skewX(15deg);
+}
+header .username:hover {
+  transition: transform 0.3s ease-in-out;
+  color: var(--light-lemon-yellow);
+}
+header .nav-menu {
+  font-weight: 500;
 }
 header .nav-menu ul li {
   display: inline-block;
@@ -174,12 +185,13 @@ header .nav-menu ul li a {
   position: relative;
   color: white;
   text-decoration: none;
-  padding: 0 15px;
+  padding: 15px;
   font-size: large;
 }
 header .nav-menu ul li a:hover {
-  color: var(--light-lemon-yellow);
+  color: black;
   transition: transform 0.3s ease-in-out;
+  background-color: var(--light-lemon-yellow);
 }
 header .nav-menu ul li a::before {
   content: "";
@@ -214,15 +226,15 @@ header .nav-menu ul li a:hover::after {
 
 main #home {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 5vh;
-  position: absolute;
-  top: 18%;
-  z-index: 1;
+  flex-direction: column;
+  text-align: center;
+  padding: 0;
 }
-main #home img {
-  width: 15%;
+main #home #homeText {
+  position: absolute;
+  top: 25%;
+  z-index: 1;
 }
 main #home #homeText h1 {
   font-size: 85px;
@@ -242,10 +254,14 @@ main #about h2 {
 main #about #aboutMeContent {
   display: flex;
   align-items: center;
+  gap: 15px;
 }
 main #about #aboutMeContent p {
   font-size: 21px;
   width: 100%;
+}
+main #about #aboutMeContent img {
+  width: 20%;
 }
 main #skillsAndTools {
   display: flex;
@@ -486,9 +502,6 @@ main .blogContainer .blogItems .blogTextContainer .readArticle:hover {
   color: var(--light-gray);
   box-shadow: inset 200px 0 0 0 var(--royal-blue);
 }
-main .blogPageContent img {
-  width: 50%;
-}
 
 footer {
   display: flex;
@@ -542,19 +555,14 @@ footer .social-links li a img:hover {
   }
 }
 @media only screen and (max-width: 1120px) and (prefers-color-scheme: dark) {
-  #home h1 {
+  #homeText {
+    top: 30% !important;
+  }
+  #homeText h1 {
     font-size: 60px !important;
   }
-  #home p {
+  #homeText p {
     font-size: 24px !important;
-  }
-  .marqueeEffect {
-    top: 11.5vh;
-    left: -1.4vh;
-    width: 106.6%;
-  }
-  .marqueeEffect li {
-    width: unset;
   }
   h2 {
     text-align: center;
@@ -682,15 +690,6 @@ footer .social-links li a img:hover {
 /* Decorations for Mobile Version */
 @media only screen and (max-width: 800px) and (prefers-color-scheme: dark) {
   /* Styles for typical tablets and mobiles screens */
-  #home h1 {
-    font-size: 40px !important;
-  }
-  #home img {
-    width: 20% !important;
-  }
-  .animatedBack {
-    width: 103.2%;
-  }
   .nav-menu {
     padding-left: 4.3px !important;
     padding-top: 50px !important;
@@ -835,6 +834,9 @@ footer .social-links li a img:hover {
     display: flex;
     flex-direction: column;
     text-align: center;
+  }
+  #aboutMeContent img {
+    width: 50% !important;
   }
 }
 /* Website Background */
@@ -1057,4 +1059,12 @@ footer .social-links li a img:hover {
   animation-delay: -12s;
   transform-origin: 17vw 24vh;
   box-shadow: -40vmin 0 5.8100448718vmin currentColor;
+}
+
+#otherHeaders {
+  padding: 5.3vh 3.5vh;
+}
+
+.blogPageContent img {
+  width: 50%;
 }/*# sourceMappingURL=style.css.map */

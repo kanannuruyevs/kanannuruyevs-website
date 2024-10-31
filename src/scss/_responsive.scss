@@ -18,7 +18,9 @@
 
 @media only screen and (max-width: 1120px) and (prefers-color-scheme: dark) {
     
-    #home {
+    #homeText {
+
+        top: 30% !important;
 
         h1 {
             font-size: 60px !important;
@@ -28,17 +30,7 @@
             font-size: 24px !important;
         }
     }
-
-    .marqueeEffect {
-        top: 11.5vh;
-        left: -1.4vh;
-        width: 106.6%;
-
-        li {
-            width: unset;
-        }
-    }
-
+    
     h2 {
         text-align: center;
         font-size: 35px;
@@ -194,21 +186,6 @@
 
 @media only screen and (max-width: 800px) and (prefers-color-scheme: dark) {
     /* Styles for typical tablets and mobiles screens */
-
-    #home {
-
-        h1 {
-            font-size: 40px !important;
-        }
-
-        img {
-            width: 20% !important;
-        }
-    }
-
-    .animatedBack {
-        width: 103.2%;
-    }
 
     .nav-menu {
         padding-left: 4.3px !important;
@@ -395,5 +372,12 @@
         display: flex;
         flex-direction: column;
         text-align: center;
+    }
+
+    #aboutMeContent {
+
+        img {
+            width: 50% !important;
+        }
     }
 }

@@ -14,13 +14,21 @@ header {
         text-decoration: none;
         color: white;
         font-size: 24px;
-        font-family: "Raleway";
-        font-weight: bold;
+        padding: 15px 0;
+        font-family: "Techno Race Italic";
         position: absolute;
+        transform: skewX(15deg);
+
+        &:hover {
+            // color: black;
+            transition: transform 0.3s ease-in-out;
+            color: var(--light-lemon-yellow);
+        }
     }
 
     /* Navigation Menu Decoration */
     .nav-menu {
+        font-weight: 500;
 
         ul {
 
@@ -32,12 +40,13 @@ header {
                     position: relative;
                     color: white;
                     text-decoration: none;
-                    padding: 0 15px;
+                    padding: 15px;
                     font-size: large;
-                    
+
                     &:hover {
-                        color: var(--light-lemon-yellow);
+                        color: black;
                         transition: transform 0.3s ease-in-out;
+                        background-color: var(--light-lemon-yellow);
                     }
 
                     &::before {

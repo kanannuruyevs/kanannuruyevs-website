@@ -1,29 +1,27 @@
 main {
 
     #home {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 5vh;
-        position: absolute;
-        top: 18%;
-        z-index: 1;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		text-align: center;
+		padding: 0;
 
-        img {
-            width: 15%;
-        }
+		#homeText {
+			position: absolute;
+			top: 25%;
+			z-index: 1;
 
-        #homeText {
-            
-            h1 {
-                font-size: 85px;
-                font-family: "Raleway";
-            }
-    
-            p {
-                font-size: 26px;
-            }
-        }
+			h1 {
+				font-size: 85px;
+				font-family: "Raleway";
+			}
+
+			p {
+				font-size: 26px;
+			}
+		}
+		
     }
 
     #about {
@@ -38,10 +36,15 @@ main {
 		#aboutMeContent {
 			display: flex;
 			align-items: center;
+			gap: 15px;
 
 			p {
 				font-size: 21px;
 				width: 100%;
+			}
+
+			img {
+				width: 20%;
 			}
 		}
 	}
@@ -336,13 +339,6 @@ main {
 					}
 				}
 			}
-		}
-	}
-
-	.blogPageContent {
-
-		img {
-			width: 50%;
 		}
 	}
 }
