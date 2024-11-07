@@ -12,77 +12,115 @@
 
 <body>
     <header id="otherHeaders">
-        <div class="burger-menu">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
         <a class="username" href="../index.html">kanansnote</a>
-        <!-- <nav class="nav-menu">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skillsAndTools">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contributions">Contributions</a></li>
-                <li><a href="#blog">Blog</a></li>
-            </ul>
-        </nav> -->
+        <button id="goBackButton" type="button">
+            <div class="goBackButton__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" height="20px" width="20px">
+                    <path d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z" fill="#000000"></path>
+                    <path d="m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z" fill="#000000"></path>
+                </svg>
+            </div>
+            <p class="goBackButton__text">Go Back</p>
+        </button>
     </header>
-    <main>
-        <section class="blogPageContent">
-            <div class="vennDiagramContentPart">
-                <h1>Welcome to My Venn Diagram!</h1>
-                <p>I'm trying to visualize my career options with three circles that represent different sets and their intersections.</p>
-                <img class="vennDiagramImgs" src="../src/images/blog-content/venn-diagram-blog/venn-diagram.png"
-                    alt="Venn Diagram 1" />
-                <p>Here three circles represent these following components:</p>
-                <ul>
-                    <li>Interests circle demonstrates artistic and philosophical interests, emphasizing creativity and deep thinking.
-                    </li>
-                    <li>Skills circle showcases technical skills alongside nutritional expertise, demonstrating a multidisciplinary approach.
-                    </li>
-                    <li>Needs circle encompasses financial and health needs, emphasizing effective communication for holistic solutions.
-                    </li>
-                </ul>
-                <p>When the three circles overlap, it will give us a career option to choose. In this case, programming seems to be the best option to go with.</p>
-            </div>
-            <div class="vennDiagramContentPart">
-                <h2>Cognitive Functions</h2>
-                <p>The project mainly includes visualizations of using the MBTI cognitive functions.
-                    Here&#39;s a breakdown of the circles and their corresponding functions:</p>
-                <ul>
-                    <li>First Circle: Fi (Introverted Feeling) represents an individual&#39;s inner values and personal ethics.
-                    </li>
-                    <li>Second Circle: Se (Extraverted Sensing) &amp; Ni (Introverted Intuition). 
-                        Se focuses on gathering concrete information from the environment in the present moment, while Ni helps recognize patterns and understand abstract concepts.
-                    </li>
-                    <li>Third Circle: Te (Extraverted Thinking) involves organizing and structuring the external world, making logical decisions, and achieving goals.
-                    </li>
-                </ul>
-                <img class="vennDiagramImgs" src="../src/images/blog-content/venn-diagram-blog/venndiagrammbti3.2.png" alt="Venn Diagram 3" />
-            </div>
-            <div class="vennDiagramContentPart">
-                <h3>Intersections</h3>
-                <p>
-                    By exploring the intersections of these circles, we unlock cognitive functions 
-                    that showcases MBTI personality traits. So, the intersection of:
-                </p>
-                <ul>
-                    <li>the first and second circles gives rise to Fe (Extraverted Feeling), fostering empathy and harmonious interactions.</li>
-                    <li>the second and third circles reveals Si (Introverted Sensing), bringing attention to detail and practicality.</li>
-                    <li>the first and third circles uncovers Ti (Introverted Thinking), promoting logical analysis and problem-solving.</li>
-                    <li>all three circles represents Ne (Extroverted Intuition), encouraging innovation and exploration.</li>
-                </ul>
-                <h2>Conclusion</h2>
-                <ul>
-                    <li>Artistic and philosophical insights to drive innovative solutions.</li>
-                    <li>Technical skills applied in conjunction with nutritional expertise.</li>
-                    <li>Holistic approach addressing financial, health, and communication needs.</li>
-                    <li>Emphasis on empathy, attention to detail, logical analysis, and innovation.</li>
-                </ul>
+    <main id="otherMains">
+        <section id="blogPageHeader">
+            <div class="blogPageHeader__div">
+                <h2>Trying visualizing my career options with Venn Diagram</h2>
+                <div class="blogPageHeader__divDown">
+                    <img class="blogPageHeader__myImg" src="../src/images/home/my-picture-favicon.jpeg" alt="">
+                    <div class="blogPageHeader__divDownText">
+                        <h1>Kanan Nuruyev</h1>
+                        <p>Published - Jan 12, 2024</p>
+                    </div>
+                </div>
             </div>
         </section>
+        <article>
+            <section id="blogPageContent">
+                <div class="vennDiagramContentPart">
+                    <h3>Welcome to my Venn Diagram! We have three circles that represent different sets and their intersections.</h3>
+                    <p>The following components:</p>
+                    <div class="vennDiagramContentPart__imgPart">
+                        <img class="vennDiagramImgs" src="../src/images/blog-content/venn-diagram-blog/venn-diagram.png" alt="Venn Diagram 1">
+                        <ul>
+                            <li>Interests circle demonstrates artistic and philosophical interests, emphasizing creativity and deep thinking.
+                            </li>
+                            <li>Skills circle showcases technical skills alongside nutritional expertise, demonstrating a multidisciplinary approach.
+                            </li>
+                            <li>Needs circle encompasses financial and health needs, emphasizing effective communication for holistic solutions.
+                            </li>
+                        </ul>
+                    </div>
+                    <p>When the three circles overlap, it will give us a career option to choose. In this case, programming seems to be the best option to go with.</p>
+                </div>
+                <div class="vennDiagramContentPart">
+                    <h2>Cognitive Functions</h2>
+                    <p>The project mainly includes visualizations of using the MBTI cognitive functions.
+                        Here&#39;s a breakdown of the circles and their corresponding functions:</p>
+                    <ul>
+                        <li>First Circle: Fi (Introverted Feeling) represents an individual&#39;s inner values and personal ethics.
+                        </li>
+                        <li>Second Circle: Se (Extraverted Sensing) &amp; Ni (Introverted Intuition). 
+                            Se focuses on gathering concrete information from the environment in the present moment, while Ni helps recognize patterns and understand abstract concepts.
+                        </li>
+                        <li>Third Circle: Te (Extraverted Thinking) involves organizing and structuring the external world, making logical decisions, and achieving goals.
+                        </li>
+                    </ul>
+                    <img class="vennDiagramImgs" src="../src/images/blog-content/venn-diagram-blog/venndiagrammbti3.2.png" alt="Venn Diagram 3" />
+                </div>
+                <div class="vennDiagramContentPart">
+                    <h3>Intersections</h3>
+                    <p>
+                        By exploring the intersections of these circles, we unlock cognitive functions 
+                        that showcases MBTI personality traits. So, the intersection of:
+                    </p>
+                    <ul>
+                        <li>the first and second circles gives rise to Fe (Extraverted Feeling), fostering empathy and harmonious interactions.</li>
+                        <li>the second and third circles reveals Si (Introverted Sensing), bringing attention to detail and practicality.</li>
+                        <li>the first and third circles uncovers Ti (Introverted Thinking), promoting logical analysis and problem-solving.</li>
+                        <li>all three circles represents Ne (Extroverted Intuition), encouraging innovation and exploration.</li>
+                    </ul>
+                    <h2>Conclusion</h2>
+                    <ul>
+                        <li>Artistic and philosophical insights to drive innovative solutions.</li>
+                        <li>Technical skills applied in conjunction with nutritional expertise.</li>
+                        <li>Holistic approach addressing financial, health, and communication needs.</li>
+                        <li>Emphasis on empathy, attention to detail, logical analysis, and innovation.</li>
+                    </ul>
+                </div>
+            </section>
+            <aside>
+                <section class="blogSidebarContent">
+                    <img src="../src/images/blog-covers/venn-diagram-cover.jpeg" alt="Venn Diagram Cover">
+                    <div>
+                        <h3>Venn Diagram</h3>
+                        <p></p>
+                    </div>
+                </section>
+                <section class="blogSidebarContent">
+                    <img src="../src/images/blog-covers/venn-diagram-cover.jpeg" alt="Venn Diagram Cover">
+                    <div>
+                        <h3>Venn Diagram</h3>
+                        <p></p>
+                    </div>
+                </section>
+                <section class="blogSidebarContent">
+                    <img src="../src/images/blog-covers/venn-diagram-cover.jpeg" alt="Venn Diagram Cover">
+                    <div>
+                        <h3>Venn Diagram</h3>
+                        <p></p>
+                    </div>
+                </section>
+                <section class="blogSidebarContent">
+                    <img src="../src/images/blog-covers/venn-diagram-cover.jpeg" alt="Venn Diagram Cover">
+                    <div>
+                        <h3>Venn Diagram</h3>
+                        <p></p>
+                    </div>
+                </section>
+            </aside>
+        </article>
     </main>
     <footer>
         <div id="copyright"></div>

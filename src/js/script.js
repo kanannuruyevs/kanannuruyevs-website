@@ -28,13 +28,16 @@ function closeMenu() {
 }
 
 // Event listener for click event
-burgerMenu.addEventListener('click', function() {
-  if (burgerMenu.classList.contains('open')) {
-    closeMenu();
-  } else {
-    openMenu();
-  }
-});
+
+if (burgerMenu){
+  burgerMenu.addEventListener('click', function() {
+    if (burgerMenu.classList.contains('open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+}
 
 // Event listener for swipe events
 hammer.on('swiperight', openMenu);
@@ -91,3 +94,12 @@ topBtn.addEventListener("click", function() {
     block: 'start'       // Scrolls to the top of the page
   });
 });
+
+// Go Back Button for Blog Pages
+const goBackButton = document.getElementById('goBackButton');
+
+if (goBackButton) {
+  goBackButton.addEventListener('click', ()=>{
+    window.location.href = '../index.html'
+  });
+}
