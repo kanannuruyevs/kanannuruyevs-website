@@ -103,3 +103,16 @@ if (goBackButton) {
     window.location.href = '../index.html'
   });
 }
+
+// Content Creation Container Slider
+document.addEventListener('DOMContentLoaded', function () {
+  const swiper = new Swiper('.swiper-container', {
+      navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+      },
+      loop: true, // Enable looping
+      slidesPerView: 1, // Ensure only one slide is visible at a time
+      spaceBetween: 10, // Add space between slides if needed
+  });
+});
