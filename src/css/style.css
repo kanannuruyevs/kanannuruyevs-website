@@ -263,60 +263,57 @@ main #about #aboutMeContent p {
 main #about #aboutMeContent img {
   width: 20%;
 }
-main #skillsAndTools {
-  display: flex;
-  flex-direction: column;
-}
-main #skillsAndTools #skillsAndToolsList {
+main #platforms .platforms-gallery {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  gap: 20px; /* Adjust the gap between platform items */
+  padding: 20px; /* Add padding around the gallery */
 }
-main #skillsAndTools #skillsAndToolsList img {
-  margin: 15px;
-  width: 90px;
-}
-main #skillsAndTools #skillsAndToolsList .listTooltip {
+main #platforms .platforms-gallery .platform-item {
   position: relative;
-  display: inline;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
-main #skillsAndTools #skillsAndToolsList .listTooltip .listTooltipText {
+main #platforms .platforms-gallery .platform-item img {
+  width: 80px; /* Set a fixed width for all platform icons */
+  height: 80px; /* Set a fixed height for all platform icons */
+  -o-object-fit: contain;
+     object-fit: contain; /* Ensure the image fits within the specified dimensions */
+  transition: transform 0.3s ease-in-out;
+}
+main #platforms .platforms-gallery .platform-item img:hover {
+  transform: scale(1.1); /* Scale up the icon on hover */
+}
+main #platforms .platforms-gallery .platform-item .tooltip {
   visibility: hidden;
   background-color: #555;
   color: #fff;
   text-align: center;
-  padding: 5px 5px;
+  padding: 5px;
   border-radius: 6px;
   position: absolute;
-  z-index: 1009;
-  top: 50%;
+  bottom: 100%; /* Position the tooltip above the icon */
   left: 50%;
-  margin-left: -30px;
+  transform: translateX(-50%);
   opacity: 0;
   transition: opacity 0.3s;
 }
-main #skillsAndTools #skillsAndToolsList .listTooltip:hover .listTooltipText {
+main #platforms .platforms-gallery .platform-item .tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* Arrow pointing down */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+main #platforms .platforms-gallery .platform-item:hover .tooltip {
   visibility: visible;
   opacity: 1;
-}
-main #skillsAndTools #skillsAndToolsList .listTooltip #javascriptText {
-  margin-left: -45px;
-}
-main #skillsAndTools #skillsAndToolsList .listTooltip #htmlText {
-  margin-left: -27px;
-}
-main #skillsAndTools #skillsAndToolsList .listTooltip #cssText {
-  margin-left: -20px;
-}
-main #skillsAndTools #skillsAndToolsList .listTooltip #pycharmText {
-  margin-left: -39px;
-}
-main #skillsAndTools #skillsAndToolsList .listTooltip #windows10Text {
-  margin-left: -50px;
-}
-main #skillsAndTools #skillsAndToolsList .listTooltip #edgeText {
-  margin-left: -23px;
 }
 main #projects {
   display: flex;
@@ -849,11 +846,8 @@ footer .social-links li a img:hover {
     margin-top: 2vh;
     max-width: 100%;
   }
-  #skillsAndTools img {
+  #platformsList img {
     width: 80px !important;
-  }
-  #windows11Text {
-    margin-left: -38px;
   }
   footer {
     display: flex;
@@ -1180,42 +1174,4 @@ footer .social-links li a img:hover {
 }
 #otherMains #blogPageContent img {
   width: 50%;
-}
-.contact-section {
-  padding: 2rem;
-  text-align: center;
-}
-
-.contact-section h1 {
-  margin-bottom: 1rem;
-}
-
-.form-group {
-  margin-bottom: 1rem;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-button[type=submit] {
-  padding: 0.75rem 1.5rem;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button[type=submit]:hover {
-  background-color: #555;
 }/*# sourceMappingURL=style.css.map */
