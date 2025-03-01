@@ -72,7 +72,7 @@ document.addEventListener('click', function(event) {
 const updateYear = new Date().getFullYear();
 const copyrightElement = document.getElementById("copyright");
 
-copyrightElement.innerHTML = "© 2023 - " + updateYear + " kanansnote. All rights reserved.";
+copyrightElement.innerHTML = "© 2023 - " + updateYear + " kanannuruyevs. All rights reserved.";
 
 // Scroll to Top
 
