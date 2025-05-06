@@ -417,4 +417,179 @@ main {
 			background-color: rgba(0, 0, 0, 0.7);
 		}
 	}
+
+    #contact {
+        width: 100%;
+        height: 100%;
+      
+        .section-header {
+          text-align: center;
+          margin: 0 auto;
+          padding: 40px 0;
+          font: 300 60px 'Oswald', sans-serif;
+          color: #fff;
+          text-transform: uppercase;
+          letter-spacing: 6px;
+        }
+      
+        .contact-wrapper {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          margin: 0 auto;
+          padding: 20px;
+          position: relative;
+          max-width: 840px;
+      
+          .form-horizontal {
+            max-width: 400px;
+            font-family: 'Lato';
+            font-weight: 400;
+      
+            .form-control,
+            textarea {
+              max-width: 400px;
+              background-color: #000;
+              color: #fff;
+              letter-spacing: 1px;
+            }
+      
+            .send-button {
+              margin-top: 15px;
+              height: 34px;
+              width: 400px;
+              overflow: hidden;
+              transition: all 0.2s ease-in-out;
+      
+              .alt-send-button {
+                width: 400px;
+                height: 34px;
+                transition: all 0.2s ease-in-out;
+      
+                &:hover {
+                  transform: translate3d(0px, -29px, 0px);
+                }
+              }
+      
+              .send-text {
+                display: block;
+                margin-top: 10px;
+                font: 700 12px 'Lato', sans-serif;
+                letter-spacing: 2px;
+              }
+            }
+          }
+      
+          .direct-contact-container {
+            max-width: 400px;
+      
+            .contact-list {
+              list-style-type: none;
+              margin-left: -30px;
+              padding-right: 20px;
+      
+              .list-item {
+                line-height: 4;
+                color: #aaa;
+              }
+      
+              .contact-text {
+                font: 300 18px 'Lato', sans-serif;
+                letter-spacing: 1.9px;
+                color: #bbb;
+      
+                a {
+                  color: #bbb;
+                  text-decoration: none;
+                  transition-duration: 0.2s;
+      
+                  &:hover {
+                    color: #fff;
+                    text-decoration: none;
+                  }
+                }
+      
+                &.place {
+                  margin-left: 62px;
+                }
+      
+                &.phone {
+                  margin-left: 56px;
+                }
+      
+                &.gmail {
+                  margin-left: 53px;
+                }
+              }
+            }
+          }
+      
+          .social-media-list {
+            position: relative;
+            font-size: 22px;
+            text-align: center;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0;
+      
+            li {
+              position: relative;
+              display: inline-block;
+              height: 60px;
+              width: 60px;
+              margin: 10px 3px;
+              line-height: 60px;
+              border-radius: 50%;
+              color: #fff;
+              background-color: rgb(27, 27, 27);
+              cursor: pointer;
+              transition: all 0.2s ease-in-out;
+      
+              a {
+                color: #fff;
+              }
+      
+              &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                border-radius: 50%;
+                opacity: 0;
+                box-shadow: 0 0 0 1px #fff;
+                transition: all 0.2s ease-in-out;
+              }
+      
+              &:hover {
+                background-color: #fff;
+      
+                &:after {
+                  opacity: 1;
+                  transform: scale(1.12);
+                  transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
+                }
+      
+                a {
+                  color: #000;
+                }
+              }
+            }
+          }
+        }
+      
+        .copyright {
+          font: 200 14px 'Oswald', sans-serif;
+          color: #555;
+          letter-spacing: 1px;
+          text-align: center;
+        }
+      
+        hr {
+          border-color: rgba(255, 255, 255, 0.6);
+        }
+      }
+      
 }

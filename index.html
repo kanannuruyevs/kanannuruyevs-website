@@ -23,8 +23,9 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#brands">Portfolio</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#brands">Personal Brands</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#others">Others</a></li>
                 <li><a href="#blog">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -173,7 +174,10 @@
                                 <div class="tooltip">TikTok</div>
                             </div>
                             <div class="platform-item">
-                                <img src="./src/images/platforms/youtube_logo_icon_147199.svg" alt="YouTube">
+                                <a rel="noopener" target="_blank" 
+                                    href="https://youtube.com/kanansnote">
+                                    <img src="./src/images/platforms/youtube_logo_icon_147199.svg" alt="YouTube">
+                                </a>
                                 <div class="tooltip">YouTube</div>
                             </div>
                             <div class="platform-item">
@@ -185,31 +189,32 @@
                 </div>
             </div>
         </section>
-        <section id="portfolio">
+        <section id="porfolio">
             <h2>Portfolio</h2>
-            <div class="smmProjectsContainer">
-                <h3>SMM Projects</h3>
-                <div class="projects-container">
-                    <div class="projects-item">
-                        <img src="./src/images/projects-covers/kanansnote-youtube.png" alt="YouTube Project Cover" />
-                        <div class="projects-item__text">
-                            <a rel="noopener" target="_blank" 
-                                href="https://youtube.com/kanansnote">
-                                <h3>@kanansnote</h3>
-                            </a>
-                        </div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <iframe width="560" height="315" src="https://www.youtube.com/watch?v=iNJbVhG0T0Y&t=5s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                    <div class="projects-item">
-                        <img src="./src/images/projects-covers/kanansnote-linkedin.png" alt="LinkedIn Project Cover" />
-                        <div class="projects-item__text">
-                            <a rel="noopener" target="_blank" 
-                                href="https://linkedin.com/in/kanansnote">
-                                <h3>@kanansnote</h3>
-                            </a>
-                        </div>
+                    <div class="swiper-slide">
+                        <iframe width="560" height="315" src="https://www.youtube.com/watch?v=iNJbVhG0T0Y&t=5s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                </div>    
+                    <div class="swiper-slide">
+                        <iframe width="560" height="315" src="https://www.youtube.com/watch?v=iNJbVhG0T0Y&t=5s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="swiper-slide">
+                        <iframe width="560" height="315" src="https://www.youtube.com/watch?v=iNJbVhG0T0Y&t=5s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="swiper-slide">
+                        <iframe width="560" height="315" src="https://www.youtube.com/watch?v=iNJbVhG0T0Y&t=5s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="swiper-button-prev">⬅</div>
+                <div class="swiper-button-next">➡</div>
             </div>
+        </section>
+        <section id="others">
+            <h2>Others</h2>
             <div class="codingProjectsContainer">
                 <h3>Coding Projects</h3>
                 <div class="projects-container">
@@ -269,184 +274,160 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="mini-projects">
-            <h3>Mini Coding Projects</h3>
-            <div class="mini-projects-items">
-                <div class="mini-projects-item">
-                    <img src="./src/images/projects-covers/venn-diagram-project.jpeg" alt="Venn Diagram Cover">
-                    <div class="mini-projects-item__text">
-                        <details>
-                            <summary>
-                                <h3>Venn Diagram</h3>
-                            </summary>
-                            <div class="mini-projects-items__links">
-                                <a rel="noopener" target="_blank"
-                                    href="https://github.com/kanansnote/py-venn-diagram">GUI</a>
-                                <a href="https://kanansnote-venn-diagram.vercel.app">Web (Work in Progress)</a>
+            <div class="mini-projects">
+                <h3>Mini Coding Projects</h3>
+                <div class="mini-projects-items">
+                    <div class="mini-projects-item">
+                        <img src="./src/images/projects-covers/venn-diagram-project.jpeg" alt="Venn Diagram Cover">
+                        <div class="mini-projects-item__text">
+                            <details>
+                                <summary>
+                                    <h3>Venn Diagram</h3>
+                                </summary>
+                                <div class="mini-projects-items__links">
+                                    <a rel="noopener" target="_blank"
+                                        href="https://github.com/kanansnote/py-venn-diagram">GUI</a>
+                                    <a href="https://kanansnote-venn-diagram.vercel.app">Web (Work in Progress)</a>
+                                </div>
+                            </details>
+                            <div class="mini-projects-item__tags">
+                                <span>MBTI</span>
+                                <span>Career Options</span>
+                                <span>Cognitive Functions</span>
                             </div>
-                        </details>
-                        <div class="mini-projects-item__tags">
-                            <span>MBTI</span>
-                            <span>Career Options</span>
-                            <span>Cognitive Functions</span>
+                            <p>The project focuses on a career path exploration, including MBTI
+                                Cognitive Functions. That was the main cause for returning to programming stuff after 6 months of delay.</p>
                         </div>
-                        <p>The project focuses on a career path exploration, including MBTI
-                            Cognitive Functions. That was the main cause for returning to programming stuff after 6 months of delay.</p>
                     </div>
-                </div>
-                <div class="mini-projects-item">
-                    <img src="./src/images/projects-covers/business-calendar.jpeg" alt="Business Calendar Cover">
-                    <div class="mini-projects-item__text">
-                        <details>
-                            <summary>
-                                <h3>Business Calendar</h3>
-                            </summary>
-                            <div class="mini-projects-items__links">
-                                <a rel="noopener" target="_blank"
-                                    href="https://github.com/kanansnote/py-business-calendar">GUI</a>
-                                <a href="https://kanansnote-business-calendar.vercel.app">Web (Work in Progress)</a>
+                    <div class="mini-projects-item">
+                        <img src="./src/images/projects-covers/business-calendar.jpeg" alt="Business Calendar Cover">
+                        <div class="mini-projects-item__text">
+                            <details>
+                                <summary>
+                                    <h3>Business Calendar</h3>
+                                </summary>
+                                <div class="mini-projects-items__links">
+                                    <a rel="noopener" target="_blank"
+                                        href="https://github.com/kanansnote/py-business-calendar">GUI</a>
+                                    <a href="https://kanansnote-business-calendar.vercel.app">Web (Work in Progress)</a>
+                                </div>
+                            </details>
+                            <div class="mini-projects-item__tags">
+                                <span>Business</span>
+                                <span>Calendar</span>
+                                <span>PowerPoint</span>
                             </div>
-                        </details>
-                        <div class="mini-projects-item__tags">
-                            <span>Business</span>
-                            <span>Calendar</span>
-                            <span>PowerPoint</span>
+                            <p>The project is designed to provide a personalized calendar
+                                experience. Inspired by the idea of creating a business calendar with PowerPoint Slides in accordance with client's specifications working at Upwork.</p>
                         </div>
-                        <p>The project is designed to provide a personalized calendar
-                            experience. Inspired by the idea of creating a business calendar with PowerPoint Slides in accordance with client's specifications working at Upwork.</p>
                     </div>
-                </div>
-                <div class="mini-projects-item">
-                    <img src="./src/images/projects-covers/programming.jpeg" alt="Programming Projects Cover">
-                    <div class="mini-projects-item__text">
-                        <a href="https://github.com/kanansnote/basic-programming-exercises">
-                            <h3>Basic Programming Exercises</h3>
-                        </a>
-                        <div class="mini-projects-item__tags">
-                            <span>Programming</span>
-                            <span>Python</span>
-                            <span>C++</span>
-                            <span>Java</span>
-                            <span>JavaScript</span>
-                            <span>HTML</span>
-                            <span>CSS</span>
+                    <div class="mini-projects-item">
+                        <img src="./src/images/projects-covers/programming.jpeg" alt="Programming Projects Cover">
+                        <div class="mini-projects-item__text">
+                            <a href="https://github.com/kanansnote/basic-programming-exercises">
+                                <h3>Basic Programming Exercises</h3>
+                            </a>
+                            <div class="mini-projects-item__tags">
+                                <span>Programming</span>
+                                <span>Python</span>
+                                <span>C++</span>
+                                <span>Java</span>
+                                <span>JavaScript</span>
+                                <span>HTML</span>
+                                <span>CSS</span>
+                            </div>
+                            <p>Small coding projects for learning and exercising in some
+                                programming & markup languages. It includes Python, JavaScript, C++, Java, HTML, and CSS.</p>
                         </div>
-                        <p>Small coding projects for learning and exercising in some
-                            programming & markup languages. It includes Python, JavaScript, C++, Java, HTML, and CSS.</p>
                     </div>
                 </div>
             </div>
-        </section>
-        <section id="contributions">
-            <h3>Favorite Open Source Contributions</h3>
-            <table class="contributeTable">
-                <thead>
-                    <tr>
-                        <th>Project</th>
-                        <th>Description</th>
-                        <th>Type</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><a href="https://github.com/gofiber/fiber">Fiber</a></td>
-                        <td><a rel="noopener" target="_blank"
-                                href="https://github.com/gofiber/fiber/pull/2413">Correct grammar errors in Azerbaijani translation #2413.
-                            </a>
-                        </td>
-                        <td>Pull Request</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="https://github.com/firstcontributions/first-contributions">First
-                                Contributions
-                            </a>
-                        </td>
-                        <td>
-                            <a rel="noopener" target="_blank"
-                                href="https://github.com/firstcontributions/first-contributions/pull/59782">
-                                Fix grammar mistakes in Azerbaijani translation #59782.
-                            </a>
-                        </td>
-                        <td>Pull Request</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="https://github.com/lakoliu/Furtherance">Furtherance</a>
-                        </td>
-                        <td>
-                            <a rel="noopener" target="_blank"
-                                href="https://github.com/lakoliu/Furtherance/issues/107">"Bug: Pomodoro Timer displays one-minute over the set time" #107.</a>
-                        </td>
-                        <td>Issue</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="https://github.com/linux-is-awesome/gnome_extension_rocketbar">Rocketbar</a>
-                        </td>
-                        <td>
-                            <a rel="noopener" target="_blank"
-                                href="https://github.com/linux-is-awesome/gnome_extension_rocketbar/issues/29">Suggested to add an option to prevent interference in placement with others in the status bar #29.
-                            </a>
-                        </td>
-                        <td>Issue</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="https://github.com/jenspfahl/KeepAwake">Keep Awake!</a>
-                        </td>
-                        <td>
-                            <a rel="noopener" target="_blank"
-                                href="https://github.com/jenspfahl/KeepAwake/issues/36">Requested support for GNOME 44 #36.
-                            </a>
-                        </td>
-                        <td>Issue</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://github.com/ryonakano/reco">Reco</a></td>
-                        <td><a rel="noopener" target="_blank"
-                                href="https://github.com/ryonakano/reco/issues/190">"Info: runtime org.gnome. Platform branch 42 is end-of-life" #190.
-                            </a>
-                        </td>
-                        <td>Issue</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://github.com/patrick330602/electron-microsoft-todo">Electron Microsoft To Do</a></td>
-                        <td><a rel="noopener" target="_blank"
-                                href="https://github.com/patrick330602/electron-microsoft-todo/issues/4">"Bug: Sign-in page appears on every app launch" #4.
-                            </a>
-                        </td>
-                        <td>Issue</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-        <!-- <section id="contentCreationStuff">
-            <h2>Content Creation Stuff</h2>
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <iframe width="560" height="315" src="https://www.youtube.com/watch?v=iNJbVhG0T0Y&t=5s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="swiper-slide">
-                        <iframe width="560" height="315" src="https://www.youtube.com/watch?v=iNJbVhG0T0Y&t=5s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="swiper-slide">
-                        <iframe width="560" height="315" src="https://www.youtube.com/watch?v=iNJbVhG0T0Y&t=5s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="swiper-slide">
-                        <iframe width="560" height="315" src="https://www.youtube.com/watch?v=iNJbVhG0T0Y&t=5s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="swiper-slide">
-                        <iframe width="560" height="315" src="https://www.youtube.com/watch?v=iNJbVhG0T0Y&t=5s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="swiper-button-prev">⬅</div>
-                <div class="swiper-button-next">➡</div>
+            <div class="contributions">
+                <h3>Favorite Open Source Contributions</h3>
+                <table class="contributeTable">
+                    <thead>
+                        <tr>
+                            <th>Project</th>
+                            <th>Description</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="https://github.com/gofiber/fiber">Fiber</a></td>
+                            <td><a rel="noopener" target="_blank"
+                                    href="https://github.com/gofiber/fiber/pull/2413">Correct grammar errors in Azerbaijani translation #2413.
+                                </a>
+                            </td>
+                            <td>Pull Request</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="https://github.com/firstcontributions/first-contributions">First
+                                    Contributions
+                                </a>
+                            </td>
+                            <td>
+                                <a rel="noopener" target="_blank"
+                                    href="https://github.com/firstcontributions/first-contributions/pull/59782">
+                                    Fix grammar mistakes in Azerbaijani translation #59782.
+                                </a>
+                            </td>
+                            <td>Pull Request</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="https://github.com/lakoliu/Furtherance">Furtherance</a>
+                            </td>
+                            <td>
+                                <a rel="noopener" target="_blank"
+                                    href="https://github.com/lakoliu/Furtherance/issues/107">"Bug: Pomodoro Timer displays one-minute over the set time" #107.</a>
+                            </td>
+                            <td>Issue</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="https://github.com/linux-is-awesome/gnome_extension_rocketbar">Rocketbar</a>
+                            </td>
+                            <td>
+                                <a rel="noopener" target="_blank"
+                                    href="https://github.com/linux-is-awesome/gnome_extension_rocketbar/issues/29">Suggested to add an option to prevent interference in placement with others in the status bar #29.
+                                </a>
+                            </td>
+                            <td>Issue</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="https://github.com/jenspfahl/KeepAwake">Keep Awake!</a>
+                            </td>
+                            <td>
+                                <a rel="noopener" target="_blank"
+                                    href="https://github.com/jenspfahl/KeepAwake/issues/36">Requested support for GNOME 44 #36.
+                                </a>
+                            </td>
+                            <td>Issue</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/ryonakano/reco">Reco</a></td>
+                            <td><a rel="noopener" target="_blank"
+                                    href="https://github.com/ryonakano/reco/issues/190">"Info: runtime org.gnome. Platform branch 42 is end-of-life" #190.
+                                </a>
+                            </td>
+                            <td>Issue</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/patrick330602/electron-microsoft-todo">Electron Microsoft To Do</a></td>
+                            <td><a rel="noopener" target="_blank"
+                                    href="https://github.com/patrick330602/electron-microsoft-todo/issues/4">"Bug: Sign-in page appears on every app launch" #4.
+                                </a>
+                            </td>
+                            <td>Issue</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-        </section> -->
-        <!-- <section id="blog">
+        </section>
+        <section id="blog">
             <h2>Blog</h2>
             <div class="blogContainer">
                 <div class="blogItems">
@@ -502,7 +483,60 @@
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
+        <section id="contact">
+            <h1 class="section-header">Contact</h1>
+            <div class="contact-wrapper">
+                <!-- Left contact page -->
+                <form id="contact-form" class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value=""
+                                required>
+                        </div>
+                    </div>
+                    <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+                    <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+                        <div class="alt-send-button">
+                            <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+                        </div>
+                    </button>
+                </form>
+                <!-- Left contact page -->
+                <div class="direct-contact-container">
+                    <ul class="contact-list">
+                        <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">City,
+                                    State</span></i></li>
+                        <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a
+                                        href="tel:1-212-555-5555" title="Give me a call">(212) 555-2368</a></span></i></li>
+                        <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a
+                                        href="mailto:#" title="Send me an email">hitmeup@gmail.com</a></span></i></li>
+                    </ul>
+                    <hr>
+                    <ul class="social-media-list">
+                        <li><a href="#" target="_blank" class="contact-icon">
+                                <i class="fa fa-github" aria-hidden="true"></i></a>
+                        </li>
+                        <li><a href="#" target="_blank" class="contact-icon">
+                                <i class="fa fa-codepen" aria-hidden="true"></i></a>
+                        </li>
+                        <li><a href="#" target="_blank" class="contact-icon">
+                                <i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                        <li><a href="#" target="_blank" class="contact-icon">
+                                <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                    <hr>
+                    <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
         <div id="copyright"></div>
