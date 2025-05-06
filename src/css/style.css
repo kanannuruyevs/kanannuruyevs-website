@@ -270,13 +270,12 @@ main #about #aboutMeContent p {
 main #about #aboutMeContent img {
   width: 20%;
 }
-main #services .services-container {
+main #brands .services-container {
   display: flex;
-  justify-content: space-between;
   gap: 20px; /* Adjust the gap between service items */
   padding: 20px; /* Add padding around the container */
 }
-main #services .services-container .services-item {
+main #brands .services-container .services-item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -287,50 +286,50 @@ main #services .services-container .services-item {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
   transition: transform 0.3s ease-in-out;
 }
-main #services .services-container .services-item:hover {
+main #brands .services-container .services-item:hover {
   transform: scale(1.05); /* Scale up the item on hover */
 }
-main #services .services-container .services-item img {
+main #brands .services-container .services-item img {
   width: 100px; /* Set a fixed width for service icons */
   height: 100px; /* Set a fixed height for service icons */
   -o-object-fit: contain;
      object-fit: contain; /* Ensure the image fits within the specified dimensions */
   margin-bottom: 15px; /* Add space between the icon and the text */
 }
-main #services .services-container .services-item h3 {
+main #brands .services-container .services-item h3 {
   font-size: 20px;
   margin-bottom: 10px; /* Add space between the heading and the paragraph */
   color: black;
 }
-main #services .services-container .services-item p {
+main #brands .services-container .services-item p {
   font-size: 16px;
   color: black; /* Set a color for the paragraph text */
 }
-main #platforms .platforms-gallery {
+main #brands .services-container .services-item .platforms .platforms-gallery {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px; /* Adjust the gap between platform items */
   padding: 20px; /* Add padding around the gallery */
 }
-main #platforms .platforms-gallery .platform-item {
+main #brands .services-container .services-item .platforms .platforms-gallery .platform-item {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
-main #platforms .platforms-gallery .platform-item img {
+main #brands .services-container .services-item .platforms .platforms-gallery .platform-item img {
   width: 80px; /* Set a fixed width for all platform icons */
   height: 80px; /* Set a fixed height for all platform icons */
   -o-object-fit: contain;
      object-fit: contain; /* Ensure the image fits within the specified dimensions */
   transition: transform 0.3s ease-in-out;
 }
-main #platforms .platforms-gallery .platform-item img:hover {
+main #brands .services-container .services-item .platforms .platforms-gallery .platform-item img:hover {
   transform: scale(1.1); /* Scale up the icon on hover */
 }
-main #platforms .platforms-gallery .platform-item .tooltip {
+main #brands .services-container .services-item .platforms .platforms-gallery .platform-item .tooltip {
   visibility: hidden;
   background-color: #555;
   color: #fff;
@@ -344,7 +343,7 @@ main #platforms .platforms-gallery .platform-item .tooltip {
   opacity: 0;
   transition: opacity 0.3s;
 }
-main #platforms .platforms-gallery .platform-item .tooltip::after {
+main #brands .services-container .services-item .platforms .platforms-gallery .platform-item .tooltip::after {
   content: "";
   position: absolute;
   top: 100%; /* Arrow pointing down */
@@ -354,45 +353,45 @@ main #platforms .platforms-gallery .platform-item .tooltip::after {
   border-style: solid;
   border-color: #555 transparent transparent transparent;
 }
-main #platforms .platforms-gallery .platform-item:hover .tooltip {
+main #brands .services-container .services-item .platforms .platforms-gallery .platform-item:hover .tooltip {
   visibility: visible;
   opacity: 1;
 }
-main #projects {
+main #portfolio {
   display: flex;
   flex-direction: column;
 }
-main #projects .projects-container {
+main #portfolio .projects-container {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5vh;
   flex-wrap: wrap;
 }
-main #projects .projects-container .projects-item {
+main #portfolio .projects-container .projects-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2vh;
   width: 30%;
 }
-main #projects .projects-container .projects-item img {
+main #portfolio .projects-container .projects-item img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 80%;
 }
-main #projects .projects-container .projects-item .projects-item__text {
+main #portfolio .projects-container .projects-item .projects-item__text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-main #projects .projects-container .projects-item .projects-item__text a {
+main #portfolio .projects-container .projects-item .projects-item__text a {
   color: white;
   transition: color 0.3s;
 }
-main #projects .projects-container .projects-item .projects-item__text a:hover {
+main #portfolio .projects-container .projects-item .projects-item__text a:hover {
   color: orange;
 }
 main .mini-projects {

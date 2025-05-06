@@ -47,11 +47,10 @@ main {
         }
     }
 
-    #services {
+    #brands {
 
         .services-container {
             display: flex;
-            justify-content: space-between;
             gap: 20px; /* Adjust the gap between service items */
             padding: 20px; /* Add padding around the container */
         
@@ -87,72 +86,73 @@ main {
                     font-size: 16px;
                     color: black; /* Set a color for the paragraph text */
                 }
-            }
-        }
-    }
 
-    #platforms {
+                .platforms {
         
-        .platforms-gallery {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px; /* Adjust the gap between platform items */
-            padding: 20px; /* Add padding around the gallery */
-            
-            .platform-item {
-                position: relative;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            
-                img {
-                    width: 80px; /* Set a fixed width for all platform icons */
-                    height: 80px; /* Set a fixed height for all platform icons */
-                    object-fit: contain; /* Ensure the image fits within the specified dimensions */
-                    transition: transform 0.3s ease-in-out;
-            
-                    &:hover {
-                        transform: scale(1.1); /* Scale up the icon on hover */
+                    .platforms-gallery {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 20px; /* Adjust the gap between platform items */
+                        padding: 20px; /* Add padding around the gallery */
+                        
+                        .platform-item {
+                            position: relative;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            text-align: center;
+                        
+                            img {
+                                width: 80px; /* Set a fixed width for all platform icons */
+                                height: 80px; /* Set a fixed height for all platform icons */
+                                object-fit: contain; /* Ensure the image fits within the specified dimensions */
+                                transition: transform 0.3s ease-in-out;
+                        
+                                &:hover {
+                                    transform: scale(1.1); /* Scale up the icon on hover */
+                                }
+                            }
+                        
+                            .tooltip {
+                                visibility: hidden;
+                                background-color: #555;
+                                color: #fff;
+                                text-align: center;
+                                padding: 5px;
+                                border-radius: 6px;
+                                position: absolute;
+                                bottom: 100%; /* Position the tooltip above the icon */
+                                left: 50%;
+                                transform: translateX(-50%);
+                                opacity: 0;
+                                transition: opacity 0.3s;
+                        
+                                &::after {
+                                    content: '';
+                                    position: absolute;
+                                    top: 100%; /* Arrow pointing down */
+                                    left: 50%;
+                                    margin-left: -5px;
+                                    border-width: 5px;
+                                    border-style: solid;
+                                    border-color: #555 transparent transparent transparent;
+                                }
+                            }
+                        
+                            &:hover .tooltip {
+                                visibility: visible;
+                                opacity: 1;
+                            }
+                        }
                     }
-                }
-            
-                .tooltip {
-                    visibility: hidden;
-                    background-color: #555;
-                    color: #fff;
-                    text-align: center;
-                    padding: 5px;
-                    border-radius: 6px;
-                    position: absolute;
-                    bottom: 100%; /* Position the tooltip above the icon */
-                    left: 50%;
-                    transform: translateX(-50%);
-                    opacity: 0;
-                    transition: opacity 0.3s;
-            
-                    &::after {
-                        content: '';
-                        position: absolute;
-                        top: 100%; /* Arrow pointing down */
-                        left: 50%;
-                        margin-left: -5px;
-                        border-width: 5px;
-                        border-style: solid;
-                        border-color: #555 transparent transparent transparent;
-                    }
-                }
-            
-                &:hover .tooltip {
-                    visibility: visible;
-                    opacity: 1;
                 }
             }
         }
+        
     }
 
-    #projects {
+    #portfolio {
         display: flex;
         flex-direction: column;
 
