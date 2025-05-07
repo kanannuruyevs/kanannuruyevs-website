@@ -364,146 +364,144 @@ main #portfolio .swiper-container {
   width: 100%;
   height: 100%;
 }
-main #portfolio .swiper-wrapper {
+main #portfolio .swiper-container .swiper-wrapper {
   display: flex;
-  flex-direction: row; /* Ensure slides are in a row */
   gap: 10px; /* Add gap between videos */
 }
-main #portfolio .swiper-slide {
+main #portfolio .swiper-container .swiper-wrapper .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
   width: auto; /* Adjust width to fit content */
 }
-main #portfolio .swiper-button-next,
-main #portfolio .swiper-button-prev {
+main #portfolio .swiper-container .swiper-button-next,
+main #portfolio .swiper-container .swiper-button-prev {
   color: #fff;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 10%;
   z-index: 10;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 10px;
   border-radius: 50%;
   cursor: pointer;
 }
-main #portfolio .swiper-button-next {
-  right: 10px; /* Position next button on the right */
-}
-main #portfolio .swiper-button-prev {
-  left: 10px; /* Position prev button on the left */
-}
-main #portfolio .swiper-button-next:hover,
-main #portfolio .swiper-button-prev:hover {
+main #portfolio .swiper-container .swiper-button-next:hover,
+main #portfolio .swiper-container .swiper-button-prev:hover {
   background-color: rgba(0, 0, 0, 0.7);
 }
-main #others {
+main #portfolio .swiper-container .swiper-button-next {
+  right: 10px; /* Position next button on the right */
+}
+main #portfolio .swiper-container .swiper-button-prev {
+  left: 10px; /* Position prev button on the left */
+}
+main #portfolio .codingStuff {
   display: flex;
   flex-direction: column;
 }
-main #others h3 {
+main #portfolio .codingStuff h3 {
   font-size: 25px;
   font-weight: 700;
   text-transform: uppercase;
   color: #AEB7F4;
 }
-main #others .codingProjectsContainer {
+main #portfolio .codingStuff .codingProjectsContainer {
   display: flex;
   flex-direction: column;
 }
-main #others .codingProjectsContainer h3 {
+main #portfolio .codingStuff .codingProjectsContainer h3 {
   margin-bottom: 4vh;
 }
-main #others .codingProjectsContainer .projects-container {
+main #portfolio .codingStuff .codingProjectsContainer .projects-container {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5vh;
   flex-wrap: wrap;
 }
-main #others .codingProjectsContainer .projects-container .projects-item {
+main #portfolio .codingStuff .codingProjectsContainer .projects-container .projects-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2vh;
   width: 30%;
 }
-main #others .codingProjectsContainer .projects-container .projects-item img {
+main #portfolio .codingStuff .codingProjectsContainer .projects-container .projects-item img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 80%;
 }
-main #others .codingProjectsContainer .projects-container .projects-item .projects-item__text {
+main #portfolio .codingStuff .codingProjectsContainer .projects-container .projects-item .projects-item__text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-main #others .codingProjectsContainer .projects-container .projects-item .projects-item__text a {
+main #portfolio .codingStuff .codingProjectsContainer .projects-container .projects-item .projects-item__text a {
   color: white;
   transition: color 0.3s;
 }
-main #others .codingProjectsContainer .projects-container .projects-item .projects-item__text a:hover {
+main #portfolio .codingStuff .codingProjectsContainer .projects-container .projects-item .projects-item__text a:hover {
   color: orange;
 }
-main #others .mini-projects {
+main #portfolio .codingStuff .mini-projects {
   display: flex;
   flex-direction: column;
 }
-main #others .mini-projects h3 {
+main #portfolio .codingStuff .mini-projects h3 {
   margin: 4vh 0;
 }
-main #others .mini-projects .mini-projects-items {
+main #portfolio .codingStuff .mini-projects .mini-projects-items {
   display: flex;
 }
-main #others .mini-projects .mini-projects-items .mini-projects-item {
+main #portfolio .codingStuff .mini-projects .mini-projects-items .mini-projects-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2vh;
 }
-main #others .mini-projects .mini-projects-items .mini-projects-item img {
+main #portfolio .codingStuff .mini-projects .mini-projects-items .mini-projects-item img {
   width: 55vh;
   height: 55vh;
   -o-object-fit: contain;
      object-fit: contain;
 }
-main #others .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text {
+main #portfolio .codingStuff .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text {
   display: flex;
   text-align: center;
   align-items: center;
   flex-direction: column;
 }
-main #others .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text h3 {
+main #portfolio .codingStuff .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text h3 {
   cursor: pointer;
   transition: 0.3s ease-in-out;
   font-size: 26px;
 }
-main #others .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text h3:hover {
+main #portfolio .codingStuff .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text h3:hover {
   color: var(--light-lemon-yellow) !important;
 }
-main #others .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text a h3 {
+main #portfolio .codingStuff .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text a h3 {
   color: white;
   transition: 0.3s ease-in-out;
 }
-main #others .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text a h3:hover {
+main #portfolio .codingStuff .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text a h3:hover {
   color: var(--light-lemon-yellow);
 }
-main #others .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-items__links {
+main #portfolio .codingStuff .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-items__links {
   list-style: none;
   padding: 2vh 2vh 0;
 }
-main #others .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-items__links a {
+main #portfolio .codingStuff .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-items__links a {
   color: white;
   margin: 5px;
 }
-main #others .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-items__heading:hover,
-main #others .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-items__links a:hover {
+main #portfolio .codingStuff .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-items__heading:hover,
+main #portfolio .codingStuff .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-items__links a:hover {
   color: var(--light-lemon-yellow);
   transition: color 0.3s;
 }
-main #others .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-item__tags {
+main #portfolio .codingStuff .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-item__tags {
   padding: 3vh 0 3vh 0;
   display: flex;
   justify-content: center;
@@ -511,37 +509,37 @@ main #others .mini-projects .mini-projects-items .mini-projects-item .mini-proje
   flex-wrap: wrap;
   gap: 1vh;
 }
-main #others .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-item__tags span {
+main #portfolio .codingStuff .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-item__tags span {
   border: solid 1px white;
   padding: 1vh;
 }
-main #others .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text p {
+main #portfolio .codingStuff .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text p {
   width: 85%;
 }
-main #others .contributions h3 {
+main #portfolio .codingStuff .contributions h3 {
   margin: 4vh 0;
 }
-main #others .contributions .contributeTable {
+main #portfolio .codingStuff .contributions .contributeTable {
   width: 100%;
   border: 1px solid;
 }
-main #others .contributions .contributeTable th {
+main #portfolio .codingStuff .contributions .contributeTable th {
   color: white;
   padding: 15px;
   text-align: left;
   padding-left: 2vh;
 }
-main #others .contributions .contributeTable th:nth-child(3) {
+main #portfolio .codingStuff .contributions .contributeTable th:nth-child(3) {
   padding-left: 1.85vh;
 }
-main #others .contributions .contributeTable td {
+main #portfolio .codingStuff .contributions .contributeTable td {
   padding: 13px;
 }
-main #others .contributions .contributeTable td a {
+main #portfolio .codingStuff .contributions .contributeTable td a {
   color: orange;
   transition: 0.25s ease-in-out;
 }
-main #others .contributions .contributeTable td a:hover {
+main #portfolio .codingStuff .contributions .contributeTable td a:hover {
   color: var(--royal-blue);
 }
 main #blog .blogContainer {
