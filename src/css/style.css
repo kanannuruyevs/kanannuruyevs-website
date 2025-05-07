@@ -358,204 +358,25 @@ main #brands .services-container .services-item .platforms .platforms-gallery .p
   opacity: 1;
 }
 main #portfolio {
-  display: flex;
-  flex-direction: column;
-}
-main #portfolio .projects-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5vh;
-  flex-wrap: wrap;
-}
-main #portfolio .projects-container .projects-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2vh;
-  width: 30%;
-}
-main #portfolio .projects-container .projects-item img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 80%;
-}
-main #portfolio .projects-container .projects-item .projects-item__text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-main #portfolio .projects-container .projects-item .projects-item__text a {
-  color: white;
-  transition: color 0.3s;
-}
-main #portfolio .projects-container .projects-item .projects-item__text a:hover {
-  color: orange;
-}
-main .mini-projects {
-  display: flex;
-  flex-direction: column;
-}
-main .mini-projects .mini-projects-items {
-  display: flex;
-}
-main .mini-projects .mini-projects-items .mini-projects-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2vh;
-}
-main .mini-projects .mini-projects-items .mini-projects-item img {
-  width: 55vh;
-  height: 55vh;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text {
-  display: flex;
-  text-align: center;
-  align-items: center;
-  flex-direction: column;
-}
-main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text h3 {
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-  font-size: 26px;
-}
-main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text h3:hover {
-  color: var(--light-lemon-yellow) !important;
-}
-main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text a h3 {
-  color: white;
-  transition: 0.3s ease-in-out;
-}
-main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text a h3:hover {
-  color: var(--light-lemon-yellow);
-}
-main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-items__links {
-  list-style: none;
-  padding: 2vh 2vh 0;
-}
-main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-items__links a {
-  color: white;
-  margin: 5px;
-}
-main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-items__heading:hover,
-main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-items__links a:hover {
-  color: var(--light-lemon-yellow);
-  transition: color 0.3s;
-}
-main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-item__tags {
-  padding: 3vh 0 3vh 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1vh;
-}
-main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-item__tags span {
-  border: solid 1px white;
-  padding: 1vh;
-}
-main .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text p {
-  width: 85%;
-}
-main .contributeTable {
-  width: 100%;
-  border: 1px solid;
-}
-main .contributeTable th {
-  color: white;
-  padding: 15px;
-  text-align: left;
-  padding-left: 2vh;
-}
-main .contributeTable th:nth-child(3) {
-  padding-left: 1.85vh;
-}
-main .contributeTable td {
-  padding: 13px;
-}
-main .contributeTable td a {
-  color: orange;
-  transition: 0.25s ease-in-out;
-}
-main .contributeTable td a:hover {
-  color: var(--royal-blue);
-}
-main .blogContainer {
-  display: flex;
-  flex-direction: column;
-  background-color: black;
-}
-main .blogContainer .blogItems {
-  display: flex;
-  margin: 15px 20px 10px 5px;
-}
-main .blogContainer .blogItems img {
-  width: 25%;
-}
-main .blogContainer .blogItems .blogTextContainer {
-  width: 100%;
-  height: 100%;
-  padding: 25px;
-  line-height: 45px;
-}
-main .blogContainer .blogItems .blogTextContainer .blogItemsHeading {
-  color: orange;
-  font-size: 28px;
-}
-main .blogContainer .blogItems .blogTextContainer .blogItemsTags {
-  margin: 5px 0;
-}
-main .blogContainer .blogItems .blogTextContainer .blogItemsTags .first-tag,
-main .blogContainer .blogItems .blogTextContainer .blogItemsTags .otherTags {
-  border: solid 1px white;
-  padding: 1vh;
-}
-main .blogContainer .blogItems .blogTextContainer .blogPostDate {
-  position: relative;
-  top: 10px;
-  color: orange;
-  font-size: 18px;
-}
-main .blogContainer .blogItems .blogTextContainer .blogItemsText {
-  font-size: 20px;
-  margin: 5px 0;
-  line-height: 6vh;
-}
-main .blogContainer .blogItems .blogTextContainer .readArticle {
-  color: var(--royal-blue);
-  background-color: var(--light-gray);
-  padding: 8px;
-  transition: color 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
-}
-main .blogContainer .blogItems .blogTextContainer .readArticle:hover {
-  color: var(--light-gray);
-  box-shadow: inset 200px 0 0 0 var(--royal-blue);
-}
-main #contentCreationStuff {
   position: relative;
 }
-main #contentCreationStuff .swiper-container {
+main #portfolio .swiper-container {
   width: 100%;
   height: 100%;
 }
-main #contentCreationStuff .swiper-wrapper {
+main #portfolio .swiper-wrapper {
   display: flex;
   flex-direction: row; /* Ensure slides are in a row */
   gap: 10px; /* Add gap between videos */
 }
-main #contentCreationStuff .swiper-slide {
+main #portfolio .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
   width: auto; /* Adjust width to fit content */
 }
-main #contentCreationStuff .swiper-button-next,
-main #contentCreationStuff .swiper-button-prev {
+main #portfolio .swiper-button-next,
+main #portfolio .swiper-button-prev {
   color: #fff;
   position: absolute;
   top: 50%;
@@ -566,15 +387,213 @@ main #contentCreationStuff .swiper-button-prev {
   border-radius: 50%;
   cursor: pointer;
 }
-main #contentCreationStuff .swiper-button-next {
+main #portfolio .swiper-button-next {
   right: 10px; /* Position next button on the right */
 }
-main #contentCreationStuff .swiper-button-prev {
+main #portfolio .swiper-button-prev {
   left: 10px; /* Position prev button on the left */
 }
-main #contentCreationStuff .swiper-button-next:hover,
-main #contentCreationStuff .swiper-button-prev:hover {
+main #portfolio .swiper-button-next:hover,
+main #portfolio .swiper-button-prev:hover {
   background-color: rgba(0, 0, 0, 0.7);
+}
+main #others {
+  display: flex;
+  flex-direction: column;
+}
+main #others h3 {
+  font-size: 25px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #AEB7F4;
+}
+main #others .codingProjectsContainer {
+  display: flex;
+  flex-direction: column;
+}
+main #others .codingProjectsContainer h3 {
+  margin-bottom: 4vh;
+}
+main #others .codingProjectsContainer .projects-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5vh;
+  flex-wrap: wrap;
+}
+main #others .codingProjectsContainer .projects-container .projects-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vh;
+  width: 30%;
+}
+main #others .codingProjectsContainer .projects-container .projects-item img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 80%;
+}
+main #others .codingProjectsContainer .projects-container .projects-item .projects-item__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+main #others .codingProjectsContainer .projects-container .projects-item .projects-item__text a {
+  color: white;
+  transition: color 0.3s;
+}
+main #others .codingProjectsContainer .projects-container .projects-item .projects-item__text a:hover {
+  color: orange;
+}
+main #others .mini-projects {
+  display: flex;
+  flex-direction: column;
+}
+main #others .mini-projects h3 {
+  margin: 4vh 0;
+}
+main #others .mini-projects .mini-projects-items {
+  display: flex;
+}
+main #others .mini-projects .mini-projects-items .mini-projects-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vh;
+}
+main #others .mini-projects .mini-projects-items .mini-projects-item img {
+  width: 55vh;
+  height: 55vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main #others .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+main #others .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text h3 {
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  font-size: 26px;
+}
+main #others .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text h3:hover {
+  color: var(--light-lemon-yellow) !important;
+}
+main #others .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text a h3 {
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+main #others .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text a h3:hover {
+  color: var(--light-lemon-yellow);
+}
+main #others .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-items__links {
+  list-style: none;
+  padding: 2vh 2vh 0;
+}
+main #others .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-items__links a {
+  color: white;
+  margin: 5px;
+}
+main #others .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-items__heading:hover,
+main #others .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-items__links a:hover {
+  color: var(--light-lemon-yellow);
+  transition: color 0.3s;
+}
+main #others .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-item__tags {
+  padding: 3vh 0 3vh 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1vh;
+}
+main #others .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text .mini-projects-item__tags span {
+  border: solid 1px white;
+  padding: 1vh;
+}
+main #others .mini-projects .mini-projects-items .mini-projects-item .mini-projects-item__text p {
+  width: 85%;
+}
+main #others .contributions h3 {
+  margin: 4vh 0;
+}
+main #others .contributions .contributeTable {
+  width: 100%;
+  border: 1px solid;
+}
+main #others .contributions .contributeTable th {
+  color: white;
+  padding: 15px;
+  text-align: left;
+  padding-left: 2vh;
+}
+main #others .contributions .contributeTable th:nth-child(3) {
+  padding-left: 1.85vh;
+}
+main #others .contributions .contributeTable td {
+  padding: 13px;
+}
+main #others .contributions .contributeTable td a {
+  color: orange;
+  transition: 0.25s ease-in-out;
+}
+main #others .contributions .contributeTable td a:hover {
+  color: var(--royal-blue);
+}
+main #blog .blogContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+}
+main #blog .blogContainer .blogItems {
+  display: flex;
+  margin: 15px 20px 10px 5px;
+}
+main #blog .blogContainer .blogItems img {
+  width: 25%;
+}
+main #blog .blogContainer .blogItems .blogTextContainer {
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+  line-height: 45px;
+}
+main #blog .blogContainer .blogItems .blogTextContainer .blogItemsHeading {
+  color: orange;
+  font-size: 28px;
+}
+main #blog .blogContainer .blogItems .blogTextContainer .blogItemsTags {
+  margin: 5px 0;
+}
+main #blog .blogContainer .blogItems .blogTextContainer .blogItemsTags .first-tag,
+main #blog .blogContainer .blogItems .blogTextContainer .blogItemsTags .otherTags {
+  border: solid 1px white;
+  padding: 1vh;
+}
+main #blog .blogContainer .blogItems .blogTextContainer .blogPostDate {
+  position: relative;
+  top: 10px;
+  color: orange;
+  font-size: 18px;
+}
+main #blog .blogContainer .blogItems .blogTextContainer .blogItemsText {
+  font-size: 20px;
+  margin: 5px 0;
+  line-height: 6vh;
+}
+main #blog .blogContainer .blogItems .blogTextContainer .readArticle {
+  color: var(--royal-blue);
+  background-color: var(--light-gray);
+  padding: 8px;
+  transition: color 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+}
+main #blog .blogContainer .blogItems .blogTextContainer .readArticle:hover {
+  color: var(--light-gray);
+  box-shadow: inset 200px 0 0 0 var(--royal-blue);
 }
 main #contact {
   width: 100%;
