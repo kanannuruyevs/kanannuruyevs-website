@@ -68,14 +68,6 @@ document.addEventListener('click', function(event) {
 //     }
 // };
 
-// Smooth scrolling for anchor links
-document.querySelector('#contact-form').addEventListener('submit', (e) => {
-  e.preventDefault();
-  e.target.elements.name.value = '';
-  e.target.elements.email.value = '';
-  e.target.elements.message.value = '';
-});
-
 // Update year in footer tag
 const updateYear = new Date().getFullYear();
 const copyrightElement = document.getElementById("copyright");
