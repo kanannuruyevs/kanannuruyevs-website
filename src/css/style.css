@@ -256,7 +256,7 @@ main #about {
   gap: 3vh;
 }
 main #about h2 {
-  margin-bottom: -2vh;
+  margin-bottom: 0;
 }
 main #about #aboutMeContent {
   display: flex;
