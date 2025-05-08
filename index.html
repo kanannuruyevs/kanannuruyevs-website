@@ -26,7 +26,7 @@
                 <li><a href="#brands">Personal Brands</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#blog">Blog</a></li>
-                <!-- <li><a href="#contact">Contact</a></li> -->
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <img class="profile-picture__header" src="./src/images/home/profile-picture-favicon-192x192.png" alt="Profile Picture Header">
@@ -498,29 +498,34 @@
                 </div>
             </div>
         </section>
-        <!-- <section id="contact">
+        <section id="contact">
             <h2>Contact</h2>
             <div class="contactContainer">
-                <div class="contact-info">
-                    <h3>Get in Touch</h3>
-                    <p>Email: <a href="mailto:kanannuruyevs@gmail.com">kanannuruyevs@gmail.com</a></p>
-                </div>
-                <div class="contactForm">
-                    <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+                <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+                    <div class="formGroups">
                         <div class="form-group">
                             <input type="text" id="name" name="name" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
                             <input type="email" id="email" name="email" placeholder="Your Email" required>
                         </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
-                </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <!-- CAPTCHA inside contactForm for spam protection -->
+                    <div class="form-group">
+                        <!-- <label for="captcha"></label> -->
+                        <input type="text" id="captcha" name="captcha" placeholder="What is 5 + 3?" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                    <!-- Privacy note replacing the contact-info section -->
+                    <div class="privacy-note">
+                        <p>Your information will only be used to respond to your inquiry.</p>
+                    </div>
+                </form>
             </div>
-        </section> -->
+        </section>
     </main>
     <footer>
         <div id="copyright"></div>
