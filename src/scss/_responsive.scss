@@ -179,6 +179,28 @@
         top: 72.5vh;
     }
 
+    .profile-picture__header {
+        display: block !important;
+    }
+
+    .services-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5vh !important;
+
+        .services-item {
+            width: 100% !important;
+            margin-bottom: 20px !important;
+            text-align: center;
+
+        }
+    }
+
+    .codingStuff h3 {
+        text-align: center;
+    }
 }
 
 
