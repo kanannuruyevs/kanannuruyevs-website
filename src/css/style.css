@@ -818,7 +818,8 @@ footer .social-links li a img:hover {
   .nav-menu ul {
     display: inline-block;
     list-style: none;
-    margin-top: 30px;
+    margin-top: 50px;
+    transform: translateX(0.5vh);
   }
   .nav-menu ul li {
     margin-bottom: 15px;
@@ -851,7 +852,8 @@ footer .social-links li a img:hover {
     flex-wrap: wrap;
     width: 170px;
     position: fixed;
-    top: 72.5vh;
+    top: 67vh;
+    left: 0;
   }
   .profile-picture__header {
     display: block !important;
@@ -879,6 +881,10 @@ footer .social-links li a img:hover {
     padding-left: 4.3px !important;
     padding-top: 50px !important;
   }
+  .nav-menu ul {
+    margin-top: 30px !important;
+    transform: translateX(0);
+  }
   .social-links {
     display: none; /* Hide the social links by default */
   }
@@ -892,7 +898,7 @@ footer .social-links li a img:hover {
   .showSocialLinks {
     position: fixed;
     top: 67vh; /* Adjust if necessary */
-    left: 0;
+    left: 0.25vh;
   }
   .bothArrowButtons {
     display: none !important;
