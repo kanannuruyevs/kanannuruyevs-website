@@ -752,6 +752,10 @@ footer .social-links li a img:hover {
     left: 37%;
     z-index: 1003;
   }
+  header .username img {
+    width: 60%;
+    transform: translateX(-15%);
+  }
   #mainContent {
     margin: 14px;
     background-color: unset;
@@ -880,6 +884,10 @@ footer .social-links li a img:hover {
   }
   .social-links li {
     padding: 8px 12px;
+  }
+  .username img {
+    width: 75% !important;
+    transform: translateX(-20%) !important;
   }
   .showSocialLinks {
     position: fixed;
