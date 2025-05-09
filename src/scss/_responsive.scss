@@ -140,15 +140,15 @@
         ul {
             display: inline-block;
             list-style: none;
-            margin-top: 50px;
+            margin-top: 30px;
 
             li {
-                margin-bottom: 20px;
+                margin-bottom: 15px;
                 display: block;
-
+                
                 a {
-                    display: block;
-                    padding: 10px 7.5vh 0px 15px !important;
+                    display: inline-block;
+                    padding: 10px 7.5vh 0px 7px !important;
                     color: white;
                     font-size: medium !important;
                     border: none; /* No border */
@@ -164,7 +164,7 @@
     .showNavMenu {
         display: flex !important;
         flex-wrap: wrap;
-        width: 200px;
+        width: 180px;
         height: 59rem;
     }
 
@@ -172,7 +172,7 @@
         display: none;
          
         li {
-            padding: 8px 12px;
+            padding: 8px 20px 9px 9px;
         }
     }
 
@@ -223,7 +223,7 @@
         display: none; /* Hide the social links by default */
  
         li {
-            padding: 8px 12px;
+            padding: 8px 20px 9px 9px;
         }
     }
 
@@ -237,8 +237,8 @@
 
     .showSocialLinks {
         position: fixed;
-        top: 65vh; /* Adjust if necessary */
-        left: 1vh;
+        top: 67vh; /* Adjust if necessary */
+        left: 0;
     }
     
     .bothArrowButtons {

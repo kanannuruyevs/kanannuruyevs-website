@@ -818,15 +818,15 @@ footer .social-links li a img:hover {
   .nav-menu ul {
     display: inline-block;
     list-style: none;
-    margin-top: 50px;
+    margin-top: 30px;
   }
   .nav-menu ul li {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     display: block;
   }
   .nav-menu ul li a {
-    display: block;
-    padding: 10px 7.5vh 0px 15px !important;
+    display: inline-block;
+    padding: 10px 7.5vh 0px 7px !important;
     color: white;
     font-size: medium !important;
     border: none; /* No border */
@@ -837,14 +837,14 @@ footer .social-links li a img:hover {
   .showNavMenu {
     display: flex !important;
     flex-wrap: wrap;
-    width: 200px;
+    width: 180px;
     height: 59rem;
   }
   .social-links {
     display: none;
   }
   .social-links li {
-    padding: 8px 12px;
+    padding: 8px 20px 9px 9px;
   }
   .showSocialLinks {
     display: flex;
@@ -883,7 +883,7 @@ footer .social-links li a img:hover {
     display: none; /* Hide the social links by default */
   }
   .social-links li {
-    padding: 8px 12px;
+    padding: 8px 20px 9px 9px;
   }
   .username img {
     width: 75% !important;
@@ -891,8 +891,8 @@ footer .social-links li a img:hover {
   }
   .showSocialLinks {
     position: fixed;
-    top: 65vh; /* Adjust if necessary */
-    left: 1vh;
+    top: 67vh; /* Adjust if necessary */
+    left: 0;
   }
   .bothArrowButtons {
     display: none !important;
