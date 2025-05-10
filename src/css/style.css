@@ -1265,7 +1265,6 @@ footer .social-links li a img:hover {
   padding: 0.9vh 3.5vh;
 }
 #otherHeaders .username {
-  position: relative;
   left: 0;
 }
 #otherHeaders #goBackButton {
