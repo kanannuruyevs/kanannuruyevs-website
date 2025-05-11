@@ -4,59 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="icon" href="./src/images/home/my-picture-favicon.jpeg" type="image/jpeg">
-    <link rel="stylesheet" href="./src/css/style.css">
+    <title>Unemployment Journey</title>
+    <link rel="icon" href="../src/images/home/my-picture-favicon.jpeg" type="image/jpeg">
+    <link rel="stylesheet" href="../src/css/style.css">
     <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
 </head>
 
 <body>
-    <header>
+    <header id="otherHeaders">
         <div class="burger-menu">
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
         </div>
-        <a class="username" href="index.html">kanansnote</a>
-        <nav class="nav-menu">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skillsAndTools">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contributions">Contributions</a></li>
-                <li><a href="#blog">Blog</a></li>
-            </ul>
-        </nav>
-        <ul class="social-links">
-            <li><a href="mailto:kanansnote@gmail.com">
-                    <img src="./src/images/social-links/gmail1-svgrepo-com.svg" alt="Gmail">
-                </a>
-            </li>
-            <li><a href="https://discord.com/users/kanansnote">
-                    <img src="./src/images/social-links/discord1-svgrepo-com.svg" alt="Discord">
-                </a>
-            </li>
-            <li><a href="https://t.me/kanansnote">
-                    <img src="./src/images/social-links/telegram1-svgrepo-com.svg" alt="Telegram">
-                </a>
-            </li>
-            <li><a href="https://github.com/kanansnote">
-                    <img src="./src/images/social-links/github1-svgrepo-com.svg" alt="GitHub">
-                </a>
-            </li>
-        </ul>
+        <a class="username" href="./index.html">
+            <img src="../src/images/home/kanannuruyevs-bg-removed.png" alt="Profile Picture">
+        </a>
+        <img class="profile-picture__header" src="../src/images/home/profile-picture-favicon-192x192.png" alt="Profile Picture Header">
+        <button id="goBackButton" type="button">
+            <div class="goBackButton__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" height="20px" width="20px">
+                    <path d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z" fill="#000000"></path>
+                    <path d="m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z" fill="#000000"></path>
+                </svg>
+            </div>
+            <p class="goBackButton__text">Go Back</p>
+        </button>
     </header>
-    <main id="blogMain">
+    <main id="otherMains">
         <div class="blog-unemployment">
             <div class="unemployment-content">
                 <h1>What I have done and learned during unemployment, after finishing my Bachelor's degree?</h1>
-                <p>As I mentioned in "About Me" page, I graduated a Bachelor's Degree in Information Technology.</p>
+                <p>As I mentioned in the "About Me" page, I graduated with a Bachelor's Degree in Information Technology.</p>
+                <p>During my unemployment period, I focused on self-improvement by learning new skills, working on personal projects, and contributing to open-source communities. This time allowed me to explore my interests and grow both personally and professionally.</p>
             </div>
         </div>
     </main>
     <footer>
-        <span id="copyright"></span>
+        <div id="copyright"></div>
+        <div id="topBtn">Scroll to Top ↑</div>
+        <ul class="social-links">
+            <li>
+                <a href="mailto:kanannuruyevs@gmail.com">
+                    <img src="../src/images/social-links/gmail1-svgrepo-com.svg" alt="Gmail">
+                </a>
+            </li>
+            <li>
+                <a href="https://facebook.com/kanannuruyevs">
+                    <img src="../src/images/social-links/facebook-svgrepo-com.svg" alt="Facebook">
+                </a>
+            </li>
+            <li>
+                <a href="https://instagram.com/kanannuruyevs">
+                    <img src="../src/images/social-links/instagram-svgrepo-com.svg" alt="Instagram">
+                </a>
+            </li>
+            <li>
+                <a href="https://tiktok.com/@kanannuruyevs">
+                    <img src="../src/images/social-links/tiktok-outline-svgrepo-com.svg" alt="TikTok">
+                </a>
+            </li>
+            <li>
+                <a href="https://youtube.com/@kanannuruyevs">
+                    <img src="../src/images/social-links/youtube-outline-svgrepo-com.svg" alt="YouTube">
+                </a>
+            </li>
+            <li>
+                <a href="https://linkedin.com/in/kanannuruyevs">
+                    <img src="../src/images/social-links/linkedin-svgrepo-com.svg" alt="LinkedIn">
+                </a>
+            </li>
+        </ul>
     </footer>
     <script src="./src/js/script.js"></script>
 </body>

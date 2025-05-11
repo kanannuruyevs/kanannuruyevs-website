@@ -638,6 +638,7 @@ main #contact .contactContainer .contact-form .form-group textarea {
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 16px;
+  font-family: unset;
   background-color: #fff;
   transition: border-color 0.3s ease;
 }
