@@ -47,127 +47,139 @@ main {
         }
     }
 
-    #brands {
+    #portfolio {
+        position: relative;
 
-        .services-container {
-            display: flex;
-            gap: 20px; /* Adjust the gap between service items */
-            padding: 20px; /* Add padding around the container */
-        
-            .services-item {
+        .portfolio-container {
+
+            .services-container {
                 display: flex;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                background-color: #f9f9f9; /* Background color for service items */
+                gap: 20px;
+                /* Adjust the gap between service items */
                 padding: 20px;
-                border-radius: 10px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-                transition: transform 0.3s ease-in-out;
-        
-                &:hover {
-                    transform: scale(1.05); /* Scale up the item on hover */
-                }
-        
-                img {
-                    width: 100px; /* Set a fixed width for service icons */
-                    height: 100px; /* Set a fixed height for service icons */
-                    object-fit: contain; /* Ensure the image fits within the specified dimensions */
-                    margin-bottom: 15px; /* Add space between the icon and the text */
-                }
-        
-                h3 {
-                    font-size: 20px;
-                    margin-bottom: 10px; /* Add space between the heading and the paragraph */
-                    color: black;
-                }
-        
-                p {
-                    font-size: 16px;
-                    color: black; /* Set a color for the paragraph text */
-                }
+                /* Add padding around the container */
+                flex-wrap: wrap;
 
-                .platforms {
-        
-                    .platforms-gallery {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        gap: 20px; /* Adjust the gap between platform items */
-                        padding: 20px; /* Add padding around the gallery */
-                        
-                        .platform-item {
-                            position: relative;
+                .services-item {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .services-item__header {
+                        /* Background color for service items */
+                        background-color: #f9f9f9;
+                        padding: 20px;
+                        border-radius: 10px;
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                        /* Add a subtle shadow */
+                        transition: transform 0.3s ease-in-out;
+                
+                        &:hover {
+                            transform: scale(1.05);
+                            /* Scale up the item on hover */
+                        }
+
+                        h3 {
+                            font-size: 20px;
+                            margin-bottom: 10px;
+                            /* Add space between the heading and the paragraph */
+                            color: black;
+                        }
+
+                        p {
+                            font-size: 16px;
+                            color: black;
+                            /* Darker text color for better readability */
+                        }
+                    }
+
+                    .platforms {
+
+                        .platforms-gallery {
                             display: flex;
-                            flex-direction: column;
+                            justify-content: center;
                             align-items: center;
-                            text-align: center;
-                        
-                            img {
-                                width: 80px; /* Set a fixed width for all platform icons */
-                                height: 80px; /* Set a fixed height for all platform icons */
-                                object-fit: contain; /* Ensure the image fits within the specified dimensions */
-                                transition: transform 0.3s ease-in-out;
-                        
-                                &:hover {
-                                    transform: scale(1.1); /* Scale up the icon on hover */
-                                }
-                            }
-                        
-                            .tooltip {
-                                visibility: hidden;
-                                background-color: #555;
-                                color: #fff;
+                            gap: 20px;
+                            /* Adjust the gap between platform items */
+                            padding: 20px;
+                            /* Add padding around the gallery */
+
+                            .platform-item {
+                                position: relative;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
                                 text-align: center;
-                                padding: 5px;
-                                border-radius: 6px;
-                                position: absolute;
-                                bottom: 100%; /* Position the tooltip above the icon */
-                                left: 50%;
-                                transform: translateX(-50%);
-                                opacity: 0;
-                                transition: opacity 0.3s;
-                        
-                                &::after {
-                                    content: '';
-                                    position: absolute;
-                                    top: 100%; /* Arrow pointing down */
-                                    left: 50%;
-                                    margin-left: -5px;
-                                    border-width: 5px;
-                                    border-style: solid;
-                                    border-color: #555 transparent transparent transparent;
+
+                                img {
+                                    width: 80px;
+                                    /* Set a fixed width for all platform icons */
+                                    height: 80px;
+                                    /* Set a fixed height for all platform icons */
+                                    object-fit: contain;
+                                    /* Ensure the image fits within the specified dimensions */
+                                    transition: transform 0.3s ease-in-out;
+
+                                    &:hover {
+                                        transform: scale(1.1);
+                                        /* Scale up the icon on hover */
+                                    }
                                 }
-                            }
-                        
-                            &:hover .tooltip {
-                                visibility: visible;
-                                opacity: 1;
+
+                                .tooltip {
+                                    visibility: hidden;
+                                    background-color: #555;
+                                    color: #fff;
+                                    text-align: center;
+                                    padding: 5px;
+                                    border-radius: 6px;
+                                    position: absolute;
+                                    bottom: 100%;
+                                    /* Position the tooltip above the icon */
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                    opacity: 0;
+                                    transition: opacity 0.3s;
+
+                                    &::after {
+                                        content: '';
+                                        position: absolute;
+                                        top: 100%;
+                                        /* Arrow pointing down */
+                                        left: 50%;
+                                        margin-left: -5px;
+                                        border-width: 5px;
+                                        border-style: solid;
+                                        border-color: #555 transparent transparent transparent;
+                                    }
+                                }
+
+                                &:hover .tooltip {
+                                    visibility: visible;
+                                    opacity: 1;
+                                }
                             }
                         }
                     }
                 }
             }
-        }
-        
-    }
 
-    #portfolio {
-		position: relative;
-	
+        }
+
         .swiper-container {
             width: 100%;
             height: 100%;
 
             .swiper-wrapper {
                 display: flex;
-                gap: 10px; /* Add gap between videos */
+                gap: 10px;
+                /* Add gap between videos */
 
                 .swiper-slide {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    width: auto; /* Adjust width to fit content */
+                    width: auto;
+                    /* Adjust width to fit content */
                 }
             }
 
@@ -188,18 +200,20 @@ main {
             }
 
             .swiper-button-next {
-                right: 10px; /* Position next button on the right */
+                right: 10px;
+                /* Position next button on the right */
             }
 
             .swiper-button-prev {
-                left: 10px; /* Position prev button on the left */
+                left: 10px;
+                /* Position prev button on the left */
             }
         }
 
         .codingStuff {
             display: flex;
             flex-direction: column;
-                        
+
             h3 {
                 font-size: 25px;
                 font-weight: 700;
@@ -207,45 +221,45 @@ main {
                 color: #AEB7F4;
                 margin-bottom: 4vh;
             }
-    
+
             .codingProjectsContainer {
                 display: flex;
                 flex-direction: column;
-                
+
                 .projects-container {
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     gap: 5vh;
                     flex-wrap: wrap;
-        
+
                     .projects-item {
                         display: flex;
                         flex-direction: column;
                         align-items: center;
                         gap: 2vh;
                         width: 30%;
-        
+
                         img {
                             object-fit: cover;
                             width: 80%;
                         }
-        
+
                         .projects-item__text {
                             display: flex;
                             flex-direction: column;
                             justify-content: center;
                             align-items: center;
                             text-align: center;
-        
+
                             a {
                                 color: white;
                                 transition: color 0.3s;
-                                
+
                                 h4 {
                                     font-size: 20px;
                                 }
-        
+
                                 &:hover {
                                     color: orange;
                                 }
@@ -254,73 +268,73 @@ main {
                     }
                 }
             }
-    
+
             .mini-projects {
                 display: flex;
                 flex-direction: column;
-    
+
                 h3 {
                     margin: 4vh 0;
                 }
-        
+
                 .mini-projects-items {
                     display: flex;
-        
+
                     .mini-projects-item {
                         display: flex;
                         flex-direction: column;
                         align-items: center;
                         gap: 2vh;
-        
+
                         img {
                             width: 55vh;
                             height: 55vh;
                             object-fit: contain;
                         }
-        
+
                         .mini-projects-item__text {
                             display: flex;
                             text-align: center;
                             align-items: center;
                             flex-direction: column;
-        
+
                             h4 {
                                 cursor: pointer;
                                 transition: 0.3s ease-in-out;
                                 font-size: 22px;
-        
+
                                 &:hover {
                                     color: var(--light-lemon-yellow) !important;
                                 }
                             }
-        
+
                             a {
                                 h4 {
                                     color: white;
                                     transition: 0.3s ease-in-out;
-        
+
                                     &:hover {
                                         color: var(--light-lemon-yellow);
                                     }
                                 }
                             }
-        
+
                             .mini-projects-items__links {
                                 list-style: none;
                                 padding: 2vh 2vh 0;
-        
+
                                 a {
                                     color: white;
                                     margin: 5px;
                                 }
                             }
-        
+
                             .mini-projects-items__heading:hover,
                             .mini-projects-items__links a:hover {
                                 color: var(--light-lemon-yellow);
                                 transition: color 0.3s;
                             }
-        
+
                             .mini-projects-item__tags {
                                 padding: 3vh 0 3vh 0;
                                 display: flex;
@@ -328,13 +342,13 @@ main {
                                 align-items: center;
                                 flex-wrap: wrap;
                                 gap: 1vh;
-        
+
                                 span {
                                     border: solid 1px white;
                                     padding: 1vh;
                                 }
                             }
-        
+
                             p {
                                 width: 85%;
                             }
@@ -342,35 +356,35 @@ main {
                     }
                 }
             }
-        
+
             .contributions {
-    
+
                 h3 {
                     margin: 4vh 0;
                 }
-    
+
                 .contributeTable {
                     width: 100%;
                     border: 1px solid;
-            
+
                     th {
                         color: white;
                         padding: 15px;
                         text-align: left;
                         padding-left: 2vh;
-            
+
                         &:nth-child(3) {
                             padding-left: 1.85vh;
                         }
                     }
-            
+
                     td {
                         padding: 13px;
-            
+
                         a {
                             color: orange;
                             transition: 0.25s ease-in-out;
-            
+
                             &:hover {
                                 color: var(--royal-blue);
                             }
@@ -379,7 +393,7 @@ main {
                 }
             }
         }
-	}
+    }
 
     #blog {
 
