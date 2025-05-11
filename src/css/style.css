@@ -297,19 +297,27 @@ main #portfolio .portfolio-container .services-container {
   padding: 20px;
   /* Add padding around the container */
   flex-wrap: wrap;
+  gap: 30px;
 }
 main #portfolio .portfolio-container .services-container .services-item {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 10vh;
 }
 main #portfolio .portfolio-container .services-container .services-item .services-item__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   /* Background color for service items */
   background-color: #f9f9f9;
-  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   /* Add a subtle shadow */
   transition: transform 0.3s ease-in-out;
+  width: 200px;
+  height: 100%;
 }
 main #portfolio .portfolio-container .services-container .services-item .services-item__header:hover {
   transform: scale(1.05);
@@ -343,13 +351,10 @@ main #portfolio .portfolio-container .services-container .services-item .platfor
   text-align: center;
 }
 main #portfolio .portfolio-container .services-container .services-item .platforms .platforms-gallery .platform-item img {
-  width: 80px;
-  /* Set a fixed width for all platform icons */
-  height: 80px;
-  /* Set a fixed height for all platform icons */
+  width: 60px;
+  height: 60px;
   -o-object-fit: contain;
      object-fit: contain;
-  /* Ensure the image fits within the specified dimensions */
   transition: transform 0.3s ease-in-out;
 }
 main #portfolio .portfolio-container .services-container .services-item .platforms .platforms-gallery .platform-item img:hover {

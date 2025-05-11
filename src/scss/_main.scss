@@ -59,19 +59,27 @@ main {
                 padding: 20px;
                 /* Add padding around the container */
                 flex-wrap: wrap;
+                gap: 30px;
 
                 .services-item {
                     display: flex;
                     justify-content: space-between;
+                    align-items: center;
+                    gap: 10vh;
 
                     .services-item__header {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
                         /* Background color for service items */
                         background-color: #f9f9f9;
-                        padding: 20px;
                         border-radius: 10px;
                         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                         /* Add a subtle shadow */
                         transition: transform 0.3s ease-in-out;
+                        width: 200px;
+                        height: 100%;
                 
                         &:hover {
                             transform: scale(1.05);
@@ -111,12 +119,9 @@ main {
                                 text-align: center;
 
                                 img {
-                                    width: 80px;
-                                    /* Set a fixed width for all platform icons */
-                                    height: 80px;
-                                    /* Set a fixed height for all platform icons */
+                                    width: 60px;
+                                    height: 60px;
                                     object-fit: contain;
-                                    /* Ensure the image fits within the specified dimensions */
                                     transition: transform 0.3s ease-in-out;
 
                                     &:hover {
