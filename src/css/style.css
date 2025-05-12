@@ -342,6 +342,12 @@ main #portfolio .portfolio-container .services-container .services-item .service
 main #portfolio .portfolio-container .services-container .services-item .services-item__header p {
   font-size: 16px;
 }
+main #portfolio .portfolio-container .services-container .services-item .services-item__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
 main #portfolio .portfolio-container .services-container .services-item .services-item__main .focuses,
 main #portfolio .portfolio-container .services-container .services-item .services-item__main .contents,
 main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms {

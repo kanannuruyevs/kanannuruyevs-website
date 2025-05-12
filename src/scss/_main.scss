@@ -111,6 +111,10 @@ main {
                     }
 
                     .services-item__main {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        gap: 20px;
 
                         .focuses,
                         .contents,
