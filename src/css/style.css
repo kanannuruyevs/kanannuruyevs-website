@@ -353,28 +353,33 @@ main #portfolio .portfolio-container .services-container .services-item .service
 main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms {
   margin-bottom: 20px;
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms-gallery {
+main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms .platforms-gallery {
   display: flex;
   gap: 20px;
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms-gallery .platform-item {
+main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms .platforms-gallery .platform-item {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms-gallery .platform-item img {
+main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms .platforms-gallery .platform-item img {
   width: 60px;
   height: 60px;
   -o-object-fit: contain;
      object-fit: contain;
   transition: transform 0.3s ease-in-out;
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms-gallery .platform-item img:hover {
+main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms .platforms-gallery .platform-item img:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms-gallery .platform-item .tooltip {
+main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms .platforms-gallery .platform-item .tooltip {
   visibility: hidden;
   background-color: #555; /* Default background color */
   color: #fff; /* Default text color */
@@ -392,7 +397,7 @@ main #portfolio .portfolio-container .services-container .services-item .service
   white-space: nowrap; /* Prevent text from wrapping */
   font-size: 14px; /* Adjust font size for readability */
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms-gallery .platform-item .tooltip::after {
+main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms .platforms-gallery .platform-item .tooltip::after {
   content: "";
   position: absolute;
   top: 100%;
@@ -402,7 +407,7 @@ main #portfolio .portfolio-container .services-container .services-item .service
   border-style: solid;
   border-color: #555 transparent transparent transparent; /* Match tooltip background */
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms-gallery .platform-item:hover .tooltip {
+main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms .platforms-gallery .platform-item:hover .tooltip {
   visibility: visible;
   opacity: 1;
 }
