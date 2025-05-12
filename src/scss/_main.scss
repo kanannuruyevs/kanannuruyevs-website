@@ -89,6 +89,7 @@ main {
 
                             &:hover {
                                 transform: scale(1.05);
+                                cursor: pointer;
                             }
                         }
 
@@ -135,23 +136,28 @@ main {
 
                                     &:hover {
                                         transform: scale(1.1);
+                                        cursor: pointer;
                                     }
                                 }
 
                                 .tooltip {
                                     visibility: hidden;
-                                    background-color: #555;
-                                    color: #fff;
+                                    background-color: #555; /* Default background color */
+                                    color: #fff; /* Default text color */
                                     text-align: center;
-                                    padding: 5px;
+                                    padding: 5px 10px; /* Add padding for better spacing */
                                     border-radius: 6px;
                                     position: absolute;
                                     bottom: 100%;
                                     left: 50%;
                                     transform: translateX(-50%);
                                     opacity: 0;
-                                    transition: opacity 0.3s;
-
+                                    transition: opacity 0.3s, background-color 0.3s;
+                                    width: auto; /* Allow tooltip to adjust width based on content */
+                                    max-width: 200px; /* Prevent tooltip from becoming too wide */
+                                    white-space: nowrap; /* Prevent text from wrapping */
+                                    font-size: 14px; /* Adjust font size for readability */
+                                
                                     &::after {
                                         content: '';
                                         position: absolute;
@@ -160,7 +166,7 @@ main {
                                         margin-left: -5px;
                                         border-width: 5px;
                                         border-style: solid;
-                                        border-color: #555 transparent transparent transparent;
+                                        border-color: #555 transparent transparent transparent; /* Match tooltip background */
                                     }
                                 }
 

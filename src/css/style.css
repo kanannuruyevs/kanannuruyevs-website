@@ -327,6 +327,7 @@ main #portfolio .portfolio-container .services-container .services-item .service
 }
 main #portfolio .portfolio-container .services-container .services-item .services-item__header .services-item__headerBack:hover {
   transform: scale(1.05);
+  cursor: pointer;
 }
 main #portfolio .portfolio-container .services-container .services-item .services-item__header h3,
 main #portfolio .portfolio-container .services-container .services-item .services-item__header p {
@@ -365,20 +366,25 @@ main #portfolio .portfolio-container .services-container .services-item .service
 }
 main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms-gallery .platform-item img:hover {
   transform: scale(1.1);
+  cursor: pointer;
 }
 main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms-gallery .platform-item .tooltip {
   visibility: hidden;
-  background-color: #555;
-  color: #fff;
+  background-color: #555; /* Default background color */
+  color: #fff; /* Default text color */
   text-align: center;
-  padding: 5px;
+  padding: 5px 10px; /* Add padding for better spacing */
   border-radius: 6px;
   position: absolute;
   bottom: 100%;
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity 0.3s, background-color 0.3s;
+  width: auto; /* Allow tooltip to adjust width based on content */
+  max-width: 200px; /* Prevent tooltip from becoming too wide */
+  white-space: nowrap; /* Prevent text from wrapping */
+  font-size: 14px; /* Adjust font size for readability */
 }
 main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms-gallery .platform-item .tooltip::after {
   content: "";
@@ -388,7 +394,7 @@ main #portfolio .portfolio-container .services-container .services-item .service
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: #555 transparent transparent transparent;
+  border-color: #555 transparent transparent transparent; /* Match tooltip background */
 }
 main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms-gallery .platform-item:hover .tooltip {
   visibility: visible;
