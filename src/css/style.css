@@ -293,7 +293,6 @@ main #portfolio {
 main #portfolio .portfolio-container .services-container {
   display: flex;
   flex-direction: column;
-  gap: 20px;
   /* Adjust the gap between service items */
   padding: 20px;
   /* Add padding around the container */
@@ -301,106 +300,73 @@ main #portfolio .portfolio-container .services-container {
 }
 main #portfolio .portfolio-container .services-container .services-item {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   gap: 10vh;
 }
 main #portfolio .portfolio-container .services-container .services-item .services-item__header {
+  position: relative;
+  width: 300px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   text-align: center;
-  padding: 20px;
-  /* Add a subtle shadow */
-  transition: transform 0.3s ease-in-out;
-  width: 600px;
-  height: 200px;
-  position: relative;
+  gap: 10px;
 }
 main #portfolio .portfolio-container .services-container .services-item .services-item__header .services-item__headerBack {
   position: absolute;
-  /* Background color for service items */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
   background-color: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  height: 100%;
+  transition: transform 0.3s ease-in-out;
 }
 main #portfolio .portfolio-container .services-container .services-item .services-item__header .services-item__headerBack:hover {
   transform: scale(1.05);
-  /* Scale up the item on hover */
+}
+main #portfolio .portfolio-container .services-container .services-item .services-item__header h3,
+main #portfolio .portfolio-container .services-container .services-item .services-item__header p {
+  z-index: 1;
+  padding: 0 20px;
+  margin: 0;
+  color: black;
 }
 main #portfolio .portfolio-container .services-container .services-item .services-item__header h3 {
   font-size: 20px;
-  /* Add space between the heading and the paragraph */
-  color: black;
 }
 main #portfolio .portfolio-container .services-container .services-item .services-item__header p {
   font-size: 16px;
-  color: black;
-  /* Darker text color for better readability */
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__main .focuses {
-  display: flex;
-  gap: 10px;
-  /* Adjust the gap between focus items */
-  /* Add padding around the focuses */
-}
-main #portfolio .portfolio-container .services-container .services-item .services-item__main .focuses .focus-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-main #portfolio .portfolio-container .services-container .services-item .services-item__main .focuses .focus-item img {
-  width: 60px;
-  height: 60px;
-  -o-object-fit: contain;
-     object-fit: contain;
-  transition: transform 0.3s ease-in-out;
-}
-main #portfolio .portfolio-container .services-container .services-item .services-item__main .focuses .focus-item img:hover {
-  transform: scale(1.1);
-  /* Scale up the icon on hover */
-}
-main #portfolio .portfolio-container .services-container .services-item .services-item__main .focuses .focus-item h4 {
-  font-size: 16px;
-  margin-top: 5px;
-  /* Space between icon and text */
-}
+main #portfolio .portfolio-container .services-container .services-item .services-item__main .focuses,
+main #portfolio .portfolio-container .services-container .services-item .services-item__main .contents,
 main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms {
-  display: flex;
-  align-items: center;
+  margin-bottom: 20px;
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms .platforms-gallery {
+main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms-gallery {
   display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 20px;
-  /* Adjust the gap between platform items */
-  padding: 20px;
-  /* Add padding around the gallery */
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms .platforms-gallery .platform-item {
+main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms-gallery .platform-item {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms .platforms-gallery .platform-item img {
+main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms-gallery .platform-item img {
   width: 60px;
   height: 60px;
   -o-object-fit: contain;
      object-fit: contain;
   transition: transform 0.3s ease-in-out;
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms .platforms-gallery .platform-item img:hover {
+main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms-gallery .platform-item img:hover {
   transform: scale(1.1);
-  /* Scale up the icon on hover */
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms .platforms-gallery .platform-item .tooltip {
+main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms-gallery .platform-item .tooltip {
   visibility: hidden;
   background-color: #555;
   color: #fff;
@@ -409,24 +375,22 @@ main #portfolio .portfolio-container .services-container .services-item .service
   border-radius: 6px;
   position: absolute;
   bottom: 100%;
-  /* Position the tooltip above the icon */
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
   transition: opacity 0.3s;
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms .platforms-gallery .platform-item .tooltip::after {
+main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms-gallery .platform-item .tooltip::after {
   content: "";
   position: absolute;
   top: 100%;
-  /* Arrow pointing down */
   left: 50%;
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
   border-color: #555 transparent transparent transparent;
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms .platforms-gallery .platform-item:hover .tooltip {
+main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms-gallery .platform-item:hover .tooltip {
   visibility: visible;
   opacity: 1;
 }
