@@ -314,22 +314,6 @@ main #portfolio .portfolio-container .services-container .services-item .service
   text-align: center;
   gap: 10px;
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__header .services-item__headerBack {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-}
-main #portfolio .portfolio-container .services-container .services-item .services-item__header .services-item__headerBack:hover {
-  transform: scale(1.05);
-  cursor: pointer;
-}
 main #portfolio .portfolio-container .services-container .services-item .services-item__header h3,
 main #portfolio .portfolio-container .services-container .services-item .services-item__header p {
   z-index: 1;
@@ -343,9 +327,29 @@ main #portfolio .portfolio-container .services-container .services-item .service
 main #portfolio .portfolio-container .services-container .services-item .services-item__header p {
   font-size: 16px;
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__header .expand-portfolio-container .expand-portfolio-btn {
+main #portfolio .portfolio-container .services-container .services-item .services-item__header .expandable-portfolio-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+main #portfolio .portfolio-container .services-container .services-item .services-item__header .expandable-portfolio-container:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+main #portfolio .portfolio-container .services-container .services-item .services-item__header .expandable-portfolio-container .expand-portfolio-btn {
+  position: absolute;
+  bottom: 10%;
+  transform: translateX(-50%);
   margin-top: 15px;
-  padding: 10px 22px;
+  width: 70%;
+  padding: 10px 30px;
   background: #AEB7F4;
   color: #222;
   border: none;
@@ -355,15 +359,15 @@ main #portfolio .portfolio-container .services-container .services-item .service
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__header .expand-portfolio-container .expand-portfolio-btn:hover {
+main #portfolio .portfolio-container .services-container .services-item .services-item__header .expandable-portfolio-container .expand-portfolio-btn:hover {
   background: #222;
   color: #fff;
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__header .expand-portfolio-container .expandable-portfolio {
+main #portfolio .portfolio-container .services-container .services-item .services-item__header .expandable-portfolio-container .expandable-portfolio {
   margin-top: 18px;
-  background: #000000;
+  background: #ffffff;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.07);
   padding: 20px 25px;
   overflow: hidden;
   max-height: 0;
@@ -371,19 +375,19 @@ main #portfolio .portfolio-container .services-container .services-item .service
   transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s;
   z-index: -1;
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__header .expand-portfolio-container .expandable-portfolio.active {
+main #portfolio .portfolio-container .services-container .services-item .services-item__header .expandable-portfolio-container .expandable-portfolio.active {
   max-height: 800px;
   opacity: 1;
   transition: max-height 0.7s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s;
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__header .expand-portfolio-container .expandable-portfolio h4 {
+main #portfolio .portfolio-container .services-container .services-item .services-item__header .expandable-portfolio-container .expandable-portfolio h4 {
   margin-top: 0;
   color: #5a5a8a;
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__header .expand-portfolio-container .expandable-portfolio ul {
+main #portfolio .portfolio-container .services-container .services-item .services-item__header .expandable-portfolio-container .expandable-portfolio ul {
   padding-left: 18px;
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__header .expand-portfolio-container .expandable-portfolio ul li {
+main #portfolio .portfolio-container .services-container .services-item .services-item__header .expandable-portfolio-container .expandable-portfolio ul li {
   margin-bottom: 12px;
 }
 main #portfolio .portfolio-container .services-container .services-item .services-item__main {

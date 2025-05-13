@@ -75,24 +75,6 @@ main {
                         text-align: center;
                         gap: 10px;
 
-                        .services-item__headerBack {
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            right: 0;
-                            bottom: 0;
-                            z-index: -1;
-                            background-color: #f9f9f9;
-                            border-radius: 10px;
-                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                            transition: transform 0.3s ease-in-out;
-
-                            &:hover {
-                                transform: scale(1.05);
-                                cursor: pointer;
-                            }
-                        }
-
                         h3,
                         p {
                             z-index: 1;
@@ -109,11 +91,30 @@ main {
                             font-size: 16px;
                         }
 
-                        .expand-portfolio-container {
+                        .expandable-portfolio-container {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            z-index: 0;
+                            background-color: #f9f9f9;
+                            border-radius: 10px;
+                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                            transition: transform 0.3s ease-in-out;
+
+                            &:hover {
+                                transform: scale(1.05);
+                                cursor: pointer;
+                            }
 
                             .expand-portfolio-btn {
+                                position: absolute;
+                                bottom: 10%;
+                                transform: translateX(-50%);
                                 margin-top: 15px;
-                                padding: 10px 22px;
+                                width: 70%;
+                                padding: 10px 30px;
                                 background: #AEB7F4;
                                 color: #222;
                                 border: none;
@@ -131,9 +132,9 @@ main {
 
                             .expandable-portfolio {
                                 margin-top: 18px;
-                                background: #000000;
+                                background: #ffffff;
                                 border-radius: 10px;
-                                box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+                                box-shadow: 0 2px 8px rgba(255, 255, 255, 0.07);
                                 padding: 20px 25px;
                                 overflow: hidden;
                                 max-height: 0;
