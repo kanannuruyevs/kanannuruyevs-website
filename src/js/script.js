@@ -51,6 +51,27 @@ document.addEventListener('click', function(event) {
   }
 });
 
+// Function to handle the click event on the portfolio button
+document.addEventListener('DOMContentLoaded', function() {
+    // ...existing code...
+
+    document.querySelectorAll('.expand-portfolio-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const targetId = btn.getAttribute('data-target');
+            const portfolioSection = document.getElementById(targetId);
+            if (portfolioSection.style.display === 'none' || portfolioSection.style.display === '') {
+                portfolioSection.style.display = 'block';
+                btn.textContent = 'Hide Portfolio';
+            } else {
+                portfolioSection.style.display = 'none';
+                btn.textContent = 'View Portfolio';
+            }
+        });
+    });
+
+    // ...existing code...
+});
+
 // Make headline id element disappear when scrolling down
 
 // document.onscroll = function () {
