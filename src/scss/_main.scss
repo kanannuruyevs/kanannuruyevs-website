@@ -74,6 +74,25 @@ main {
                         justify-content: center;
                         text-align: center;
                         gap: 10px;
+                        margin-top: 18px;
+                        background: #fff;
+                        border-radius: 16px;
+                        box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+                        padding: 32px 24px;
+                        transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+                        cursor: pointer;
+                                            
+                        &:hover {
+                            transform: scale(1.05);
+                            z-index: 10; // Optional: bring to front if overlapping
+                        }
+
+                        &.active {
+                            max-height: 1200px;
+                            opacity: 1;
+                            transform: scale(1);
+                            transition: max-height 0.7s cubic-bezier(0.4,0,0.2,1), opacity 0.4s, transform 0.3s;
+                        }
 
                         h3,
                         p {
@@ -91,93 +110,7 @@ main {
                             font-size: 16px;
                         }
 
-                        .expandable-portfolio-container {
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            right: 0;
-                            bottom: 0;
-                            z-index: 0;
-                            background-color: #f9f9f9;
-                            border-radius: 10px;
-                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                            transition: transform 0.3s ease-in-out;
-
-                            &:hover {
-                                transform: scale(1.05);
-                                cursor: pointer;
-                            }
-
-                            .expand-portfolio-btn {
-                                position: absolute;
-                                bottom: 10%;
-                                transform: translateX(-50%);
-                                margin-top: 15px;
-                                width: 70%;
-                                padding: 10px 30px;
-                                background: #AEB7F4;
-                                color: #222;
-                                border: none;
-                                border-radius: 6px;
-                                font-size: 16px;
-                                font-weight: 600;
-                                cursor: pointer;
-                                transition: background 0.2s, color 0.2s;
-                            
-                                &:hover {
-                                    background: #222;
-                                    color: #fff;
-                                }
-                            }
-
-                            .expandable-portfolio {
-                                margin-top: 18px;
-                                background: #ffffff;
-                                border-radius: 10px;
-                                box-shadow: 0 2px 8px rgba(255, 255, 255, 0.07);
-                                padding: 20px 25px;
-                                overflow: hidden;
-                                max-height: 0;
-                                opacity: 0;
-                                transition: max-height 0.5s cubic-bezier(0.4,0,0.2,1), opacity 0.4s;
-                                z-index: -1;
-                            
-                                &.active {
-                                    max-height: 800px; // Adjust as needed for your content
-                                    opacity: 1;
-                                    transition: max-height 0.7s cubic-bezier(0.4,0,0.2,1), opacity 0.4s;
-                                }
-                            
-                                h4 {
-                                    margin-top: 0;
-                                    color: #5a5a8a;
-                                }
-                            
-                                ul {
-                                    padding-left: 18px;
-
-                                    li {
-                                        margin-bottom: 12px;
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    .services-item__main {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        gap: 20px;
-
-                        .focuses,
-                        .contents,
                         .platforms {
-                            margin-bottom: 20px;
-                        }
-
-                        .platforms {
-
                             display: flex;
                             flex-direction: column;
                             gap: 15px;
@@ -240,6 +173,57 @@ main {
                                     }
                                 }
                             }
+                        }
+                    }
+
+                    .services-item__main {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        gap: 20px;
+
+                        .focuses,
+                        .contents,
+                        .expandable-portfolio-btn {
+                            margin-bottom: 20px;
+                        }
+
+                        .expandable-portfolio-btn {
+                            margin: 20px 0 0 0;
+                            padding: 12px 32px;
+                            width: 30%;
+                            background: #AEB7F4;
+                            color: #222;
+                            border: none;
+                            border-radius: 8px;
+                            font-size: 18px;
+                            font-weight: 600;
+                            cursor: pointer;
+                            transition: background 0.2s, color 0.2s;
+                                                    
+                            &:hover {
+                                background: #222;
+                                color: #fff;
+                            }
+                        }
+                    }
+
+                    .expandable-portfolio {
+                        margin-top: 18px;
+                        border-radius: 16px;
+                        box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+                        padding: 32px 24px;
+                        overflow: hidden;
+                        max-height: 0;
+                        opacity: 0;
+                        transition: max-height 0.5s cubic-bezier(0.4,0,0.2,1), opacity 0.4s, transform 0.3s;
+                        position: relative;
+                        z-index: 2;
+                        
+                        &.active {
+                            max-height: 1200px; // Adjust as needed
+                            opacity: 1;
+                            transition: max-height 0.7s cubic-bezier(0.4,0,0.2,1), opacity 0.4s;
                         }
                     }
                 }

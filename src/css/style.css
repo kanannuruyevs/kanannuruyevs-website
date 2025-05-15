@@ -313,6 +313,23 @@ main #portfolio .portfolio-container .services-container .services-item .service
   justify-content: center;
   text-align: center;
   gap: 10px;
+  margin-top: 18px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  padding: 32px 24px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+main #portfolio .portfolio-container .services-container .services-item .services-item__header:hover {
+  transform: scale(1.05);
+  z-index: 10;
+}
+main #portfolio .portfolio-container .services-container .services-item .services-item__header.active {
+  max-height: 1200px;
+  opacity: 1;
+  transform: scale(1);
+  transition: max-height 0.7s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s, transform 0.3s;
 }
 main #portfolio .portfolio-container .services-container .services-item .services-item__header h3,
 main #portfolio .portfolio-container .services-container .services-item .services-item__header p {
@@ -327,107 +344,33 @@ main #portfolio .portfolio-container .services-container .services-item .service
 main #portfolio .portfolio-container .services-container .services-item .services-item__header p {
   font-size: 16px;
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__header .expandable-portfolio-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 0;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-}
-main #portfolio .portfolio-container .services-container .services-item .services-item__header .expandable-portfolio-container:hover {
-  transform: scale(1.05);
-  cursor: pointer;
-}
-main #portfolio .portfolio-container .services-container .services-item .services-item__header .expandable-portfolio-container .expand-portfolio-btn {
-  position: absolute;
-  bottom: 10%;
-  transform: translateX(-50%);
-  margin-top: 15px;
-  width: 70%;
-  padding: 10px 30px;
-  background: #AEB7F4;
-  color: #222;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
-}
-main #portfolio .portfolio-container .services-container .services-item .services-item__header .expandable-portfolio-container .expand-portfolio-btn:hover {
-  background: #222;
-  color: #fff;
-}
-main #portfolio .portfolio-container .services-container .services-item .services-item__header .expandable-portfolio-container .expandable-portfolio {
-  margin-top: 18px;
-  background: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.07);
-  padding: 20px 25px;
-  overflow: hidden;
-  max-height: 0;
-  opacity: 0;
-  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s;
-  z-index: -1;
-}
-main #portfolio .portfolio-container .services-container .services-item .services-item__header .expandable-portfolio-container .expandable-portfolio.active {
-  max-height: 800px;
-  opacity: 1;
-  transition: max-height 0.7s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s;
-}
-main #portfolio .portfolio-container .services-container .services-item .services-item__header .expandable-portfolio-container .expandable-portfolio h4 {
-  margin-top: 0;
-  color: #5a5a8a;
-}
-main #portfolio .portfolio-container .services-container .services-item .services-item__header .expandable-portfolio-container .expandable-portfolio ul {
-  padding-left: 18px;
-}
-main #portfolio .portfolio-container .services-container .services-item .services-item__header .expandable-portfolio-container .expandable-portfolio ul li {
-  margin-bottom: 12px;
-}
-main #portfolio .portfolio-container .services-container .services-item .services-item__main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-}
-main #portfolio .portfolio-container .services-container .services-item .services-item__main .focuses,
-main #portfolio .portfolio-container .services-container .services-item .services-item__main .contents,
-main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms {
-  margin-bottom: 20px;
-}
-main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms {
+main #portfolio .portfolio-container .services-container .services-item .services-item__header .platforms {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms .platforms-gallery {
+main #portfolio .portfolio-container .services-container .services-item .services-item__header .platforms .platforms-gallery {
   display: flex;
   gap: 20px;
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms .platforms-gallery .platform-item {
+main #portfolio .portfolio-container .services-container .services-item .services-item__header .platforms .platforms-gallery .platform-item {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms .platforms-gallery .platform-item img {
+main #portfolio .portfolio-container .services-container .services-item .services-item__header .platforms .platforms-gallery .platform-item img {
   width: 60px;
   height: 60px;
   -o-object-fit: contain;
      object-fit: contain;
   transition: transform 0.3s ease-in-out;
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms .platforms-gallery .platform-item img:hover {
+main #portfolio .portfolio-container .services-container .services-item .services-item__header .platforms .platforms-gallery .platform-item img:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms .platforms-gallery .platform-item .tooltip {
+main #portfolio .portfolio-container .services-container .services-item .services-item__header .platforms .platforms-gallery .platform-item .tooltip {
   visibility: hidden;
   background-color: #555; /* Default background color */
   color: #fff; /* Default text color */
@@ -445,7 +388,7 @@ main #portfolio .portfolio-container .services-container .services-item .service
   white-space: nowrap; /* Prevent text from wrapping */
   font-size: 14px; /* Adjust font size for readability */
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms .platforms-gallery .platform-item .tooltip::after {
+main #portfolio .portfolio-container .services-container .services-item .services-item__header .platforms .platforms-gallery .platform-item .tooltip::after {
   content: "";
   position: absolute;
   top: 100%;
@@ -455,9 +398,54 @@ main #portfolio .portfolio-container .services-container .services-item .service
   border-style: solid;
   border-color: #555 transparent transparent transparent; /* Match tooltip background */
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__main .platforms .platforms-gallery .platform-item:hover .tooltip {
+main #portfolio .portfolio-container .services-container .services-item .services-item__header .platforms .platforms-gallery .platform-item:hover .tooltip {
   visibility: visible;
   opacity: 1;
+}
+main #portfolio .portfolio-container .services-container .services-item .services-item__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+main #portfolio .portfolio-container .services-container .services-item .services-item__main .focuses,
+main #portfolio .portfolio-container .services-container .services-item .services-item__main .contents,
+main #portfolio .portfolio-container .services-container .services-item .services-item__main .expandable-portfolio-btn {
+  margin-bottom: 20px;
+}
+main #portfolio .portfolio-container .services-container .services-item .services-item__main .expandable-portfolio-btn {
+  margin: 20px 0 0 0;
+  padding: 12px 32px;
+  width: 30%;
+  background: #AEB7F4;
+  color: #222;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+main #portfolio .portfolio-container .services-container .services-item .services-item__main .expandable-portfolio-btn:hover {
+  background: #222;
+  color: #fff;
+}
+main #portfolio .portfolio-container .services-container .services-item .expandable-portfolio {
+  margin-top: 18px;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  padding: 32px 24px;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s, transform 0.3s;
+  position: relative;
+  z-index: 2;
+}
+main #portfolio .portfolio-container .services-container .services-item .expandable-portfolio.active {
+  max-height: 1200px;
+  opacity: 1;
+  transition: max-height 0.7s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s;
 }
 main #portfolio .swiper-container {
   width: 100%;
