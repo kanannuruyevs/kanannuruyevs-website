@@ -543,16 +543,16 @@ main {
 
         .contactContainer {
             display: flex;
-            justify-content: space-between;
             align-items: center;
             width: 100%;
             flex: 1;
+            margin-bottom: 3vh;
     
             .contact-form {
                 display: flex;
                 flex-direction: column;
                 gap: 15px;
-                width: 100%;
+                width: 50%;
     
                 .formGroups {
                     display: flex;
@@ -594,14 +594,14 @@ main {
                         background-color: #555;
                     }
                 }
-    
-                .privacy-note {
-                    font-size: 19px;
-                    color: #666;
-                    text-align: center;
-                    margin-top: 10px;
-                }
             }
+        }
+        
+        .privacy-note {
+            font-size: 19px;
+            color: #666;
+            text-align: center;
+            margin-top: 10px;
         }
     }
 }

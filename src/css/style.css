@@ -696,16 +696,16 @@ main #blog .blogContainer .blogItems .blogTextContainer .readArticle:hover {
 }
 main #contact .contactContainer {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   width: 100%;
   flex: 1;
+  margin-bottom: 3vh;
 }
 main #contact .contactContainer .contact-form {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  width: 100%;
+  width: 50%;
 }
 main #contact .contactContainer .contact-form .formGroups {
   display: flex;
@@ -743,7 +743,7 @@ main #contact .contactContainer .contact-form .submit-btn {
 main #contact .contactContainer .contact-form .submit-btn:hover {
   background-color: #555;
 }
-main #contact .contactContainer .contact-form .privacy-note {
+main #contact .privacy-note {
   font-size: 19px;
   color: #666;
   text-align: center;
