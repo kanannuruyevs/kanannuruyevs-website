@@ -58,161 +58,174 @@ main {
                 /* Adjust the gap between service items */
                 padding: 20px;
                 /* Add padding around the container */
-                gap: 30px;
 
                 .services-item {
                     display: flex;
+                    flex-direction: column;
                     align-items: center;
-                    gap: 10vh;
 
-                    .services-item__header {
-                        position: relative;
-                        width: 300px;
-                        height: 300px;
+                    .services-item__headerPlusMain {
                         display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        text-align: center;
-                        gap: 10px;
-                        margin-top: 18px;
-                        background: #fff;
-                        border-radius: 16px;
-                        box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-                        padding: 32px 24px;
-                        transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
-                        cursor: pointer;
-                                            
-                        &:hover {
-                            transform: scale(1.05);
-                            z-index: 10; // Optional: bring to front if overlapping
-                        }
+                        gap: 5vh;
 
-                        &.active {
-                            max-height: 1200px;
-                            opacity: 1;
-                            transform: scale(1);
-                            transition: max-height 0.7s cubic-bezier(0.4,0,0.2,1), opacity 0.4s, transform 0.3s;
-                        }
-
-                        h3,
-                        p {
-                            z-index: 1;
-                            padding: 0 20px;
-                            margin: 0;
-                            color: black;
-                        }
-
-                        h3 {
-                            font-size: 20px;
-                        }
-
-                        p {
-                            font-size: 16px;
-                        }
-
-                        .platforms {
+                        .services-item__header {
+                            position: relative;
+                            width: 300px;
+                            height: 300px;
                             display: flex;
                             flex-direction: column;
-                            gap: 15px;
-
-                            .platforms-gallery {
+                            justify-content: center;
+                            text-align: center;
+                            gap: 10px;
+                            margin-top: 18px;
+                            background: #fff;
+                            border-radius: 16px;
+                            box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+                            padding: 32px 24px;
+                            transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+                            cursor: pointer;
+                            overflow: hidden;
+                                                
+                            &:hover {
+                                transform: scale(1.05);
+                                z-index: 10; // Optional: bring to front if overlapping
+                            }
+    
+                            &.active {
+                                max-height: 1200px;
+                                opacity: 1;
+                                transform: scale(1);
+                                transition: max-height 0.7s cubic-bezier(0.4,0,0.2,1), opacity 0.4s, transform 0.3s;
+                            }
+    
+                            .services-item__headerText {
                                 display: flex;
-                                gap: 20px;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                                gap: 10px;
     
-                                .platform-item {
-                                    position: relative;
+                                h3,
+                                p {
+                                    z-index: 1;
+                                    color: black;
+                                }
+    
+                                h3 {
+                                    font-size: 20px;
+                                }
+    
+                                p {
+                                    font-size: 16px;
+                                }
+                            }
+    
+                            .platforms {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 15px;
+    
+                                .platforms-gallery {
                                     display: flex;
-                                    flex-direction: column;
-                                    align-items: center;
-    
-                                    img {
-                                        width: 60px;
-                                        height: 60px;
-                                        object-fit: contain;
-                                        transition: transform 0.3s ease-in-out;
-    
-                                        &:hover {
-                                            transform: scale(1.1);
-                                            cursor: pointer;
+                                    justify-content: center;
+                                    gap: 20px;
+        
+                                    .platform-item {
+                                        position: relative;
+                                        display: flex;
+                                        flex-direction: column;
+                                        align-items: center;
+        
+                                        img {
+                                            width: 60px;
+                                            height: 60px;
+                                            object-fit: contain;
+                                            transition: transform 0.3s ease-in-out;
+        
+                                            &:hover {
+                                                transform: scale(1.1);
+                                                cursor: pointer;
+                                            }
                                         }
-                                    }
-    
-                                    .tooltip {
-                                        visibility: hidden;
-                                        background-color: #555; /* Default background color */
-                                        color: #fff; /* Default text color */
-                                        text-align: center;
-                                        padding: 5px 10px; /* Add padding for better spacing */
-                                        border-radius: 6px;
-                                        position: absolute;
-                                        bottom: 100%;
-                                        left: 50%;
-                                        transform: translateX(-50%);
-                                        opacity: 0;
-                                        transition: opacity 0.3s, background-color 0.3s;
-                                        width: auto; /* Allow tooltip to adjust width based on content */
-                                        max-width: 200px; /* Prevent tooltip from becoming too wide */
-                                        white-space: nowrap; /* Prevent text from wrapping */
-                                        font-size: 14px; /* Adjust font size for readability */
-                                    
-                                        &::after {
-                                            content: '';
+        
+                                        .tooltip {
+                                            visibility: hidden;
+                                            background-color: #555; /* Default background color */
+                                            color: #fff; /* Default text color */
+                                            text-align: center;
+                                            padding: 5px 10px; /* Add padding for better spacing */
+                                            border-radius: 6px;
                                             position: absolute;
-                                            top: 100%;
+                                            bottom: 100%;
                                             left: 50%;
-                                            margin-left: -5px;
-                                            border-width: 5px;
-                                            border-style: solid;
-                                            border-color: #555 transparent transparent transparent; /* Match tooltip background */
+                                            transform: translateX(-50%);
+                                            opacity: 0;
+                                            transition: opacity 0.3s, background-color 0.3s;
+                                            width: auto; /* Allow tooltip to adjust width based on content */
+                                            max-width: 200px; /* Prevent tooltip from becoming too wide */
+                                            white-space: nowrap; /* Prevent text from wrapping */
+                                            font-size: 14px; /* Adjust font size for readability */
+                                        
+                                            &::after {
+                                                content: '';
+                                                position: absolute;
+                                                top: 100%;
+                                                left: 50%;
+                                                margin-left: -5px;
+                                                border-width: 5px;
+                                                border-style: solid;
+                                                border-color: #555 transparent transparent transparent; /* Match tooltip background */
+                                            }
+                                        }
+        
+                                        &:hover .tooltip {
+                                            visibility: visible;
+                                            opacity: 1;
                                         }
                                     }
+                                }
+                            }
+                        }
     
-                                    &:hover .tooltip {
-                                        visibility: visible;
-                                        opacity: 1;
-                                    }
+                        .services-item__main {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            gap: 20px;
+    
+                            .focuses,
+                            .contents,
+                            .expandable-portfolio-btn {
+                                margin-bottom: 20px;
+                            }
+    
+                            .expandable-portfolio-btn {
+                                margin: 20px 0 0 0;
+                                padding: 12px;
+                                width: 20%;
+                                background: #AEB7F4;
+                                color: #222;
+                                border: none;
+                                border-radius: 8px;
+                                font-size: 18px;
+                                font-weight: 600;
+                                cursor: pointer;
+                                transition: background 0.2s, color 0.2s;
+                                                        
+                                &:hover {
+                                    background: #222;
+                                    color: #fff;
                                 }
                             }
                         }
                     }
 
-                    .services-item__main {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        gap: 20px;
-
-                        .focuses,
-                        .contents,
-                        .expandable-portfolio-btn {
-                            margin-bottom: 20px;
-                        }
-
-                        .expandable-portfolio-btn {
-                            margin: 20px 0 0 0;
-                            padding: 12px 32px;
-                            width: 30%;
-                            background: #AEB7F4;
-                            color: #222;
-                            border: none;
-                            border-radius: 8px;
-                            font-size: 18px;
-                            font-weight: 600;
-                            cursor: pointer;
-                            transition: background 0.2s, color 0.2s;
-                                                    
-                            &:hover {
-                                background: #222;
-                                color: #fff;
-                            }
-                        }
-                    }
 
                     .expandable-portfolio {
                         margin-top: 18px;
                         border-radius: 16px;
                         box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-                        padding: 32px 24px;
+                        // padding: 32px 24px;
                         overflow: hidden;
                         max-height: 0;
                         opacity: 0;
