@@ -123,12 +123,12 @@ main {
                             .platforms {
                                 display: flex;
                                 flex-direction: column;
-                                gap: 15px;
     
                                 .platforms-gallery {
                                     display: flex;
                                     justify-content: center;
-                                    gap: 20px;
+                                    flex-wrap: wrap;
+                                    gap: 10px;
         
                                     .platform-item {
                                         position: relative;

@@ -356,12 +356,12 @@ main #portfolio .portfolio-container .services-container .services-item .service
 main #portfolio .portfolio-container .services-container .services-item .services-item__headerPlusMain .services-item__header .platforms {
   display: flex;
   flex-direction: column;
-  gap: 15px;
 }
 main #portfolio .portfolio-container .services-container .services-item .services-item__headerPlusMain .services-item__header .platforms .platforms-gallery {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 main #portfolio .portfolio-container .services-container .services-item .services-item__headerPlusMain .services-item__header .platforms .platforms-gallery .platform-item {
   position: relative;
