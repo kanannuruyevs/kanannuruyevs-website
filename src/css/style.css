@@ -743,6 +743,22 @@ main #contact .contactContainer .contact-form .submit-btn {
 main #contact .contactContainer .contact-form .submit-btn:hover {
   background-color: #555;
 }
+main #contact .contactContainer .download-resume-btn {
+  background-color: #AEB7F4;
+  color: #222;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  margin-left: 20px;
+}
+main #contact .contactContainer .download-resume-btn:hover {
+  background: #222;
+  color: #fff;
+}
 main #contact .privacy-note {
   font-size: 19px;
   color: #666;

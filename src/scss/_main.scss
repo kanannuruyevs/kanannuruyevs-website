@@ -595,6 +595,24 @@ main {
                     }
                 }
             }
+
+            .download-resume-btn {
+                background-color: #AEB7F4;
+                color: #222;
+                padding: 12px;
+                border: none;
+                border-radius: 8px;
+                font-size: 18px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: background 0.2s, color 0.2s;
+                margin-left: 20px;
+
+                &:hover {
+                    background: #222;
+                    color: #fff;
+                }
+            }
         }
         
         .privacy-note {
