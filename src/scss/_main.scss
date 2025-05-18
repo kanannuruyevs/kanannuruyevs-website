@@ -50,6 +50,18 @@ main {
     #portfolio {
         position: relative;
 
+        .portfolio__Heading {
+            font-size: 25px;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: #AEB7F4;
+            margin-bottom: 4vh;
+        }
+
+        .brandOverview {
+            margin-bottom: 0;
+        }
+
         .portfolio-container {
 
             .services-container {
@@ -291,14 +303,6 @@ main {
         .codingStuff {
             display: flex;
             flex-direction: column;
-
-            h3 {
-                font-size: 25px;
-                font-weight: 700;
-                text-transform: uppercase;
-                color: #AEB7F4;
-                margin-bottom: 4vh;
-            }
 
             .codingProjectsContainer {
                 display: flex;

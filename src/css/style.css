@@ -291,6 +291,16 @@ main #about #aboutMeContent img {
 main #portfolio {
   position: relative;
 }
+main #portfolio .portfolio__Heading {
+  font-size: 25px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #AEB7F4;
+  margin-bottom: 4vh;
+}
+main #portfolio .brandOverview {
+  margin-bottom: 0;
+}
 main #portfolio .portfolio-container .services-container {
   display: flex;
   flex-direction: column;
@@ -498,13 +508,6 @@ main #portfolio .swiper-container .swiper-button-prev {
 main #portfolio .codingStuff {
   display: flex;
   flex-direction: column;
-}
-main #portfolio .codingStuff h3 {
-  font-size: 25px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #AEB7F4;
-  margin-bottom: 4vh;
 }
 main #portfolio .codingStuff .codingProjectsContainer {
   display: flex;
