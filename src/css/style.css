@@ -449,7 +449,6 @@ main #portfolio .portfolio-container .services-container .services-item .service
 }
 main #portfolio .portfolio-container .services-container .services-item .expandable-portfolio {
   margin-top: 18px;
-  border-radius: 16px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   max-height: 0;
