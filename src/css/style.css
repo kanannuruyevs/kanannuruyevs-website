@@ -303,24 +303,17 @@ main #portfolio .brandOverview {
 }
 main #portfolio .portfolio-container .services-container {
   display: flex;
-  flex-direction: column;
-  padding: 20px;
+  gap: 10px;
+  padding-bottom: 10px;
 }
 main #portfolio .portfolio-container .services-container .services-item {
   display: flex;
-  flex-direction: column;
-}
-main #portfolio .portfolio-container .services-container .services-item .services-item__headerPlusMain {
-  display: flex;
-  gap: 5vh;
-}
-main #portfolio .portfolio-container .services-container .services-item .services-item__headerPlusMain .services-item__header {
-  position: relative;
-  width: 300px;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
+  position: relative;
+  width: 400px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
   text-align: center;
   gap: 10px;
   margin-top: 18px;
@@ -330,64 +323,64 @@ main #portfolio .portfolio-container .services-container .services-item .service
   padding: 32px 24px;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
-  overflow: hidden;
+  color: black;
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__headerPlusMain .services-item__header:hover {
+main #portfolio .portfolio-container .services-container .services-item:hover {
   transform: scale(1.05);
   z-index: 10;
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__headerPlusMain .services-item__header.active {
+main #portfolio .portfolio-container .services-container .services-item.active {
   max-height: 1200px;
   opacity: 1;
   transform: scale(1);
   transition: max-height 0.7s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s, transform 0.3s;
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__headerPlusMain .services-item__header .services-item__headerText {
+main #portfolio .portfolio-container .services-container .services-item .services-item__header {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10px;
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__headerPlusMain .services-item__header .services-item__headerText h3,
-main #portfolio .portfolio-container .services-container .services-item .services-item__headerPlusMain .services-item__header .services-item__headerText p {
+main #portfolio .portfolio-container .services-container .services-item .services-item__header h3,
+main #portfolio .portfolio-container .services-container .services-item .services-item__header p {
   z-index: 1;
   color: black;
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__headerPlusMain .services-item__header .services-item__headerText h3 {
+main #portfolio .portfolio-container .services-container .services-item .services-item__header h3 {
   font-size: 20px;
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__headerPlusMain .services-item__header .services-item__headerText p {
+main #portfolio .portfolio-container .services-container .services-item .services-item__header p {
   font-size: 16px;
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__headerPlusMain .services-item__header .platforms {
+main #portfolio .portfolio-container .services-container .services-item .platforms {
   display: flex;
   flex-direction: column;
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__headerPlusMain .services-item__header .platforms .platforms-gallery {
+main #portfolio .portfolio-container .services-container .services-item .platforms .platforms-gallery {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__headerPlusMain .services-item__header .platforms .platforms-gallery .platform-item {
+main #portfolio .portfolio-container .services-container .services-item .platforms .platforms-gallery .platform-item {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__headerPlusMain .services-item__header .platforms .platforms-gallery .platform-item img {
+main #portfolio .portfolio-container .services-container .services-item .platforms .platforms-gallery .platform-item img {
   width: 60px;
   height: 60px;
   -o-object-fit: contain;
      object-fit: contain;
   transition: transform 0.3s ease-in-out;
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__headerPlusMain .services-item__header .platforms .platforms-gallery .platform-item img:hover {
+main #portfolio .portfolio-container .services-container .services-item .platforms .platforms-gallery .platform-item img:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__headerPlusMain .services-item__header .platforms .platforms-gallery .platform-item .tooltip {
+main #portfolio .portfolio-container .services-container .services-item .platforms .platforms-gallery .platform-item .tooltip {
   visibility: hidden;
   background-color: #555; /* Default background color */
   color: #fff; /* Default text color */
@@ -405,7 +398,7 @@ main #portfolio .portfolio-container .services-container .services-item .service
   white-space: nowrap; /* Prevent text from wrapping */
   font-size: 14px; /* Adjust font size for readability */
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__headerPlusMain .services-item__header .platforms .platforms-gallery .platform-item .tooltip::after {
+main #portfolio .portfolio-container .services-container .services-item .platforms .platforms-gallery .platform-item .tooltip::after {
   content: "";
   position: absolute;
   top: 100%;
@@ -415,22 +408,16 @@ main #portfolio .portfolio-container .services-container .services-item .service
   border-style: solid;
   border-color: #555 transparent transparent transparent; /* Match tooltip background */
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__headerPlusMain .services-item__header .platforms .platforms-gallery .platform-item:hover .tooltip {
+main #portfolio .portfolio-container .services-container .services-item .platforms .platforms-gallery .platform-item:hover .tooltip {
   visibility: visible;
   opacity: 1;
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__headerPlusMain .services-item__main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-}
-main #portfolio .portfolio-container .services-container .services-item .services-item__headerPlusMain .services-item__main .purposes,
-main #portfolio .portfolio-container .services-container .services-item .services-item__headerPlusMain .services-item__main .contents,
-main #portfolio .portfolio-container .services-container .services-item .services-item__headerPlusMain .services-item__main .expandable-portfolio-btn {
+main #portfolio .portfolio-container .services-container .services-item .services-item__main .purposes,
+main #portfolio .portfolio-container .services-container .services-item .services-item__main .contents,
+main #portfolio .portfolio-container .services-container .services-item .services-item__main .expandable-portfolio-btn {
   margin-bottom: 20px;
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__headerPlusMain .services-item__main .expandable-portfolio-btn {
+main #portfolio .portfolio-container .services-container .services-item .services-item__main .expandable-portfolio-btn {
   margin: 20px 0 0 0;
   padding: 12px;
   width: 150px;
@@ -443,7 +430,7 @@ main #portfolio .portfolio-container .services-container .services-item .service
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
 }
-main #portfolio .portfolio-container .services-container .services-item .services-item__headerPlusMain .services-item__main .expandable-portfolio-btn:hover {
+main #portfolio .portfolio-container .services-container .services-item .services-item__main .expandable-portfolio-btn:hover {
   background: #222;
   color: #fff;
 }
