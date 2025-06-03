@@ -303,14 +303,14 @@ main #portfolio .brandOverview {
 }
 main #portfolio .portfolio-container .services-container {
   display: flex;
-  gap: 10px;
+  gap: 40px;
   padding-bottom: 10px;
 }
 main #portfolio .portfolio-container .services-container .services-item {
   display: flex;
   justify-content: center;
   position: relative;
-  width: 400px;
+  width: 300px;
   height: 500px;
   display: flex;
   flex-direction: column;
