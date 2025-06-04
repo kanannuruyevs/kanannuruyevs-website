@@ -355,6 +355,7 @@ main #portfolio .portfolio-container .services-container .services-item .service
 main #portfolio .portfolio-container .services-container .services-item .platforms {
   display: flex;
   flex-direction: column;
+  gap: 5px;
 }
 main #portfolio .portfolio-container .services-container .services-item .platforms .platforms-gallery {
   display: flex;
@@ -410,11 +411,6 @@ main #portfolio .portfolio-container .services-container .services-item .platfor
 main #portfolio .portfolio-container .services-container .services-item .platforms .platforms-gallery .platform-item:hover .tooltip {
   visibility: visible;
   opacity: 1;
-}
-main #portfolio .portfolio-container .services-container .services-item .services-item__main .purposes,
-main #portfolio .portfolio-container .services-container .services-item .services-item__main .contents,
-main #portfolio .portfolio-container .services-container .services-item .services-item__main .expandable-portfolio-btn {
-  margin-bottom: 20px;
 }
 main #portfolio .portfolio-container .services-container .services-item .services-item__main .expandable-portfolio-btn {
   margin: 20px 0 0 0;

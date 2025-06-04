@@ -125,6 +125,7 @@ main {
                     .platforms {
                         display: flex;
                         flex-direction: column;
+                        gap: 5px;
     
                         .platforms-gallery {
                             display: flex;
@@ -189,12 +190,6 @@ main {
                     }
 
                     .services-item__main {
-
-                        .purposes,
-                        .contents,
-                        .expandable-portfolio-btn {
-                            margin-bottom: 20px;
-                        }
 
                         .expandable-portfolio-btn {
                             margin: 20px 0 0 0;
