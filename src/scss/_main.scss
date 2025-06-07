@@ -71,14 +71,13 @@ main {
 
                 .services-item {
                     display: flex;
-                    justify-content: center;
-                    position: relative;
-                    width: 300px;
-                    height: 450px;
-                    display: flex;
                     flex-direction: column;
-                    text-align: center;
-                    gap: 10px;
+                    justify-content: flex-start;
+                    align-items: center;
+                    flex: 1 1 320px;
+                    min-width: 280px;
+                    max-width: 340px;
+                    min-height: 450px;
                     background: #fff;
                     border-radius: 16px;
                     box-shadow: 0 4px 24px rgba(0,0,0,0.10);
@@ -86,6 +85,8 @@ main {
                     transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
                     cursor: pointer;
                     color: black;
+                    margin-bottom: 24px;
+                    text-align: center;
                     // overflow: hidden;
                                         
                     &:hover {
@@ -246,7 +247,17 @@ main {
                     justify-content: center;
                     align-items: center;
                     width: auto;
-                    /* Adjust width to fit content */
+
+                    iframe {
+                        width: 100% !important;
+                        max-width: 320px;
+                        aspect-ratio: 16 / 9;
+                        height: auto !important;
+                        display: block;
+                        margin: 0 auto;
+                        border-radius: 12px;
+                        background: #000;
+                    }
                 }
             }
 

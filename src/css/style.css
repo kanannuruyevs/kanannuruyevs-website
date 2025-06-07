@@ -308,14 +308,13 @@ main #portfolio .portfolio-container .services-container {
 }
 main #portfolio .portfolio-container .services-container .services-item {
   display: flex;
-  justify-content: center;
-  position: relative;
-  width: 300px;
-  height: 450px;
-  display: flex;
   flex-direction: column;
-  text-align: center;
-  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 1 1 320px;
+  min-width: 280px;
+  max-width: 340px;
+  min-height: 450px;
   background: #fff;
   border-radius: 16px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
@@ -323,6 +322,8 @@ main #portfolio .portfolio-container .services-container .services-item {
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   color: black;
+  margin-bottom: 24px;
+  text-align: center;
 }
 main #portfolio .portfolio-container .services-container .services-item:hover {
   transform: scale(1.05);
@@ -458,7 +459,16 @@ main #portfolio .swiper-container .swiper-wrapper .swiper-slide {
   justify-content: center;
   align-items: center;
   width: auto;
-  /* Adjust width to fit content */
+}
+main #portfolio .swiper-container .swiper-wrapper .swiper-slide iframe {
+  width: 100% !important;
+  max-width: 320px;
+  aspect-ratio: 16/9;
+  height: auto !important;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+  background: #000;
 }
 main #portfolio .swiper-container .swiper-button-next,
 main #portfolio .swiper-container .swiper-button-prev {
