@@ -1,5 +1,5 @@
-main {
-    #home {
+#previousMain {
+    #previousHome {
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -12,7 +12,7 @@ main {
             z-index: 1;
 
             h1 {
-                font-size: 85px;
+                font-size: 75px;
                 font-family: "Raleway";
             }
 
@@ -22,7 +22,7 @@ main {
         }
     }
 
-    #about {
+    #previousAbout {
         display: flex;
         flex-direction: column;
         gap: 3vh;
@@ -47,7 +47,7 @@ main {
         }
     }
 
-    #portfolio {
+    #previousPortfolio {
         position: relative;
 
         .portfolio__Heading {
@@ -465,6 +465,7 @@ main {
         }
     }
 
+    /* blog section */
     #blog {
 
         .blogContainer {
@@ -531,7 +532,7 @@ main {
     }
 
     /* General Contact Section */
-    #contact {
+    #previousContact {
 
         .contactContainer {
             display: flex;

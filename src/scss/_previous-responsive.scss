@@ -51,7 +51,7 @@
         font-size: small;
     }
 
-    header {
+    #previousHeader {
         display: flex;
         align-items: center;
         padding: 3vh;
@@ -404,7 +404,7 @@
         width: 80px !important;
     }
 
-    footer {
+    #previousFooter {
         display: flex;
         flex-direction: column;
         align-items: center;

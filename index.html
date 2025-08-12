@@ -1,515 +1,409 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="theme-transition bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="icon" href="../src/images/home/profile-picture-favicon-192x192.png" type="image/png">
-    <link rel="stylesheet" href="./src/css/style.css">
-    <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kanan Nuruyev</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./src/css/style.css" />
 </head>
 <body>
-    <header>
-        <div class="burger-menu">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
+    <!-- Header -->
+    <header class="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-700">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">KN</span>
+                    </div>
+                    <span class="text-xl font-bold">Kanan Nuruyev</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="hover:text-blue-600 transition-colors">Home</a>
+                    <a href="#about" class="hover:text-blue-600 transition-colors">About</a>
+                    <a href="#portfolio" class="hover:text-blue-600 transition-colors">Portfolio</a>
+                    <a href="#contact" class="hover:text-blue-600 transition-colors">Contact</a>
+                    <a href="./pages/previous-index.html" class="hover:text-blue-600 transition-colors">Previous Version</a>
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-moon" id="icon-moon"></i>
+                        <i class="fas fa-sun" id="icon-sun"></i>
+                    </button>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
         </div>
-        <a class="username" href="index.html">
-            <img src="./src/images/home/kanannuruyevs-bg-removed.png" alt="">
-        </a>
-        <nav class="nav-menu">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <!-- <li><a href="#blog">Blog</a></li> -->
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <img class="profile-picture__header" src="./src/images/home/profile-picture-favicon-192x192.png" alt="Profile Picture Header">
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-64 h-full bg-white dark:bg-gray-900 shadow-lg md:hidden">
+            <div class="p-6">
+                <button id="mobile-menu-close" class="absolute top-4 right-4 p-2">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+                <nav class="mt-8 space-y-4">
+                    <a href="#home" class="block py-2 hover:text-blue-600 transition-colors">Home</a>
+                    <a href="#about" class="block py-2 hover:text-blue-600 transition-colors">About</a>
+                    <a href="#portfolio" class="block py-2 hover:text-blue-600 transition-colors">Portfolio</a>
+                    <a href="#contact" class="block py-2 hover:text-blue-600 transition-colors">Contact</a>
+                    <a href="./pages/previous-index.html" class="hover:text-blue-600 transition-colors">Previous Version</a>
+                    <button id="mobile-theme-toggle" class="flex items-center space-x-2 py-2">
+                        <i class="fas fa-moon" id="mobile-icon-moon"></i>
+                        <i class="fas fa-sun" id="mobile-icon-sun"></i>
+                        <span>Toggle Theme</span>
+                    </button>
+                </nav>
+            </div>
+        </div>
     </header>
-    <main>
-        <section id="home">
-            <div class="animatedBack">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
+
+    <!-- Home Section -->
+    <section id="home" class="min-h-screen animated-bg flex items-center justify-center relative overflow-hidden">
+        <div class="container mx-auto px-6 text-center text-white relative z-10">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">Kanan Nuruyev</h1>
+                <p class="text-xl md:text-2xl mb-8 opacity-90">Content Creator | ASMRtist | Casual Coder | Lifelong Learner</p>
+                <div class="marquee bg-black/20 rounded-full py-3 px-6 mb-8">
+                    <div class="marquee-content text-lg">
+                        Welcome to My Personal Website! Nice to Meet You!
+                    </div>
+                </div>
+                <a href="#about" class="btn-primary inline-block px-8 py-3 rounded-full text-white font-semibold">
+                    Discover My Journey
+                </a>
             </div>
-            <div id="homeText">
-                <h1>Kanan Nuruyev</h1>
-                <p>Content Creator | ASMRtist | Casual Coder | Lifelong Learner</p>
-            </div>
-            <ul class="marqueeEffect">
-                <li>Welcome to My Personal Website! Nice to Meet You!</li>
-                <li>Welcome to My Personal Website! Nice to Meet You!</li>
-                <li>Welcome to My Personal Website! Nice to Meet You!</li>
-                <li>Welcome to My Personal Website! Nice to Meet You!</li>
-                <li>Welcome to My Personal Website! Nice to Meet You!</li>
-                <li>Welcome to My Personal Website! Nice to Meet You!</li>
-                <li>Welcome to My Personal Website! Nice to Meet You!</li>
-                <li>Welcome to My Personal Website! Nice to Meet You!</li>
-                <li>Welcome to My Personal Website! Nice to Meet You!</li>
-                <li>Welcome to My Personal Website! Nice to Meet You!</li>
-                <li>Welcome to My Personal Website! Nice to Meet You!</li>
-                <li>Welcome to My Personal Website! Nice to Meet You!</li>
-            </ul>
-        </section>
-        <section id="about">
-            <h2>About</h2>
-            <div id="aboutMeContent">
-                <p>
-                    Hi, I’m a Content Creator with a background in IT and programming, now focused on crafting engaging content around Mental Health, Style & Self-Improvement to attract and retain followers on social media.
-                    <br><br>
-                    I hold a Bachelor's in Information Technology (2020) and began my journey in backend development with Python, later transitioning to frontend with HTML, CSS, JavaScript, and React. After facing burnout, I pivoted into content creation — where I now combine creativity with analytical thinking to make a meaningful impact online.
-                    <br><br>
-                    I’m always learning, and looking for new opportunities that align with my evolving strengths and passions. Open to collaboration with like-minded individuals, so let’s connect!
-                </p>
-                <img src="./src/images/home/profile-picture.png" alt="My Picture">
-            </div>
-        </section>
-        <section id="portfolio">
-            <h2>Portfolio</h2>
-            <div class="portfolio-container">
-                <h3 class="portfolio__Heading brandOverview">Brand Overview</h3>
-                <div class="services-container">
-                    <div class="services-item">
-                        <div class="services-item__header">
-                            <h3>KANANSNOTE</h3>
-                            <p>English Brand</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-gray-50 dark:bg-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-12">About Me</h2>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="w-64 h-64 mx-auto bg-gradient-to-br from-blue-400 to-purple-600 rounded-full flex items-center justify-center text-white text-6xl">
+                            <i class="fas fa-user"></i>
                         </div>
-                        <div class="platforms">
-                            <div class="platforms-gallery">
-                                <div class="platform-item">
-                                    <img src="./src/images/platforms/circle-instagram_icon-icons.com_66832.svg"
-                                        alt="Instagram" />
-                                    <div class="tooltip">Instagram</div>
-                                </div>
-                                <div class="platform-item">
-                                    <img src="./src/images/platforms/tiktok_logo_icon_186896.svg" alt="TikTok" />
-                                    <div class="tooltip">TikTok</div>
-                                </div>
-                                <div class="platform-item">
-                                    <img src="./src/images/platforms/youtube_logo_icon_147199.svg" alt="YouTube" />
-                                    <div class="tooltip">YouTube</div>
-                                </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-6">Hello! I'm Kanan Nuruyev</h3>
+                        <p class="text-lg mb-6 leading-relaxed">
+                            A Content Creator with a background in IT and programming. I focus on mental health, style, and self-improvement content to attract and retain a social media following.
+                        </p>
+                        <p class="text-lg mb-6 leading-relaxed">
+                            I hold a Bachelor's in Information Technology (2020). I started in backend development (Python), transitioned to frontend (HTML, CSS, JavaScript, React), and later pivoted to content creation after experiencing burnout.
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">IT & Programming</span>
+                            <span class="px-4 py-2 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm">Content Creation</span>
+                            <span class="px-4 py-2 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">Mental Health</span>
+                            <span class="px-4 py-2 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-sm">Self-Improvement</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section-padding">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">Portfolio</h2>
+
+            <!-- Brand Overview -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold mb-8">Content Brands</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card-hover bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="text-xl font-semibold">KANANSNOTE</h4>
+                            <div class="flex space-x-2">
+                                <a href="#" class="tooltip social-icon text-pink-500" data-tooltip="Instagram">
+                                    <i class="fab fa-instagram text-xl"></i>
+                                </a>
+                                <a href="#" class="tooltip social-icon text-black dark:text-white" data-tooltip="TikTok">
+                                    <i class="fab fa-tiktok text-xl"></i>
+                                </a>
+                                <a href="#" class="tooltip social-icon text-red-500" data-tooltip="YouTube">
+                                    <i class="fab fa-youtube text-xl"></i>
+                                </a>
                             </div>
                         </div>
-                        <div class="services-item__main">
-                            <p>Personal brand targeting an international audience.</p>
-                            <br>
-                            <p>Lifestyle, self-improvement, mental health, fashion, and entertainment.</p>
-                            <button class="expandable-portfolio-btn" data-target="kanansnote-portfolio">View Portfolio</button>
-                        </div>
-                        <div class="expandable-portfolio" id="kanansnote-portfolio">
-                            <!-- Put your portfolio content here (videos, images, links, etc.) -->
-                            <h4>KANANSNOTE Portfolio</h4>
-                            <div class="swiper-container">
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Lifestyle, self-improvement, mental health, fashion, and entertainment content for an English-speaking international audience.
+                        </p>
+                        <button class="expand-btn w-full bg-gradient-to-r from-pink-500 to-purple-600 text-white py-2 rounded-lg hover:shadow-lg transition-all">
+                            View Content
+                        </button>
+                        <div class="video-slider hidden mt-6">
+                            <div class="swiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/iNJbVhG0T0Y?start=5"
-                                            style="border: none;"
-                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen title="YouTube video"></iframe>
+                                        <iframe class="w-full h-48 rounded-lg" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video 1" frameborder="0" allowfullscreen></iframe>
                                     </div>
                                     <div class="swiper-slide">
-                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/iNJbVhG0T0Y?start=5"
-                                            style="border: none;"
-                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen title="YouTube video"></iframe>
+                                        <iframe class="w-full h-48 rounded-lg" src="https://www.youtube.com/embed/3tmd-ClpJxA" title="Video 2" frameborder="0" allowfullscreen></iframe>
                                     </div>
-                                    <div class="swiper-slide">
-                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/iNJbVhG0T0Y?start=5"
-                                            style="border: none;"
-                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen title="YouTube video"></iframe>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/iNJbVhG0T0Y?start=5"
-                                            style="border: none;"
-                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen title="YouTube video"></iframe>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/iNJbVhG0T0Y?start=5"
-                                            style="border: none;"
-                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen title="YouTube video"></iframe>
-                                    </div>
+                                    <!-- Add more video slides as needed -->
                                 </div>
-                                <div class="swiper-button-prev">⬅</div>
-                                <div class="swiper-button-next">➡</div>
+                                <div class="swiper-pagination"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="codingStuff">
-                    <h3 class="portfolio__Heading">Coding Projects</h3>
-                    <div class="codingProjectsContainer">
-                        <div class="projects-container">
-                            <div class="projects-item">
-                                <img src="./src/images/projects-covers/hivency-template-task.png" alt="Hivency Project Cover" />
-                                <div class="projects-item__text">
-                                    <a rel="noopener" target="_blank" href="https://kanansnote-hivency-template-task.vercel.app">
-                                        <h4>Hivency Template Task</h4>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="projects-item">
-                                <img src="./src/images/projects-covers/ogenix-template-task.png" alt="Ogenix Template" />
-                                <div class="projects-item__text">
-                                    <a rel="noopener" target="_blank" href="https://kanansnote-ogenix-template-task.vercel.app">
-                                        <h4>Ogenix Template Task</h4>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="projects-item">
-                                <img src="./src/images/projects-covers/xhibiter-template-task.png"
-                                    alt="Programming Exercises Project" />
-                                <div class="projects-item__text">
-                                    <a rel="noopener" target="_blank" href="https://kanansnote-xhibiter-template-task.vercel.app">
-                                        <h4>Xhibiter Template Task</h4>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="projects-item">
-                                <img src="./src/images/projects-covers/themedox-template-task.png" alt="Themedox Template" />
-                                <div class="projects-item__text">
-                                    <a rel="noopener" target="_blank" href="https://kanansnote-themedox-template-task.vercel.app">
-                                        <h4>Themedox Template Task</h4>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="projects-item">
-                                <img src="./src/images/projects-covers/startbootstrap-template-task.png"
-                                    alt="Start Bootstrap Template" />
-                                <div class="projects-item__text">
-                                    <a rel="noopener" target="_blank"
-                                        href="https://kanansnote-startbootstrap-template-task.vercel.app">
-                                        <h4>Start Bootstrap Template Task</h4>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="projects-item">
-                                <img src="./src/images/projects-covers/stag-template-task.jpeg" alt="Stag Template" />
-                                <div class="projects-item__text">
-                                    <a rel="noopener" target="_blank" href="https://kanansnote-stag-template-task.vercel.app">
-                                        <h4>Stag Template Task</h4>
-                                    </a>
-                                </div>
-                            </div>
+            </div>
+
+            <!-- Coding Projects -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold mb-8">Coding Projects</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <div class="project-card rounded-xl p-6">
+                        <div class="w-full h-48 bg-gradient-to-br from-blue-400 to-purple-600 rounded-lg mb-4 flex items-center justify-center text-white text-4xl">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Hivency Template Task</h4>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Responsive template project</p>
+                        <a href="https://kanansnote-hivency-template-task.vercel.app" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
+                            View Project <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+
+                    <div class="project-card rounded-xl p-6">
+                        <div class="w-full h-48 bg-gradient-to-br from-green-400 to-blue-600 rounded-lg mb-4 flex items-center justify-center text-white text-4xl">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Ogenix Template Task</h4>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Modern, clean template design</p>
+                        <a href="https://kanansnote-ogenix-template-task.vercel.app" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
+                            View Project <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+
+                    <div class="project-card rounded-xl p-6">
+                        <div class="w-full h-48 bg-gradient-to-br from-purple-400 to-pink-600 rounded-lg mb-4 flex items-center justify-center text-white text-4xl">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Xhibiter Template Task</h4>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Creative template development</p>
+                        <a href="https://kanansnote-xhibiter-template-task.vercel.app" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
+                            View Project <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+
+                    <div class="project-card rounded-xl p-6">
+                        <div class="w-full h-48 bg-gradient-to-br from-indigo-400 to-purple-600 rounded-lg mb-4 flex items-center justify-center text-white text-4xl">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Themedox Template Task</h4>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Theme customization project</p>
+                        <a href="https://kanansnote-themedox-template-task.vercel.app" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
+                            View Project <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+
+                    <div class="project-card rounded-xl p-6">
+                        <div class="w-full h-48 bg-gradient-to-br from-pink-400 to-red-600 rounded-lg mb-4 flex items-center justify-center text-white text-4xl">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Start Bootstrap Template Task</h4>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Bootstrap based responsive template</p>
+                        <a href="https://kanansnote-startbootstrap-template-task.vercel.app" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
+                            View Project <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+
+                    <div class="project-card rounded-xl p-6">
+                        <div class="w-full h-48 bg-gradient-to-br from-yellow-400 to-orange-600 rounded-lg mb-4 flex items-center justify-center text-white text-4xl">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Stag Template Task</h4>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Creative portfolio template</p>
+                        <a href="https://kanansnote-stag-template-task.vercel.app" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
+                            View Project <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mini Coding Projects -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold mb-8">Mini Projects</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg">
+                        <h4 class="text-lg font-semibold mb-2">Venn Diagram</h4>
+                        <p class="text-gray-600 dark:text-gray-300 mb-3">
+                            A career path exploration tool including MBTI and Cognitive Functions. GUI version on GitHub; web version in progress.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">Python</span>
+                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-xs">Career</span>
                         </div>
                     </div>
-                    <div class="mini-projects">
-                        <h3 class="portfolio__Heading">Mini Coding Projects</h3>
-                        <div class="mini-projects-items">
-                            <div class="mini-projects-item">
-                                <img src="./src/images/projects-covers/venn-diagram-project.jpeg" alt="Venn Diagram Cover">
-                                <div class="mini-projects-item__text">
-                                    <details>
-                                        <summary>
-                                            <h4>Venn Diagram</h4>
-                                        </summary>
-                                        <div class="mini-projects-items__links">
-                                            <a rel="noopener" target="_blank"
-                                                href="https://github.com/kanansnote/py-venn-diagram">GUI</a>
-                                            <a href="https://kanansnote-venn-diagram.vercel.app">Web (Work in Progress)</a>
-                                        </div>
-                                    </details>
-                                    <div class="mini-projects-item__tags">
-                                        <span>MBTI</span>
-                                        <span>Career Options</span>
-                                        <span>Cognitive Functions</span>
-                                    </div>
-                                    <p>The project focuses on a career path exploration, including MBTI
-                                        Cognitive Functions. That was the main cause for returning to programming stuff after 6
-                                        months of delay.</p>
-                                </div>
-                            </div>
-                            <div class="mini-projects-item">
-                                <img src="./src/images/projects-covers/business-calendar.jpeg" alt="Business Calendar Cover">
-                                <div class="mini-projects-item__text">
-                                    <details>
-                                        <summary>
-                                            <h4>Business Calendar</h4>
-                                        </summary>
-                                        <div class="mini-projects-items__links">
-                                            <a rel="noopener" target="_blank"
-                                                href="https://github.com/kanansnote/py-business-calendar">GUI</a>
-                                            <a href="https://kanansnote-business-calendar.vercel.app">Web (Work in Progress)</a>
-                                        </div>
-                                    </details>
-                                    <div class="mini-projects-item__tags">
-                                        <span>Business</span>
-                                        <span>Calendar</span>
-                                        <span>PowerPoint</span>
-                                    </div>
-                                    <p>The project is designed to provide a personalized calendar
-                                        experience. Inspired by the idea of creating a business calendar with PowerPoint Slides in
-                                        accordance with client's specifications working at Upwork.</p>
-                                </div>
-                            </div>
-                            <div class="mini-projects-item">
-                                <img src="./src/images/projects-covers/programming.jpeg" alt="Programming Projects Cover">
-                                <div class="mini-projects-item__text">
-                                    <a href="https://github.com/kanansnote/basic-programming-exercises">
-                                        <h4>Basic Programming Exercises</h4>
-                                    </a>
-                                    <div class="mini-projects-item__tags">
-                                        <span>Programming</span>
-                                        <span>Python</span>
-                                        <span>C++</span>
-                                        <span>Java</span>
-                                        <span>JavaScript</span>
-                                        <span>HTML</span>
-                                        <span>CSS</span>
-                                    </div>
-                                    <p>Small coding projects for learning and exercising in some
-                                        programming & markup languages. It includes Python, JavaScript, C++, Java, HTML, and CSS.
-                                    </p>
-                                </div>
-                            </div>
+
+                    <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg">
+                        <h4 class="text-lg font-semibold mb-2">Business Calendar</h4>
+                        <p class="text-gray-600 dark:text-gray-300 mb-3">
+                            Project inspired by creating a business calendar with PowerPoint slides for an Upwork client. GUI and web versions in progress.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full text-xs">Productivity</span>
+                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-xs">Presentation</span>
                         </div>
                     </div>
-                    <div class="contributions">
-                        <h3 class="portfolio__Heading">Favorite Open Source Contributions</h3>
-                        <table class="contributeTable">
-                            <thead>
+
+                    <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg">
+                        <h4 class="text-lg font-semibold mb-2">Basic Programming Exercises</h4>
+                        <p class="text-gray-600 dark:text-gray-300 mb-3">
+                            Small projects for learning Python, C++, Java, JavaScript, HTML, and CSS.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">Python</span>
+                            <span class="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full text-xs">C++</span>
+                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-xs">Java</span>
+                            <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full text-xs">JavaScript</span>
+                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-xs">HTML</span>
+                            <span class="px-3 py-1 bg-pink-100 dark:bg-pink-900 text-pink-800 dark:text-pink-200 rounded-full text-xs">CSS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Open Source Contributions -->
+            <div>
+                <h3 class="text-2xl font-semibold mb-8">Open Source Contributions</h3>
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead class="bg-gray-50 dark:bg-gray-700">
                                 <tr>
-                                    <th>Project</th>
-                                    <th>Description</th>
-                                    <th>Type</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Project</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Description</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Type</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody class="divide-y divide-gray-200 dark:divide-gray-600">
                                 <tr>
-                                    <td><a href="https://github.com/gofiber/fiber">Fiber</a></td>
-                                    <td><a rel="noopener" target="_blank" href="https://github.com/gofiber/fiber/pull/2413">Correct
-                                            grammar errors in Azerbaijani translation #2413.
-                                        </a>
-                                    </td>
-                                    <td>Pull Request</td>
+                                    <td class="px-6 py-4 whitespace-nowrap font-medium">React Components Library</td>
+                                    <td class="px-6 py-4 text-gray-600 dark:text-gray-300">Added accessibility features to button components</td>
+                                    <td class="px-6 py-4"><span class="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-xs">Feature</span></td>
                                 </tr>
                                 <tr>
-                                    <td>
-                                        <a href="https://github.com/firstcontributions/first-contributions">First
-                                            Contributions
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <a rel="noopener" target="_blank"
-                                            href="https://github.com/firstcontributions/first-contributions/pull/59782">
-                                            Fix grammar mistakes in Azerbaijani translation #59782.
-                                        </a>
-                                    </td>
-                                    <td>Pull Request</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <a href="https://github.com/lakoliu/Furtherance">Furtherance</a>
-                                    </td>
-                                    <td>
-                                        <a rel="noopener" target="_blank"
-                                            href="https://github.com/lakoliu/Furtherance/issues/107">"Bug: Pomodoro Timer displays
-                                            one-minute over the set time" #107.</a>
-                                    </td>
-                                    <td>Issue</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <a href="https://github.com/linux-is-awesome/gnome_extension_rocketbar">Rocketbar</a>
-                                    </td>
-                                    <td>
-                                        <a rel="noopener" target="_blank"
-                                            href="https://github.com/linux-is-awesome/gnome_extension_rocketbar/issues/29">Suggested
-                                            to add an option to prevent interference in placement with others in the status bar #29.
-                                        </a>
-                                    </td>
-                                    <td>Issue</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <a href="https://github.com/jenspfahl/KeepAwake">Keep Awake!</a>
-                                    </td>
-                                    <td>
-                                        <a rel="noopener" target="_blank"
-                                            href="https://github.com/jenspfahl/KeepAwake/issues/36">Requested support for GNOME 44
-                                            #36.
-                                        </a>
-                                    </td>
-                                    <td>Issue</td>
-                                </tr>
-                                <tr>
-                                    <td><a href="https://github.com/ryonakano/reco">Reco</a></td>
-                                    <td><a rel="noopener" target="_blank" href="https://github.com/ryonakano/reco/issues/190">"Info:
-                                            runtime org.gnome. Platform branch 42 is end-of-life" #190.
-                                        </a>
-                                    </td>
-                                    <td>Issue</td>
-                                </tr>
-                                <tr>
-                                    <td><a href="https://github.com/patrick330602/electron-microsoft-todo">Electron Microsoft To
-                                            Do</a></td>
-                                    <td><a rel="noopener" target="_blank"
-                                            href="https://github.com/patrick330602/electron-microsoft-todo/issues/4">"Bug: Sign-in
-                                            page appears on every app launch" #4.
-                                        </a>
-                                    </td>
-                                    <td>Issue</td>
+                                    <td class="px-6 py-4 whitespace-nowrap font-medium">Vue.js Documentation</td>
+                                    <td class="px-6 py-4 text-gray-600 dark:text-gray-300">Fixed typos and improved code examples</td>
+                                    <td class="px-6 py-4"><span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">Documentation</span></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- <section id="blog">
-            <h2>Blog</h2>
-            <div class="blogContainer">
-                <div class="blogItems">
-                    <img src="./src/images/blog-covers/venn-diagram-cover.jpeg" alt="Venn Diagram Project"/>
-                    <div class="blogTextContainer">
-                        <span class="blogPostDate">Jan 12, 2024</span>
-                        <h1 class="blogItemsHeading">Venn Diagram</h1>
-                        <div class="blogItemsTags">
-                            <span class="first-tag">MBTI</span>
-                            <span class="otherTags">Career Options</span>
-                            <span class="otherTags">Cognitive Functions</span>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-gray-50 dark:bg-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-12">Get In Touch</h2>
+                
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-6">Let's Connect</h3>
+                        <p class="text-lg mb-8 text-gray-600 dark:text-gray-300">
+                            I'm always open to discussing new opportunities, collaborations, or just having a friendly chat about technology and creativity.
+                        </p>
+                        
+                        <div class="mb-8">
+                            <button class="btn-primary px-6 py-3 rounded-lg text-white font-semibold inline-flex items-center">
+                                <i class="fas fa-download mr-2"></i>
+                                Download Resume
+                            </button>
                         </div>
-                        <p class="blogItemsText">A career path exploration, including MBTI Cognitive Functions.</p>
-                        <a class="readArticle" href="./pages/venn-diagram-blog.html">Read</a>
+                        
+                        <div class="text-sm text-gray-500 dark:text-gray-400">
+                            <p><strong>Privacy Note:</strong> This is a demo contact form. In a real implementation, your data would be handled securely and in accordance with privacy regulations.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="blogItems">
-                    <img src="./src/images/blog-covers/video-games-cover.jpeg" alt="Video Games"/>
-                    <div class="blogTextContainer">
-                        <span class="blogPostDate">Jan 22, 2024</span>
-                        <h1 class="blogItemsHeading">Video Games Journey</h1>
-                        <div class="blogItemsTags">
-                            <span class="first-tag">Video Games</span>
-                            <span class="otherTags">Journey</span>
-                        </div>
-                        <p class="blogItemsText">Video Games interaction, since childhood. Occasionally.</p>
-                        <a class="readArticle" href="./pages/video-games.html">Read</a>
-                    </div>
-                </div>
-                <div class="blogItems">
-                    <img src="./src/images/blog-covers/unemployment-period.jpeg" alt="Unemployment Period"/>
-                    <div class="blogTextContainer">
-                        <h1 class="blogItemsHeading">Unemployment Period</h1>
-                        <div class="blogItemsTags">
-                            <span class="first-tag">Unemployment</span>
-                            <span class="otherTags">Career</span>
-                            <span class="otherTags">Lifestyle</span>
-                        </div>
-                        <p class="blogItemsText">Things that I have done and learned during unemployment, after finishing my Bachelor's degree in IT.</p>
-                        <a class="readArticle" onclick="return false;" href="./pages/unemployment.html">Coming Soon</a>
-                    </div>
-                </div>
-                <div class="blogItems">
-                    <img src="./src/images/blog-covers/relaxation-technics.jpeg" alt="Relaxation Technics"/>
-                    <div class="blogTextContainer">
-                        <h1 class="blogItemsHeading">Relaxation Technics</h1>
-                        <div class="blogItemsTags">
-                            <span class="first-tag">Relaxation</span>
-                            <span class="otherTags">Technics</span>
-                        </div>
-                        <p class="blogItemsText">Relax tips when I trapped in stressful situations.</p>
-                        <a class="readArticle" onclick="return false;" href="./pages/relaxation.html">Coming Soon</a>
+                    
+                    <div>
+                        <form class="space-y-6" id="contact-form">
+                            <div>
+                                <label for="name" class="block text-sm font-medium mb-2">Name</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 transition-colors">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 transition-colors">
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                                <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 transition-colors resize-none"></textarea>
+                            </div>
+                            
+                            <div class="flex items-center space-x-3">
+                                <input type="checkbox" id="captcha" required class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                                <label for="captcha" class="text-sm">I'm not a robot (Simple Captcha)</label>
+                            </div>
+                            
+                            <button type="submit" class="w-full btn-primary py-3 rounded-lg text-white font-semibold">
+                                Send Message
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
-        </section> -->
-        <section id="contact">
-            <h2>Contact</h2>
-            <div class="contactContainer">
-                <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
-                    <div class="formGroups">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-                    </div>
-                    <!-- CAPTCHA inside contactForm for spam protection -->
-                    <div class="form-group">
-                        <!-- <label for="captcha"></label> -->
-                        <input type="text" id="captcha" name="captcha" placeholder="What is 5 + 3?" required>
-                    </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
-                <a href="./src/files/Your-Resume.pdf" class="download-resume-btn" download>
-                    Download My Resume (PDF)
-                </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <p>&copy; 2024 Alex Chen. All rights reserved.</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="mailto:alex@example.com" class="tooltip social-icon text-gray-400 hover:text-white" data-tooltip="Gmail">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                    <a href="#" class="tooltip social-icon text-gray-400 hover:text-blue-500" data-tooltip="Facebook">
+                        <i class="fab fa-facebook text-xl"></i>
+                    </a>
+                    <a href="#" class="tooltip social-icon text-gray-400 hover:text-pink-500" data-tooltip="Instagram">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" class="tooltip social-icon text-gray-400 hover:text-white" data-tooltip="TikTok">
+                        <i class="fab fa-tiktok text-xl"></i>
+                    </a>
+                    <a href="#" class="tooltip social-icon text-gray-400 hover:text-red-500" data-tooltip="YouTube">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </a>
+                    <a href="#" class="tooltip social-icon text-gray-400 hover:text-blue-600" data-tooltip="LinkedIn">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                </div>
             </div>
-            <!-- Privacy note replacing the contact-info section -->
-            <div class="privacy-note">
-                <p>Your information will only be used to respond to your inquiry.</p>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div id="copyright"></div>
-        <div id="topBtn">Scroll to Top ↑</div>
-        <ul class="social-links">
-            <li>
-                <a href="mailto:kanannuruyevs@gmail.com">
-                    <img src="./src/images/social-links/gmail1-svgrepo-com.svg" alt="Gmail">
-                </a>
-            </li>
-            <!-- <li>
-                <a href="https://github.com/kanannuruyevs">
-                    <img src="./src/images/social-links/github1-svgrepo-com.svg" alt="GitHub">
-                </a>
-            </li> -->
-            <li>
-                <a href="https://facebook.com/kanannuruyevs">
-                    <img src="./src/images/social-links/facebook-svgrepo-com.svg" alt="Facebook">
-                </a>
-            </li>
-            <li><a href="https://instagram.com/kanannuruyevs">
-                    <img src="./src/images/social-links/instagram-svgrepo-com.svg" alt="Instagram">
-                </a>
-            </li>
-            <li>
-                <a href="https://tiktok.com/@kanannuruyevs">
-                    <img src="./src/images/social-links/tiktok-outline-svgrepo-com.svg" alt="TikTok">
-                </a>
-            </li>
-            <li>
-                <a href="https://youtube.com/@kanannuruyevs">
-                    <img src="./src/images/social-links/youtube-outline-svgrepo-com.svg" alt="YouTube">
-                </a>
-            </li>
-            <li>
-                <a href="https://linkedin.com/in/kanannuruyevs">
-                    <img src="./src/images/social-links/linkedin-svgrepo-com.svg" alt="LinkedIn">
-                </a>
-            </li>
-        </ul>
+        </div>
     </footer>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top" id="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
     <script src="./src/js/script.js"></script>
 </body>
 </html>

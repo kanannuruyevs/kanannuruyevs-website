@@ -1,135 +1,170 @@
-// Select the body or a larger container
-const container = document.body; // or document.querySelector('.your-container');
+// Theme Toggle
+const themeToggle = document.getElementById('theme-toggle');
+const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+const html = document.documentElement;
 
-// Header background appearing by scrolling
-const header = document.querySelector('header');
-const homeHeader = document.getElementById('homeHeader');
-
-// Select the burger menu and the elements you want to show/hide
-const burgerMenu = document.querySelector('.burger-menu');
-const navMenu = document.querySelector('.nav-menu');
-const socialLinks = document.querySelector('.social-links');
-
-// Create a new instance of Hammer on the container
-const hammer = new Hammer(container);
-
-// Function to open the menu
-function openMenu() {
-  navMenu.classList.add('showNavMenu');
-  socialLinks.classList.add('showSocialLinks');
-  burgerMenu.classList.add('open');
-}
-
-// Function to close the menu
-function closeMenu() {
-  navMenu.classList.remove('showNavMenu');
-  socialLinks.classList.remove('showSocialLinks');
-  burgerMenu.classList.remove('open');
-}
-
-// Event listener for click event
-
-if (burgerMenu){
-  burgerMenu.addEventListener('click', function() {
-    if (burgerMenu.classList.contains('open')) {
-      closeMenu();
-    } else {
-      openMenu();
+function updateThemeIcons() {
+    // Desktop
+    const moon = document.getElementById('icon-moon');
+    const sun = document.getElementById('icon-sun');
+    if (moon && sun) {
+        if (html.classList.contains('dark')) {
+            sun.style.display = 'none';
+            moon.style.display = 'inline';
+        } else {
+            sun.style.display = 'inline';
+            moon.style.display = 'none';
+        }
     }
-  });
+    // Mobile
+    const mobileMoon = document.getElementById('mobile-icon-moon');
+    const mobileSun = document.getElementById('mobile-icon-sun');
+    if (mobileMoon && mobileSun) {
+        if (html.classList.contains('dark')) {
+            mobileMoon.style.display = 'none';
+            mobileSun.style.display = 'inline';
+        } else {
+            mobileMoon.style.display = 'inline';
+            mobileSun.style.display = 'none';
+        }
+    }
 }
 
-// Event listener for swipe events
-hammer.on('swiperight', openMenu);
-hammer.on('swipeleft', closeMenu);
+function toggleTheme() {
+    html.classList.toggle('dark');
+    localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    updateThemeIcons();
+}
 
-// Event listener for click event on the document body
-document.addEventListener('click', function(event) {
-  // Check if the click was outside the burger menu and the menu is open
-  if (!burgerMenu.contains(event.target) && burgerMenu.classList.contains('open')) {
-    closeMenu();
-  }
+// On page load, set theme and icons
+if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    html.classList.add('dark');
+}
+updateThemeIcons();
+
+themeToggle.addEventListener('click', toggleTheme);
+mobileThemeToggle.addEventListener('click', toggleTheme);
+
+// Mobile Menu
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileMenuClose = document.getElementById('mobile-menu-close');
+
+mobileMenuBtn.addEventListener('click', () => {
+    mobileMenu.classList.add('open');
 });
 
-// Function to handle the click event on the portfolio button
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.expandable-portfolio-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-            const targetId = btn.getAttribute('data-target');
-            const portfolioSection = document.getElementById(targetId);
-            if (!portfolioSection.classList.contains('active')) {
-                portfolioSection.classList.add('active');
-                btn.textContent = 'Hide Portfolio';
-            } else {
-                portfolioSection.classList.remove('active');
-                btn.textContent = 'View Portfolio';
-            }
-        });
+mobileMenuClose.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+});
+
+// Close mobile menu when clicking on links
+document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
     });
 });
 
-// Make headline id element disappear when scrolling down
-
-// document.onscroll = function () {
-//     const scrollPosition = window.scrollY;
-
-//     // Determine desired scroll threshold (e.g., 50px):
-//     const threshold = 50;
-
-//     if (scrollPosition > threshold) {
-//         header.style.backgroundColor = '#212529';
-//         homeHeader.style.backgroundColor = '#212529';
-//     } else {
-//         header.style.backgroundColor = 'black';
-//         homeHeader.style.backgroundColor = 'transparent';
-//     }
-// };
-
-// Update year in footer tag
-const updateYear = new Date().getFullYear();
-const copyrightElement = document.getElementById("copyright");
-
-copyrightElement.innerHTML = "© 2023 - " + updateYear + " kanannuruyevs. All rights reserved.";
-
-// Scroll to Top
-
-const topBtn = document.getElementById("topBtn");
-
-window.onscroll = function() { scrollFunction() };
-
-function scrollFunction() {
-  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-    topBtn.style.display = "block";  /* Show button when scrolled down */
-  } else {
-    topBtn.style.display = "none";   /* Hide button when scrolled up */
-  }
-}
-
-topBtn.addEventListener("click", function() {
-  document.documentElement.scrollIntoView({
-    behavior: 'smooth',  // Enables smooth scrolling animation
-    block: 'start'       // Scrolls to the top of the page
-  });
+// Smooth Scrolling
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
 });
 
-// Go Back Button for Blog Pages
-const goBackButton = document.getElementById('goBackButton');
+// Scroll to Top Button
+const scrollToTopBtn = document.getElementById('scroll-to-top');
 
-if (goBackButton) {
-  goBackButton.addEventListener('click', ()=>{
-    window.location.href = '../index.html'
-  });
-}
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+        scrollToTopBtn.classList.add('visible');
+    } else {
+        scrollToTopBtn.classList.remove('visible');
+    }
+});
 
-// Content Creation Container Slider
-document.addEventListener('DOMContentLoaded', function () {
-  const swiper = new Swiper('.swiper-container', {
-      navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-      },
-      loop: true, // Enable looping
-      slidesPerView: 1, // Ensure only one slide is visible at a time
-      spaceBetween: 10, // Add space between slides if needed
-  });
+scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+// Expand/Collapse Brand Cards
+document.querySelectorAll('.expand-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const slider = this.parentElement.querySelector('.video-slider');
+        const isHidden = slider.classList.contains('hidden');
+        
+        if (isHidden) {
+            slider.classList.remove('hidden');
+            this.textContent = 'Hide Content';
+            
+            // Initialize Swiper
+            new Swiper(slider.querySelector('.swiper'), {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                autoplay: {
+                    delay: 3000,
+                },
+            });
+        } else {
+            slider.classList.add('hidden');
+            this.textContent = 'View Content';
+        }
+    });
+});
+
+// Contact Form
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Simple form validation
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    const captcha = document.getElementById('captcha').checked;
+    
+    if (!name || !email || !message || !captcha) {
+        alert('Please fill in all fields and complete the captcha.');
+        return;
+    }
+    
+    // Demo submission
+    alert('Thank you for your message! This is a demo form - in a real implementation, your message would be sent securely.');
+    this.reset();
+});
+
+// Add scroll animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, observerOptions);
+
+// Observe elements for animation
+document.querySelectorAll('.card-hover, .project-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
 });
