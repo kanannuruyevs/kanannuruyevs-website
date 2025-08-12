@@ -1531,7 +1531,7 @@
 
 .scroll-to-top {
   position: fixed;
-  bottom: 20px;
+  bottom: 50px;
   right: 20px;
   background: #f97316;
   color: white;

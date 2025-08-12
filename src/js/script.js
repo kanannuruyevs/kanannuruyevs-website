@@ -168,3 +168,9 @@ document.querySelectorAll('.card-hover, .project-card').forEach(el => {
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
 });
+
+// Update year in footer tag
+const updateYear = new Date().getFullYear();
+const copyrightElement = document.getElementById("copyright");
+
+copyrightElement.innerHTML = "© 2023 - " + updateYear + " @kanannuruyevs. All rights reserved.";
