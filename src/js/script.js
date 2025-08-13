@@ -19,13 +19,19 @@ function updateThemeIcons() {
     // Mobile
     const mobileMoon = document.getElementById('mobile-icon-moon');
     const mobileSun = document.getElementById('mobile-icon-sun');
+    const textLight = document.getElementById('mobile-text-light');
+    const textDark = document.getElementById('mobile-text-dark');
     if (mobileMoon && mobileSun) {
         if (html.classList.contains('dark')) {
-            mobileMoon.style.display = 'none';
-            mobileSun.style.display = 'inline';
-        } else {
             mobileMoon.style.display = 'inline';
+            textDark.style.display = 'inline';
             mobileSun.style.display = 'none';
+            textLight.style.display = 'none';
+        } else {
+            mobileMoon.style.display = 'none';
+            textDark.style.display = 'none';
+            mobileSun.style.display = 'inline';
+            textLight.style.display = 'inline';
         }
     }
 }

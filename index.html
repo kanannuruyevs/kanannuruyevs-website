@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="theme-transition bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,14 +11,17 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="./src/css/style.css" />
 </head>
+
 <body>
     <!-- Header -->
-    <header class="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-700">
+    <header
+        class="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-700">
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <!-- Logo -->
                 <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
+                    <div
+                        class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
                         <img src="./src/images/home/profile-picture.png" alt="">
                     </div>
                     <span class="text-xl font-bold">Kanan Nuruyev</span>
@@ -29,8 +33,10 @@
                     <a href="#about" class="hover:text-blue-600 transition-colors">About</a>
                     <a href="#portfolio" class="hover:text-blue-600 transition-colors">Portfolio</a>
                     <a href="#contact" class="hover:text-blue-600 transition-colors">Contact</a>
-                    <a href="./pages/previous-index.html" class="hover:text-blue-600 transition-colors">Previous Version</a>
-                    <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                    <a href="./pages/previous-index.html" class="hover:text-blue-600 transition-colors">Previous
+                        Version</a>
+                    <button id="theme-toggle"
+                        class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
                         <i class="fas fa-moon" id="icon-moon"></i>
                         <i class="fas fa-sun" id="icon-sun"></i>
                     </button>
@@ -44,21 +50,24 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-64 h-full bg-white dark:bg-gray-900 shadow-lg md:hidden">
-            <div class="p-6">
+        <div id="mobile-menu"
+            class="mobile-menu fixed top-0 right-0 w-64 h-full bg-white dark:bg-gray-900 shadow-lg md:hidden">
+            <div class="p-6 bg-gray-50 dark:bg-gray-800">
                 <button id="mobile-menu-close" class="absolute top-4 right-4 p-2">
                     <i class="fas fa-times text-xl"></i>
                 </button>
-                <nav class="mt-8 space-y-4">
+                <nav class="space-y-4">
                     <a href="#home" class="block py-2 hover:text-blue-600 transition-colors">Home</a>
                     <a href="#about" class="block py-2 hover:text-blue-600 transition-colors">About</a>
                     <a href="#portfolio" class="block py-2 hover:text-blue-600 transition-colors">Portfolio</a>
                     <a href="#contact" class="block py-2 hover:text-blue-600 transition-colors">Contact</a>
-                    <a href="./pages/previous-index.html" class="hover:text-blue-600 transition-colors">Previous Version</a>
+                    <a href="./pages/previous-index.html"
+                        class="block py-2 hover:text-blue-600 transition-colors">Previous Version</a>
                     <button id="mobile-theme-toggle" class="flex items-center space-x-2 py-2">
-                        <i class="fas fa-moon" id="mobile-icon-moon"></i>
                         <i class="fas fa-sun" id="mobile-icon-sun"></i>
-                        <span>Toggle Theme</span>
+                        <i class="fas fa-moon" id="mobile-icon-moon"></i>
+                        <span id="mobile-text-light">Light Theme</span>
+                        <span id="mobile-text-dark">Dark Theme</span>
                     </button>
                 </nav>
             </div>
@@ -70,7 +79,8 @@
         <div class="container mx-auto px-6 text-center text-white relative z-10">
             <div class="max-w-4xl mx-auto">
                 <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">Kanan Nuruyev</h1>
-                <p class="text-xl md:text-2xl mb-8 opacity-90">Content Creator | ASMRtist | Casual Coder | Lifelong Learner</p>
+                <p class="text-xl md:text-2xl mb-8 opacity-90">Content Creator | ASMRtist | Casual Coder | Lifelong
+                    Learner</p>
                 <div class="marquee bg-black/20 rounded-full py-3 px-6 mb-8">
                     <div class="marquee-content text-lg">
                         Welcome to My Personal Website! Nice to Meet You!
@@ -92,23 +102,38 @@
                     <div>
                         <h3 class="text-2xl font-semibold mb-6">Hello! I'm Kanan Nuruyev</h3>
                         <p class="text-lg mb-6 leading-relaxed">
-                            A Content Creator with a background in IT and programming. I focus on mental health, style, and self-improvement content to attract and retain a social media following.
+                            A Content Creator with a background in IT and programming. I focus on mental health, style,
+                            and self-improvement content to attract and retain a social media following.
                         </p>
                         <p class="text-lg mb-6 leading-relaxed">
-                            I hold a Bachelor's in Information Technology (2020). I started in backend development (Python), transitioned to frontend (HTML, CSS, JavaScript, React), and later pivoted to content creation after experiencing burnout.
+                            I hold a Bachelor's in Information Technology (2020). I started in backend development
+                            (Python), transitioned to frontend (HTML, CSS, JavaScript, React), and later pivoted to
+                            content creation after experiencing burnout.
                         </p>
                         <div class="flex flex-wrap gap-3">
-                            <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">IT & Programming</span>
-                            <span class="px-4 py-2 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm">Content Creation</span>
-                            <span class="px-4 py-2 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">Mental Health</span>
-                            <span class="px-4 py-2 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-sm">Self-Improvement</span>
-                            <span class="px-4 py-2 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full text-sm">Lifestyle</span>
-                            <span class="px-4 py-2 bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 rounded-full text-sm">Personal Style</span>
+                            <span
+                                class="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">IT
+                                & Programming</span>
+                            <span
+                                class="px-4 py-2 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm">Content
+                                Creation</span>
+                            <span
+                                class="px-4 py-2 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">Mental
+                                Health</span>
+                            <span
+                                class="px-4 py-2 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-sm">Self-Improvement</span>
+                            <span
+                                class="px-4 py-2 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full text-sm">Lifestyle</span>
+                            <span
+                                class="px-4 py-2 bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 rounded-full text-sm">Personal
+                                Style</span>
                         </div>
                     </div>
-                                        <div>
-                        <div class="w-64 h-64 mx-auto bg-gradient-to-br from-blue-400 to-purple-600 rounded-full flex items-center justify-center text-white text-6xl">
-                            <img src="/src/images/home/profile-picture.png" alt="Profile Picture" class="rounded-full w-64 h-64 object-cover">
+                    <div>
+                        <div
+                            class="w-64 h-64 mx-auto bg-gradient-to-br from-blue-400 to-purple-600 rounded-full flex items-center justify-center text-white text-6xl">
+                            <img src="/src/images/home/profile-picture.png" alt="Profile Picture"
+                                class="rounded-full w-64 h-64 object-cover">
                         </div>
                     </div>
                 </div>
@@ -132,7 +157,8 @@
                                 <a href="#" class="tooltip social-icon text-pink-500" data-tooltip="Instagram">
                                     <i class="fab fa-instagram text-xl"></i>
                                 </a>
-                                <a href="#" class="tooltip social-icon text-black dark:text-white" data-tooltip="TikTok">
+                                <a href="#" class="tooltip social-icon text-black dark:text-white"
+                                    data-tooltip="TikTok">
                                     <i class="fab fa-tiktok text-xl"></i>
                                 </a>
                                 <a href="#" class="tooltip social-icon text-red-500" data-tooltip="YouTube">
@@ -141,19 +167,25 @@
                             </div>
                         </div>
                         <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            Lifestyle, self-improvement, mental health, fashion, and entertainment content for an English-speaking international audience.
+                            Lifestyle, self-improvement, mental health, fashion, and entertainment content for an
+                            English-speaking international audience.
                         </p>
-                        <button class="expand-btn w-full bg-gradient-to-r from-pink-500 to-purple-600 text-white py-2 rounded-lg hover:shadow-lg transition-all">
+                        <button
+                            class="expand-btn w-full bg-gradient-to-r from-pink-500 to-purple-600 text-white py-2 rounded-lg hover:shadow-lg transition-all">
                             View Content
                         </button>
                         <div class="video-slider hidden mt-6">
                             <div class="swiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <iframe class="w-full h-48 rounded-lg" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video 1" frameborder="0" allowfullscreen></iframe>
+                                        <iframe class="w-full h-48 rounded-lg"
+                                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video 1"
+                                            frameborder="0" allowfullscreen></iframe>
                                     </div>
                                     <div class="swiper-slide">
-                                        <iframe class="w-full h-48 rounded-lg" src="https://www.youtube.com/embed/3tmd-ClpJxA" title="Video 2" frameborder="0" allowfullscreen></iframe>
+                                        <iframe class="w-full h-48 rounded-lg"
+                                            src="https://www.youtube.com/embed/3tmd-ClpJxA" title="Video 2"
+                                            frameborder="0" allowfullscreen></iframe>
                                     </div>
                                     <!-- Add more video slides as needed -->
                                 </div>
@@ -170,67 +202,79 @@
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                     <div class="project-card rounded-xl p-6">
-                        <div class="w-full h-48 bg-gradient-to-br from-blue-400 to-purple-600 rounded-lg mb-4 flex items-center justify-center text-white text-4xl">
+                        <div
+                            class="w-full h-48 bg-gradient-to-br from-blue-400 to-purple-600 rounded-lg mb-4 flex items-center justify-center text-white text-4xl">
                             <i class="fas fa-code"></i>
                         </div>
                         <h4 class="text-xl font-semibold mb-2">Hivency Template Task</h4>
                         <p class="text-gray-600 dark:text-gray-300 mb-4">Responsive template project</p>
-                        <a href="https://kanansnote-hivency-template-task.vercel.app" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
+                        <a href="https://kanansnote-hivency-template-task.vercel.app" target="_blank"
+                            class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
                             View Project <i class="fas fa-external-link-alt ml-2"></i>
                         </a>
                     </div>
 
                     <div class="project-card rounded-xl p-6">
-                        <div class="w-full h-48 bg-gradient-to-br from-green-400 to-blue-600 rounded-lg mb-4 flex items-center justify-center text-white text-4xl">
+                        <div
+                            class="w-full h-48 bg-gradient-to-br from-green-400 to-blue-600 rounded-lg mb-4 flex items-center justify-center text-white text-4xl">
                             <i class="fas fa-code"></i>
                         </div>
                         <h4 class="text-xl font-semibold mb-2">Ogenix Template Task</h4>
                         <p class="text-gray-600 dark:text-gray-300 mb-4">Modern, clean template design</p>
-                        <a href="https://kanansnote-ogenix-template-task.vercel.app" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
+                        <a href="https://kanansnote-ogenix-template-task.vercel.app" target="_blank"
+                            class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
                             View Project <i class="fas fa-external-link-alt ml-2"></i>
                         </a>
                     </div>
 
                     <div class="project-card rounded-xl p-6">
-                        <div class="w-full h-48 bg-gradient-to-br from-purple-400 to-pink-600 rounded-lg mb-4 flex items-center justify-center text-white text-4xl">
+                        <div
+                            class="w-full h-48 bg-gradient-to-br from-purple-400 to-pink-600 rounded-lg mb-4 flex items-center justify-center text-white text-4xl">
                             <i class="fas fa-code"></i>
                         </div>
                         <h4 class="text-xl font-semibold mb-2">Xhibiter Template Task</h4>
                         <p class="text-gray-600 dark:text-gray-300 mb-4">Creative template development</p>
-                        <a href="https://kanansnote-xhibiter-template-task.vercel.app" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
+                        <a href="https://kanansnote-xhibiter-template-task.vercel.app" target="_blank"
+                            class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
                             View Project <i class="fas fa-external-link-alt ml-2"></i>
                         </a>
                     </div>
 
                     <div class="project-card rounded-xl p-6">
-                        <div class="w-full h-48 bg-gradient-to-br from-indigo-400 to-purple-600 rounded-lg mb-4 flex items-center justify-center text-white text-4xl">
+                        <div
+                            class="w-full h-48 bg-gradient-to-br from-indigo-400 to-purple-600 rounded-lg mb-4 flex items-center justify-center text-white text-4xl">
                             <i class="fas fa-code"></i>
                         </div>
                         <h4 class="text-xl font-semibold mb-2">Themedox Template Task</h4>
                         <p class="text-gray-600 dark:text-gray-300 mb-4">Theme customization project</p>
-                        <a href="https://kanansnote-themedox-template-task.vercel.app" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
+                        <a href="https://kanansnote-themedox-template-task.vercel.app" target="_blank"
+                            class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
                             View Project <i class="fas fa-external-link-alt ml-2"></i>
                         </a>
                     </div>
 
                     <div class="project-card rounded-xl p-6">
-                        <div class="w-full h-48 bg-gradient-to-br from-pink-400 to-red-600 rounded-lg mb-4 flex items-center justify-center text-white text-4xl">
+                        <div
+                            class="w-full h-48 bg-gradient-to-br from-pink-400 to-red-600 rounded-lg mb-4 flex items-center justify-center text-white text-4xl">
                             <i class="fas fa-code"></i>
                         </div>
                         <h4 class="text-xl font-semibold mb-2">Start Bootstrap Template Task</h4>
                         <p class="text-gray-600 dark:text-gray-300 mb-4">Bootstrap based responsive template</p>
-                        <a href="https://kanansnote-startbootstrap-template-task.vercel.app" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
+                        <a href="https://kanansnote-startbootstrap-template-task.vercel.app" target="_blank"
+                            class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
                             View Project <i class="fas fa-external-link-alt ml-2"></i>
                         </a>
                     </div>
 
                     <div class="project-card rounded-xl p-6">
-                        <div class="w-full h-48 bg-gradient-to-br from-yellow-400 to-orange-600 rounded-lg mb-4 flex items-center justify-center text-white text-4xl">
+                        <div
+                            class="w-full h-48 bg-gradient-to-br from-yellow-400 to-orange-600 rounded-lg mb-4 flex items-center justify-center text-white text-4xl">
                             <i class="fas fa-code"></i>
                         </div>
                         <h4 class="text-xl font-semibold mb-2">Stag Template Task</h4>
                         <p class="text-gray-600 dark:text-gray-300 mb-4">Creative portfolio template</p>
-                        <a href="https://kanansnote-stag-template-task.vercel.app" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
+                        <a href="https://kanansnote-stag-template-task.vercel.app" target="_blank"
+                            class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
                             View Project <i class="fas fa-external-link-alt ml-2"></i>
                         </a>
                     </div>
@@ -244,22 +288,28 @@
                     <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg">
                         <h4 class="text-lg font-semibold mb-2">Venn Diagram</h4>
                         <p class="text-gray-600 dark:text-gray-300 mb-3">
-                            A career path exploration tool including MBTI and Cognitive Functions. GUI version on GitHub; web version in progress.
+                            A career path exploration tool including MBTI and Cognitive Functions. GUI version on
+                            GitHub; web version in progress.
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">Python</span>
-                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-xs">Career</span>
+                            <span
+                                class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">Python</span>
+                            <span
+                                class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-xs">Career</span>
                         </div>
                     </div>
 
                     <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg">
                         <h4 class="text-lg font-semibold mb-2">Business Calendar</h4>
                         <p class="text-gray-600 dark:text-gray-300 mb-3">
-                            Project inspired by creating a business calendar with PowerPoint slides for an Upwork client. GUI and web versions in progress.
+                            Project inspired by creating a business calendar with PowerPoint slides for an Upwork
+                            client. GUI and web versions in progress.
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full text-xs">Productivity</span>
-                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-xs">Presentation</span>
+                            <span
+                                class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full text-xs">Productivity</span>
+                            <span
+                                class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-xs">Presentation</span>
                         </div>
                     </div>
 
@@ -269,12 +319,18 @@
                             Small projects for learning Python, C++, Java, JavaScript, HTML, and CSS.
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">Python</span>
-                            <span class="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full text-xs">C++</span>
-                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-xs">Java</span>
-                            <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full text-xs">JavaScript</span>
-                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-xs">HTML</span>
-                            <span class="px-3 py-1 bg-pink-100 dark:bg-pink-900 text-pink-800 dark:text-pink-200 rounded-full text-xs">CSS</span>
+                            <span
+                                class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">Python</span>
+                            <span
+                                class="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full text-xs">C++</span>
+                            <span
+                                class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-xs">Java</span>
+                            <span
+                                class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full text-xs">JavaScript</span>
+                            <span
+                                class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-xs">HTML</span>
+                            <span
+                                class="px-3 py-1 bg-pink-100 dark:bg-pink-900 text-pink-800 dark:text-pink-200 rounded-full text-xs">CSS</span>
                         </div>
                     </div>
                 </div>
@@ -288,9 +344,15 @@
                         <table class="w-full">
                             <thead class="bg-gray-50 dark:bg-gray-700">
                                 <tr>
-                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Project</th>
-                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Description</th>
-                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Type</th>
+                                    <th
+                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
+                                        Project</th>
+                                    <th
+                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
+                                        Description</th>
+                                    <th
+                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
+                                        Type</th>
                                 </tr>
                             </thead>
                             <tbody class="divide-y divide-gray-200 dark:divide-gray-600">
@@ -299,11 +361,14 @@
                                         <a href="https://github.com/gofiber/fiber">Fiber</a>
                                     </td>
                                     <td class="px-6 py-4 text-gray-600 dark:text-gray-300">
-                                        <a rel="noopener" target="_blank" href="https://github.com/gofiber/fiber/pull/2413">Correct
+                                        <a rel="noopener" target="_blank"
+                                            href="https://github.com/gofiber/fiber/pull/2413">Correct
                                             grammar errors in Azerbaijani translation #2413.
                                         </a>
                                     </td>
-                                    <td class="px-6 py-4"><span class="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-xs">Pull Request</span></td>
+                                    <td class="px-6 py-4"><span
+                                            class="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-xs">Pull
+                                            Request</span></td>
                                 </tr>
                                 <tr>
                                     <td class="px-6 py-4 whitespace-nowrap font-medium">
@@ -317,7 +382,9 @@
                                             Fix grammar mistakes in Azerbaijani translation #59782.
                                         </a>
                                     </td>
-                                    <td class="px-6 py-4"><span class="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-xs">Pull Request</span></td>
+                                    <td class="px-6 py-4"><span
+                                            class="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-xs">Pull
+                                            Request</span></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -332,48 +399,55 @@
         <div class="container mx-auto px-6">
             <div class="max-w-4xl mx-auto">
                 <h2 class="text-4xl font-bold text-center mb-12">Get In Touch</h2>
-                
+
                 <div class="grid md:grid-cols-2 gap-12">
                     <div>
                         <h3 class="text-2xl font-semibold mb-6">Let's Connect</h3>
                         <p class="text-lg mb-8 text-gray-600 dark:text-gray-300">
-                            I'm always open to discussing new opportunities, collaborations, or just having a friendly chat about technology and creativity.
+                            I'm always open to discussing new opportunities, collaborations, or just having a friendly
+                            chat about technology and creativity.
                         </p>
-                        
+
                         <div class="mb-8">
-                            <button class="btn-primary px-6 py-3 rounded-lg text-white font-semibold inline-flex items-center">
+                            <button
+                                class="btn-primary px-6 py-3 rounded-lg text-white font-semibold inline-flex items-center">
                                 <i class="fas fa-download mr-2"></i>
                                 Download Resume
                             </button>
                         </div>
-                        
+
                         <div class="text-sm text-gray-500 dark:text-gray-400">
-                            <p><strong>Privacy Note:</strong> This is a demo contact form. In a real implementation, your data would be handled securely and in accordance with privacy regulations.</p>
+                            <p><strong>Privacy Note:</strong> This is a demo contact form. In a real implementation,
+                                your data would be handled securely and in accordance with privacy regulations.</p>
                         </div>
                     </div>
-                    
+
                     <div>
                         <form class="space-y-6" id="contact-form">
                             <div>
                                 <label for="name" class="block text-sm font-medium mb-2">Name</label>
-                                <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 transition-colors">
+                                <input type="text" id="name" name="name" required
+                                    class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 transition-colors">
                             </div>
-                            
+
                             <div>
                                 <label for="email" class="block text-sm font-medium mb-2">Email</label>
-                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 transition-colors">
+                                <input type="email" id="email" name="email" required
+                                    class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 transition-colors">
                             </div>
-                            
+
                             <div>
                                 <label for="message" class="block text-sm font-medium mb-2">Message</label>
-                                <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 transition-colors resize-none"></textarea>
+                                <textarea id="message" name="message" rows="5" required
+                                    class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 transition-colors resize-none"></textarea>
                             </div>
-                            
+
                             <div class="flex items-center space-x-3">
-                                <input type="checkbox" id="captcha" required class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                                <input type="checkbox" id="captcha" required
+                                    class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
                                 <label for="captcha" class="text-sm">I'm not a robot (Simple Captcha)</label>
                             </div>
-                            
+
                             <button type="submit" class="w-full btn-primary py-3 rounded-lg text-white font-semibold">
                                 Send Message
                             </button>
@@ -391,24 +465,30 @@
                 <div class="mb-6 md:mb-0">
                     <div id="copyright"></div>
                 </div>
-                
+
                 <div class="flex space-x-4">
-                    <a href="mailto:kanannuruyevs@gmail.com" class="tooltip social-icon text-gray-400 hover:text-white" data-tooltip="Gmail">
+                    <a href="mailto:kanannuruyevs@gmail.com" class="tooltip social-icon text-gray-400 hover:text-white"
+                        data-tooltip="Gmail">
                         <i class="fas fa-envelope text-xl"></i>
                     </a>
-                    <a href="https://facebook.com/kanannuruyevs" class="tooltip social-icon text-gray-400 hover:text-blue-500" data-tooltip="Facebook">
+                    <a href="https://facebook.com/kanannuruyevs"
+                        class="tooltip social-icon text-gray-400 hover:text-blue-500" data-tooltip="Facebook">
                         <i class="fab fa-facebook text-xl"></i>
                     </a>
-                    <a href="https://instagram.com/kanannuruyevs" class="tooltip social-icon text-gray-400 hover:text-pink-500" data-tooltip="Instagram">
+                    <a href="https://instagram.com/kanannuruyevs"
+                        class="tooltip social-icon text-gray-400 hover:text-pink-500" data-tooltip="Instagram">
                         <i class="fab fa-instagram text-xl"></i>
                     </a>
-                    <a href="https://tiktok.com/@kanannuruyevs" class="tooltip social-icon text-gray-400 hover:text-white" data-tooltip="TikTok">
+                    <a href="https://tiktok.com/@kanannuruyevs"
+                        class="tooltip social-icon text-gray-400 hover:text-white" data-tooltip="TikTok">
                         <i class="fab fa-tiktok text-xl"></i>
                     </a>
-                    <a href="https://youtube.com/@kanannuruyevs" class="tooltip social-icon text-gray-400 hover:text-red-500" data-tooltip="YouTube">
+                    <a href="https://youtube.com/@kanannuruyevs"
+                        class="tooltip social-icon text-gray-400 hover:text-red-500" data-tooltip="YouTube">
                         <i class="fab fa-youtube text-xl"></i>
                     </a>
-                    <a href="https://linkedin.com/in/kanannuruyevs" class="tooltip social-icon text-gray-400 hover:text-blue-600" data-tooltip="LinkedIn">
+                    <a href="https://linkedin.com/in/kanannuruyevs"
+                        class="tooltip social-icon text-gray-400 hover:text-blue-600" data-tooltip="LinkedIn">
                         <i class="fab fa-linkedin text-xl"></i>
                     </a>
                 </div>
@@ -423,4 +503,5 @@
 
     <script src="./src/js/script.js"></script>
 </body>
+
 </html>
