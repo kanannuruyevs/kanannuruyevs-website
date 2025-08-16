@@ -357,8 +357,9 @@
                         gap: 2vh;
 
                         img {
-                            width: 55vh;
-                            height: 55vh;
+                            max-width: 100%;
+                            width: auto;
+                            height: auto;
                             object-fit: contain;
                         }
 
