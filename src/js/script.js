@@ -132,25 +132,54 @@ document.querySelectorAll('.expand-btn').forEach(btn => {
     });
 });
 
-// Contact Form
-document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Simple form validation
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    const captcha = document.getElementById('captcha').checked;
-    
-    if (!name || !email || !message || !captcha) {
-        alert('Please fill in all fields and complete the captcha.');
-        return;
+// --- Contact Form Logic with EmailJS ---
+// It's best to place this inside your existing DOMContentLoaded listener if you have one.
+document.addEventListener('DOMContentLoaded', function () {
+    const contactForm = document.getElementById('contact-form');
+
+    if (contactForm) {
+        // Initialize EmailJS with your Public Key
+        emailjs.init({
+            publicKey: "Vkx9gRLQoz4KGBcYV", // Get this from your EmailJS account settings
+        });
+
+        contactForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const captcha = document.getElementById('captcha');
+            if (!captcha.checked) {
+                alert('Please confirm you are not a robot.');
+                return;
+            }
+
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.textContent;
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+
+            // Replace with your EmailJS Service ID and Template ID
+            const serviceID = 'service_ta1ntqb';
+            const templateID = 'template_xrvhvqf';
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    submitButton.textContent = 'Message Sent!';
+                    alert('Your message has been sent successfully!');
+                    contactForm.reset();
+                    // Re-enable the button after a delay
+                    setTimeout(() => {
+                        submitButton.disabled = false;
+                        submitButton.textContent = originalButtonText;
+                    }, 3000);
+                }, (err) => {
+                    submitButton.disabled = false;
+                    submitButton.textContent = originalButtonText;
+                    alert('Failed to send the message. Please try again later. Error: ' + JSON.stringify(err));
+                });
+        });
     }
-    
-    // Demo submission
-    alert('Thank you for your message! This is a demo form - in a real implementation, your message would be sent securely.');
-    this.reset();
 });
+
 
 // Add scroll animations
 const observerOptions = {
