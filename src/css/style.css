@@ -1470,10 +1470,6 @@ html:not(.dark) #mobile-theme-toggle i {
   color: #222;
 }
 
-header {
-  background: #fff !important;
-}
-
 html.dark header {
   background: rgba(17, 24, 39, 0.9) !important;
 }
