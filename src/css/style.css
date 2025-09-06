@@ -1581,4 +1581,44 @@
   .section-padding {
     padding: 40px 0;
   }
+}
+
+.username-rotator {
+  animation: slide-up 25s infinite;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(0);
+  }
+  16% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-1.25rem);
+  }
+  36% {
+    transform: translateY(-1.25rem);
+  }
+  40% {
+    transform: translateY(-2.5rem);
+  }
+  56% {
+    transform: translateY(-2.5rem);
+  }
+  60% {
+    transform: translateY(-3.75rem);
+  }
+  76% {
+    transform: translateY(-3.75rem);
+  }
+  80% {
+    transform: translateY(-5rem);
+  }
+  96% {
+    transform: translateY(-5rem);
+  }
+  100% {
+    transform: translateY(-6.25rem);
+  }
 }/*# sourceMappingURL=style.css.map */
