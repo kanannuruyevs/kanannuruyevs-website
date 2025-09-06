@@ -4,19 +4,87 @@
     font-family: 'Inter', sans-serif;
 }
 
+body {
+    background-color: #fff;
+    color: #000;
+}
+
+.dark body {
+    background-color: #1a1a2e;
+    color: #fff;
+}
+
 .theme-transition {
     transition: all 0.3s ease;
+}
+
+#theme-toggle i,
+#mobile-theme-toggle i {
+    color: #222; // Light mod üçün tünd
+}
+
+.dark #theme-toggle i,
+.dark #mobile-theme-toggle i {
+    color: #f3f4f6 !important; // Dark mod üçün açıq
+}
+
+html.dark #theme-toggle i,
+html.dark #mobile-theme-toggle i {
+    color: #222; // Dark modda tünd icon
+}
+
+html.dark {
+    // Textlər üçün
+    .text-gray-500, .text-gray-600 {
+        color: #cbd5e1 !important; // Tailwind slate-300 və ya öz seçimin
+    }
+    // Table başlıqları və arxa fonlar üçün
+    .bg-gray-50, .bg-gray-100 {
+        background-color: #23263a !important; // və ya #18181b
+    }
+    // Sərhədlər üçün
+    .border-gray-200, .divide-gray-200 {
+        border-color: #373a53 !important;
+    }
+}
+
+// Əgər light modda ağ istəsən:
+html:not(.dark) #theme-toggle i,
+html:not(.dark) #mobile-theme-toggle i {
+    color: #222; // Light modda tünd icon
+}
+
+header {
+    background: #fff !important;
+}
+
+html.dark header {
+    background: rgba(17, 24, 39, 0.9) !important; // gray-900/90
+}
+
+html.dark .rounded-lg.scroll-animate {
+    border: 1.5px solid #475569 !important; // slate-600 və ya istədiyin tünd boz
+    box-shadow: 0 4px 0 0 rgba(30, 41, 59, 0.25); // bir az qabarıq shadow
+}
+
+html.dark #mobile-menu {
+    background: #23263a !important; // Tam tünd fon
+}
+
+html.dark #mobile-menu .p-6,
+html.dark #mobile-menu .bg-gray-50 {
+    background: #23263a !important; // Menyu içi də tünd olsun
 }
 
 .animated-bg {
     background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #f5576c);
     background-size: 400% 400%;
     animation: gradientShift 15s ease infinite;
+}
 
-    .dark & {
-        background: linear-gradient(-45deg, #1a1a2e, #16213e, #0f3460, #533483);
-        background-size: 400% 400%;
-    }
+.dark .animated-bg {
+    background: linear-gradient(-45deg, #1a1a2e, #16213e, #0f3460, #533483);
+    background-size: 400% 400%;
 }
 
 @keyframes gradientShift {
@@ -41,6 +109,8 @@
 }
 
 .card-hover {
+    background: #fff;
+    border: 1.5px solid #e5e7eb;
     transition: all 0.3s ease;
 
     &:hover {
@@ -50,6 +120,11 @@
         .dark & {
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
         }
+    }
+
+    .dark & {
+        background: #23263a;
+        border: 1.5px solid #373a53;
     }
 }
 
@@ -98,17 +173,17 @@
 }
 
 .project-card {
-    background: rgba(255, 255, 255, 0.1);
+    background: #f9fafb;
+    border: 1.5px solid #e5e7eb;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
 
     .dark & {
-        background: rgba(0, 0, 0, 0.3);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: #23263a;
+        border: 1.5px solid #373a53;
     }
 
     @media (max-width: 768px) {
-        width: 100%; /* Or adjust as needed for mobile */
+        width: 100%;
     }
 }
 
