@@ -44,6 +44,7 @@
                     <a href="#home" class="text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Home</a>
                     <a href="#about" class="text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About</a>
                     <a href="#portfolio" class="text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Portfolio</a>
+                    <a href="#blog" class="text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Blog</a>
                     <a href="#contact" class="text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Contact</a>
                     <a href="./pages/previous-index.html" class="text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Previous Version</a>
                     <button id="theme-toggle"
@@ -71,6 +72,7 @@
                     <a href="#home" class="block py-2 hover:text-blue-600 transition-colors">Home</a>
                     <a href="#about" class="block py-2 hover:text-blue-600 transition-colors">About</a>
                     <a href="#portfolio" class="block py-2 hover:text-blue-600 transition-colors">Portfolio</a>
+                    <a href="#blog" class="block py-2 hover:text-blue-600 transition-colors">Blog</a>
                     <a href="#contact" class="block py-2 hover:text-blue-600 transition-colors">Contact</a>
                     <a href="./pages/previous-index.html"
                         class="block py-2 hover:text-blue-600 transition-colors">Previous Version</a>
@@ -585,6 +587,62 @@
             </div>
         </div>
     </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section-padding bg-gray-50 dark:bg-gray-900/50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 scroll-animate">Blog</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Blog Post 1: Venn Diagram -->
+                <div class="blog-card bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="./src/images/blog-covers/venn-diagram-cover.jpeg" alt="Venn Diagram Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Jan 12, 2024</span>
+                        <h3 class="text-xl font-semibold my-2 text-gray-900 dark:text-white">Venn Diagram</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">A career path exploration, including MBTI Cognitive Functions.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">MBTI</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs">Career</span>
+                        </div>
+                        <a href="./pages/venn-diagram-blog.html" class="font-semibold text-blue-600 dark:text-blue-400 hover:underline">Read More &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Blog Post 2: Video Games Journey -->
+                <div class="blog-card bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="./src/images/blog-covers/video-games-cover.jpeg" alt="Video Games" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Jan 22, 2024</span>
+                        <h3 class="text-xl font-semibold my-2 text-gray-900 dark:text-white">Video Games Journey</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Video Games interaction, since childhood. Occasionally.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs">Video Games</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs">Journey</span>
+                        </div>
+                        <a href="./pages/video-games.html" class="font-semibold text-blue-600 dark:text-blue-400 hover:underline">Read More &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Blog Post 3: Unemployment Period (Coming Soon) -->
+                <div class="blog-card bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 opacity-70">
+                    <img src="./src/images/blog-covers/unemployment-period.jpeg" alt="Unemployment Period" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Coming Soon</span>
+                        <h3 class="text-xl font-semibold my-2 text-gray-900 dark:text-white">Unemployment Period</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Things I have done and learned during unemployment.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-xs">Career</span>
+                            <span class="px-3 py-1 bg-pink-100 text-pink-800 rounded-full text-xs">Lifestyle</span>
+                        </div>
+                        <span class="font-semibold text-gray-500 dark:text-gray-400"></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
 
     <!-- Contact Section -->
     <section id="contact" class="section-padding">

@@ -1,174 +1,227 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="theme-transition">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Games Journey</title>
-    <link rel="icon" href="../src/images/home/my-picture-favicon.jpeg" type="image/jpeg">
+    <link rel="icon" href="../src/images/home/profile-picture-favicon-192x192.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="../src/css/style.css">
-    <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
 </head>
 
-<body>
-    <header id="otherHeaders">
-        <div class="burger-menu">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
-        <a class="username" href="./index.html">
-            <img src="../src/images/home/kanannuruyevs-bg-removed.png" alt="Profile Picture">
-        </a>
-        <img class="profile-picture__header" src="../src/images/home/profile-picture-favicon-192x192.png" alt="Profile Picture Header">
-        <button id="goBackButton" type="button">
-            <div class="goBackButton__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" height="20px" width="20px">
-                    <path d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z" fill="#000000"></path>
-                    <path d="m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z" fill="#000000"></path>
-                </svg>
-            </div>
-            <p class="goBackButton__text">Go Back</p>
-        </button>
-    </header>
-    <main id="otherMains">
-        <section id="blogPageHeader">
-            <div class="blogPageHeader__div">
-                <h2>Occasional interaction with Video Games. Since childhood</h2>
-                <div class="blogPageHeader__divDown">
-                    <img class="blogPageHeader__myImg" src="../src/images/home/profile-picture-favicon-192x192.png" alt="">
-                    <div class="blogPageHeader__divDownText">
-                        <h1>Kanan Nuruyev</h1>
-                        <p>Published - Jan 22, 2024 | Last Edited - Nov 3, 2024</p>
+<body class="bg-white dark:bg-gray-900">
+    <!-- Header -->
+    <header class="fixed top-0 w-full bg-white dark:bg-gray-900/90 z-50 border-b border-gray-200 dark:border-gray-800">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <a href="../index.html#home" class="flex items-center space-x-3">
+                    <div
+                        class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
+                        <img src="../src/images/home/profile-picture.png" alt="Profile Picture">
                     </div>
+                    <div class="flex flex-col">
+                        <span class="text-lg font-bold leading-tight text-gray-900 dark:text-gray-100">Kanan Nuruyev</span>
+                        <div class="h-5 overflow-hidden">
+                            <div class="username-rotator">
+                                <span class="text-sm text-gray-500 dark:text-gray-300 leading-5 block">@kanannuruyevs</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-300 leading-5 block">@kanansnote</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-300 leading-5 block">@kanansnoteru</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-300 leading-5 block">@kanansnoteaze</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-300 leading-5 block">@kananwhispersasmr</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-300 leading-5 block">@kanannuruyevs</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html#home" class="text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Home</a>
+                    <a href="../index.html#about" class="text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About</a>
+                    <a href="../index.html#portfolio" class="text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Portfolio</a>
+                    <a href="../index.html#blog" class="text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Blog</a>
+                    <a href="../index.html#contact" class="text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Contact</a>
+                    <a href="./previous-index.html" class="text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Previous Version</a>
+                    <button id="theme-toggle"
+                        class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-moon text-gray-800 dark:text-gray-200" id="icon-moon"></i>
+                        <i class="fas fa-sun text-gray-800 dark:text-gray-200" id="icon-sun"></i>
+                    </button>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2">
+                    <i class="fas fa-bars text-xl text-gray-900 dark:text-gray-100"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="mobile-menu fixed top-0 right-0 w-64 bg-white dark:bg-gray-800 shadow-lg md:hidden">
+            <div class="p-6 bg-gray-50 dark:bg-gray-900">
+                <button id="mobile-menu-close" class="absolute top-4 right-4 p-2">
+                    <i class="fas fa-times text-xl text-gray-800 dark:text-gray-200"></i>
+                </button>
+                <nav class="space-y-4">
+                    <a href="../index.html#home" class="block py-2 text-gray-800 dark:text-gray-200 hover:text-blue-600 transition-colors">Home</a>
+                    <a href="../index.html#about" class="block py-2 text-gray-800 dark:text-gray-200 hover:text-blue-600 transition-colors">About</a>
+                    <a href="../index.html#portfolio" class="block py-2 text-gray-800 dark:text-gray-200 hover:text-blue-600 transition-colors">Portfolio</a>
+                    <a href="../index.html#blog" class="block py-2 text-gray-800 dark:text-gray-200 hover:text-blue-600 transition-colors">Blog</a>
+                    <a href="../index.html#contact" class="block py-2 text-gray-800 dark:text-gray-200 hover:text-blue-600 transition-colors">Contact</a>
+                    <a href="./previous-index.html"
+                        class="block py-2 text-gray-800 dark:text-gray-200 hover:text-blue-600 transition-colors">Previous Version</a>
+                    <button id="mobile-theme-toggle" class="flex items-center space-x-2 py-2 text-gray-800 dark:text-gray-200">
+                        <i class="fas fa-sun" id="mobile-icon-sun"></i>
+                        <i class="fas fa-moon" id="mobile-icon-moon"></i>
+                        <span id="mobile-text-light">Light Theme</span>
+                        <span id="mobile-text-dark">Dark Theme</span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        <div class="container mx-auto px-6">
+            <div class="lg:grid lg:grid-cols-3 lg:gap-12">
+                <!-- Main Content -->
+                <article class="lg:col-span-2">
+                    <!-- Blog Header -->
+                    <header class="mb-12 text-center">
+                        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">My Journey with Video Games</h1>
+                        <div class="flex items-center justify-center space-x-4 text-gray-500 dark:text-gray-400">
+                            <div class="flex items-center space-x-2">
+                                <img class="w-8 h-8 rounded-full" src="../src/images/home/profile-picture-favicon-192x192.png" alt="Profile Picture">
+                                <span>Kanan Nuruyev</span>
+                            </div>
+                            <span>&bull;</span>
+                            <time datetime="2024-01-22">Jan 22, 2024</time>
+                        </div>
+                    </header>
+
+                    <!-- Blog Content -->
+                    <div class="prose prose-lg lg:prose-xl max-w-none dark:prose-invert">
+                        <img class="rounded-lg shadow-lg mb-8" src="../src/images/blog-covers/video-games-cover.jpeg" alt="Video Games Cover" loading="lazy">
+
+                        <p>I started playing video games when I was five years old after my father bought a PC and a couple of games. I'll mention some of them in this article.</p>
+
+                        <h2>The Early Days: True Crime</h2>
+                        <img class="rounded-lg" src="../src/images/blog-content/video-games-blog/true-crime-streets-of-la.jpg" alt="True Crime: Streets of LA" loading="lazy" />
+                        <p>One of my earliest memories is playing <strong>"True Crime: Streets of LA"</strong>, a police detective game rated 16+. I was too young, but I was fascinated by the story and gameplay. I loved chasing down criminals, fighting them, and making arrests. It felt like I was making a difference.</p>
+
+                        <h2>An Unexpected Impact</h2>
+                        <p>Gaming helped me develop critical thinking skills early on. In 4th grade, a teacher gave us a task to create true and false statements. I wrote things like:</p>
+                        <blockquote>
+                            <p>True Statement: I am 10 years old<br>False Statement: I am 4 years old</p>
+                            <p>True Statement: X found guilty<br>False Statement: X found not guilty</p>
+                        </blockquote>
+                        <p>My teacher looked at it and said, "You are going to be a jury at court." At the time, I didn't get it, but now I understand. My statements resembled legal testimonies, which showed an early grasp of logical frameworks, likely influenced by the problem-solving nature of games.</p>
+
+                        <h2>Continuous Play: Far Cry</h2>
+                        <img class="rounded-lg" src="../src/images/blog-content/video-games-blog/far-cry-1.jpg" alt="Far Cry" loading="lazy" />
+                        <p>The next game I loved was <strong>Far Cry 1</strong> and its modifications. It offered a great experience of exploring locations and using strategy to overcome challenges. I also enjoyed the mission-based objectives.</p>
+                        <p>The mutants were both amusing and terrifying. I remember a glitch where a mutant I grenaded started "dancing" erratically. I couldn't stop laughing. I played this game for years, even into university, largely because of the CryEngine editor, which let me design the game as I wished.</p>
+
+                        <h2>Multiplayer Games</h2>
+                        <img class="rounded-lg" src="../src/images/blog-content/video-games-blog/counter-strike-source.png" alt="Counter-Strike: Source" loading="lazy" />
+                        <p><strong>Counter-Strike: Source</strong> was my first consistent multiplayer game. While community servers were fun, I eventually moved on to its successor.</p>
+
+                        <img class="rounded-lg" src="../src/images/blog-content/video-games-blog/cs-go.png" alt="Counter-Strike: Global Offensive" loading="lazy" />
+                        <p><strong>Counter-Strike: Global Offensive</strong> felt like a more mature gaming experience. I focused on improving my skills, but dealing with toxic players was a challenge. A fun way I enjoyed the game was by creating a table to track competitive maps and match lengths, striking through completed ones. I continued this until CS2 was introduced, which my laptop couldn't support.</p>
+
+                        <h2>Mobile Games</h2>
+                        <img class="rounded-lg" src="../src/images/blog-content/video-games-blog/mobile-games-on-android.jpg" alt="Mobile Games" loading="lazy" />
+                        <p>During the era of mobile games, I sought small accomplishments to feel fulfilled during moments of boredom. I primarily played RPGs for relaxation but eventually quit, as they required more focus than I wanted from a casual gaming experience.</p>
+
+                        <div class="mt-12 text-center">
+                            <a href="../index.html#blog" class="btn-primary inline-block px-8 py-3 rounded-full text-white font-semibold">
+                                &larr; Back to All Posts
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Sidebar -->
+                <aside class="lg:col-span-1 mt-12 lg:mt-0">
+                    <div class="sticky top-28">
+                        <h3 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Other Posts</h3>
+                        <div class="space-y-8">
+                            <!-- Other Post 1: Venn Diagram -->
+                            <a href="./venn-diagram-blog.html" class="flex items-center space-x-4 group">
+                                <img src="../src/images/blog-covers/venn-diagram-cover.jpeg" alt="Venn Diagram" class="w-24 h-24 object-cover rounded-lg">
+                                <div class="flex-1">
+                                    <h4 class="font-semibold text-lg text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Venn Diagram</h4>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400">Jan 12, 2024</p>
+                                </div>
+                            </a>
+                            <!-- Other Post 2: Unemployment (Coming Soon) -->
+                            <div class="flex items-center space-x-4 opacity-70">
+                                <img src="../src/images/blog-covers/unemployment-period.jpeg" alt="Unemployment Period" class="w-24 h-24 object-cover rounded-lg">
+                                <div class="flex-1">
+                                    <h4 class="font-semibold text-lg text-gray-900 dark:text-white">Unemployment Period</h4>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400">Coming Soon</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 mt-16">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col items-start space-y-2">
+                <div class="mb-6 md:mb-0">
+                    <div id="copyright"></div>
+                </div>
+
+                <div class="flex space-x-4">
+                    <a href="mailto:kanannuruyevs@gmail.com" class="tooltip social-icon text-gray-400 hover:text-white"
+                        data-tooltip="Gmail">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                    <a href="https://facebook.com/kanannuruyevs"
+                        class="tooltip social-icon text-gray-400 hover:text-blue-500" data-tooltip="Facebook">
+                        <i class="fab fa-facebook text-xl"></i>
+                    </a>
+                    <a href="https://instagram.com/kanannuruyevs"
+                        class="tooltip social-icon text-gray-400 hover:text-pink-500" data-tooltip="Instagram">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="https://tiktok.com/@kanannuruyevs"
+                        class="tooltip social-icon text-gray-400 hover:text-white" data-tooltip="TikTok">
+                        <i class="fab fa-tiktok text-xl"></i>
+                    </a>
+                    <a href="https://youtube.com/@kanannuruyevs"
+                        class="tooltip social-icon text-gray-400 hover:text-red-500" data-tooltip="YouTube">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/kanannuruyevs"
+                        class="tooltip social-icon text-gray-400 hover:text-blue-600" data-tooltip="LinkedIn">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="https://github.com/kanannuruyevs"
+                        class="tooltip social-icon text-gray-400 hover:text-gray-100" data-tooltip="GitHub">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
                 </div>
             </div>
-        </section>
-        <section id="blogPageContent">
-            <h3>I started playing video games since 5 years old. That time, my father bought PC and a couple of games to play in it. I will mention some by following article:</h3>
-            <div class="videoGamesBlogPart">
-                <img src="../src/images/blog-content/video-games-blog/true-crime-streets-of-la.jpg"
-                    alt="True Crime: Streets of LA" />
-                <p>
-                    One of my earliest memories of gaming is playing <strong>"True Crime: Streets of LA"</strong>, a police detective game that was rated 16+. 
-                    I was too young to play it, but I was fascinated by the story and the gameplay. I loved chasing down criminals, fighting them, and arresting them. 
-                    I felt like I was making a difference in the city and bringing justice to the people.
-                </p>
-                <h2>Earlier Impact of playing Video Games</h2>
-                <p>
-                    Gaming really helped me developing very good critical thinking skills earlier. The primary example is when I was in primary school, taking 4th class, a teacher gave us a task to make true and false statements about certain actions and what I did is saying something like this:<br><br>
-
-                    <code>True Statement: I am 10 years old<br>
-                    False Statement: I am 4 years old<br><br>
-
-                    True Statement: X found guilty<br>
-                    False Statement: X found not guilty<br><br></code>
-
-                    When a teacher looked at this stuff, she said: You are going to be a jury at court.
-                    That time, I wasn't really understanding why that was the case, but now, in my adult age,
-                    I can get the idea why that teacher assumed in that way. As reading my given statements, 
-                    it was pretty clear that they were related the stuff that juries do in the court where there is a case between two possible people. 
-                    And my statement is practically usable by the people who are testifying to the judge and that makes an impact to juries to collect all details and then make a decision about it.
-                    <br><br>
-                    Lol, but obviously I wasn't become a person who works for law enforcement area. 
-                    Maybe, I just was up to understanding the teacher's assignment better that lead me to handle it "professionally", so that I could get her attention in that way.
-                </p>
-            </div>
-            <div class="videoGamesBlogPart">
-                <h2>Continuos Play</h2>
-                <img src="../src/images/blog-content/video-games-blog/far-cry-1.jpg" alt="Far Cry" />
-                <p>
-                    The next game that I enjoyed playing a lot was Far Cry 1 and its modifications. 
-                    This game offered me a great experience of exploring different locations and applying strategic thinking to overcome the challenges by using various weapons effectively.
-                    I also liked how the game had missions that required me to succeed in different objectives.
-                </p>
-                <p>
-                    One of the aspects that I found both amusing and terrifying was the presence of mutants 
-                    and the reactions of the human enemies that included a lot of weird cursing words against my game characters. 
-                    I recall once where I encountered a mutant downstairs, and I threw a grenade at it, the grenade caused a glitch
-                    and the mutant started to move erratically, as if it was dancing. I could not stop laughing at that hilarious situation.
-                    <br><br>
-                    I played this game for a long time, till to my second year of university studies. 
-                    What made me really hooked to the game was the ability to use its CryEngine editor, 
-                    which allowed me to design the game as I wished. I could edit, add, and change things, such as characters, models, names, and so on. 
-                    This was a fun hobby for me, but I did not go too deep into it.
-                    I was satisfied with the basic features that I had at my disposal.
-                </p>
-            </div>
-            <div class="videoGamesBlogPart">
-                <h2>Multiplayer Games</h2>
-                <img src="../src/images/blog-content/video-games-blog/counter-strike-source.png"
-                    alt="Counter-Strike: Source" />
-                <p>
-                    Counter-Strike: Source my first consistent multiplayer game  
-                    Although playing on community servers was enjoyable, I decided to shift to Counter Strike: Global Offensive.
-                </p>
-            </div>
-            <div class="videoGamesBlogPart">
-                <img src="../src/images/blog-content/video-games-blog/cs-go.png" alt="Video Games" />
-                <p>
-                    Counter-Strike: Global Offensive became my choice after taking a break from gaming. Playing this game, I sensed
-                    a more mature gaming experience. Although I concentrated on improving my skills and understanding gameplay better, 
-                    dealing with annoying and toxic players in random matches proved challenging, often leaving me frustrated and struggling to keep my composure.
-                    <br>
-                </p>
-                <p>
-                    A great way I found to enjoy Counter-Strike: Global Offensive was creating a table to track info about competitive maps and match lengths. 
-                    I would strike through completed ones, allowing me to focus on new matches.
-                    After finishing all, I'd reset and create another table. It's such a fun thing to do, isn't it?
-                    <br><br>
-                    I continued this road until CS2 was introduced, at which point
-                    I had to quit due to my current laptop not supporting CS2.
-                </p>
-            </div>
-            <div class="videoGamesBlogPart">
-                <h2>Mobile Games</h2>
-                <img src="../src/images/blog-content/video-games-blog/mobile-games-on-android.jpg"
-                    alt="Mobile Games" />
-                <p>
-                    During the era of mobile games, I sought to achieve small accomplishments to feel fulfilled during moments of boredom.
-                    Consequently, I primarily engaged in RPG games, viewing them as a form of relaxation. 
-                    However, I eventually quit as I found them to require too much thinking and focus, contrary to my initial goal of simply having fun and experiencing gameplay.
-                </p>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div id="copyright"></div>
-        <div id="topBtn">Scroll to Top ↑</div>
-        <ul class="social-links">
-            <li>
-                <a href="mailto:kanannuruyevs@gmail.com">
-                    <img src="../src/images/social-links/gmail1-svgrepo-com.svg" alt="Gmail">
-                </a>
-            </li>
-            <li>
-                <a href="https://facebook.com/kanannuruyevs">
-                    <img src="../src/images/social-links/facebook-svgrepo-com.svg" alt="Facebook">
-                </a>
-            </li>
-            <li>
-                <a href="https://instagram.com/kanannuruyevs">
-                    <img src="../src/images/social-links/instagram-svgrepo-com.svg" alt="Instagram">
-                </a>
-            </li>
-            <li>
-                <a href="https://tiktok.com/@kanannuruyevs">
-                    <img src="../src/images/social-links/tiktok-outline-svgrepo-com.svg" alt="TikTok">
-                </a>
-            </li>
-            <li>
-                <a href="https://youtube.com/@kanannuruyevs">
-                    <img src="../src/images/social-links/youtube-outline-svgrepo-com.svg" alt="YouTube">
-                </a>
-            </li>
-            <li>
-                <a href="https://linkedin.com/in/kanannuruyevs">
-                    <img src="../src/images/social-links/linkedin-svgrepo-com.svg" alt="LinkedIn">
-                </a>
-            </li>
-        </ul>
+        </div>
     </footer>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top" id="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
     <script src="../src/js/script.js"></script>
 </body>
 
