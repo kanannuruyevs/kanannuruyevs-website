@@ -41,17 +41,26 @@
 
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Home</a>
-                    <a href="#about" class="text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About</a>
-                    <a href="#portfolio" class="text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Portfolio</a>
-                    <a href="#blog" class="text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Blog</a>
-                    <a href="#contact" class="text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Contact</a>
-                    <a href="./pages/previous-index.html" class="text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Previous Version</a>
+                    <a href="#home" data-i18n-key="nav_home" class="text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Home</a>
+                    <a href="#about" data-i18n-key="nav_about" class="text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About</a>
+                    <a href="#portfolio" data-i18n-key="nav_portfolio" class="text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Portfolio</a>
+                    <a href="#blog" data-i18n-key="nav_blog" class="text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Blog</a>
+                    <a href="#contact" data-i18n-key="nav_contact" class="text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Contact</a>
+                    <a href="./pages/previous-index.html" data-i18n-key="nav_previous" class="text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Previous Version</a>
                     <button id="theme-toggle"
                         class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors">
                         <i class="fas fa-moon" id="icon-moon"></i>
                         <i class="fas fa-sun" id="icon-sun"></i>
                     </button>
+                    <!-- Language Switcher -->
+                    <div class="relative">
+                        <select id="language-switcher" class="py-2 pl-3 pr-8 rounded-lg bg-gray-100 dark:bg-gray-800 dark:text-gray-100 appearance-none cursor-pointer">
+                            <option value="en">EN</option>
+                            <option value="az">AZ</option>
+                            <option value="ru">RU</option>
+                        </select>
+                        <i class="fas fa-chevron-down absolute right-2 top-1/2 -translate-y-1/2 text-xs pointer-events-none dark:text-gray-100"></i>
+                    </div>
                 </nav>
 
                 <!-- Mobile Menu Button -->
@@ -68,20 +77,29 @@
                 <button id="mobile-menu-close" class="absolute top-4 right-4 p-2">
                     <i class="fas fa-times text-xl"></i>
                 </button>
-                <nav class="space-y-4">
-                    <a href="#home" class="block py-2 hover:text-blue-600 transition-colors">Home</a>
-                    <a href="#about" class="block py-2 hover:text-blue-600 transition-colors">About</a>
-                    <a href="#portfolio" class="block py-2 hover:text-blue-600 transition-colors">Portfolio</a>
-                    <a href="#blog" class="block py-2 hover:text-blue-600 transition-colors">Blog</a>
-                    <a href="#contact" class="block py-2 hover:text-blue-600 transition-colors">Contact</a>
+                <nav class="space-y-4 text-gray-900 dark:text-gray-100">
+                    <a href="#home" data-i18n-key="nav_home" class="block py-2 hover:text-blue-600 transition-colors">Home</a>
+                    <a href="#about" data-i18n-key="nav_about" class="block py-2 hover:text-blue-600 transition-colors">About</a>
+                    <a href="#portfolio" data-i18n-key="nav_portfolio" class="block py-2 hover:text-blue-600 transition-colors">Portfolio</a>
+                    <a href="#blog" data-i18n-key="nav_blog" class="block py-2 hover:text-blue-600 transition-colors">Blog</a>
+                    <a href="#contact" data-i18n-key="nav_contact" class="block py-2 hover:text-blue-600 transition-colors">Contact</a>
                     <a href="./pages/previous-index.html"
-                        class="block py-2 hover:text-blue-600 transition-colors">Previous Version</a>
+                        data-i18n-key="nav_previous" class="block py-2 hover:text-blue-600 transition-colors">Previous Version</a>
                     <button id="mobile-theme-toggle" class="flex items-center space-x-2 py-2">
                         <i class="fas fa-sun" id="mobile-icon-sun"></i>
                         <i class="fas fa-moon" id="mobile-icon-moon"></i>
                         <span id="mobile-text-light">Light Theme</span>
                         <span id="mobile-text-dark">Dark Theme</span>
                     </button>
+                    <!-- Mobile Language Switcher -->
+                    <div class="relative">
+                        <select id="mobile-language-switcher" class="w-full p-2 rounded-lg bg-gray-100 dark:bg-gray-800 dark:text-gray-100 appearance-none cursor-pointer text-gray-900 dark:text-gray-100">
+                            <option value="en">English</option>
+                            <option value="az">Azərbaycanca</option>
+                            <option value="ru">Русский</option>
+                        </select>
+                        <i class="fas fa-chevron-down absolute right-3 top-1/2 -translate-y-1/2 text-xs pointer-events-none text-gray-900 dark:text-gray-100"></i>
+                    </div>
                 </nav>
             </div>
         </div>
@@ -91,15 +109,15 @@
     <section id="home" class="min-h-screen animated-bg flex items-center justify-center relative overflow-hidden">
         <div class="container mx-auto px-6 text-center text-white relative z-10">
             <div class="max-w-4xl mx-auto">
-                <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">Kanan Nuruyev</h1>
-                <p class="text-xl md:text-2xl mb-8 opacity-90">Content Creator • ASMRtist • Casual Coder • Lifelong
+                <h1 data-i18n-key="home_name" class="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">Kanan Nuruyev</h1>
+                <p data-i18n-key="home_subtitle" class="text-xl md:text-2xl mb-8 opacity-90">Content Creator • ASMRtist • Casual Coder • Lifelong
                     Learner</p>
                 <div class="marquee bg-black/20 rounded-full py-3 px-6 mb-8">
-                    <div class="marquee-content text-lg">
+                    <div data-i18n-key="home_marquee" class="marquee-content text-lg">
                         Welcome to My Personal Website! Nice to Meet You!
                     </div>
                 </div>
-                <a href="#about" class="btn-primary inline-block px-8 py-3 rounded-full text-white font-semibold">
+                <a href="#about" data-i18n-key="home_button" class="btn-primary inline-block px-8 py-3 rounded-full text-white font-semibold">
                     Discover My Journey
                 </a>
             </div>
@@ -868,6 +886,8 @@
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
+    <script src="./src/js/translations.js"></script>
+    <script src="./src/js/i18n.js"></script>
     <script src="./src/js/script.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
