@@ -55,9 +55,9 @@
                     <!-- Language Switcher -->
                     <div class="relative">
                         <select id="language-switcher" class="py-2 pl-3 pr-8 rounded-lg bg-gray-100 dark:bg-gray-800 dark:text-gray-100 appearance-none cursor-pointer">
-                            <option value="en">EN</option>
-                            <option value="az">AZ</option>
-                            <option value="ru">RU</option>
+                            <option value="en" data-i18n-key="english">EN</option>
+                            <option value="az" data-i18n-key="azerbaijani">AZE</option>
+                            <option value="ru" data-i18n-key="russian">RU</option>
                         </select>
                         <i class="fas fa-chevron-down absolute right-2 top-1/2 -translate-y-1/2 text-xs pointer-events-none dark:text-gray-100"></i>
                     </div>
@@ -88,15 +88,15 @@
                     <button id="mobile-theme-toggle" class="flex items-center space-x-2 py-2">
                         <i class="fas fa-sun" id="mobile-icon-sun"></i>
                         <i class="fas fa-moon" id="mobile-icon-moon"></i>
-                        <span id="mobile-text-light">Light Theme</span>
-                        <span id="mobile-text-dark">Dark Theme</span>
+                        <span id="mobile-text-light" data-i18n-key="light_theme">Light Theme</span>
+                        <span id="mobile-text-dark" data-i18n-key="dark_theme">Dark Theme</span>
                     </button>
                     <!-- Mobile Language Switcher -->
                     <div class="relative">
                         <select id="mobile-language-switcher" class="w-full p-2 rounded-lg bg-gray-100 dark:bg-gray-800 dark:text-gray-100 appearance-none cursor-pointer text-gray-900 dark:text-gray-100">
-                            <option value="en">English</option>
-                            <option value="az">Azərbaycanca</option>
-                            <option value="ru">Русский</option>
+                            <option value="en" data-i18n-key="english">EN</option>
+                            <option value="az" data-i18n-key="azerbaijani">AZE</option>
+                            <option value="ru" data-i18n-key="russian">RU</option>
                         </select>
                         <i class="fas fa-chevron-down absolute right-3 top-1/2 -translate-y-1/2 text-xs pointer-events-none text-gray-900 dark:text-gray-100"></i>
                     </div>
@@ -128,36 +128,36 @@
     <section id="about" class="section-padding">
         <div class="container mx-auto px-6">
             <div class="max-w-6xl mx-auto">
-                <h2 class="text-4xl font-bold text-center mb-12 scroll-animate">About Me</h2>
+                <h2 class="text-4xl font-bold text-center mb-12 scroll-animate" data-i18n-key="about_title">About Me</h2>
                 <div class="grid md:grid-cols-2 gap-16 items-center">
                     <div class="scroll-animate">
                         <h3 class="text-3xl font-semibold mb-6 leading-tight">
-                            I'm Kanan Nuruyev, a self-taught content creator from Azerbaijan. 
+                            <span data-i18n-key="about_description_1">I'm Kanan Nuruyev, a self-taught content creator from Azerbaijan.</span>
                         </h3>
-                        <p class="text-lg mb-6 leading-relaxed text-gray-600">
+                        <p class="text-lg mb-6 leading-relaxed text-gray-600" data-i18n-key="about_description_2">
                              I focus on emotional well-being, personal style, and self-expression through ASMR, lifestyle content, and authentic storytelling.
                              I create calming ASMR videos, talk about mental health and personal growth, and share my take on fashion, music, and everyday experiences 
                              — all with a personal touch. My goal is to connect deeply with people who value honesty, calm, and creativity.
                         </p>
-                        <p class="text-lg mb-6 leading-relaxed text-gray-600">
+                        <p class="text-lg mb-6 leading-relaxed text-gray-600" data-i18n-key="about_description_3">
                             I believe that even simple content can heal, inspire, and bring people together. 
                             Through my videos and posts, I aim to create a safe, relatable space for those who feel deeply and think widely.
                         </p>
                         <div class="flex flex-wrap gap-3 pt-4">
-                            <span
+                            <span data-i18n-key="tag_content_creation"
                                 class="px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">Content
                                 Creation</span>
-                            <span
+                            <span data-i18n-key="tag_asrm"
                                 class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">ASMR</span>
-                            <span
+                            <span data-i18n-key="tag_mental_health"
                                 class="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium">Mental
                                 Health</span>
-                            <span
+                            <span data-i18n-key="tag_self_expression"
                                 class="px-4 py-2 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">Self-Expression</span>
-                            <span
+                            <span data-i18n-key="tag_personal_style"
                                 class="px-4 py-2 bg-cyan-100 text-cyan-800 rounded-full text-sm font-medium">Personal
                                 Style</span>
-                            <span
+                            <span data-i18n-key="tag_storytelling"
                                 class="px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">Storytelling</span>
                         </div>
                     </div>
@@ -176,18 +176,18 @@
     <!-- Portfolio Section -->
     <section id="portfolio" class="section-padding">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12 scroll-animate">Portfolio</h2>
+            <h2 class="text-4xl font-bold text-center mb-12 scroll-animate" data-i18n-key="portfolio_title">Portfolio</h2>
 
             <!-- Brand Overview -->
             <div class="mb-16">
-                <h3 class="text-2xl font-semibold mb-8 scroll-animate">Brands Overview</h3>
+                <h3 class="text-2xl font-semibold mb-8 scroll-animate" data-i18n-key="brands_overview">Brands Overview</h3>
                 
                 <div class="flex flex-wrap gap-8 justify-center">
                     <!-- KANANNURUYEVS -->
                     <div class="card-hover rounded-xl p-6 shadow-lg flex flex-col items-center flex-1 min-w-[300px] max-w-[350px]">
                         <div class="flex-grow">
                             <div class="flex items-center justify-between flex-col mb-4">
-                                <h4 class="text-xl font-semibold">KANANNURUYEVS</h4>
+                                <h4 class="text-xl font-semibold" data-i18n-key="brand_kanannuruyevs">KANANNURUYEVS</h4>
                                 <div class="flex space-x-2">
                                     <a href="https://facebook.com/kanannuruyevs" class="tooltip social-icon text-blue-500" data-tooltip="Facebook">
                                         <i class="fab fa-facebook text-xl"></i>
@@ -206,11 +206,11 @@
                                     </a>
                                 </div>
                             </div>
-                            <p class="text-gray-600 mb-4 text-center">
+                            <p class="text-gray-600 mb-4 text-center" data-i18n-key="brand_kanannuruyevs_desc">
                                 Targets a professional audience. The content focuses on digital growth, content creation, and other work-related topics.
                             </p>
                         </div>
-                        <button class="brand-work-btn w-full mt-auto inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+                        <button class="brand-work-btn w-full mt-auto inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700" data-i18n-key="view_work">
                             View Work
                             <i class="fas fa-chevron-down text-xs ml-2 transform transition-transform duration-300"></i>
                         </button>
@@ -232,7 +232,7 @@
                     <div class="card-hover rounded-xl p-6 shadow-lg flex flex-col items-center flex-1 min-w-[300px] max-w-[350px]">
                         <div class="flex-grow">
                             <div class="flex items-center justify-between flex-col mb-4">
-                                <h4 class="text-xl font-semibold">KANANWHISPERSASMR</h4>
+                                <h4 class="text-xl font-semibold" data-i18n-key="brand_kananwhispersasmr">KANANWHISPERSASMR</h4>
                                 <div class="flex space-x-2">
                                     <a href="#" class="tooltip social-icon text-pink-500" data-tooltip="Instagram">
                                         <i class="fab fa-instagram text-xl"></i>
@@ -245,11 +245,11 @@
                                     </a>
                                 </div>
                             </div>
-                            <p class="text-gray-600 mb-4 text-center">
+                            <p class="text-gray-600 mb-4 text-center" data-i18n-key="brand_kananwhispersasmr_desc">
                                 Targets an international audience. The content focuses on ASMR roleplays, triggers, and other related topics.
                             </p>
                         </div>
-                        <button class="brand-work-btn w-full mt-auto inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+                        <button class="brand-work-btn w-full mt-auto inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700" data-i18n-key="view_work">
                             View Work
                             <i class="fas fa-chevron-down text-xs ml-2 transform transition-transform duration-300"></i>
                         </button>
@@ -271,7 +271,7 @@
                     <div class="card-hover rounded-xl p-6 shadow-lg flex flex-col items-center flex-1 min-w-[300px] max-w-[350px]">
                         <div class="flex-grow">
                             <div class="flex items-center justify-between flex-col mb-4">
-                                <h4 class="text-xl font-semibold">KANANSNOTE</h4>
+                                <h4 class="text-xl font-semibold" data-i18n-key="brand_kanansnote">KANANSNOTE</h4>
                                 <div class="flex space-x-2">
                                     <a href="https://instagram.com/kanansnote" class="tooltip social-icon text-pink-500" data-tooltip="Instagram">
                                         <i class="fab fa-instagram text-xl"></i>
@@ -284,11 +284,11 @@
                                     </a>
                                 </div>
                             </div>
-                            <p class="text-gray-600 mb-4 text-center">
+                            <p class="text-gray-600 mb-4 text-center" data-i18n-key="brand_kanansnote_desc">
                                 Targets an international audience. The content focuses on lifestyle, self-improvement, mental health, fashion, and entertainment.
                             </p>
                         </div>
-                        <button class="brand-work-btn w-full mt-auto inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+                        <button class="brand-work-btn w-full mt-auto inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700" data-i18n-key="view_work">
                             View Work
                             <i class="fas fa-chevron-down text-xs ml-2 transform transition-transform duration-300"></i>
                         </button>
@@ -310,7 +310,7 @@
                     <div class="card-hover rounded-xl p-6 shadow-lg flex flex-col items-center flex-1 min-w-[300px] max-w-[350px]">
                         <div class="flex-grow">
                             <div class="flex items-center justify-between flex-col mb-4">
-                                <h4 class="text-xl font-semibold">KANANSNOTEAZE</h4>
+                                <h4 class="text-xl font-semibold" data-i18n-key="brand_kanansnoteaze">KANANSNOTEAZE</h4>
                                 <div class="flex space-x-2">
                                     <a href="https://instagram.com/kanansnoteaze" class="tooltip social-icon text-pink-500" data-tooltip="Instagram">
                                         <i class="fab fa-instagram text-xl"></i>
@@ -323,11 +323,11 @@
                                     </a>
                                 </div>
                             </div>
-                            <p class="text-gray-600 mb-4 text-center">
+                            <p class="text-gray-600 mb-4 text-center" data-i18n-key="brand_kanansnoteaze_desc">
                                 Targets the Azerbaijani audience. The content focuses on lifestyle, self-improvement, mental health, fashion, and entertainment.
                             </p>
                         </div>
-                        <button class="brand-work-btn w-full mt-auto inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+                        <button class="brand-work-btn w-full mt-auto inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700" data-i18n-key="view_work">
                             View Work
                             <i class="fas fa-chevron-down text-xs ml-2 transform transition-transform duration-300"></i>
                         </button>
@@ -349,7 +349,7 @@
                     <div class="card-hover rounded-xl p-6 shadow-lg flex flex-col items-center flex-1 min-w-[300px] max-w-[350px]">
                         <div class="flex-grow">
                             <div class="flex items-center justify-between flex-col mb-4">
-                                <h4 class="text-xl font-semibold">KANANSNOTERU</h4>
+                                <h4 class="text-xl font-semibold" data-i18n-key="brand_kanansnoteru">KANANSNOTERU</h4>
                                 <div class="flex space-x-2">
                                     <a href="https://instagram.com/kanansnoteru" class="tooltip social-icon text-pink-500" data-tooltip="Instagram">
                                         <i class="fab fa-instagram text-xl"></i>
@@ -362,11 +362,11 @@
                                     </a>
                                 </div>
                             </div>
-                            <p class="text-gray-600 mb-4 text-center">
+                            <p class="text-gray-600 mb-4 text-center" data-i18n-key="brand_kanansnoteru_desc">
                                 Targets the Russian-speaking audience. The content focuses on lifestyle, self-improvement, mental health, fashion, and entertainment.
                             </p>
                         </div>
-                        <button class="brand-work-btn w-full mt-auto inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+                        <button class="brand-work-btn w-full mt-auto inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700" data-i18n-key="view_work">
                             View Work
                             <i class="fas fa-chevron-down text-xs ml-2 transform transition-transform duration-300"></i>
                         </button>
@@ -388,7 +388,7 @@
 
             <!-- Coding Projects -->
             <div class="mb-16">
-                <h3 class="text-2xl font-semibold mb-8 scroll-animate">Coding Projects</h3>
+                <h3 class="text-2xl font-semibold mb-8 scroll-animate" data-i18n-key="coding_projects">Coding Projects</h3>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                     <div class="project-card rounded-xl p-6">
@@ -396,11 +396,10 @@
                             class="w-full h-48 bg-gradient-to-br from-blue-400 to-purple-600 rounded-lg mb-4 flex items-center justify-center text-white text-4xl">
                             <i class="fas fa-code"></i>
                         </div>
-                        <h4 class="text-xl font-semibold mb-2">Hivency Template Task</h4>
-                        <p class="text-gray-600 mb-4">Responsive template project</p>
+                        <h4 class="text-xl font-semibold mb-2" data-i18n-key="project_hivency">Hivency Template Task</h4>
+                        <p class="text-gray-600 mb-4" data-i18n-key="project_hivency_desc">Responsive template project</p>
                         <a href="https://kanansnote-hivency-template-task.vercel.app" target="_blank"
-                            class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
-                            View Project <i class="fas fa-external-link-alt ml-2"></i>
+                            class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors" data-i18n-key="view_project">View Project <i class="fas fa-external-link-alt ml-2"></i>
                         </a>
                     </div>
 
@@ -409,11 +408,10 @@
                             class="w-full h-48 bg-gradient-to-br from-green-400 to-blue-600 rounded-lg mb-4 flex items-center justify-center text-white text-4xl">
                             <i class="fas fa-code"></i>
                         </div>
-                        <h4 class="text-xl font-semibold mb-2">Ogenix Template Task</h4>
-                        <p class="text-gray-600 mb-4">Modern, clean template design</p>
+                        <h4 class="text-xl font-semibold mb-2" data-i18n-key="project_ogenix">Ogenix Template Task</h4>
+                        <p class="text-gray-600 mb-4" data-i18n-key="project_ogenix_desc">Modern, clean template design</p>
                         <a href="https://kanansnote-ogenix-template-task.vercel.app" target="_blank"
-                            class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
-                            View Project <i class="fas fa-external-link-alt ml-2"></i>
+                            class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors" data-i18n-key="view_project">View Project <i class="fas fa-external-link-alt ml-2"></i>
                         </a>
                     </div>
 
@@ -422,11 +420,10 @@
                             class="w-full h-48 bg-gradient-to-br from-purple-400 to-pink-600 rounded-lg mb-4 flex items-center justify-center text-white text-4xl">
                             <i class="fas fa-code"></i>
                         </div>
-                        <h4 class="text-xl font-semibold mb-2">Xhibiter Template Task</h4>
-                        <p class="text-gray-600 mb-4">Creative template development</p>
+                        <h4 class="text-xl font-semibold mb-2" data-i18n-key="project_xhibiter">Xhibiter Template Task</h4>
+                        <p class="text-gray-600 mb-4" data-i18n-key="project_xhibiter_desc">Creative template development</p>
                         <a href="https://kanansnote-xhibiter-template-task.vercel.app" target="_blank"
-                            class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
-                            View Project <i class="fas fa-external-link-alt ml-2"></i>
+                            class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors" data-i18n-key="view_project">View Project <i class="fas fa-external-link-alt ml-2"></i>
                         </a>
                     </div>
 
@@ -435,11 +432,10 @@
                             class="w-full h-48 bg-gradient-to-br from-indigo-400 to-purple-600 rounded-lg mb-4 flex items-center justify-center text-white text-4xl">
                             <i class="fas fa-code"></i>
                         </div>
-                        <h4 class="text-xl font-semibold mb-2">Themedox Template Task</h4>
-                        <p class="text-gray-600 mb-4">Theme customization project</p>
+                        <h4 class="text-xl font-semibold mb-2" data-i18n-key="project_themedox">Themedox Template Task</h4>
+                        <p class="text-gray-600 mb-4" data-i18n-key="project_themedox_desc">Theme customization project</p>
                         <a href="https://kanansnote-themedox-template-task.vercel.app" target="_blank"
-                            class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
-                            View Project <i class="fas fa-external-link-alt ml-2"></i>
+                            class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors" data-i18n-key="view_project">View Project <i class="fas fa-external-link-alt ml-2"></i>
                         </a>
                     </div>
 
@@ -448,11 +444,10 @@
                             class="w-full h-48 bg-gradient-to-br from-pink-400 to-red-600 rounded-lg mb-4 flex items-center justify-center text-white text-4xl">
                             <i class="fas fa-code"></i>
                         </div>
-                        <h4 class="text-xl font-semibold mb-2">Start Bootstrap Template Task</h4>
-                        <p class="text-gray-600 mb-4">Bootstrap based responsive template</p>
+                        <h4 class="text-xl font-semibold mb-2" data-i18n-key="project_startbootstrap">Start Bootstrap Template Task</h4>
+                        <p class="text-gray-600 mb-4" data-i18n-key="project_startbootstrap_desc">Bootstrap based responsive template</p>
                         <a href="https://kanansnote-startbootstrap-template-task.vercel.app" target="_blank"
-                            class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
-                            View Project <i class="fas fa-external-link-alt ml-2"></i>
+                            class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors" data-i18n-key="view_project">View Project <i class="fas fa-external-link-alt ml-2"></i>
                         </a>
                     </div>
 
@@ -461,11 +456,10 @@
                             class="w-full h-48 bg-gradient-to-br from-yellow-400 to-orange-600 rounded-lg mb-4 flex items-center justify-center text-white text-4xl">
                             <i class="fas fa-code"></i>
                         </div>
-                        <h4 class="text-xl font-semibold mb-2">Stag Template Task</h4>
-                        <p class="text-gray-600 mb-4">Creative portfolio template</p>
+                        <h4 class="text-xl font-semibold mb-2" data-i18n-key="project_stag">Stag Template Task</h4>
+                        <p class="text-gray-600 mb-4" data-i18n-key="project_stag_desc">Creative portfolio template</p>
                         <a href="https://kanansnote-stag-template-task.vercel.app" target="_blank"
-                            class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
-                            View Project <i class="fas fa-external-link-alt ml-2"></i>
+                            class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors" data-i18n-key="view_project">View Project <i class="fas fa-external-link-alt ml-2"></i>
                         </a>
                     </div>
                 </div>
@@ -473,11 +467,11 @@
 
             <!-- Mini Coding Projects -->
             <div class="mb-16">
-                <h3 class="text-2xl font-semibold mb-8 scroll-animate">Mini Coding Projects</h3>
+                <h3 class="text-2xl font-semibold mb-8 scroll-animate" data-i18n-key="mini_coding_projects">Mini Coding Projects</h3>
                 <div class="flex flex-wrap justify-center gap-7">
                     <div class="rounded-lg p-6 shadow-lg w-full max-w-md scroll-animate">
                         <details class="group mb-2">
-                            <summary class="text-lg font-semibold cursor-pointer hover:text-blue-600 transition-colors list-none flex items-center gap-2">
+                            <summary class="text-lg font-semibold cursor-pointer hover:text-blue-600 transition-colors list-none flex items-center gap-2" data-i18n-key="project_venn_diagram">
                                 Venn Diagram
                                 <i
                                     class="fas fa-chevron-down text-sm transform transition-transform duration-300 group-open:rotate-180"></i>
@@ -489,7 +483,7 @@
                                     class="hover:text-blue-600 transition-colors hover:underline text-sm font-medium">Web (In Progress)</a>
                             </div>
                         </details>
-                        <p class="text-gray-600 mb-3">
+                        <p class="text-gray-600 mb-3" data-i18n-key="project_venn_diagram_desc">
                             A career path exploration tool including MBTI and Cognitive Functions. GUI version on
                             GitHub; web version in progress.
                         </p>
@@ -503,7 +497,7 @@
 
                     <div class="rounded-lg p-6 shadow-lg w-full max-w-md scroll-animate">
                         <details class="group mb-2">
-                            <summary class="text-lg font-semibold cursor-pointer hover:text-blue-600 transition-colors list-none flex items-center gap-2">
+                            <summary class="text-lg font-semibold cursor-pointer hover:text-blue-600 transition-colors list-none flex items-center gap-2" data-i18n-key="project_business_calendar">
                                 Business Calendar
                                 <i
                                     class="fas fa-chevron-down text-sm transform transition-transform duration-300 group-open:rotate-180"></i>
@@ -515,7 +509,7 @@
                                     rel="noopener" class="hover:text-blue-600 transition-colors hover:underline text-sm font-medium">Web (In Progress)</a>
                             </div>
                         </details>
-                        <p class="text-gray-600 mb-3">
+                        <p class="text-gray-600 mb-3" data-i18n-key="project_business_calendar_desc">
                             Project inspired by creating a business calendar with PowerPoint slides for an Upwork
                             client. GUI and web versions in progress.
                         </p>
@@ -530,11 +524,11 @@
                     <div class="rounded-lg p-6 shadow-lg w-full max-w-md scroll-animate">
                         <a href="https://github.com/kanansnote/basic-programming-exercises" target="_blank"
                             rel="noopener"
-                            class="text-lg font-semibold mb-2 inline-block hover:text-blue-600 transition-colors">
+                            class="text-lg font-semibold mb-2 inline-block hover:text-blue-600 transition-colors" data-i18n-key="project_basic_programming">
                             Basic Programming Exercises
                             <i class="fas fa-external-link-alt text-sm ml-2"></i>
                         </a>
-                        <p class="text-gray-600 mb-3">
+                        <p class="text-gray-600 mb-3" data-i18n-key="project_basic_programming_desc">
                             Small projects for learning Python, C++, Java, JavaScript, HTML, and CSS.
                         </p>
                         <div class="flex flex-wrap gap-2">
@@ -557,22 +551,22 @@
 
             <!-- Open Source Contributions -->
             <div>
-                <h3 class="text-2xl font-semibold mb-8 scroll-animate">Open Source Contributions</h3>
+                <h3 class="text-2xl font-semibold mb-8 scroll-animate" data-i18n-key="open_source_contributions">Open Source Contributions</h3>
                 <div class="rounded-xl shadow-lg overflow-hidden scroll-animate">
                     <div class="overflow-x-auto">
                         <table class="w-full">
                             <thead class="bg-gray-50">
                                 <tr>
                                     <th
-                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" data-i18n-key="table_project">
                                         Project
                                     </th>
                                     <th
-                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" data-i18n-key="table_description">
                                         Description
                                     </th>
                                     <th
-                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" data-i18n-key="table_type">
                                         Type
                                     </th>
                                 </tr>
@@ -590,7 +584,7 @@
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <span
-                                            class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs">Pull
+                                            class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs" data-i18n-key="pull_request">Pull
                                             Request</span>
                                     </td>
                                 </tr>
@@ -608,7 +602,7 @@
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <span
-                                            class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs">Pull
+                                            class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs" data-i18n-key="pull_request">Pull
                                             Request</span>
                                     </td>
                                 </tr>
@@ -625,7 +619,7 @@
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <span
-                                            class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Issue</span>
+                                            class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs" data-i18n-key="issue">Issue</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -642,7 +636,7 @@
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <span
-                                            class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Issue</span>
+                                            class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs" data-i18n-key="issue">Issue</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -658,7 +652,7 @@
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <span
-                                            class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Issue</span>
+                                            class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs" data-i18n-key="issue">Issue</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -673,7 +667,7 @@
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <span
-                                            class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Issue</span>
+                                            class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs" data-i18n-key="issue">Issue</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -690,7 +684,7 @@
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <span
-                                            class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Issue</span>
+                                            class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs" data-i18n-key="issue">Issue</span>
                                     </td>
                                 </tr>
                             </tbody>
@@ -704,7 +698,7 @@
     <!-- Blog Section -->
     <section id="blog" class="section-padding bg-gray-50 dark:bg-gray-900/50">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12 scroll-animate">Blog</h2>
+            <h2 class="text-4xl font-bold text-center mb-12 scroll-animate" data-i18n-key="blog_title">Blog</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                 <!-- Blog Post 1: Venn Diagram -->
@@ -712,13 +706,13 @@
                     <img src="./src/images/blog-covers/venn-diagram-cover.jpeg" alt="Venn Diagram Project" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <span class="text-sm text-gray-500 dark:text-gray-400">Jan 12, 2024</span>
-                        <h3 class="text-xl font-semibold my-2 text-gray-900 dark:text-white">Venn Diagram</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">A career path exploration, including MBTI Cognitive Functions.</p>
+                        <h3 class="text-xl font-semibold my-2 text-gray-900 dark:text-white" data-i18n-key="blog_venn_diagram_title">Venn Diagram</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4" data-i18n-key="blog_venn_diagram_desc">A career path exploration, including MBTI Cognitive Functions.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">MBTI</span>
-                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs">Career</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs" data-i18n-key="tag_mbti">MBTI</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs" data-i18n-key="tag_career">Career</span>
                         </div>
-                        <a href="./pages/venn-diagram-blog.html" class="font-semibold text-blue-600 dark:text-blue-400 hover:underline">Read More &rarr;</a>
+                        <a href="./pages/venn-diagram-blog.html" class="font-semibold text-blue-600 dark:text-blue-400 hover:underline" data-i18n-key="read_more">Read More &rarr;</a>
                     </div>
                 </div>
 
@@ -727,13 +721,13 @@
                     <img src="./src/images/blog-covers/video-games-cover.jpeg" alt="Video Games" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <span class="text-sm text-gray-500 dark:text-gray-400">Jan 22, 2024</span>
-                        <h3 class="text-xl font-semibold my-2 text-gray-900 dark:text-white">Video Games Journey</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">Video Games interaction, since childhood. Occasionally.</p>
+                        <h3 class="text-xl font-semibold my-2 text-gray-900 dark:text-white" data-i18n-key="blog_video_games_title">Video Games Journey</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4" data-i18n-key="blog_video_games_desc">Video Games interaction, since childhood. Occasionally.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs">Video Games</span>
-                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs">Journey</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs" data-i18n-key="tag_video_games">Video Games</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs" data-i18n-key="tag_journey">Journey</span>
                         </div>
-                        <a href="./pages/video-games.html" class="font-semibold text-blue-600 dark:text-blue-400 hover:underline">Read More &rarr;</a>
+                        <a href="./pages/video-games.html" class="font-semibold text-blue-600 dark:text-blue-400 hover:underline" data-i18n-key="read_more">Read More &rarr;</a>
                     </div>
                 </div>
 
@@ -742,11 +736,11 @@
                     <img src="./src/images/blog-covers/unemployment-period.jpeg" alt="Unemployment Period" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <span class="text-sm text-gray-500 dark:text-gray-400">Coming Soon</span>
-                        <h3 class="text-xl font-semibold my-2 text-gray-900 dark:text-white">Unemployment Period</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">Things I have done and learned during unemployment.</p>
+                        <h3 class="text-xl font-semibold my-2 text-gray-900 dark:text-white" data-i18n-key="blog_unemployment_title">Unemployment Period</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4" data-i18n-key="blog_unemployment_desc">Things I have done and learned during unemployment.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-xs">Career</span>
-                            <span class="px-3 py-1 bg-pink-100 text-pink-800 rounded-full text-xs">Lifestyle</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-xs" data-i18n-key="tag_career">Career</span>
+                            <span class="px-3 py-1 bg-pink-100 text-pink-800 rounded-full text-xs" data-i18n-key="tag_lifestyle">Lifestyle</span>
                         </div>
                         <span class="font-semibold text-gray-500 dark:text-gray-400"></span>
                     </div>
@@ -761,25 +755,25 @@
     <section id="contact" class="section-padding">
         <div class="container mx-auto px-6">
             <div class="max-w-4xl mx-auto">
-                <h2 class="text-4xl font-bold text-center mb-12 scroll-animate">Get In Touch</h2>
+                <h2 class="text-4xl font-bold text-center mb-12 scroll-animate" data-i18n-key="contact_title">Get In Touch</h2>
 
                 <div class="grid md:grid-cols-2 gap-12">
                     <div class="scroll-animate">
-                        <h3 class="text-2xl font-semibold mb-6">Let's Connect</h3>
-                        <p class="text-lg mb-8 text-gray-600">
+                        <h3 class="text-2xl font-semibold mb-6" data-i18n-key="contact_subtitle">Let's Connect</h3>
+                        <p class="text-lg mb-8 text-gray-600" data-i18n-key="contact_description">
                             I'm always open to discussing new opportunities, collaborations, or just having a friendly
                             chat about technology and creativity.
                         </p>
 
                         <div class="mb-8">
                             <a href="./src/docs/Kanan Nuruyev - Content Creator.pdf" download="Kanan_Nuruyev_Resume.pdf"
-                                class="btn-primary px-6 py-3 rounded-lg text-white font-semibold inline-flex items-center">
+                                class="btn-primary px-6 py-3 rounded-lg text-white font-semibold inline-flex items-center" data-i18n-key="download_resume">
                                 <i class="fas fa-download mr-2"></i>
                                 Download Resume
                             </a>
                         </div>
 
-                        <div class="text-sm text-gray-500">
+                        <div class="text-sm text-gray-500" data-i18n-key="privacy_note">
                             <p><strong>Privacy Note:</strong> This is a demo contact form. In a real implementation,
                                 your data would be handled securely and in accordance with privacy regulations.</p>
                         </div>
@@ -788,19 +782,19 @@
                     <div class="scroll-animate">
                         <form class="space-y-6" id="contact-form">
                             <div>
-                                <label for="name" class="block text-sm font-medium mb-2">Name</label>
+                                <label for="name" class="block text-sm font-medium mb-2" data-i18n-key="form_name">Name</label>
                                 <input type="text" id="name" name="name" required
                                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors">
                             </div>
 
                             <div>
-                                <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                                <label for="email" class="block text-sm font-medium mb-2" data-i18n-key="form_email">Email</label>
                                 <input type="email" id="email" name="email" required
                                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors">
                             </div>
 
                             <div>
-                                <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                                <label for="message" class="block text-sm font-medium mb-2" data-i18n-key="form_message">Message</label>
                                 <textarea id="message" name="message" rows="5" required
                                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"></textarea>
                             </div>
@@ -808,10 +802,10 @@
                             <div class="flex items-center space-x-3">
                                 <input type="checkbox" id="captcha" required
                                     class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
-                                <label for="captcha" class="text-sm">I'm not a robot (Simple Captcha)</label>
+                                <label for="captcha" class="text-sm" data-i18n-key="form_captcha">I'm not a robot (Simple Captcha)</label>
                             </div>
 
-                            <button type="submit" class="w-full btn-primary py-3 rounded-lg text-white font-semibold">
+                            <button type="submit" class="w-full btn-primary py-3 rounded-lg text-white font-semibold" data-i18n-key="send_message">
                                 Send Message
                             </button>
                         </form>
