@@ -19,11 +19,6 @@
 
 .my-portfolio-scope {
   scroll-behavior: smooth;
-  /* Details, Summary Tag Styling */
-  /* For Chrome, Safari and Edge */
-  /* For Firefox */
-  /* Marquee Effect */
-  /* Scroll to Top Button */
 }
 .my-portfolio-scope * {
   margin: 0;
@@ -79,14 +74,26 @@
     transform: translate3d(0, 0, 1px) rotate(360deg);
   }
 }
+.my-portfolio-scope {
+  /* Details, Summary Tag Styling */
+}
 .my-portfolio-scope details > summary {
   list-style-type: none;
+}
+.my-portfolio-scope {
+  /* For Chrome, Safari and Edge */
 }
 .my-portfolio-scope details > summary::-webkit-details-marker {
   display: none;
 }
+.my-portfolio-scope {
+  /* For Firefox */
+}
 .my-portfolio-scope details > summary::marker {
   display: none;
+}
+.my-portfolio-scope {
+  /* Marquee Effect */
 }
 .my-portfolio-scope .marqueeEffect {
   display: flex;
@@ -94,7 +101,6 @@
   background-color: yellow;
   z-index: 2;
   width: 100%;
-  /* Marquee Animation */
 }
 .my-portfolio-scope .marqueeEffect li {
   padding: 2vh;
@@ -106,6 +112,9 @@
   content: "•";
   position: absolute;
   left: -0.8vh;
+}
+.my-portfolio-scope .marqueeEffect {
+  /* Marquee Animation */
 }
 @keyframes marquee {
   0% {
@@ -123,6 +132,9 @@
   100% {
     transform: translateX(-100%);
   }
+}
+.my-portfolio-scope {
+  /* Scroll to Top Button */
 }
 .my-portfolio-scope #topBtn {
   z-index: 10;
@@ -146,7 +158,6 @@
   transition: 0.1s ease-in-out;
   font-family: "Cinzel Decorative";
   overflow: hidden;
-  /* Navigation Menu Decoration */
 }
 #previousHeader .username {
   text-decoration: none;
@@ -164,6 +175,9 @@
 #previousHeader .username img {
   margin-top: 1vh;
   width: 200px;
+}
+#previousHeader {
+  /* Navigation Menu Decoration */
 }
 #previousHeader .nav-menu {
   font-weight: 500;
@@ -229,10 +243,6 @@
   background-color: var(--light-lemon-yellow);
 }
 
-#previousMain {
-  /* blog section */
-  /* General Contact Section */
-}
 #previousMain #previousHome {
   display: flex;
   align-items: center;
@@ -619,6 +629,9 @@
 #previousMain #previousPortfolio .codingStuff .contributions .contributeTable td a:hover {
   color: var(--royal-blue);
 }
+#previousMain {
+  /* blog section */
+}
 #previousMain #blog .blogContainer {
   display: flex;
   flex-direction: column;
@@ -669,6 +682,9 @@
 #previousMain #blog .blogContainer .blogItems .blogTextContainer .readArticle:hover {
   color: var(--light-gray);
   box-shadow: inset 200px 0 0 0 var(--royal-blue);
+}
+#previousMain {
+  /* General Contact Section */
 }
 #previousMain #previousContact .contactContainer {
   display: flex;
@@ -1587,8 +1603,7 @@ html.dark #mobile-menu .bg-gray-50 {
 .project-card {
   background: #f9fafb;
   border: 1.5px solid #e5e7eb;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 .dark .project-card {
   background: #23263a;
