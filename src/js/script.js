@@ -97,10 +97,26 @@ window.addEventListener('scroll', () => {
 });
 
 scrollToTopBtn.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
+    const startPosition = window.pageYOffset;
+    const startTime = performance.now();
+    const duration = 800; // animation duration in milliseconds
+
+    function easeOutQuad(t) {
+        return t * (2 - t);
+    }
+
+    function scrollAnimation(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        
+        window.scrollTo(0, startPosition * (1 - easeOutQuad(progress)));
+        
+        if (progress < 1) {
+            requestAnimationFrame(scrollAnimation);
+        }
+    }
+
+    requestAnimationFrame(scrollAnimation);
 });
 
 // Expand/Collapse Brand Cards

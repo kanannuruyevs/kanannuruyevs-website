@@ -104,6 +104,31 @@ html.dark #mobile-menu .bg-gray-50 {
     transform: translateX(-100%);
   }
 }
+
+.brand-chip {
+  background: rgba(59, 130, 246, 0.08);
+  color: #1e40af;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border: 1px solid rgba(59,130,246,0.12);
+  box-shadow: 0 2px 6px rgba(59,130,246,0.04);
+}
+
+@keyframes brand-chip-hover {
+  0% {
+    background: rgba(59, 130, 246, 0.08);
+    color: #1e40af;
+  }
+  100% {
+    background: rgba(59, 130, 246, 0.12);
+    color: #bfdbfe;
+  }
+}
+
+.brand-chip:first-child {
+  background: linear-gradient(90deg, rgba(99,102,241,0.12), rgba(139,92,246,0.08));
+  color: #4f46e5;
+}
 .card-hover {
   background: #fff;
   border: 1.5px solid #e5e7eb;
@@ -198,6 +223,10 @@ html.dark #mobile-menu .bg-gray-50 {
   opacity: 1;
   transform: translateY(0);
 }
+.scroll-to-top.visible:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(249, 115, 22, 0.4);
+}
 .scroll-to-top:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(249, 115, 22, 0.4);
@@ -262,4 +291,46 @@ html.dark #mobile-menu .bg-gray-50 {
   100% {
     transform: translateY(-6.25rem);
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/* Platform tiles used in brand overview */
+.platform-tile {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.75rem;
+  background: rgba(249, 250, 251, 0.8);
+  border: 1px solid rgba(229,231,235,0.8);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.platform-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+.platform-tile .platform-name {
+  font-weight: 600;
+}
+.platform-tile .platform-metric {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+.platform-visit {
+  color: #2563eb;
+  font-weight: 600;
+}
+.dark .platform-tile {
+  background: rgba(17, 24, 39, 0.75);
+  border-color: rgba(71,85,105,0.45);
+}
+
+.platform-tile.disabled {
+  opacity: 0.95;
+  cursor: default;
+}
+.platform-visit.disabled {
+  color: #9ca3af;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=style.css.map */
