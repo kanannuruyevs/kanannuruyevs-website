@@ -115,8 +115,23 @@ html.dark #mobile-menu .bg-gray-50 {
 }
 
 .brand-avatar {
-  border-radius: 9999px;
-  overflow: hidden;
+  display: inline-block;
+  width: 3.5rem;
+  height: 3.5rem;
+  min-width: 3.5rem;
+  min-height: 3.5rem;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  position: relative;
+  background-color: #e5e7eb;
+}
+
+.brand-avatar img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 50% !important;
 }
 
 @keyframes brand-chip-hover {
