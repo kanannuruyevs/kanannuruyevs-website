@@ -7,7 +7,7 @@ const translations = {
         "nav_contact": "Contact",
         "nav_previous": "Previous Version",
         "home_name": "Kanan Nuruyev",
-        "home_subtitle": "Content Creator • ASMRtist • Casual Coder • Lifelong Learner",
+        "home_subtitle": "Content Creator • ASMRtist • Vibe Coder • Lifelong Learner",
         "home_marquee": "Welcome to My Personal Website! Nice to Meet You!",
         "home_button": "Discover My Journey",
         "about_title": "About Me",
