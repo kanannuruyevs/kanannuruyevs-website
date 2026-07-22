@@ -277,6 +277,30 @@ html.dark #mobile-menu .bg-gray-50 {
   animation: slide-up 25s infinite;
 }
 
+.footer-username {
+  color: #fb923c;
+  font-weight: 600;
+}
+
+.footer-username.is-changing {
+  animation: footer-username-change 0.3s ease both;
+}
+
+@keyframes footer-username-change {
+  from {
+    opacity: 0.25;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-username.is-changing {
+    animation: none;
+  }
+}
+
 @keyframes slide-up {
   0% {
     transform: translateY(0);

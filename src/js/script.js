@@ -222,6 +222,29 @@ document.querySelectorAll('.card-hover, .project-card, .scroll-animate').forEach
 
 // Update year in footer tag
 const updateYear = new Date().getFullYear();
-const copyrightElement = document.getElementById("copyright");
+const copyrightYearElement = document.getElementById("copyright-year");
 
-copyrightElement.innerHTML = "© 2023 - " + updateYear + " @kanannuruyevs. All rights reserved.";
+if (copyrightYearElement) {
+    copyrightYearElement.textContent = "2023 - " + updateYear;
+}
+
+const footerUsernameElement = document.getElementById("footer-username");
+const footerUsernames = [
+    "@kanannuruyevs.",
+    "@kanansnote.",
+    "@kanansnoteru.",
+    "@kanansnoteaze.",
+    "@kananwhispersasmr."
+];
+
+if (footerUsernameElement) {
+    let footerUsernameIndex = 0;
+
+    setInterval(() => {
+        footerUsernameIndex = (footerUsernameIndex + 1) % footerUsernames.length;
+        footerUsernameElement.classList.remove("is-changing");
+        footerUsernameElement.textContent = footerUsernames[footerUsernameIndex];
+        void footerUsernameElement.offsetWidth;
+        footerUsernameElement.classList.add("is-changing");
+    }, 4000);
+}
