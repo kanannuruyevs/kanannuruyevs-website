@@ -119,34 +119,25 @@ scrollToTopBtn.addEventListener('click', () => {
     requestAnimationFrame(scrollAnimation);
 });
 
-// Expand/Collapse Brand Cards
-document.querySelectorAll('.expand-btn').forEach(btn => {
-    btn.addEventListener('click', function() {
-        const slider = this.parentElement.querySelector('.video-slider');
-        const isHidden = slider.classList.contains('hidden');
-        
-        if (isHidden) {
-            slider.classList.remove('hidden');
-            this.textContent = 'Hide Content';
-            
-            // Initialize Swiper
-            new Swiper(slider.querySelector('.swiper'), {
-                slidesPerView: 1,
-                spaceBetween: 20,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                autoplay: {
-                    delay: 3000,
-                },
-            });
-        } else {
-            slider.classList.add('hidden');
-            this.textContent = 'View Content';
-        }
-    });
-});
+// Brand Card: Toggle expand/collapse
+function toggleBrandCard(btn) {
+    const card = btn.closest('.flex.flex-col');
+    const panel = card.querySelector('.brand-gallery-content');
+    const isOpen = panel.classList.contains('open');
+    panel.classList.toggle('open', !isOpen);
+    btn.classList.toggle('open', !isOpen);
+}
+
+// Brand Card: Switch between Platforms / Audience Stats tabs
+function switchBrandTab(clickedBtn, panelId) {
+    const tabBar = clickedBtn.closest('.brand-tab-bar');
+    const panel = clickedBtn.closest('.brand-panel-inner');
+    tabBar.querySelectorAll('.brand-tab-btn').forEach(b => b.classList.remove('active'));
+    panel.querySelectorAll('.brand-tab-panel').forEach(p => p.classList.remove('active'));
+    clickedBtn.classList.add('active');
+    document.getElementById(panelId).classList.add('active');
+}
+
 
 // --- Contact Form Logic with EmailJS ---
 // It's best to place this inside your existing DOMContentLoaded listener if you have one.

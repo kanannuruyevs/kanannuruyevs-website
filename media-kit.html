@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Media Kit – Kanan Nuruyev</title>
+  <meta name="description" content="Official Media Kit for Kanan Nuruyev – Content Creator, ASMRtist, and Digital Creator across YouTube, Instagram, and TikTok."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: #f8fafc; color: #0f172a; }
+
+    /* ── Print styles ── */
+    @media print {
+      .no-print { display: none !important; }
+      body { background: #fff; }
+      .page { box-shadow: none; }
+    }
+
+    /* ── Top bar ── */
+    .topbar {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.9); backdrop-filter: blur(10px);
+      border-bottom: 1px solid #e2e8f0;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 32px;
+    }
+    .topbar-logo { font-size: 15px; font-weight: 700; color: #111827; }
+    .topbar-logo span { color: #2563eb; }
+    .topbar-actions { display: flex; gap: 10px; }
+    .btn-download {
+      display: flex; align-items: center; gap: 7px;
+      padding: 9px 18px; border-radius: 8px;
+      background: #2563eb; color: #fff;
+      font-size: 13px; font-weight: 600;
+      border: none; cursor: pointer;
+      transition: background .2s, transform .2s;
+      text-decoration: none;
+    }
+    .btn-download:hover { background: #1d4ed8; transform: translateY(-1px); }
+    .btn-back {
+      display: flex; align-items: center; gap: 7px;
+      padding: 9px 18px; border-radius: 8px;
+      background: #f1f5f9; color: #374151;
+      font-size: 13px; font-weight: 600;
+      border: 1px solid #e2e8f0; cursor: pointer;
+      transition: background .2s;
+      text-decoration: none;
+    }
+    .btn-back:hover { background: #e2e8f0; }
+
+    /* ── Page container ── */
+    .page {
+      max-width: 820px; margin: 36px auto 80px;
+      background: #fff; border-radius: 20px;
+      box-shadow: 0 4px 40px rgba(0,0,0,.08);
+      overflow: hidden;
+    }
+
+    /* ── Hero header ── */
+    .mk-hero {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 48px 48px 36px;
+      display: flex; align-items: center; gap: 28px;
+      position: relative; overflow: hidden;
+    }
+    .mk-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .mk-avatar {
+      width: 90px; height: 90px; border-radius: 50%;
+      border: 3px solid rgba(255,255,255,.35);
+      overflow: hidden; flex-shrink: 0; position: relative; z-index: 1;
+      background: rgba(255,255,255,.15);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 36px; font-weight: 800; color: #fff;
+    }
+    .mk-hero-text { position: relative; z-index: 1; }
+    .mk-hero-text h1 { font-size: 26px; font-weight: 800; color: #fff; margin-bottom: 4px; }
+    .mk-hero-text p { font-size: 14px; color: rgba(255,255,255,.8); margin-bottom: 14px; line-height: 1.5; }
+    .mk-hero-badges { display: flex; flex-wrap: wrap; gap: 8px; }
+    .mk-badge {
+      background: rgba(255,255,255,.18); color: #fff;
+      font-size: 11px; font-weight: 600;
+      padding: 4px 10px; border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.25);
+    }
+
+    /* ── Body ── */
+    .mk-body { padding: 40px 48px; }
+
+    /* ── Section header ── */
+    .mk-section-title {
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: .08em; color: #6b7280;
+      display: flex; align-items: center; gap: 8px;
+      margin-bottom: 18px; margin-top: 36px;
+    }
+    .mk-section-title:first-child { margin-top: 0; }
+    .mk-section-title::after { content: ''; flex: 1; height: 1px; background: #e5e7eb; }
+
+    /* ── Stat cards ── */
+    .mk-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .mk-stat-card {
+      background: #f8fafc; border: 1px solid #e5e7eb;
+      border-radius: 12px; padding: 18px;
+      text-align: center;
+    }
+    .mk-stat-number { font-size: 28px; font-weight: 800; color: #111827; line-height: 1; }
+    .mk-stat-label { font-size: 11px; color: #6b7280; font-weight: 500; margin-top: 4px; }
+    .mk-stat-sub { font-size: 10px; color: #9ca3af; margin-top: 2px; }
+
+    /* ── Brands grid ── */
+    .mk-brands { display: flex; flex-direction: column; gap: 10px; }
+    .mk-brand-row {
+      display: flex; align-items: center;
+      padding: 14px 16px; border-radius: 12px;
+      border: 1px solid #e5e7eb; gap: 14px;
+    }
+    .mk-brand-icon {
+      width: 40px; height: 40px; border-radius: 10px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; font-weight: 800; color: #fff;
+      flex-shrink: 0;
+    }
+    .mk-brand-info { flex: 1; }
+    .mk-brand-name { font-size: 13px; font-weight: 700; color: #111827; }
+    .mk-brand-type { font-size: 11px; color: #9ca3af; margin-top: 2px; }
+    .mk-brand-follower { font-size: 14px; font-weight: 700; color: #2563eb; white-space: nowrap; }
+    .mk-brand-follower span { font-size: 10px; color: #9ca3af; font-weight: 400; display: block; text-align: right; }
+
+    /* ── Platforms ── */
+    .mk-platforms { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .mk-platform {
+      border: 1px solid #e5e7eb; border-radius: 12px;
+      padding: 16px; text-align: center;
+    }
+    .mk-platform-icon { font-size: 24px; margin-bottom: 8px; }
+    .mk-platform-name { font-size: 12px; font-weight: 600; color: #374151; margin-bottom: 4px; }
+    .mk-platform-metric { font-size: 16px; font-weight: 800; color: #111827; }
+    .mk-platform-label { font-size: 10px; color: #9ca3af; margin-top: 2px; }
+
+    /* ── Content types ── */
+    .mk-content-types { display: flex; flex-wrap: wrap; gap: 8px; }
+    .mk-content-chip {
+      background: #eff6ff; color: #1e40af;
+      font-size: 12px; font-weight: 600;
+      padding: 6px 14px; border-radius: 999px;
+      border: 1px solid #bfdbfe;
+    }
+
+    /* ── About ── */
+    .mk-about {
+      background: #f8fafc; border-radius: 12px;
+      padding: 20px; font-size: 13px; color: #4b5563;
+      line-height: 1.7; border: 1px solid #e5e7eb;
+    }
+
+    /* ── Contact ── */
+    .mk-contact {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 14px; padding: 24px 28px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 20px;
+    }
+    .mk-contact-text h3 { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+    .mk-contact-text p { font-size: 13px; color: rgba(255,255,255,.8); }
+    .mk-contact-btn {
+      background: #fff; color: #667eea;
+      font-size: 13px; font-weight: 700;
+      padding: 10px 20px; border-radius: 8px;
+      text-decoration: none; white-space: nowrap;
+      display: flex; align-items: center; gap: 7px;
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .mk-contact-btn:hover { transform: translateY(-1px); }
+
+    /* ── Footer ── */
+    .mk-footer {
+      text-align: center; padding: 20px;
+      font-size: 11px; color: #9ca3af;
+      border-top: 1px solid #f3f4f6;
+    }
+
+    @media (max-width: 640px) {
+      .mk-hero { padding: 32px 24px; flex-direction: column; }
+      .mk-body { padding: 28px 24px; }
+      .mk-stats { grid-template-columns: repeat(2, 1fr); }
+      .mk-platforms { grid-template-columns: repeat(2, 1fr); }
+      .mk-contact { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top bar -->
+  <div class="topbar no-print">
+    <div class="topbar-logo">Kanan<span>Nuruyev</span> · Media Kit</div>
+    <div class="topbar-actions">
+      <a href="./index.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Site</a>
+      <button class="btn-download" onclick="window.print()"><i class="fas fa-download"></i> Download PDF</button>
+    </div>
+  </div>
+
+  <!-- Page -->
+  <div class="page">
+
+    <!-- Hero -->
+    <div class="mk-hero">
+      <div class="mk-avatar">K</div>
+      <div class="mk-hero-text">
+        <h1>Kanan Nuruyev</h1>
+        <p>Content Creator · ASMRtist · Vibe Coder · Multilingual Digital Creator<br>
+        🇦🇿 Azerbaijan &nbsp;·&nbsp; Azerbaijani · English · Russian</p>
+        <div class="mk-hero-badges">
+          <span class="mk-badge">YouTube</span>
+          <span class="mk-badge">Instagram</span>
+          <span class="mk-badge">TikTok</span>
+          <span class="mk-badge">5 Active Brands</span>
+          <span class="mk-badge">Updated July 2026</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Body -->
+    <div class="mk-body">
+
+      <!-- About -->
+      <div class="mk-section-title"><i class="fas fa-user"></i> About</div>
+      <div class="mk-about">
+        I'm a self-taught content creator from Azerbaijan, operating across five distinct brands targeting international, Azerbaijani, and Russian-speaking audiences. My content spans ASMR, lifestyle, self-improvement, mental health, fashion, digital growth, and AI/tech topics. I create in three languages and maintain an active presence across YouTube, Instagram, and TikTok with a combined audience of 290K+ followers.
+      </div>
+
+      <!-- Overall Stats -->
+      <div class="mk-section-title"><i class="fas fa-chart-line"></i> Overall Reach</div>
+      <div class="mk-stats">
+        <div class="mk-stat-card">
+          <div class="mk-stat-number">290K+</div>
+          <div class="mk-stat-label">Combined Followers</div>
+          <div class="mk-stat-sub">Across all brands & platforms</div>
+        </div>
+        <div class="mk-stat-card">
+          <div class="mk-stat-number">5.1%</div>
+          <div class="mk-stat-label">Avg. Engagement Rate</div>
+          <div class="mk-stat-sub">Above industry average</div>
+        </div>
+        <div class="mk-stat-card">
+          <div class="mk-stat-number">18–34</div>
+          <div class="mk-stat-label">Core Audience Age</div>
+          <div class="mk-stat-sub">Primary demographic</div>
+        </div>
+      </div>
+
+      <!-- Brands -->
+      <div class="mk-section-title"><i class="fas fa-layer-group"></i> Brands</div>
+      <div class="mk-brands">
+        <div class="mk-brand-row">
+          <div class="mk-brand-icon" style="background:linear-gradient(135deg,#667eea,#764ba2)">K</div>
+          <div class="mk-brand-info">
+            <div class="mk-brand-name">KANANNURUYEVS</div>
+            <div class="mk-brand-type">Work Brand · AI · Vibe Coding · Content Creation · Career Growth</div>
+          </div>
+          <div class="mk-brand-follower">30K+<span>followers</span></div>
+        </div>
+        <div class="mk-brand-row">
+          <div class="mk-brand-icon" style="background:linear-gradient(135deg,#f43f5e,#ec4899)">K</div>
+          <div class="mk-brand-info">
+            <div class="mk-brand-name">KANANWHISPERSASMR</div>
+            <div class="mk-brand-type">ASMR Brand · Relaxation · Roleplay · Multilingual</div>
+          </div>
+          <div class="mk-brand-follower">60K+<span>followers</span></div>
+        </div>
+        <div class="mk-brand-row">
+          <div class="mk-brand-icon" style="background:linear-gradient(135deg,#0ea5e9,#06b6d4)">K</div>
+          <div class="mk-brand-info">
+            <div class="mk-brand-name">KANANSNOTE</div>
+            <div class="mk-brand-type">Personal Brand (EN) · Lifestyle · Mental Health · Fashion</div>
+          </div>
+          <div class="mk-brand-follower">95K+<span>followers</span></div>
+        </div>
+        <div class="mk-brand-row">
+          <div class="mk-brand-icon" style="background:linear-gradient(135deg,#f97316,#fb923c)">K</div>
+          <div class="mk-brand-info">
+            <div class="mk-brand-name">KANANSNOTEAZE</div>
+            <div class="mk-brand-type">Personal Brand (AZE) · Lifestyle · Fashion · Entertainment</div>
+          </div>
+          <div class="mk-brand-follower">45K+<span>followers</span></div>
+        </div>
+        <div class="mk-brand-row">
+          <div class="mk-brand-icon" style="background:linear-gradient(135deg,#ef4444,#dc2626)">K</div>
+          <div class="mk-brand-info">
+            <div class="mk-brand-name">KANANSNOTERU</div>
+            <div class="mk-brand-type">Personal Brand (RU) · Lifestyle · Fashion · Entertainment</div>
+          </div>
+          <div class="mk-brand-follower">60K+<span>followers</span></div>
+        </div>
+      </div>
+
+      <!-- Platforms -->
+      <div class="mk-section-title"><i class="fas fa-satellite-dish"></i> Platform Presence</div>
+      <div class="mk-platforms">
+        <div class="mk-platform">
+          <div class="mk-platform-icon"><i class="fab fa-instagram" style="color:#e1306c"></i></div>
+          <div class="mk-platform-name">Instagram</div>
+          <div class="mk-platform-metric">215K+</div>
+          <div class="mk-platform-label">Combined followers</div>
+        </div>
+        <div class="mk-platform">
+          <div class="mk-platform-icon"><i class="fab fa-tiktok"></i></div>
+          <div class="mk-platform-name">TikTok</div>
+          <div class="mk-platform-metric">Active</div>
+          <div class="mk-platform-label">Multiple accounts</div>
+        </div>
+        <div class="mk-platform">
+          <div class="mk-platform-icon"><i class="fab fa-youtube" style="color:#ff0000"></i></div>
+          <div class="mk-platform-name">YouTube</div>
+          <div class="mk-platform-metric">15K+</div>
+          <div class="mk-platform-label">Subscribers (KANANSNOTE)</div>
+        </div>
+      </div>
+
+      <!-- Content Types -->
+      <div class="mk-section-title"><i class="fas fa-film"></i> Content I Create</div>
+      <div class="mk-content-types">
+        <span class="mk-content-chip">ASMR Videos</span>
+        <span class="mk-content-chip">Lifestyle Vlogs</span>
+        <span class="mk-content-chip">AI & Tech Content</span>
+        <span class="mk-content-chip">Mental Health Talks</span>
+        <span class="mk-content-chip">Fashion & Style</span>
+        <span class="mk-content-chip">Reaction Videos</span>
+        <span class="mk-content-chip">Sponsored Posts</span>
+        <span class="mk-content-chip">Brand Reviews</span>
+        <span class="mk-content-chip">Story Mentions</span>
+        <span class="mk-content-chip">Multilingual Content</span>
+      </div>
+
+      <!-- Contact CTA -->
+      <div style="margin-top:32px">
+        <div class="mk-contact">
+          <div class="mk-contact-text">
+            <h3>Interested in working together?</h3>
+            <p>Open to brand deals, sponsorships, collabs, and job opportunities.</p>
+          </div>
+          <a href="./index.html#contact" class="mk-contact-btn">
+            <i class="fas fa-paper-plane"></i> Get in Touch
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="mk-footer">
+      © 2026 Kanan Nuruyev · kanannuruyevs.com · All numbers are approximate and updated monthly.
+    </div>
+
+  </div>
+
+</body>
+</html>
