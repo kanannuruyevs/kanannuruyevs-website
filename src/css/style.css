@@ -452,13 +452,39 @@ html.dark #mobile-menu .bg-gray-50 {
 }
 .dark .brand-reach-label { color: #a5b4fc; }
 
+/* ── Brand Grid Layout & Masonry Fill ── */
+.brand-grid {
+  grid-auto-flow: row dense;
+  align-items: start;
+}
+
+.brand-card {
+  will-change: transform;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.brand-card.open {
+  border-color: rgba(139, 92, 246, 0.6);
+  box-shadow: 0 0 24px rgba(139, 92, 246, 0.15);
+}
+
+@media (min-width: 1280px) {
+  .brand-card.top-row.open {
+    grid-row: span 2;
+  }
+}
+
 /* ── Expanded panel ── */
 .brand-gallery-content {
   overflow: hidden;
   max-height: 0;
-  transition: max-height 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+  opacity: 0;
 }
-.brand-gallery-content.open { max-height: 1000px; }
+.brand-gallery-content.open {
+  max-height: 1000px;
+  opacity: 1;
+}
 
 .brand-panel-inner {
   padding: 0 0 4px;

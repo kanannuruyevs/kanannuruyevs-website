@@ -119,13 +119,75 @@ scrollToTopBtn.addEventListener('click', () => {
     requestAnimationFrame(scrollAnimation);
 });
 
-// Brand Card: Toggle expand/collapse
+// Brand Card: Toggle expand/collapse with FLIP animation
+let activeOpenBrandCard = null;
+
 function toggleBrandCard(btn) {
-    const card = btn.closest('.flex.flex-col');
+    const card = btn.closest('.brand-card');
+    if (!card) return;
+
     const panel = card.querySelector('.brand-gallery-content');
-    const isOpen = panel.classList.contains('open');
-    panel.classList.toggle('open', !isOpen);
-    btn.classList.toggle('open', !isOpen);
+    const isCurrentlyOpen = card.classList.contains('open');
+    const allBrandCards = Array.from(document.querySelectorAll('.brand-card'));
+
+    // 1. Snapshot ALL brand cards before layout change
+    const firstRects = new Map();
+    allBrandCards.forEach(c => {
+        firstRects.set(c, c.getBoundingClientRect());
+    });
+
+    // 2. Close active card if another one is open
+    if (activeOpenBrandCard && activeOpenBrandCard !== card) {
+        const prevPanel = activeOpenBrandCard.querySelector('.brand-gallery-content');
+        const prevBtn = activeOpenBrandCard.querySelector('.brand-work-btn');
+        activeOpenBrandCard.classList.remove('open');
+        if (prevPanel) prevPanel.classList.remove('open');
+        if (prevBtn) prevBtn.classList.remove('open');
+    }
+
+    // 3. Toggle target card
+    if (!isCurrentlyOpen) {
+        card.classList.add('open');
+        if (panel) panel.classList.add('open');
+        btn.classList.add('open');
+        activeOpenBrandCard = card;
+    } else {
+        card.classList.remove('open');
+        if (panel) panel.classList.remove('open');
+        btn.classList.remove('open');
+        activeOpenBrandCard = null;
+    }
+
+    // 4. Force reflow and snapshot NEW positions
+    const lastRects = new Map();
+    allBrandCards.forEach(c => {
+        lastRects.set(c, c.getBoundingClientRect());
+    });
+
+    // 5. Animate any card that moved position via Web Animations API (FLIP)
+    allBrandCards.forEach(c => {
+        const first = firstRects.get(c);
+        const last = lastRects.get(c);
+
+        if (!first || !last) return;
+
+        const dx = first.left - last.left;
+        const dy = first.top - last.top;
+
+        if (Math.abs(dx) > 1 || Math.abs(dy) > 1) {
+            c.animate(
+                [
+                    { transform: `translate(${dx}px, ${dy}px)` },
+                    { transform: 'translate(0px, 0px)' }
+                ],
+                {
+                    duration: 480,
+                    easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
+                    fill: 'none'
+                }
+            );
+        }
+    });
 }
 
 // Brand Card: Switch between Platforms / Audience Stats tabs
