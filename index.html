@@ -17,39 +17,24 @@
 
 <body>
     <!-- Header -->
-    <header class="fixed top-0 w-full bg-white dark:bg-gray-900/90 z-50 border-b border-gray-200 dark:border-gray-800">
+    <header class="fixed top-0 w-full z-50 nav-blur border-b border-gray-800">
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <!-- Logo -->
-                <a href="#home" class="flex items-center space-x-3">
-                    <div
-                        class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
-                        <img src="./src/images/home/new-profile-picture.png" alt="Profile Picture">
+                <a href="#home" class="flex items-center space-x-3 group">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 p-0.5 shadow-lg group-hover:scale-105 transition-transform">
+                        <img src="./src/images/home/new-profile-picture.png" alt="Profile Picture" class="w-full h-full rounded-full object-cover">
                     </div>
                     <div class="flex flex-col">
-                        <span class="text-lg font-bold leading-tight text-gray-900 dark:text-gray-100">Kanan Nuruyev</span>
+                        <span class="text-lg font-bold leading-tight gradient-text">Kanan Nuruyev</span>
                         <div class="h-5 overflow-hidden">
                             <div class="username-rotator">
-                                <span class="text-sm text-gray-500 dark:text-gray-300 leading-5 block">@kanannuruyevs</span>
-                                <span class="text-sm text-gray-500 dark:text-gray-300 leading-5 block">@kanansnote</span>
-                                <span class="text-sm text-gray-500 dark:text-gray-300 leading-5 block">@kanansnoteru</span>
-                                <span class="text-sm text-gray-500 dark:text-gray-300 leading-5 block">@kanansnoteaze</span>
-                                <span class="text-sm text-gray-500 dark:text-gray-300 leading-5 block">@kananwhispersasmr</span>
-                                <span class="text-sm text-gray-500 dark:text-gray-300 leading-5 block">@kanannuruyevs</span>
-                            </div>
-                            <div class="pt-4 border-t border-gray-100 dark:border-gray-800 mt-4">
-                                <div class="text-sm font-semibold mb-2">Featured Work</div>
-                                <div class="grid grid-cols-3 gap-2">
-                                    <div class="rounded-lg overflow-hidden block">
-                                        <img src="https://placehold.co/300x200/7c3aed/ffffff/png?text=Strategy+Case" alt="Strategy Case" class="w-full h-20 object-cover">
-                                    </div>
-                                    <div class="rounded-lg overflow-hidden block">
-                                        <img src="https://placehold.co/300x200/4f46e5/ffffff/png?text=Campaign+Creative" alt="Campaign Creative" class="w-full h-20 object-cover">
-                                    </div>
-                                    <div class="rounded-lg overflow-hidden block">
-                                        <img src="https://placehold.co/300x200/3730a3/ffffff/png?text=Audience+Report" alt="Audience Report" class="w-full h-20 object-cover">
-                                    </div>
-                                </div>
+                                <span class="text-sm text-gray-400 leading-5 block font-medium">@kanannuruyevs</span>
+                                <span class="text-sm text-gray-400 leading-5 block font-medium">@kanansnote</span>
+                                <span class="text-sm text-gray-400 leading-5 block font-medium">@kanansnoteru</span>
+                                <span class="text-sm text-gray-400 leading-5 block font-medium">@kanansnoteaze</span>
+                                <span class="text-sm text-gray-400 leading-5 block font-medium">@kananwhispersasmr</span>
+                                <span class="text-sm text-gray-400 leading-5 block font-medium">@kanannuruyevs</span>
                             </div>
                         </div>
                     </div>
@@ -57,136 +42,155 @@
 
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex items-center space-x-8">
-                    <a href="#home" data-i18n-key="nav_home" class="text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Home</a>
-                    <a href="#about" data-i18n-key="nav_about" class="text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About</a>
-                    <a href="#portfolio" data-i18n-key="nav_portfolio" class="text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Portfolio</a>
-                    <!-- <a href="#blog" data-i18n-key="nav_blog" class="text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Blog</a> -->
-                    <a href="#contact" data-i18n-key="nav_contact" class="text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Contact</a>
+                    <a href="#home" data-i18n-key="nav_home" class="text-gray-300 hover:text-orange-400 font-medium transition-colors">Home</a>
+                    <a href="#about" data-i18n-key="nav_about" class="text-gray-300 hover:text-orange-400 font-medium transition-colors">About</a>
+                    <a href="#portfolio" data-i18n-key="nav_portfolio" class="text-gray-300 hover:text-orange-400 font-medium transition-colors">Portfolio</a>
+                    <a href="#skills" data-i18n-key="nav_skills" class="text-gray-300 hover:text-orange-400 font-medium transition-colors">Skills</a>
+                    <a href="#contact" data-i18n-key="nav_contact" class="text-gray-300 hover:text-orange-400 font-medium transition-colors">Contact</a>
                     <button id="theme-toggle"
-                        class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors">
+                        class="p-2 rounded-xl bg-gray-900 border border-gray-800 hover:bg-gray-800 transition-colors text-white">
                         <i class="fas fa-moon" id="icon-moon"></i>
                         <i class="fas fa-sun" id="icon-sun"></i>
                     </button>
                     <!-- Language Switcher -->
                     <div class="relative">
-                        <select id="language-switcher" class="py-2 pl-3 pr-8 rounded-lg bg-gray-100 dark:bg-gray-800 dark:text-gray-100 appearance-none cursor-pointer">
-                            <option value="en" data-i18n-key="english"></option>
-                            <option value="az" data-i18n-key="azerbaijani"></option>
-                            <option value="ru" data-i18n-key="russian"></option>
+                        <select id="language-switcher" class="py-2 pl-3 pr-8 rounded-xl bg-gray-900 border border-gray-800 text-gray-200 appearance-none cursor-pointer hover:border-gray-700 transition-colors text-sm font-medium">
+                            <option value="en" data-i18n-key="english">EN</option>
+                            <option value="az" data-i18n-key="azerbaijani">AZ</option>
+                            <option value="ru" data-i18n-key="russian">RU</option>
                         </select>
-                        <i class="fas fa-chevron-down absolute right-2 top-1/2 -translate-y-1/2 text-xs pointer-events-none dark:text-gray-100"></i>
+                        <i class="fas fa-chevron-down absolute right-3 top-1/2 -translate-y-1/2 text-xs pointer-events-none text-gray-400"></i>
                     </div>
                 </nav>
 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden p-2">
-                    <i class="fas fa-bars text-xl text-gray-900 dark:text-gray-100"></i>
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-white">
+                    <i class="fas fa-bars text-xl"></i>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Menu -->
         <div id="mobile-menu"
-            class="mobile-menu fixed top-0 right-0 w-64 bg-white shadow-lg md:hidden">
-            <div class="p-6 bg-gray-50">
-                <button id="mobile-menu-close" class="absolute top-4 right-4 p-2">
+            class="mobile-menu fixed top-0 right-0 w-72 h-full bg-black/95 border-l border-gray-800 backdrop-blur-xl z-50 md:hidden">
+            <div class="p-6">
+                <button id="mobile-menu-close" class="absolute top-4 right-4 p-2 text-gray-400 hover:text-white">
                     <i class="fas fa-times text-xl"></i>
                 </button>
-                <nav class="space-y-4 text-gray-900 dark:text-gray-100">
-                    <a href="#home" data-i18n-key="nav_home" class="block py-2 hover:text-blue-600 transition-colors">Home</a>
-                    <a href="#about" data-i18n-key="nav_about" class="block py-2 hover:text-blue-600 transition-colors">About</a>
-                    <a href="#portfolio" data-i18n-key="nav_portfolio" class="block py-2 hover:text-blue-600 transition-colors">Portfolio</a>
-                    <a href="#blog" data-i18n-key="nav_blog" class="block py-2 hover:text-blue-600 transition-colors">Blog</a>
-                    <a href="#contact" data-i18n-key="nav_contact" class="block py-2 hover:text-blue-600 transition-colors">Contact</a>
-                    <button id="mobile-theme-toggle" class="flex items-center space-x-2 py-2">
+                <div class="mt-8 mb-6">
+                    <span class="text-xl font-bold gradient-text">Kanan Nuruyev</span>
+                </div>
+                <nav class="space-y-4 text-gray-200">
+                    <a href="#home" data-i18n-key="nav_home" class="block py-2 hover:text-orange-400 transition-colors">Home</a>
+                    <a href="#about" data-i18n-key="nav_about" class="block py-2 hover:text-orange-400 transition-colors">About</a>
+                    <a href="#portfolio" data-i18n-key="nav_portfolio" class="block py-2 hover:text-orange-400 transition-colors">Portfolio</a>
+                    <a href="#skills" data-i18n-key="nav_skills" class="block py-2 hover:text-orange-400 transition-colors">Skills</a>
+                    <a href="#contact" data-i18n-key="nav_contact" class="block py-2 hover:text-orange-400 transition-colors">Contact</a>
+                    <button id="mobile-theme-toggle" class="flex items-center space-x-2 py-2 w-full text-left text-gray-300">
                         <i class="fas fa-sun" id="mobile-icon-sun"></i>
                         <i class="fas fa-moon" id="mobile-icon-moon"></i>
                         <span id="mobile-text-light" data-i18n-key="light_theme">Light Theme</span>
                         <span id="mobile-text-dark" data-i18n-key="dark_theme">Dark Theme</span>
                     </button>
                     <!-- Mobile Language Switcher -->
-                    <div class="relative">
-                        <select id="mobile-language-switcher" class="w-full p-2 rounded-lg bg-gray-100 dark:bg-gray-800 dark:text-gray-100 appearance-none cursor-pointer text-gray-900 dark:text-gray-100">
-                            <option value="en" data-i18n-key="english"></option>
-                            <option value="az" data-i18n-key="azerbaijani"></option>
-                            <option value="ru" data-i18n-key="russian"></option>
+                    <div class="relative pt-2">
+                        <select id="mobile-language-switcher" class="w-full p-2.5 rounded-xl bg-gray-900 border border-gray-800 text-gray-200 appearance-none cursor-pointer">
+                            <option value="en" data-i18n-key="english">English</option>
+                            <option value="az" data-i18n-key="azerbaijani">Azerbaijani</option>
+                            <option value="ru" data-i18n-key="russian">Russian</option>
                         </select>
-                        <i class="fas fa-chevron-down absolute right-3 top-1/2 -translate-y-1/2 text-xs pointer-events-none text-gray-900 dark:text-gray-100"></i>
+                        <i class="fas fa-chevron-down absolute right-3 top-1/2 translate-y-1 text-xs pointer-events-none text-gray-400"></i>
                     </div>
                 </nav>
             </div>
         </div>
     </header>
 
-    <!-- Home Section -->
-    <section id="home" class="min-h-screen animated-bg flex items-center justify-center relative overflow-hidden">
+    <!-- Home / Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden bg-black text-white pt-24 pb-16">
+        <div class="absolute inset-0 gradient-bg opacity-20"></div>
         <div class="container mx-auto px-6 text-center text-white relative z-10">
             <div class="max-w-4xl mx-auto">
-                <h1 data-i18n-key="home_name" class="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">Kanan Nuruyev</h1>
-                <p data-i18n-key="home_subtitle" class="text-xl md:text-2xl mb-8 opacity-90">Content Creator • ASMRtist • Vibe Coder • Lifelong
-                    Learner</p>
-                <div class="marquee bg-black/20 rounded-full py-3 px-6 mb-8">
-                    <div data-i18n-key="home_marquee" class="marquee-content text-lg">
+                <div class="floating mb-8">
+                    <div class="w-44 h-44 md:w-52 md:h-52 mx-auto bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 rounded-2xl p-1 shadow-2xl shadow-purple-900/40 transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                        <img src="./src/images/home/cropped_circle_image.png" alt="Kanan Nuruyev Profile" class="rounded-xl w-full h-full object-cover">
+                    </div>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
+                    <span data-i18n-key="home_name" class="gradient-text">Kanan Nuruyev</span><br>
+                    <span data-i18n-key="home_subtitle" class="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold opacity-90 block mt-3">Content Creator • ASMRtist • Vibe Coder</span>
+                </h1>
+                <div class="marquee bg-gray-900/60 border border-gray-800 backdrop-blur-md rounded-full py-3 px-6 mb-8 max-w-2xl mx-auto">
+                    <div data-i18n-key="home_marquee" class="marquee-content text-base md:text-lg text-gray-300 font-medium">
                         Welcome to My Personal Website! Nice to Meet You!
                     </div>
                 </div>
-                <a href="#about" data-i18n-key="home_button" class="btn-primary inline-block px-8 py-3 rounded-full text-white font-semibold">
-                    Discover My Journey
-                </a>
+                <div class="flex justify-center mt-8 mb-16">
+                    <a href="#about" data-i18n-key="home_button" class="px-9 py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-xl font-semibold text-white hover:opacity-90 transition-all transform hover:scale-105 shadow-xl shadow-purple-600/30">
+                        Discover My Journey
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section-padding">
+    <section id="about" class="section-padding bg-black text-white relative">
         <div class="container mx-auto px-6">
             <div class="max-w-6xl mx-auto">
-                <h2 class="text-4xl font-bold text-center mb-12 scroll-animate" data-i18n-key="about_title">About Me</h2>
-                <div class="grid md:grid-cols-2 gap-16 items-center">
-                    <div class="scroll-animate">
-                        <h3 class="text-3xl font-semibold mb-6 leading-tight">
+                <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 scroll-animate gradient-text" data-i18n-key="about_title">
+                    About Me
+                </h2>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="card-gradient p-8 rounded-2xl border border-gray-800 scroll-animate hover-lift">
+                        <h3 class="text-2xl md:text-3xl font-bold mb-6 text-yellow-300 leading-tight">
                             <span data-i18n-key="about_description_1">I'm Kanan Nuruyev, a self-taught Content Creator from Azerbaijan.</span>
                         </h3>
-                        <p class="text-lg mb-6 leading-relaxed text-gray-600" data-i18n-key="about_description_2">
+                        <p class="text-gray-300 leading-relaxed mb-6 text-base md:text-lg" data-i18n-key="about_description_2">
                             I focus on emotional well-being, personal style, musical taste, and self-expression. Through calming ASMR, relatable storytelling, and daily commentary, I share my perspective on life, fashion, and personal growth.
                         </p>
-                        <p class="text-lg mb-6 leading-relaxed text-gray-600" data-i18n-key="about_description_3">
-                            My goal is to connect deeply with people who value honesty, calm, and creativity. Whether through an immersive ASMR video, a discussion on mental health, or a reaction to everyday topics, I aim to create a safe, grounded space for those who feel deeply and think widely.
-                            <br><br>
-                            <strong>My Approach:</strong><br>
-                            Voice: Genuine, calm, reflective, and human.<br>
-                            Languages: Azerbaijani, English, and Russian.<br>
-                            Platforms: YouTube, Instagram, and TikTok.<br>
-                            Delivery: Each with its own rhythm, but driven by the same core intention.
+                        <p class="text-gray-300 leading-relaxed text-base md:text-lg" data-i18n-key="about_description_3">
+                            My goal is to connect deeply with people who value honesty, calm, and creativity. Whether through an immersive ASMR video, a discussion on mental health, or building personal vibe coding projects, I aim to create a safe, grounded space for those who feel deeply and think widely.
                         </p>
-                        <div class="flex flex-wrap gap-3 pt-4">
-                            <span data-i18n-key="tag_content_creation"
-                                class="px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">Content
-                                Creation</span>
-                            <span data-i18n-key="tag_musical_taste"
-                                class="px-4 py-2 bg-pink-100 text-pink-800 rounded-full text-sm font-medium">Musical
-                                Taste</span>
-                            <span data-i18n-key="tag_asrm"
-                                class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">ASMR</span>
-                            <span data-i18n-key="tag_mental_health"
-                                class="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium">Mental
-                                Health</span>
-                            <span data-i18n-key="tag_self_expression"
-                                class="px-4 py-2 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">Self-Expression</span>
-                            <span data-i18n-key="tag_personal_style"
-                                class="px-4 py-2 bg-cyan-100 text-cyan-800 rounded-full text-sm font-medium">Personal
-                                Style</span>
-                            <span data-i18n-key="tag_storytelling"
-                                class="px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">Storytelling</span>
-                            <span data-i18n-key="tag_reactions"
-                                class="px-4 py-2 bg-red-100 text-red-800 rounded-full text-sm font-medium">Reactions</span>
+                        <div class="flex flex-wrap gap-2.5 pt-6 border-t border-gray-800/80 mt-6">
+                            <span data-i18n-key="tag_content_creation" class="brand-chip">Content Creation</span>
+                            <span data-i18n-key="tag_musical_taste" class="brand-chip">Musical Taste</span>
+                            <span data-i18n-key="tag_asrm" class="brand-chip">ASMR</span>
+                            <span data-i18n-key="tag_mental_health" class="brand-chip">Mental Health</span>
+                            <span data-i18n-key="tag_self_expression" class="brand-chip">Self-Expression</span>
+                            <span data-i18n-key="tag_personal_style" class="brand-chip">Personal Style</span>
+                            <span data-i18n-key="tag_storytelling" class="brand-chip">Storytelling</span>
+                            <span data-i18n-key="tag_reactions" class="brand-chip">Reactions</span>
                         </div>
                     </div>
-                    <div class="flex justify-center scroll-animate">
-                        <div
-                            class="w-72 h-72 md:w-80 md:h-80 mx-auto bg-gradient-to-br from-blue-400 to-purple-600 rounded-lg flex items-center justify-center text-white text-6xl shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                            <img src="/src/images/home/cropped_circle_image.png" alt="About Section Image"
-                                class="rounded-lg w-[95%] h-[95%] object-cover transform -rotate-3 hover:rotate-0 transition-transform duration-300">
+                    
+                    <div class="space-y-6 scroll-animate">
+                        <div class="flex items-center space-x-4 p-5 rounded-2xl card-gradient border border-gray-800 hover-lift">
+                            <div class="w-12 h-12 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center text-white shrink-0 shadow-lg">
+                                <i class="fas fa-code text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-white">Personal Website Projects & Vibe Coding</h4>
+                                <p class="text-gray-400 text-sm">Developing & maintaining my personal website projects with modern AI tools</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4 p-5 rounded-2xl card-gradient border border-gray-800 hover-lift">
+                            <div class="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex items-center justify-center text-white shrink-0 shadow-lg">
+                                <i class="fas fa-microphone-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-white">ASMRtist & Immersive Audio</h4>
+                                <p class="text-gray-400 text-sm">Crafting soothing roleplays & auditory triggers for global audiences</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4 p-5 rounded-2xl card-gradient border border-gray-800 hover-lift">
+                            <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-amber-500 rounded-xl flex items-center justify-center text-white shrink-0 shadow-lg">
+                                <i class="fas fa-heart text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-white">Storyteller & Authentic Connection</h4>
+                                <p class="text-gray-400 text-sm">Creating calm, grounded spaces for lifestyle content & daily commentary</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -195,7 +199,7 @@
     </section>
 
     <!-- Homepage Banner Ads -->
-    <section class="section-padding bg-gray-50">
+    <section class="section-padding bg-black border-y border-gray-900">
         <div class="container mx-auto px-6 flex justify-center">
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3594838591909550"
                  crossorigin="anonymous"></script>
@@ -213,28 +217,30 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="section-padding">
+    <section id="portfolio" class="section-padding bg-black text-white">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12 scroll-animate" data-i18n-key="portfolio_title">Portfolio</h2>
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 scroll-animate gradient-text" data-i18n-key="portfolio_title">
+                Portfolio
+            </h2>
 
             <!-- Brand Overview -->
-            <div class="mb-16">
-                <h3 class="text-2xl font-semibold mb-4 scroll-animate text-center" data-i18n-key="brands_overview">Brands Overview</h3>
-                <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-10 leading-7 text-center scroll-animate" data-i18n-key="brands_overview_desc">
+            <div class="mb-20">
+                <h3 class="text-2xl md:text-3xl font-bold mb-4 scroll-animate text-center gradient-text" data-i18n-key="brands_overview">Brands Overview</h3>
+                <p class="text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed text-center scroll-animate text-base md:text-lg" data-i18n-key="brands_overview_desc">
                     Explore the portfolio of brands I manage across professional growth, ASMR storytelling, lifestyle guidance, and local-language channels. Each card highlights audience focus, content direction, and sample work that demonstrates the breadth of the brand experience.
                 </p>
 
                 <div class="brand-grid grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
 
                     <!-- KANANNURUYEVS -->
-                    <div class="card-hover brand-card top-row rounded-3xl p-6 shadow-lg flex flex-col">
-                        <div class="flex items-start gap-4 mb-4">
-                            <div class="w-14 h-14 rounded-full brand-avatar overflow-hidden">
-                                <img src="./src/images/brand-avatars/kanannuruyevs-avatar.png" alt="KANANNURUYEVS avatar" class="w-full h-full object-cover">
+                    <div class="card-gradient hover-lift brand-card top-row rounded-2xl p-6 border border-gray-800 flex flex-col">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <div class="w-14 h-14 rounded-full bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 p-0.5 shrink-0 shadow-lg">
+                                <img src="./src/images/brand-avatars/kanannuruyevs-avatar.png" alt="KANANNURUYEVS avatar" class="w-full h-full rounded-full object-cover">
                             </div>
                             <div>
-                                <h4 class="text-xl font-semibold mb-1" data-i18n-key="brand_kanannuruyevs">KANANNURUYEVS</h4>
-                                <p class="text-sm text-gray-500 dark:text-gray-400" data-i18n-key="brand_kanannuruyevs_type">Work Brand</p>
+                                <h4 class="text-xl font-bold gradient-text" data-i18n-key="brand_kanannuruyevs">KANANNURUYEVS</h4>
+                                <p class="text-xs text-gray-400" data-i18n-key="brand_kanannuruyevs_type">Work & Digital Growth Brand</p>
                             </div>
                         </div>
                         <div class="flex flex-wrap gap-2 mb-4">
@@ -244,7 +250,7 @@
                             <span class="brand-chip" data-i18n-key="tag_smm">SMM</span>
                             <span class="brand-chip" data-i18n-key="tag_career_growth">Career Growth</span>
                         </div>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-5" data-i18n-key="brand_kanannuruyevs_desc">
+                        <p class="text-gray-300 text-sm leading-relaxed mb-5" data-i18n-key="brand_kanannuruyevs_desc">
                             Targets a professional audience. The content focuses on digital growth, content creation, and other work-related topics.
                         </p>
                         <div class="brand-reach-badge">
@@ -263,17 +269,23 @@
                             <div class="brand-panel-inner">
                                 <div class="brand-section-title" data-i18n-key="best_content">Best Content</div>
                                 <div class="brand-content-grid">
-                                    <a href="https://youtube.com/@kanannuruyevs" target="_blank" class="brand-thumb">
-                                        <img src="https://placehold.co/200x250/667eea/ffffff/png?text=YouTube" alt="YouTube content">
-                                        <div class="brand-thumb-overlay"><span class="brand-thumb-badge"><i class="fab fa-youtube"></i> YouTube</span></div>
+                                    <a href="https://youtube.com/@kanannuruyevs" target="_blank" class="brand-thumb group">
+                                        <img src="https://placehold.co/200x250/1e1b4b/ffffff/png?text=YouTube" alt="YouTube content">
+                                        <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2">
+                                            <span class="brand-thumb-badge"><i class="fab fa-youtube text-red-500"></i> YouTube</span>
+                                        </div>
                                     </a>
-                                    <a href="https://tiktok.com/@kanannuruyevs" target="_blank" class="brand-thumb">
-                                        <img src="https://placehold.co/200x250/764ba2/ffffff/png?text=TikTok" alt="TikTok content">
-                                        <div class="brand-thumb-overlay"><span class="brand-thumb-badge"><i class="fab fa-tiktok"></i> TikTok</span></div>
+                                    <a href="https://tiktok.com/@kanannuruyevs" target="_blank" class="brand-thumb group">
+                                        <img src="https://placehold.co/200x250/312e81/ffffff/png?text=TikTok" alt="TikTok content">
+                                        <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2">
+                                            <span class="brand-thumb-badge"><i class="fab fa-tiktok"></i> TikTok</span>
+                                        </div>
                                     </a>
-                                    <a href="https://instagram.com/kanannuruyevs" target="_blank" class="brand-thumb">
-                                        <img src="https://placehold.co/200x250/a855f7/ffffff/png?text=Instagram" alt="Instagram content">
-                                        <div class="brand-thumb-overlay"><span class="brand-thumb-badge"><i class="fab fa-instagram"></i> Instagram</span></div>
+                                    <a href="https://instagram.com/kanannuruyevs" target="_blank" class="brand-thumb group">
+                                        <img src="https://placehold.co/200x250/4c1d95/ffffff/png?text=Instagram" alt="Instagram content">
+                                        <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2">
+                                            <span class="brand-thumb-badge"><i class="fab fa-instagram text-pink-500"></i> Instagram</span>
+                                        </div>
                                     </a>
                                 </div>
                                 <div class="brand-tab-bar">
@@ -298,9 +310,9 @@
                                     </a>
                                 </div>
                                 <div id="knr-stats" class="brand-tab-panel">
-                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_reach">Combined Reach</span><span class="bsr-value">30K+</span></div>
-                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_engagement">Avg. Engagement</span><div class="bsr-bar-wrap"><div class="bsr-bar-bg"><div class="bsr-bar-fill" style="width:54%"></div></div><span class="bsr-value">5.4%</span></div></div>
-                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_age">Core Audience</span><span class="bsr-value">18 – 34</span></div>
+                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_reach">Combined Reach</span><span class="bsr-value text-white">30K+</span></div>
+                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_engagement">Avg. Engagement</span><div class="bsr-bar-wrap"><div class="bsr-bar-bg"><div class="bsr-bar-fill" style="width:54%"></div></div><span class="bsr-value text-white">5.4%</span></div></div>
+                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_age">Core Audience</span><span class="bsr-value text-white">18 – 34</span></div>
                                 </div>
                                 <a href="./media-kit.html" target="_blank" class="brand-collab-btn">
                                     <i class="fas fa-file-alt"></i> <span data-i18n-key="download_media_kit">Download Media Kit</span>
@@ -310,14 +322,14 @@
                     </div>
 
                     <!-- KANANWHISPERSASMR -->
-                    <div class="card-hover brand-card top-row rounded-3xl p-6 shadow-lg flex flex-col">
-                        <div class="flex items-start gap-4 mb-4">
-                            <div class="w-14 h-14 rounded-full brand-avatar overflow-hidden">
-                                <img src="./src/images/brand-avatars/kananwhispersasmr-avatar.png" alt="KANANWHISPERSASMR avatar" class="w-full h-full object-cover">
+                    <div class="card-gradient hover-lift brand-card top-row rounded-2xl p-6 border border-gray-800 flex flex-col">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <div class="w-14 h-14 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 p-0.5 shrink-0 shadow-lg">
+                                <img src="./src/images/brand-avatars/kananwhispersasmr-avatar.png" alt="KANANWHISPERSASMR avatar" class="w-full h-full rounded-full object-cover">
                             </div>
                             <div>
-                                <h4 class="text-xl font-semibold mb-1" data-i18n-key="brand_kananwhispersasmr">KANANWHISPERSASMR</h4>
-                                <p class="text-sm text-gray-500 dark:text-gray-400" data-i18n-key="brand_kananwhispersasmr_type">ASMR Brand</p>
+                                <h4 class="text-xl font-bold gradient-text" data-i18n-key="brand_kananwhispersasmr">KANANWHISPERSASMR</h4>
+                                <p class="text-xs text-gray-400" data-i18n-key="brand_kananwhispersasmr_type">ASMR Brand</p>
                             </div>
                         </div>
                         <div class="flex flex-wrap gap-2 mb-4">
@@ -326,7 +338,7 @@
                             <span class="brand-chip" data-i18n-key="tag_roleplay">Roleplay</span>
                             <span class="brand-chip" data-i18n-key="tag_multilingual">Multilingual</span>
                         </div>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-5" data-i18n-key="brand_kananwhispersasmr_desc">
+                        <p class="text-gray-300 text-sm leading-relaxed mb-5" data-i18n-key="brand_kananwhispersasmr_desc">
                             Targets an international audience. The content focuses on ASMR roleplays, triggers, and other related topics.
                         </p>
                         <div class="brand-reach-badge">
@@ -345,17 +357,23 @@
                             <div class="brand-panel-inner">
                                 <div class="brand-section-title" data-i18n-key="best_content">Best Content</div>
                                 <div class="brand-content-grid">
-                                    <div class="brand-thumb">
-                                        <img src="https://placehold.co/200x250/f43f5e/ffffff/png?text=ASMR+1" alt="ASMR content 1">
-                                        <div class="brand-thumb-overlay"><span class="brand-thumb-badge"><i class="fab fa-youtube"></i> YouTube</span></div>
+                                    <div class="brand-thumb group">
+                                        <img src="https://placehold.co/200x250/701a75/ffffff/png?text=ASMR+1" alt="ASMR content 1">
+                                        <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2">
+                                            <span class="brand-thumb-badge"><i class="fab fa-youtube text-red-500"></i> YouTube</span>
+                                        </div>
                                     </div>
-                                    <div class="brand-thumb">
-                                        <img src="https://placehold.co/200x250/ec4899/ffffff/png?text=ASMR+2" alt="ASMR content 2">
-                                        <div class="brand-thumb-overlay"><span class="brand-thumb-badge"><i class="fab fa-tiktok"></i> TikTok</span></div>
+                                    <div class="brand-thumb group">
+                                        <img src="https://placehold.co/200x250/831843/ffffff/png?text=ASMR+2" alt="ASMR content 2">
+                                        <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2">
+                                            <span class="brand-thumb-badge"><i class="fab fa-tiktok"></i> TikTok</span>
+                                        </div>
                                     </div>
-                                    <div class="brand-thumb">
-                                        <img src="https://placehold.co/200x250/db2777/ffffff/png?text=ASMR+3" alt="ASMR content 3">
-                                        <div class="brand-thumb-overlay"><span class="brand-thumb-badge"><i class="fab fa-instagram"></i> Instagram</span></div>
+                                    <div class="brand-thumb group">
+                                        <img src="https://placehold.co/200x250/9f1239/ffffff/png?text=ASMR+3" alt="ASMR content 3">
+                                        <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2">
+                                            <span class="brand-thumb-badge"><i class="fab fa-instagram text-pink-500"></i> Instagram</span>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="brand-tab-bar">
@@ -380,9 +398,9 @@
                                     </div>
                                 </div>
                                 <div id="kwa-stats" class="brand-tab-panel">
-                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_reach">Combined Reach</span><span class="bsr-value">60K+</span></div>
-                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_engagement">Avg. Engagement</span><div class="bsr-bar-wrap"><div class="bsr-bar-bg"><div class="bsr-bar-fill" style="width:62%"></div></div><span class="bsr-value">6.2%</span></div></div>
-                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_age">Core Audience</span><span class="bsr-value">18 – 34</span></div>
+                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_reach">Combined Reach</span><span class="bsr-value text-white">60K+</span></div>
+                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_engagement">Avg. Engagement</span><div class="bsr-bar-wrap"><div class="bsr-bar-bg"><div class="bsr-bar-fill" style="width:62%"></div></div><span class="bsr-value text-white">6.2%</span></div></div>
+                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_age">Core Audience</span><span class="bsr-value text-white">18 – 34</span></div>
                                 </div>
                                 <a href="./media-kit.html" target="_blank" class="brand-collab-btn">
                                     <i class="fas fa-file-alt"></i> <span data-i18n-key="download_media_kit">Download Media Kit</span>
@@ -392,14 +410,14 @@
                     </div>
 
                     <!-- KANANSNOTE -->
-                    <div class="card-hover brand-card top-row rounded-3xl p-6 shadow-lg flex flex-col">
-                        <div class="flex items-start gap-4 mb-4">
-                            <div class="w-14 h-14 rounded-full brand-avatar overflow-hidden">
-                                <img src="./src/images/brand-avatars/kanansnote-avatar.png" alt="KANANSNOTE avatar" class="w-full h-full object-cover">
+                    <div class="card-gradient hover-lift brand-card top-row rounded-2xl p-6 border border-gray-800 flex flex-col">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <div class="w-14 h-14 rounded-full bg-gradient-to-r from-blue-500 to-teal-400 p-0.5 shrink-0 shadow-lg">
+                                <img src="./src/images/brand-avatars/kanansnote-avatar.png" alt="KANANSNOTE avatar" class="w-full h-full rounded-full object-cover">
                             </div>
                             <div>
-                                <h4 class="text-xl font-semibold mb-1" data-i18n-key="brand_kanansnote">KANANSNOTE</h4>
-                                <p class="text-sm text-gray-500 dark:text-gray-400" data-i18n-key="brand_kanansnote_type">Personal Brand</p>
+                                <h4 class="text-xl font-bold gradient-text" data-i18n-key="brand_kanansnote">KANANSNOTE</h4>
+                                <p class="text-xs text-gray-400" data-i18n-key="brand_kanansnote_type">Personal Brand</p>
                             </div>
                         </div>
                         <div class="flex flex-wrap gap-2 mb-4">
@@ -409,7 +427,7 @@
                             <span class="brand-chip" data-i18n-key="tag_reactions">Reactions</span>
                             <span class="brand-chip" data-i18n-key="tag_english">English</span>
                         </div>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-5" data-i18n-key="brand_kanansnote_desc">
+                        <p class="text-gray-300 text-sm leading-relaxed mb-5" data-i18n-key="brand_kanansnote_desc">
                             Targets an international audience. The content focuses on lifestyle, self-improvement, mental health, fashion, and entertainment.
                         </p>
                         <div class="brand-reach-badge">
@@ -428,17 +446,23 @@
                             <div class="brand-panel-inner">
                                 <div class="brand-section-title" data-i18n-key="best_content">Best Content</div>
                                 <div class="brand-content-grid">
-                                    <a href="https://instagram.com/kanansnote" target="_blank" class="brand-thumb">
-                                        <img src="https://placehold.co/200x250/0ea5e9/ffffff/png?text=Lifestyle" alt="Lifestyle content">
-                                        <div class="brand-thumb-overlay"><span class="brand-thumb-badge"><i class="fab fa-instagram"></i> Instagram</span></div>
+                                    <a href="https://instagram.com/kanansnote" target="_blank" class="brand-thumb group">
+                                        <img src="https://placehold.co/200x250/0c4a6e/ffffff/png?text=Lifestyle" alt="Lifestyle content">
+                                        <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2">
+                                            <span class="brand-thumb-badge"><i class="fab fa-instagram text-pink-500"></i> Instagram</span>
+                                        </div>
                                     </a>
-                                    <a href="https://tiktok.com/@kanansnote" target="_blank" class="brand-thumb">
-                                        <img src="https://placehold.co/200x250/38bdf8/ffffff/png?text=TikTok" alt="TikTok content">
-                                        <div class="brand-thumb-overlay"><span class="brand-thumb-badge"><i class="fab fa-tiktok"></i> TikTok</span></div>
+                                    <a href="https://tiktok.com/@kanansnote" target="_blank" class="brand-thumb group">
+                                        <img src="https://placehold.co/200x250/0369a1/ffffff/png?text=TikTok" alt="TikTok content">
+                                        <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2">
+                                            <span class="brand-thumb-badge"><i class="fab fa-tiktok"></i> TikTok</span>
+                                        </div>
                                     </a>
-                                    <a href="https://youtube.com/@kanansnote" target="_blank" class="brand-thumb">
-                                        <img src="https://placehold.co/200x250/06b6d4/ffffff/png?text=YouTube" alt="YouTube content">
-                                        <div class="brand-thumb-overlay"><span class="brand-thumb-badge"><i class="fab fa-youtube"></i> YouTube</span></div>
+                                    <a href="https://youtube.com/@kanansnote" target="_blank" class="brand-thumb group">
+                                        <img src="https://placehold.co/200x250/0284c7/ffffff/png?text=YouTube" alt="YouTube content">
+                                        <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2">
+                                            <span class="brand-thumb-badge"><i class="fab fa-youtube text-red-500"></i> YouTube</span>
+                                        </div>
                                     </a>
                                 </div>
                                 <div class="brand-tab-bar">
@@ -463,9 +487,9 @@
                                     </a>
                                 </div>
                                 <div id="ksn-stats" class="brand-tab-panel">
-                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_reach">Combined Reach</span><span class="bsr-value">95K+</span></div>
-                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_engagement">Avg. Engagement</span><div class="bsr-bar-wrap"><div class="bsr-bar-bg"><div class="bsr-bar-fill" style="width:48%"></div></div><span class="bsr-value">4.8%</span></div></div>
-                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_age">Core Audience</span><span class="bsr-value">18 – 34</span></div>
+                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_reach">Combined Reach</span><span class="bsr-value text-white">95K+</span></div>
+                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_engagement">Avg. Engagement</span><div class="bsr-bar-wrap"><div class="bsr-bar-bg"><div class="bsr-bar-fill" style="width:48%"></div></div><span class="bsr-value text-white">4.8%</span></div></div>
+                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_age">Core Audience</span><span class="bsr-value text-white">18 – 34</span></div>
                                 </div>
                                 <a href="./media-kit.html" target="_blank" class="brand-collab-btn">
                                     <i class="fas fa-file-alt"></i> <span data-i18n-key="download_media_kit">Download Media Kit</span>
@@ -475,14 +499,14 @@
                     </div>
 
                     <!-- KANANSNOTEAZE -->
-                    <div class="card-hover brand-card rounded-3xl p-6 shadow-lg flex flex-col">
-                        <div class="flex items-start gap-4 mb-4">
-                            <div class="w-14 h-14 rounded-full brand-avatar overflow-hidden">
-                                <img src="./src/images/brand-avatars/kanansnoteaze-avatar.png" alt="KANANSNOTEAZE avatar" class="w-full h-full object-cover">
+                    <div class="card-gradient hover-lift brand-card rounded-2xl p-6 border border-gray-800 flex flex-col">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <div class="w-14 h-14 rounded-full bg-gradient-to-r from-amber-500 to-orange-600 p-0.5 shrink-0 shadow-lg">
+                                <img src="./src/images/brand-avatars/kanansnoteaze-avatar.png" alt="KANANSNOTEAZE avatar" class="w-full h-full rounded-full object-cover">
                             </div>
                             <div>
-                                <h4 class="text-xl font-semibold mb-1" data-i18n-key="brand_kanansnoteaze">KANANSNOTEAZE</h4>
-                                <p class="text-sm text-gray-500 dark:text-gray-400" data-i18n-key="brand_kanansnoteaze_type">Personal Brand</p>
+                                <h4 class="text-xl font-bold gradient-text" data-i18n-key="brand_kanansnoteaze">KANANSNOTEAZE</h4>
+                                <p class="text-xs text-gray-400" data-i18n-key="brand_kanansnoteaze_type">Personal Brand</p>
                             </div>
                         </div>
                         <div class="flex flex-wrap gap-2 mb-4">
@@ -492,7 +516,7 @@
                             <span class="brand-chip" data-i18n-key="tag_reactions">Reactions</span>
                             <span class="brand-chip" data-i18n-key="tag_azerbaijani">Azerbaijani</span>
                         </div>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-5" data-i18n-key="brand_kanansnoteaze_desc">
+                        <p class="text-gray-300 text-sm leading-relaxed mb-5" data-i18n-key="brand_kanansnoteaze_desc">
                             Targets the Azerbaijani audience. The content focuses on lifestyle, self-improvement, mental health, fashion, and entertainment.
                         </p>
                         <div class="brand-reach-badge">
@@ -511,17 +535,23 @@
                             <div class="brand-panel-inner">
                                 <div class="brand-section-title" data-i18n-key="best_content">Best Content</div>
                                 <div class="brand-content-grid">
-                                    <a href="https://instagram.com/kanansnoteaze" target="_blank" class="brand-thumb">
-                                        <img src="https://placehold.co/200x250/f97316/ffffff/png?text=AZE+1" alt="Azerbaijani content 1">
-                                        <div class="brand-thumb-overlay"><span class="brand-thumb-badge"><i class="fab fa-instagram"></i> Instagram</span></div>
+                                    <a href="https://instagram.com/kanansnoteaze" target="_blank" class="brand-thumb group">
+                                        <img src="https://placehold.co/200x250/7c2d12/ffffff/png?text=AZE+1" alt="Azerbaijani content 1">
+                                        <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2">
+                                            <span class="brand-thumb-badge"><i class="fab fa-instagram text-pink-500"></i> Instagram</span>
+                                        </div>
                                     </a>
-                                    <a href="https://tiktok.com/@kanansnoteaze" target="_blank" class="brand-thumb">
-                                        <img src="https://placehold.co/200x250/fb923c/ffffff/png?text=AZE+2" alt="Azerbaijani content 2">
-                                        <div class="brand-thumb-overlay"><span class="brand-thumb-badge"><i class="fab fa-tiktok"></i> TikTok</span></div>
+                                    <a href="https://tiktok.com/@kanansnoteaze" target="_blank" class="brand-thumb group">
+                                        <img src="https://placehold.co/200x250/9a3412/ffffff/png?text=AZE+2" alt="Azerbaijani content 2">
+                                        <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2">
+                                            <span class="brand-thumb-badge"><i class="fab fa-tiktok"></i> TikTok</span>
+                                        </div>
                                     </a>
-                                    <div class="brand-thumb">
-                                        <img src="https://placehold.co/200x250/fdba74/ffffff/png?text=AZE+3" alt="Azerbaijani content 3">
-                                        <div class="brand-thumb-overlay"><span class="brand-thumb-badge"><i class="fas fa-photo-film"></i> Content</span></div>
+                                    <div class="brand-thumb group">
+                                        <img src="https://placehold.co/200x250/c2410c/ffffff/png?text=AZE+3" alt="Azerbaijani content 3">
+                                        <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2">
+                                            <span class="brand-thumb-badge"><i class="fas fa-photo-film"></i> Content</span>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="brand-tab-bar">
@@ -541,9 +571,9 @@
                                     </a>
                                 </div>
                                 <div id="kaze-stats" class="brand-tab-panel">
-                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_reach">Combined Reach</span><span class="bsr-value">45K+</span></div>
-                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_engagement">Avg. Engagement</span><div class="bsr-bar-wrap"><div class="bsr-bar-bg"><div class="bsr-bar-fill" style="width:51%"></div></div><span class="bsr-value">5.1%</span></div></div>
-                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_age">Core Audience</span><span class="bsr-value">18 – 34</span></div>
+                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_reach">Combined Reach</span><span class="bsr-value text-white">45K+</span></div>
+                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_engagement">Avg. Engagement</span><div class="bsr-bar-wrap"><div class="bsr-bar-bg"><div class="bsr-bar-fill" style="width:51%"></div></div><span class="bsr-value text-white">5.1%</span></div></div>
+                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_age">Core Audience</span><span class="bsr-value text-white">18 – 34</span></div>
                                 </div>
                                 <a href="./media-kit.html" target="_blank" class="brand-collab-btn">
                                     <i class="fas fa-file-alt"></i> <span data-i18n-key="download_media_kit">Download Media Kit</span>
@@ -553,14 +583,14 @@
                     </div>
 
                     <!-- KANANSNOTERU -->
-                    <div class="card-hover brand-card rounded-3xl p-6 shadow-lg flex flex-col">
-                        <div class="flex items-start gap-4 mb-4">
-                            <div class="w-14 h-14 rounded-full brand-avatar overflow-hidden">
-                                <img src="./src/images/brand-avatars/kanansnoteru-avatar.png" alt="KANANSNOTERU avatar" class="w-full h-full object-cover">
+                    <div class="card-gradient hover-lift brand-card rounded-2xl p-6 border border-gray-800 flex flex-col">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <div class="w-14 h-14 rounded-full bg-gradient-to-r from-red-500 to-rose-600 p-0.5 shrink-0 shadow-lg">
+                                <img src="./src/images/brand-avatars/kanansnoteru-avatar.png" alt="KANANSNOTERU avatar" class="w-full h-full rounded-full object-cover">
                             </div>
                             <div>
-                                <h4 class="text-xl font-semibold mb-1" data-i18n-key="brand_kanansnoteru">KANANSNOTERU</h4>
-                                <p class="text-sm text-gray-500 dark:text-gray-400" data-i18n-key="brand_kanansnoteru_type">Personal Brand</p>
+                                <h4 class="text-xl font-bold gradient-text" data-i18n-key="brand_kanansnoteru">KANANSNOTERU</h4>
+                                <p class="text-xs text-gray-400" data-i18n-key="brand_kanansnoteru_type">Personal Brand</p>
                             </div>
                         </div>
                         <div class="flex flex-wrap gap-2 mb-4">
@@ -570,7 +600,7 @@
                             <span class="brand-chip" data-i18n-key="tag_reactions">Reactions</span>
                             <span class="brand-chip" data-i18n-key="tag_russian">Russian</span>
                         </div>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-5" data-i18n-key="brand_kanansnoteru_desc">
+                        <p class="text-gray-300 text-sm leading-relaxed mb-5" data-i18n-key="brand_kanansnoteru_desc">
                             Targets the Russian-speaking audience. The content focuses on lifestyle, self-improvement, mental health, fashion, and entertainment.
                         </p>
                         <div class="brand-reach-badge">
@@ -589,17 +619,23 @@
                             <div class="brand-panel-inner">
                                 <div class="brand-section-title" data-i18n-key="best_content">Best Content</div>
                                 <div class="brand-content-grid">
-                                    <a href="https://instagram.com/kanansnoteru" target="_blank" class="brand-thumb">
-                                        <img src="https://placehold.co/200x250/ef4444/ffffff/png?text=RU+1" alt="Russian content 1">
-                                        <div class="brand-thumb-overlay"><span class="brand-thumb-badge"><i class="fab fa-instagram"></i> Instagram</span></div>
+                                    <a href="https://instagram.com/kanansnoteru" target="_blank" class="brand-thumb group">
+                                        <img src="https://placehold.co/200x250/881337/ffffff/png?text=RU+1" alt="Russian content 1">
+                                        <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2">
+                                            <span class="brand-thumb-badge"><i class="fab fa-instagram text-pink-500"></i> Instagram</span>
+                                        </div>
                                     </a>
-                                    <a href="https://tiktok.com/@kanansnoteru" target="_blank" class="brand-thumb">
-                                        <img src="https://placehold.co/200x250/dc2626/ffffff/png?text=RU+2" alt="Russian content 2">
-                                        <div class="brand-thumb-overlay"><span class="brand-thumb-badge"><i class="fab fa-tiktok"></i> TikTok</span></div>
+                                    <a href="https://tiktok.com/@kanansnoteru" target="_blank" class="brand-thumb group">
+                                        <img src="https://placehold.co/200x250/9f1239/ffffff/png?text=RU+2" alt="Russian content 2">
+                                        <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2">
+                                            <span class="brand-thumb-badge"><i class="fab fa-tiktok"></i> TikTok</span>
+                                        </div>
                                     </a>
-                                    <div class="brand-thumb">
-                                        <img src="https://placehold.co/200x250/b91c1c/ffffff/png?text=RU+3" alt="Russian content 3">
-                                        <div class="brand-thumb-overlay"><span class="brand-thumb-badge"><i class="fas fa-photo-film"></i> Content</span></div>
+                                    <div class="brand-thumb group">
+                                        <img src="https://placehold.co/200x250/be123c/ffffff/png?text=RU+3" alt="Russian content 3">
+                                        <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2">
+                                            <span class="brand-thumb-badge"><i class="fas fa-photo-film"></i> Content</span>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="brand-tab-bar">
@@ -619,9 +655,9 @@
                                     </a>
                                 </div>
                                 <div id="kru-stats" class="brand-tab-panel">
-                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_reach">Combined Reach</span><span class="bsr-value">60K+</span></div>
-                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_engagement">Avg. Engagement</span><div class="bsr-bar-wrap"><div class="bsr-bar-bg"><div class="bsr-bar-fill" style="width:46%"></div></div><span class="bsr-value">4.6%</span></div></div>
-                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_age">Core Audience</span><span class="bsr-value">18 – 34</span></div>
+                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_reach">Combined Reach</span><span class="bsr-value text-white">60K+</span></div>
+                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_engagement">Avg. Engagement</span><div class="bsr-bar-wrap"><div class="bsr-bar-bg"><div class="bsr-bar-fill" style="width:46%"></div></div><span class="bsr-value text-white">4.6%</span></div></div>
+                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_age">Core Audience</span><span class="bsr-value text-white">18 – 34</span></div>
                                 </div>
                                 <a href="./media-kit.html" target="_blank" class="brand-collab-btn">
                                     <i class="fas fa-file-alt"></i> <span data-i18n-key="download_media_kit">Download Media Kit</span>
@@ -635,304 +671,242 @@
             </div>
 
             <!-- Coding Projects -->
-            <div class="mb-16">
-                <h3 class="text-2xl font-semibold mb-8 scroll-animate" data-i18n-key="coding_projects">Coding Projects</h3>
+            <div class="mb-20">
+                <h3 class="text-2xl md:text-3xl font-bold mb-8 scroll-animate text-center gradient-text" data-i18n-key="coding_projects">Coding Projects</h3>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                    <div class="project-card rounded-xl p-6">
-                        <div
-                            class="w-full h-48 bg-gradient-to-br from-blue-400 to-purple-600 rounded-lg mb-4 flex items-center justify-center text-white text-4xl">
+                    <div class="project-card card-gradient rounded-2xl p-6 border border-gray-800 hover-lift flex flex-col">
+                        <div class="w-full h-44 bg-gradient-to-br from-blue-600 to-indigo-900 rounded-xl mb-5 flex items-center justify-center text-white text-4xl shadow-inner">
                             <i class="fas fa-code"></i>
                         </div>
-                        <h4 class="text-xl font-semibold mb-2" data-i18n-key="project_hivency">Hivency Template Task</h4>
-                        <p class="text-gray-600 mb-4" data-i18n-key="project_hivency_desc">Responsive template project</p>
+                        <h4 class="text-xl font-bold text-white mb-2" data-i18n-key="project_hivency">Hivency Template Task</h4>
+                        <p class="text-gray-400 text-sm mb-5 flex-1" data-i18n-key="project_hivency_desc">Responsive template project</p>
                         <a href="https://kanansnote-hivency-template-task.vercel.app" target="_blank"
-                            class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors" data-i18n-key="view_project">View Project <i class="fas fa-external-link-alt ml-2"></i>
+                            class="inline-flex items-center text-orange-400 hover:text-orange-300 font-semibold text-sm transition-colors" data-i18n-key="view_project">View Project <i class="fas fa-external-link-alt ml-2 text-xs"></i>
                         </a>
                     </div>
 
-                    <div class="project-card rounded-xl p-6">
-                        <div
-                            class="w-full h-48 bg-gradient-to-br from-green-400 to-blue-600 rounded-lg mb-4 flex items-center justify-center text-white text-4xl">
+                    <div class="project-card card-gradient rounded-2xl p-6 border border-gray-800 hover-lift flex flex-col">
+                        <div class="w-full h-44 bg-gradient-to-br from-emerald-600 to-teal-900 rounded-xl mb-5 flex items-center justify-center text-white text-4xl shadow-inner">
                             <i class="fas fa-code"></i>
                         </div>
-                        <h4 class="text-xl font-semibold mb-2" data-i18n-key="project_ogenix">Ogenix Template Task</h4>
-                        <p class="text-gray-600 mb-4" data-i18n-key="project_ogenix_desc">Modern, clean template design</p>
+                        <h4 class="text-xl font-bold text-white mb-2" data-i18n-key="project_ogenix">Ogenix Template Task</h4>
+                        <p class="text-gray-400 text-sm mb-5 flex-1" data-i18n-key="project_ogenix_desc">Modern, clean template design</p>
                         <a href="https://kanansnote-ogenix-template-task.vercel.app" target="_blank"
-                            class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors" data-i18n-key="view_project">View Project <i class="fas fa-external-link-alt ml-2"></i>
+                            class="inline-flex items-center text-orange-400 hover:text-orange-300 font-semibold text-sm transition-colors" data-i18n-key="view_project">View Project <i class="fas fa-external-link-alt ml-2 text-xs"></i>
                         </a>
                     </div>
 
-                    <div class="project-card rounded-xl p-6">
-                        <div
-                            class="w-full h-48 bg-gradient-to-br from-purple-400 to-pink-600 rounded-lg mb-4 flex items-center justify-center text-white text-4xl">
+                    <div class="project-card card-gradient rounded-2xl p-6 border border-gray-800 hover-lift flex flex-col">
+                        <div class="w-full h-44 bg-gradient-to-br from-purple-600 to-pink-900 rounded-xl mb-5 flex items-center justify-center text-white text-4xl shadow-inner">
                             <i class="fas fa-code"></i>
                         </div>
-                        <h4 class="text-xl font-semibold mb-2" data-i18n-key="project_xhibiter">Xhibiter Template Task</h4>
-                        <p class="text-gray-600 mb-4" data-i18n-key="project_xhibiter_desc">Creative template development</p>
+                        <h4 class="text-xl font-bold text-white mb-2" data-i18n-key="project_xhibiter">Xhibiter Template Task</h4>
+                        <p class="text-gray-400 text-sm mb-5 flex-1" data-i18n-key="project_xhibiter_desc">Creative template development</p>
                         <a href="https://kanansnote-xhibiter-template-task.vercel.app" target="_blank"
-                            class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors" data-i18n-key="view_project">View Project <i class="fas fa-external-link-alt ml-2"></i>
+                            class="inline-flex items-center text-orange-400 hover:text-orange-300 font-semibold text-sm transition-colors" data-i18n-key="view_project">View Project <i class="fas fa-external-link-alt ml-2 text-xs"></i>
                         </a>
                     </div>
 
-                    <div class="project-card rounded-xl p-6">
-                        <div
-                            class="w-full h-48 bg-gradient-to-br from-indigo-400 to-purple-600 rounded-lg mb-4 flex items-center justify-center text-white text-4xl">
+                    <div class="project-card card-gradient rounded-2xl p-6 border border-gray-800 hover-lift flex flex-col">
+                        <div class="w-full h-44 bg-gradient-to-br from-indigo-600 to-purple-900 rounded-xl mb-5 flex items-center justify-center text-white text-4xl shadow-inner">
                             <i class="fas fa-code"></i>
                         </div>
-                        <h4 class="text-xl font-semibold mb-2" data-i18n-key="project_themedox">Themedox Template Task</h4>
-                        <p class="text-gray-600 mb-4" data-i18n-key="project_themedox_desc">Theme customization project</p>
+                        <h4 class="text-xl font-bold text-white mb-2" data-i18n-key="project_themedox">Themedox Template Task</h4>
+                        <p class="text-gray-400 text-sm mb-5 flex-1" data-i18n-key="project_themedox_desc">Theme customization project</p>
                         <a href="https://kanansnote-themedox-template-task.vercel.app" target="_blank"
-                            class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors" data-i18n-key="view_project">View Project <i class="fas fa-external-link-alt ml-2"></i>
+                            class="inline-flex items-center text-orange-400 hover:text-orange-300 font-semibold text-sm transition-colors" data-i18n-key="view_project">View Project <i class="fas fa-external-link-alt ml-2 text-xs"></i>
                         </a>
                     </div>
 
-                    <div class="project-card rounded-xl p-6">
-                        <div
-                            class="w-full h-48 bg-gradient-to-br from-pink-400 to-red-600 rounded-lg mb-4 flex items-center justify-center text-white text-4xl">
+                    <div class="project-card card-gradient rounded-2xl p-6 border border-gray-800 hover-lift flex flex-col">
+                        <div class="w-full h-44 bg-gradient-to-br from-pink-600 to-rose-900 rounded-xl mb-5 flex items-center justify-center text-white text-4xl shadow-inner">
                             <i class="fas fa-code"></i>
                         </div>
-                        <h4 class="text-xl font-semibold mb-2" data-i18n-key="project_startbootstrap">Start Bootstrap Template Task</h4>
-                        <p class="text-gray-600 mb-4" data-i18n-key="project_startbootstrap_desc">Bootstrap based responsive template</p>
+                        <h4 class="text-xl font-bold text-white mb-2" data-i18n-key="project_startbootstrap">Start Bootstrap Template Task</h4>
+                        <p class="text-gray-400 text-sm mb-5 flex-1" data-i18n-key="project_startbootstrap_desc">Bootstrap based responsive template</p>
                         <a href="https://kanansnote-startbootstrap-template-task.vercel.app" target="_blank"
-                            class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors" data-i18n-key="view_project">View Project <i class="fas fa-external-link-alt ml-2"></i>
+                            class="inline-flex items-center text-orange-400 hover:text-orange-300 font-semibold text-sm transition-colors" data-i18n-key="view_project">View Project <i class="fas fa-external-link-alt ml-2 text-xs"></i>
                         </a>
                     </div>
 
-                    <div class="project-card rounded-xl p-6">
-                        <div
-                            class="w-full h-48 bg-gradient-to-br from-yellow-400 to-orange-600 rounded-lg mb-4 flex items-center justify-center text-white text-4xl">
+                    <div class="project-card card-gradient rounded-2xl p-6 border border-gray-800 hover-lift flex flex-col">
+                        <div class="w-full h-44 bg-gradient-to-br from-amber-500 to-orange-900 rounded-xl mb-5 flex items-center justify-center text-white text-4xl shadow-inner">
                             <i class="fas fa-code"></i>
                         </div>
-                        <h4 class="text-xl font-semibold mb-2" data-i18n-key="project_stag">Stag Template Task</h4>
-                        <p class="text-gray-600 mb-4" data-i18n-key="project_stag_desc">Creative portfolio template</p>
+                        <h4 class="text-xl font-bold text-white mb-2" data-i18n-key="project_stag">Stag Template Task</h4>
+                        <p class="text-gray-400 text-sm mb-5 flex-1" data-i18n-key="project_stag_desc">Creative portfolio template</p>
                         <a href="https://kanansnote-stag-template-task.vercel.app" target="_blank"
-                            class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors" data-i18n-key="view_project">View Project <i class="fas fa-external-link-alt ml-2"></i>
+                            class="inline-flex items-center text-orange-400 hover:text-orange-300 font-semibold text-sm transition-colors" data-i18n-key="view_project">View Project <i class="fas fa-external-link-alt ml-2 text-xs"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
             <!-- Mini Coding Projects -->
-            <div class="mb-16">
-                <h3 class="text-2xl font-semibold mb-8 scroll-animate" data-i18n-key="mini_coding_projects">Mini Coding Projects</h3>
-                <div class="flex flex-wrap justify-center gap-7">
-                    <div class="rounded-lg p-6 shadow-lg w-full max-w-md scroll-animate">
-                        <details class="group mb-2">
-                            <summary class="text-lg font-semibold cursor-pointer hover:text-blue-600 transition-colors list-none flex items-center gap-2" data-i18n-key="project_venn_diagram">
-                                Venn Diagram
-                                <i
-                                    class="fas fa-chevron-down text-sm transform transition-transform duration-300 group-open:rotate-180"></i>
+            <div class="mb-20">
+                <h3 class="text-2xl md:text-3xl font-bold mb-8 scroll-animate text-center gradient-text" data-i18n-key="mini_coding_projects">Mini Coding Projects</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card-gradient rounded-2xl p-6 border border-gray-800 hover-lift scroll-animate">
+                        <details class="group mb-3">
+                            <summary class="text-lg font-bold text-white cursor-pointer hover:text-orange-400 transition-colors list-none flex items-center justify-between" data-i18n-key="project_venn_diagram">
+                                <span>Venn Diagram</span>
+                                <i class="fas fa-chevron-down text-sm transform transition-transform duration-300 group-open:rotate-180 text-gray-400"></i>
                             </summary>
-                            <div class="pt-2 space-x-4">
+                            <div class="pt-3 space-x-4">
                                 <a href="https://github.com/kanansnote/py-venn-diagram" target="_blank" rel="noopener"
-                                    class="hover:text-blue-600 transition-colors hover:underline text-sm font-medium">GUI</a>
+                                    class="text-orange-400 hover:underline text-sm font-semibold">GUI Repository</a>
                                 <a href="https://kanansnote-venn-diagram.vercel.app" target="_blank" rel="noopener"
-                                    class="hover:text-blue-600 transition-colors hover:underline text-sm font-medium">Web (In Progress)</a>
+                                    class="text-purple-400 hover:underline text-sm font-semibold">Web App (In Progress)</a>
                             </div>
                         </details>
-                        <p class="text-gray-600 mb-3" data-i18n-key="project_venn_diagram_desc">
+                        <p class="text-gray-400 text-sm mb-4 leading-relaxed" data-i18n-key="project_venn_diagram_desc">
                             A career path exploration tool including MBTI and Cognitive Functions. GUI version on
                             GitHub; web version in progress.
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Python</span>
-                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs">Career Options</span>
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">MBTI</span>
-                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs">Cognitive Functions</span>
+                            <span class="brand-chip">Python</span>
+                            <span class="brand-chip">Career Options</span>
+                            <span class="brand-chip">MBTI</span>
+                            <span class="brand-chip">Cognitive Functions</span>
                         </div>
                     </div>
 
-                    <div class="rounded-lg p-6 shadow-lg w-full max-w-md scroll-animate">
-                        <details class="group mb-2">
-                            <summary class="text-lg font-semibold cursor-pointer hover:text-blue-600 transition-colors list-none flex items-center gap-2" data-i18n-key="project_business_calendar">
-                                Business Calendar
-                                <i
-                                    class="fas fa-chevron-down text-sm transform transition-transform duration-300 group-open:rotate-180"></i>
+                    <div class="card-gradient rounded-2xl p-6 border border-gray-800 hover-lift scroll-animate">
+                        <details class="group mb-3">
+                            <summary class="text-lg font-bold text-white cursor-pointer hover:text-orange-400 transition-colors list-none flex items-center justify-between" data-i18n-key="project_business_calendar">
+                                <span>Business Calendar</span>
+                                <i class="fas fa-chevron-down text-sm transform transition-transform duration-300 group-open:rotate-180 text-gray-400"></i>
                             </summary>
-                            <div class="pt-2 space-x-4">
+                            <div class="pt-3 space-x-4">
                                 <a href="https://github.com/kanansnote/py-business-calendar" target="_blank"
-                                    rel="noopener" class="hover:text-blue-600 transition-colors hover:underline text-sm font-medium">GUI</a>
+                                    rel="noopener" class="text-orange-400 hover:underline text-sm font-semibold">GUI Repository</a>
                                 <a href="https://kanansnote-business-calendar.vercel.app" target="_blank"
-                                    rel="noopener" class="hover:text-blue-600 transition-colors hover:underline text-sm font-medium">Web (In Progress)</a>
+                                    rel="noopener" class="text-purple-400 hover:underline text-sm font-semibold">Web App (In Progress)</a>
                             </div>
                         </details>
-                        <p class="text-gray-600 mb-3" data-i18n-key="project_business_calendar_desc">
+                        <p class="text-gray-400 text-sm mb-4 leading-relaxed" data-i18n-key="project_business_calendar_desc">
                             Project inspired by creating a business calendar with PowerPoint slides for an Upwork
                             client. GUI and web versions in progress.
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs">Productivity</span>
-                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs">Presentation</span>
-                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs">Accounting</span>
-                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs">Calendar</span>
+                            <span class="brand-chip">Productivity</span>
+                            <span class="brand-chip">Presentation</span>
+                            <span class="brand-chip">Accounting</span>
+                            <span class="brand-chip">Calendar</span>
                         </div>
                     </div>
 
-                    <div class="rounded-lg p-6 shadow-lg w-full max-w-md scroll-animate">
+                    <div class="card-gradient rounded-2xl p-6 border border-gray-800 hover-lift scroll-animate">
                         <a href="https://github.com/kanansnote/basic-programming-exercises" target="_blank"
                             rel="noopener"
-                            class="text-lg font-semibold mb-2 inline-block hover:text-blue-600 transition-colors" data-i18n-key="project_basic_programming">
+                            class="text-lg font-bold text-white mb-3 inline-block hover:text-orange-400 transition-colors" data-i18n-key="project_basic_programming">
                             Basic Programming Exercises
                             <i class="fas fa-external-link-alt text-sm ml-2"></i>
                         </a>
-                        <p class="text-gray-600 mb-3" data-i18n-key="project_basic_programming_desc">
+                        <p class="text-gray-400 text-sm mb-4 leading-relaxed" data-i18n-key="project_basic_programming_desc">
                             Small projects for learning Python, C++, Java, JavaScript, HTML, and CSS.
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span
-                                class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Python</span>
-                            <span
-                                class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-xs">C++</span>
-                            <span
-                                class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-xs">Java</span>
-                            <span
-                                class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full text-xs">JavaScript</span>
-                            <span
-                                class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-xs">HTML</span>
-                            <span
-                                class="px-3 py-1 bg-pink-100 text-pink-800 rounded-full text-xs">CSS</span>
+                            <span class="brand-chip">Python</span>
+                            <span class="brand-chip">C++</span>
+                            <span class="brand-chip">Java</span>
+                            <span class="brand-chip">JavaScript</span>
+                            <span class="brand-chip">HTML & CSS</span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Open Source Contributions -->
-            <div>
-                <h3 class="text-2xl font-semibold mb-8 scroll-animate" data-i18n-key="open_source_contributions">Open Source Contributions</h3>
-                <div class="rounded-xl shadow-lg overflow-hidden scroll-animate">
+            <div class="mb-20">
+                <h3 class="text-2xl md:text-3xl font-bold mb-8 scroll-animate text-center gradient-text" data-i18n-key="open_source_contributions">Open Source Contributions</h3>
+                <div class="card-gradient rounded-2xl border border-gray-800 overflow-hidden shadow-2xl scroll-animate">
                     <div class="overflow-x-auto">
-                        <table class="w-full">
-                            <thead class="bg-gray-50">
+                        <table class="w-full text-left border-collapse">
+                            <thead class="bg-gray-900/80 border-b border-gray-800">
                                 <tr>
-                                    <th
-                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" data-i18n-key="table_project">
-                                        Project
-                                    </th>
-                                    <th
-                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" data-i18n-key="table_description">
-                                        Description
-                                    </th>
-                                    <th
-                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" data-i18n-key="table_type">
-                                        Type
-                                    </th>
+                                    <th class="px-6 py-4 text-xs font-bold text-gray-300 uppercase tracking-wider" data-i18n-key="table_project">Project</th>
+                                    <th class="px-6 py-4 text-xs font-bold text-gray-300 uppercase tracking-wider" data-i18n-key="table_description">Description</th>
+                                    <th class="px-6 py-4 text-xs font-bold text-gray-300 uppercase tracking-wider" data-i18n-key="table_type">Type</th>
                                 </tr>
                             </thead>
-                            <tbody class="divide-y divide-gray-200">
-                                <tr>
-                                    <td class="px-6 py-4 whitespace-nowrap font-medium">
-                                        <a href="https://github.com/gofiber/fiber"
-                                            class="hover:underline hover:text-blue-500 transition-colors">Fiber</a>
+                            <tbody class="divide-y divide-gray-800/60 text-sm">
+                                <tr class="hover:bg-gray-900/40 transition-colors">
+                                    <td class="px-6 py-4 font-semibold text-white">
+                                        <a href="https://github.com/gofiber/fiber" target="_blank" class="hover:text-orange-400 transition-colors">Fiber</a>
                                     </td>
-                                    <td class="px-6 py-4 text-gray-600">
-                                        <a rel="noopener" target="_blank" href="https://github.com/gofiber/fiber/pull/2413"
-                                            class="hover:underline hover:text-blue-500 transition-colors">Correct
-                                            grammar errors in Azerbaijani translation #2413.</a>
+                                    <td class="px-6 py-4 text-gray-300">
+                                        <a rel="noopener" target="_blank" href="https://github.com/gofiber/fiber/pull/2413" class="hover:text-orange-400 transition-colors">Correct grammar errors in Azerbaijani translation #2413.</a>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        <span
-                                            class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs" data-i18n-key="pull_request">Pull
-                                            Request</span>
+                                        <span class="px-3 py-1 bg-emerald-950/80 text-emerald-400 border border-emerald-800/60 rounded-full text-xs font-semibold" data-i18n-key="pull_request">Pull Request</span>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td class="px-6 py-4 whitespace-nowrap font-medium">
-                                        <a href="https://github.com/firstcontributions/first-contributions"
-                                            class="hover:underline hover:text-blue-500 transition-colors">First
-                                            Contributions</a>
+                                <tr class="hover:bg-gray-900/40 transition-colors">
+                                    <td class="px-6 py-4 font-semibold text-white">
+                                        <a href="https://github.com/firstcontributions/first-contributions" target="_blank" class="hover:text-orange-400 transition-colors">First Contributions</a>
                                     </td>
-                                    <td class="px-6 py-4 text-gray-600">
-                                        <a rel="noopener" target="_blank"
-                                            href="https://github.com/firstcontributions/first-contributions/pull/59782"
-                                            class="hover:underline hover:text-blue-500 transition-colors">Fix grammar
-                                            mistakes in Azerbaijani translation #59782.</a>
+                                    <td class="px-6 py-4 text-gray-300">
+                                        <a rel="noopener" target="_blank" href="https://github.com/firstcontributions/first-contributions/pull/59782" class="hover:text-orange-400 transition-colors">Fix grammar mistakes in Azerbaijani translation #59782.</a>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        <span
-                                            class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs" data-i18n-key="pull_request">Pull
-                                            Request</span>
+                                        <span class="px-3 py-1 bg-emerald-950/80 text-emerald-400 border border-emerald-800/60 rounded-full text-xs font-semibold" data-i18n-key="pull_request">Pull Request</span>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td class="px-6 py-4 whitespace-nowrap font-medium">
-                                        <a href="https://github.com/lakoliu/Furtherance"
-                                            class="hover:underline hover:text-blue-500 transition-colors">Furtherance</a>
+                                <tr class="hover:bg-gray-900/40 transition-colors">
+                                    <td class="px-6 py-4 font-semibold text-white">
+                                        <a href="https://github.com/lakoliu/Furtherance" target="_blank" class="hover:text-orange-400 transition-colors">Furtherance</a>
                                     </td>
-                                    <td class="px-6 py-4 text-gray-600">
-                                        <a rel="noopener" target="_blank"
-                                            href="https://github.com/lakoliu/Furtherance/issues/107"
-                                            class="hover:underline hover:text-blue-500 transition-colors">"Bug: Pomodoro Timer displays
-                                            one-minute over the set time" #107.</a>
+                                    <td class="px-6 py-4 text-gray-300">
+                                        <a rel="noopener" target="_blank" href="https://github.com/lakoliu/Furtherance/issues/107" class="hover:text-orange-400 transition-colors">"Bug: Pomodoro Timer displays one-minute over the set time" #107.</a>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        <span
-                                            class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs" data-i18n-key="issue">Issue</span>
+                                        <span class="px-3 py-1 bg-indigo-950/80 text-indigo-400 border border-indigo-800/60 rounded-full text-xs font-semibold" data-i18n-key="issue">Issue</span>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td class="px-6 py-4 whitespace-nowrap font-medium">
-                                        <a href="https://github.com/linux-is-awesome/gnome_extension_rocketbar"
-                                            class="hover:underline hover:text-blue-500 transition-colors">Rocketbar</a>
+                                <tr class="hover:bg-gray-900/40 transition-colors">
+                                    <td class="px-6 py-4 font-semibold text-white">
+                                        <a href="https://github.com/linux-is-awesome/gnome_extension_rocketbar" target="_blank" class="hover:text-orange-400 transition-colors">Rocketbar</a>
                                     </td>
-                                    <td class="px-6 py-4 text-gray-600">
-                                        <a rel="noopener" target="_blank"
-                                            href="https://github.com/linux-is-awesome/gnome_extension_rocketbar/issues/29"
-                                            class="hover:underline hover:text-blue-500 transition-colors">Suggested
-                                            to add an option to prevent interference in placement with others in the status bar
-                                            #29.</a>
+                                    <td class="px-6 py-4 text-gray-300">
+                                        <a rel="noopener" target="_blank" href="https://github.com/linux-is-awesome/gnome_extension_rocketbar/issues/29" class="hover:text-orange-400 transition-colors">Suggested option to prevent interference in placement with status bar items #29.</a>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        <span
-                                            class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs" data-i18n-key="issue">Issue</span>
+                                        <span class="px-3 py-1 bg-indigo-950/80 text-indigo-400 border border-indigo-800/60 rounded-full text-xs font-semibold" data-i18n-key="issue">Issue</span>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td class="px-6 py-4 whitespace-nowrap font-medium">
-                                        <a href="https://github.com/jenspfahl/KeepAwake"
-                                            class="hover:underline hover:text-blue-500 transition-colors">Keep Awake!</a>
+                                <tr class="hover:bg-gray-900/40 transition-colors">
+                                    <td class="px-6 py-4 font-semibold text-white">
+                                        <a href="https://github.com/jenspfahl/KeepAwake" target="_blank" class="hover:text-orange-400 transition-colors">Keep Awake!</a>
                                     </td>
-                                    <td class="px-6 py-4 text-gray-600">
-                                        <a rel="noopener" target="_blank"
-                                            href="https://github.com/jenspfahl/KeepAwake/issues/36"
-                                            class="hover:underline hover:text-blue-500 transition-colors">Requested support for GNOME 44
-                                            #36.</a>
+                                    <td class="px-6 py-4 text-gray-300">
+                                        <a rel="noopener" target="_blank" href="https://github.com/jenspfahl/KeepAwake/issues/36" class="hover:text-orange-400 transition-colors">Requested support for GNOME 44 #36.</a>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        <span
-                                            class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs" data-i18n-key="issue">Issue</span>
+                                        <span class="px-3 py-1 bg-indigo-950/80 text-indigo-400 border border-indigo-800/60 rounded-full text-xs font-semibold" data-i18n-key="issue">Issue</span>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td class="px-6 py-4 whitespace-nowrap font-medium">
-                                        <a href="https://github.com/ryonakano/reco"
-                                            class="hover:underline hover:text-blue-500 transition-colors">Reco</a>
+                                <tr class="hover:bg-gray-900/40 transition-colors">
+                                    <td class="px-6 py-4 font-semibold text-white">
+                                        <a href="https://github.com/ryonakano/reco" target="_blank" class="hover:text-orange-400 transition-colors">Reco</a>
                                     </td>
-                                    <td class="px-6 py-4 text-gray-600">
-                                        <a rel="noopener" target="_blank" href="https://github.com/ryonakano/reco/issues/190"
-                                            class="hover:underline hover:text-blue-500 transition-colors">"Info:
-                                            runtime org.gnome. Platform branch 42 is end-of-life" #190.</a>
+                                    <td class="px-6 py-4 text-gray-300">
+                                        <a rel="noopener" target="_blank" href="https://github.com/ryonakano/reco/issues/190" class="hover:text-orange-400 transition-colors">"Info: runtime org.gnome.Platform branch 42 is end-of-life" #190.</a>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        <span
-                                            class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs" data-i18n-key="issue">Issue</span>
+                                        <span class="px-3 py-1 bg-indigo-950/80 text-indigo-400 border border-indigo-800/60 rounded-full text-xs font-semibold" data-i18n-key="issue">Issue</span>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td class="px-6 py-4 whitespace-nowrap font-medium">
-                                        <a href="https://github.com/patrick330602/electron-microsoft-todo"
-                                            class="hover:underline hover:text-blue-500 transition-colors">Electron Microsoft To
-                                            Do</a>
+                                <tr class="hover:bg-gray-900/40 transition-colors">
+                                    <td class="px-6 py-4 font-semibold text-white">
+                                        <a href="https://github.com/patrick330602/electron-microsoft-todo" target="_blank" class="hover:text-orange-400 transition-colors">Electron Microsoft To Do</a>
                                     </td>
-                                    <td class="px-6 py-4 text-gray-600">
-                                        <a rel="noopener" target="_blank"
-                                            href="https://github.com/patrick330602/electron-microsoft-todo/issues/4"
-                                            class="hover:underline hover:text-blue-500 transition-colors">"Bug: Sign-in
-                                            page appears on every app launch" #4.</a>
+                                    <td class="px-6 py-4 text-gray-300">
+                                        <a rel="noopener" target="_blank" href="https://github.com/patrick330602/electron-microsoft-todo/issues/4" class="hover:text-orange-400 transition-colors">"Bug: Sign-in page appears on every app launch" #4.</a>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        <span
-                                            class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs" data-i18n-key="issue">Issue</span>
+                                        <span class="px-3 py-1 bg-indigo-950/80 text-indigo-400 border border-indigo-800/60 rounded-full text-xs font-semibold" data-i18n-key="issue">Issue</span>
                                     </td>
                                 </tr>
                             </tbody>
@@ -943,182 +917,139 @@
         </div>
     </section>
 
-    <!-- Blog Section (hidden for showcasing) -->
-    <!--
-    <section id="blog" class="section-padding bg-gray-50 dark:bg-gray-900/50">
+    <!-- Skills & Focus Areas Section -->
+    <section id="skills" class="section-padding bg-black text-white relative border-t border-gray-900">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12 scroll-animate" data-i18n-key="blog_title">Blog</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                Blog Post 1: Venn Diagram 
-                <div class="blog-card bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <img src="./src/images/blog-covers/venn-diagram-cover.jpeg" alt="Venn Diagram Project" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <span class="text-sm text-gray-500 dark:text-gray-400">Jan 12, 2024</span>
-                        <h3 class="text-xl font-semibold my-2 text-gray-900 dark:text-white" data-i18n-key="blog_venn_diagram_title">Venn Diagram</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4" data-i18n-key="blog_venn_diagram_desc">A career path exploration, including MBTI Cognitive Functions.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs" data-i18n-key="tag_mbti">MBTI</span>
-                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs" data-i18n-key="tag_career">Career</span>
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 scroll-animate gradient-text">
+                    Skills & Focus Areas
+                </h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Skill 1 -->
+                    <div class="card-gradient p-6 rounded-2xl border border-gray-800 hover-lift">
+                        <div class="flex items-center space-x-3 mb-3">
+                            <div class="w-3 h-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-500"></div>
+                            <span class="font-bold text-xl text-white">Content Creation & Strategy</span>
                         </div>
-                        <a href="./pages/venn-diagram-blog.html" class="font-semibold text-blue-600 dark:text-blue-400 hover:underline" data-i18n-key="read_more">Read More &rarr;</a>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                            Managing multiple personal brand platforms with tailored content strategy across YouTube, Instagram, and TikTok.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="brand-chip">Brand Identity</span>
+                            <span class="brand-chip">Video Production</span>
+                            <span class="brand-chip">Multi-Platform</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill 2 -->
+                    <div class="card-gradient p-6 rounded-2xl border border-gray-800 hover-lift">
+                        <div class="flex items-center space-x-3 mb-3">
+                            <div class="w-3 h-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-500"></div>
+                            <span class="font-bold text-xl text-white">ASMR & Immersive Audio</span>
+                        </div>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                            Crafting calming roleplays, binaural audio triggers, and relaxing soundscapes for an international audience.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="brand-chip">ASMR Triggers</span>
+                            <span class="brand-chip">Voice Expression</span>
+                            <span class="brand-chip">Relaxation</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill 3 -->
+                    <div class="card-gradient p-6 rounded-2xl border border-gray-800 hover-lift">
+                        <div class="flex items-center space-x-3 mb-3">
+                            <div class="w-3 h-3 rounded-full bg-gradient-to-r from-pink-500 to-orange-500"></div>
+                            <span class="font-bold text-xl text-white">Storytelling & Lifestyle</span>
+                        </div>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                            Sharing authentic perspectives on mental health, personal style, creative direction, fashion, and daily reflections.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="brand-chip">Lifestyle</span>
+                            <span class="brand-chip">Mental Well-being</span>
+                            <span class="brand-chip">Personal Style</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill 4 -->
+                    <div class="card-gradient p-6 rounded-2xl border border-gray-800 hover-lift">
+                        <div class="flex items-center space-x-3 mb-3">
+                            <div class="w-3 h-3 rounded-full bg-gradient-to-r from-orange-500 to-amber-500"></div>
+                            <span class="font-bold text-xl text-white">Vibe Coding & AI Tools</span>
+                        </div>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                            Building and iterating on personal web applications and digital projects using modern AI coding assistants.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="brand-chip">AI Workflows</span>
+                            <span class="brand-chip">Personal Apps</span>
+                            <span class="brand-chip">Web Tech</span>
+                        </div>
                     </div>
                 </div>
-
-                Blog Post 2: Video Games Journey
-                <div class="blog-card bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <img src="./src/images/blog-covers/video-games-cover.jpeg" alt="Video Games" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <span class="text-sm text-gray-500 dark:text-gray-400">Jan 22, 2024</span>
-                        <h3 class="text-xl font-semibold my-2 text-gray-900 dark:text-white" data-i18n-key="blog_video_games_title">Video Games Journey</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4" data-i18n-key="blog_video_games_desc">Video Games interaction, since childhood. Occasionally.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs" data-i18n-key="tag_video_games">Video Games</span>
-                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs" data-i18n-key="tag_journey">Journey</span>
-                        </div>
-                        <a href="./pages/video-games.html" class="font-semibold text-blue-600 dark:text-blue-400 hover:underline" data-i18n-key="read_more">Read More &rarr;</a>
-                    </div>
-                </div>
-
-                Blog Post 3: Programming Journey
-                <div class="blog-card bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <img src="./src/images/blog-covers/programming-journey-cover.png" alt="Programming Journey" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <span class="text-sm text-gray-500 dark:text-gray-400">Jan 17, 2026</span>
-                        <h3 class="text-xl font-semibold my-2 text-gray-900 dark:text-white">Programming Journey</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">My journey into the world of programming, challenges faced, and growth experienced.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Programming</span>
-                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs">Journey</span>
-                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs">Development</span>
-                        </div>
-                        <a href="./pages/programming-journey.html" class="font-semibold text-blue-600 dark:text-blue-400 hover:underline" data-i18n-key="read_more">Read More &rarr;</a>
-                    </div>
-                </div>
-
-                Blog Post 4: IT to Content Creation 
-                <div class="blog-card bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <img src="./src/images/blog-covers/it-to-content-creation.jpg" alt="IT to Content Creation" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <span class="text-sm text-gray-500 dark:text-gray-400">Jan 24, 2026</span>
-                        <h3 class="text-xl font-semibold my-2 text-gray-900 dark:text-white">Transition from IT to Content Creation</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">My journey from IT to content creation, sharing experiences and lessons learned.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">IT</span>
-                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs">Content Creation</span>
-                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs">Career Change</span>
-                        </div>
-                        <a href="./pages/it-to-content-creation.html" class="font-semibold text-blue-600 dark:text-blue-400 hover:underline" data-i18n-key="read_more">Read More &rarr;</a>
-                    </div>
-                </div>
-
-                Blog Post 5: Content Creation Journey 
-                <div class="blog-card bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <img src="./src/images/blog-covers/content-creation-journey.png" alt="Content Creation Journey" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <span class="text-sm text-gray-500 dark:text-gray-400">Feb 5, 2026</span>
-                        <h3 class="text-xl font-semibold my-2 text-gray-900 dark:text-white">Kontent Yaradıcılığına keçidim barədə</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">My journey into content creation, focusing on ASMR and finding the right audience.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Content Creation</span>
-                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs">ASMR</span>
-                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs">Journey</span>
-                        </div>
-                        <a href="./pages/content-creation-journey.html" class="font-semibold text-blue-600 dark:text-blue-400 hover:underline" data-i18n-key="read_more">Read More &rarr;</a>
-                    </div>
-                </div>
-
-                Blog Post 6: Social Media Finding People 
-                <div class="blog-card bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <img src="./src/images/blog-covers/social-media-finding-audience-cover.png" alt="Social Media Finding Audience" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <span class="text-sm text-gray-500 dark:text-gray-400">Jan 27, 2026</span>
-                        <h3 class="text-xl font-semibold my-2 text-gray-900 dark:text-white">Sosial mediada uyğun auditoriyanı tapmaq niyə bu qədər çətindir?</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">Why is it so hard to find suitable audience on social media? Exploring content creation challenges.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Social Media</span>
-                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs">Content Creation</span>
-                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs">Networking</span>
-                        </div>
-                        <a href="./pages/social-media-finding-audience.html" class="font-semibold text-blue-600 dark:text-blue-400 hover:underline" data-i18n-key="read_more">Read More &rarr;</a>
-                    </div>
-                </div>
-
-                Blog Post 7: Unemployment Period (Coming Soon) 
-                <div class="blog-card bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 opacity-70">
-                    <img src="./src/images/blog-covers/unemployment-period.jpeg" alt="Unemployment Period" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <span class="text-sm text-gray-500 dark:text-gray-400">Coming Soon</span>
-                        <h3 class="text-xl font-semibold my-2 text-gray-900 dark:text-white" data-i18n-key="blog_unemployment_title">Unemployment Period</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4" data-i18n-key="blog_unemployment_desc">Things I have done and learned during unemployment.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-xs" data-i18n-key="tag_career">Career</span>
-                            <span class="px-3 py-1 bg-pink-100 text-pink-800 rounded-full text-xs" data-i18n-key="tag_lifestyle">Lifestyle</span>
-                        </div>
-                        <span class="font-semibold text-gray-500 dark:text-gray-400"></span>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
-    -->
 
     <!-- Contact Section -->
-    <section id="contact" class="section-padding">
+    <section id="contact" class="section-padding bg-black text-white relative border-t border-gray-900">
         <div class="container mx-auto px-6">
             <div class="max-w-4xl mx-auto">
-                <h2 class="text-4xl font-bold text-center mb-12 scroll-animate" data-i18n-key="contact_title">Get In Touch</h2>
+                <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 scroll-animate" data-i18n-key="contact_title">
+                    <span class="gradient-text">Get In Touch</span>
+                </h2>
 
-                <div class="grid md:grid-cols-2 gap-12">
-                    <div class="scroll-animate">
-                        <h3 class="text-2xl font-semibold mb-6" data-i18n-key="contact_subtitle">Let's Connect</h3>
-                        <p class="text-lg mb-8 text-gray-600" data-i18n-key="contact_description">
+                <div class="grid md:grid-cols-2 gap-12 items-start">
+                    <div class="card-gradient p-8 rounded-2xl border border-gray-800 scroll-animate hover-lift">
+                        <h3 class="text-2xl font-bold text-white mb-6" data-i18n-key="contact_subtitle">Let's Connect</h3>
+                        <p class="text-gray-300 text-base leading-relaxed mb-8" data-i18n-key="contact_description">
                             I'm always open to discussing new opportunities, collaborations, or just having a friendly
                             chat about technology and creativity.
                         </p>
 
                         <div class="mb-8">
                             <a href="./src/docs/Kanan Nuruyev - Content Creator.pdf" download="Kanan_Nuruyev_Resume.pdf"
-                                class="btn-primary px-6 py-3 rounded-lg text-white font-semibold inline-flex items-center" data-i18n-key="download_resume">
-                                <i class="fas fa-download mr-2"></i>
+                                class="btn-primary px-8 py-4 rounded-xl text-white font-bold inline-flex items-center shadow-lg" data-i18n-key="download_resume">
+                                <i class="fas fa-download mr-3"></i>
                                 Download Resume
                             </a>
                         </div>
 
-                        <div class="text-sm text-gray-500" data-i18n-key="privacy_note">
+                        <div class="text-xs text-gray-400 border-t border-gray-800/80 pt-6" data-i18n-key="privacy_note">
                             <p><strong>Privacy Note:</strong> This is a demo contact form. In a real implementation,
                                 your data would be handled securely and in accordance with privacy regulations.</p>
                         </div>
                     </div>
 
-                    <div class="scroll-animate">
+                    <div class="card-gradient p-8 rounded-2xl border border-gray-800 scroll-animate hover-lift">
                         <form class="space-y-6" id="contact-form">
                             <div>
-                                <label for="name" class="block text-sm font-medium mb-2" data-i18n-key="form_name">Name</label>
+                                <label for="name" class="block text-sm font-semibold text-gray-200 mb-2" data-i18n-key="form_name">Name</label>
                                 <input type="text" id="name" name="name" required
-                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors">
+                                    class="w-full px-4 py-3.5 bg-gray-900/90 border border-gray-800 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all">
                             </div>
 
                             <div>
-                                <label for="email" class="block text-sm font-medium mb-2" data-i18n-key="form_email">Email</label>
+                                <label for="email" class="block text-sm font-semibold text-gray-200 mb-2" data-i18n-key="form_email">Email</label>
                                 <input type="email" id="email" name="email" required
-                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors">
+                                    class="w-full px-4 py-3.5 bg-gray-900/90 border border-gray-800 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all">
                             </div>
 
                             <div>
-                                <label for="message" class="block text-sm font-medium mb-2" data-i18n-key="form_message">Message</label>
+                                <label for="message" class="block text-sm font-semibold text-gray-200 mb-2" data-i18n-key="form_message">Message</label>
                                 <textarea id="message" name="message" rows="5" required
-                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"></textarea>
+                                    class="w-full px-4 py-3.5 bg-gray-900/90 border border-gray-800 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none transition-all"></textarea>
                             </div>
 
                             <div class="flex items-center space-x-3">
                                 <input type="checkbox" id="captcha" required
-                                    class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
-                                <label for="captcha" class="text-sm" data-i18n-key="form_captcha">I'm not a robot (Simple Captcha)</label>
+                                    class="w-4 h-4 text-purple-600 bg-gray-900 border-gray-800 rounded focus:ring-purple-500">
+                                <label for="captcha" class="text-xs text-gray-400" data-i18n-key="form_captcha">I'm not a robot (Simple Captcha)</label>
                             </div>
 
-                            <button type="submit" class="w-full btn-primary py-3 rounded-lg text-white font-semibold" data-i18n-key="send_message">
+                            <button type="submit" class="w-full btn-primary py-4 rounded-xl text-white font-bold tracking-wide" data-i18n-key="send_message">
                                 Send Message
                             </button>
                         </form>
@@ -1129,45 +1060,38 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
+    <footer class="bg-black border-t border-gray-900 text-white py-12">
         <div class="container mx-auto px-6">
-            <div class="flex flex-col items-start space-y-2">
-                <div class="mb-6 md:mb-0">
-                    <div id="copyright" class="inline-flex items-center flex-wrap gap-x-1">
+            <div class="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+                <div class="mb-4 md:mb-0">
+                    <div id="copyright" class="inline-flex items-center flex-wrap gap-x-1 text-sm text-gray-400">
                         <span>&copy; <span id="copyright-year"></span>.</span>
-                        <span>Kanan Nuruyev</span>
+                        <span class="gradient-text font-bold">Kanan Nuruyev</span>
                         <span id="footer-username" class="footer-username inline-block align-middle">@kanannuruyevs.</span>
                         <span>All rights reserved.</span>
                     </div>
                 </div>
 
-                <div class="flex space-x-4">
-                    <a href="mailto:kanannuruyevs@gmail.com" class="tooltip social-icon text-gray-400 hover:text-white"
-                        data-tooltip="Gmail">
+                <div class="flex space-x-5">
+                    <a href="mailto:kanannuruyevs@gmail.com" class="tooltip social-icon text-gray-400 hover:text-orange-400" data-tooltip="Gmail">
                         <i class="fas fa-envelope text-xl"></i>
                     </a>
-                    <a href="https://facebook.com/kanannuruyevs"
-                        class="tooltip social-icon text-gray-400 hover:text-blue-500" data-tooltip="Facebook">
+                    <a href="https://facebook.com/kanannuruyevs" class="tooltip social-icon text-gray-400 hover:text-blue-500" data-tooltip="Facebook">
                         <i class="fab fa-facebook text-xl"></i>
                     </a>
-                    <a href="https://instagram.com/kanannuruyevs"
-                        class="tooltip social-icon text-gray-400 hover:text-pink-500" data-tooltip="Instagram">
+                    <a href="https://instagram.com/kanannuruyevs" class="tooltip social-icon text-gray-400 hover:text-pink-500" data-tooltip="Instagram">
                         <i class="fab fa-instagram text-xl"></i>
                     </a>
-                    <a href="https://tiktok.com/@kanannuruyevs"
-                        class="tooltip social-icon text-gray-400 hover:text-white" data-tooltip="TikTok">
+                    <a href="https://tiktok.com/@kanannuruyevs" class="tooltip social-icon text-gray-400 hover:text-white" data-tooltip="TikTok">
                         <i class="fab fa-tiktok text-xl"></i>
                     </a>
-                    <a href="https://youtube.com/@kanannuruyevs"
-                        class="tooltip social-icon text-gray-400 hover:text-red-500" data-tooltip="YouTube">
+                    <a href="https://youtube.com/@kanannuruyevs" class="tooltip social-icon text-gray-400 hover:text-red-500" data-tooltip="YouTube">
                         <i class="fab fa-youtube text-xl"></i>
                     </a>
-                    <a href="https://linkedin.com/in/kanannuruyevs"
-                        class="tooltip social-icon text-gray-400 hover:text-blue-600" data-tooltip="LinkedIn">
+                    <a href="https://linkedin.com/in/kanannuruyevs" class="tooltip social-icon text-gray-400 hover:text-blue-400" data-tooltip="LinkedIn">
                         <i class="fab fa-linkedin text-xl"></i>
                     </a>
-                    <a href="https://github.com/kanannuruyevs"
-                        class="tooltip social-icon text-gray-400 hover:text-gray-100" data-tooltip="GitHub">
+                    <a href="https://github.com/kanannuruyevs" class="tooltip social-icon text-gray-400 hover:text-purple-400" data-tooltip="GitHub">
                         <i class="fab fa-github text-xl"></i>
                     </a>
                 </div>

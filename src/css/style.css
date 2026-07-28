@@ -4,13 +4,72 @@
 }
 
 body {
-  background-color: #fff;
-  color: #000;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .dark body {
-  background-color: #1a1a2e;
-  color: #fff;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* ── Cyberpunk Glassmorphic Design System Tokens & Animations ── */
+.gradient-bg {
+  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 25%, #7c3aed 50%, #ec4899 75%, #ef4444 100%);
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #3F52E3, #ec4899, #f97316);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.card-gradient {
+  background: linear-gradient(135deg, rgba(63, 82, 227, 0.1) 0%, rgba(236, 72, 153, 0.1) 50%, rgba(249, 115, 22, 0.1) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(63, 82, 227, 0.2);
+}
+
+.nav-blur {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.skill-bar {
+  background: linear-gradient(90deg, #3F52E3, #ec4899, #f97316);
+  height: 4px;
+  border-radius: 2px;
+}
+
+.project-overlay {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(63, 82, 227, 0.3) 100%);
 }
 
 .theme-transition {
@@ -19,7 +78,7 @@ body {
 
 #theme-toggle i,
 #mobile-theme-toggle i {
-  color: #222;
+  color: #f3f4f6;
 }
 
 .dark #theme-toggle i,
@@ -29,26 +88,26 @@ body {
 
 html.dark #theme-toggle i,
 html.dark #mobile-theme-toggle i {
-  color: #222;
+  color: #f3f4f6;
 }
 
 html.dark .text-gray-500, html.dark .text-gray-600 {
-  color: #cbd5e1 !important;
+  color: #9ca3af !important;
 }
 html.dark .bg-gray-50, html.dark .bg-gray-100 {
-  background-color: #23263a !important;
+  background-color: rgba(17, 24, 39, 0.8) !important;
 }
 html.dark .border-gray-200, html.dark .divide-gray-200 {
-  border-color: #373a53 !important;
+  border-color: #1f2937 !important;
 }
 
 html:not(.dark) #theme-toggle i,
 html:not(.dark) #mobile-theme-toggle i {
-  color: #222;
+  color: #f3f4f6;
 }
 
 html.dark header {
-  background: rgba(17, 24, 39, 0.9) !important;
+  background: rgba(0, 0, 0, 0.85) !important;
 }
 
 html.dark .rounded-lg.scroll-animate {
@@ -171,29 +230,33 @@ html.dark #mobile-menu .bg-gray-50 {
 }
 
 .card-hover {
-  background: #fff;
-  border: 1.5px solid #e5e7eb;
-  transition: all 0.3s ease;
+  background: linear-gradient(135deg, rgba(63, 82, 227, 0.1) 0%, rgba(236, 72, 153, 0.1) 50%, rgba(249, 115, 22, 0.1) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card-hover:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(63, 82, 227, 0.25);
+  border-color: rgba(236, 72, 153, 0.3);
 }
 .dark .card-hover:hover {
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7), 0 0 25px rgba(236, 72, 153, 0.3);
 }
 .dark .card-hover {
-  background: #23263a;
-  border: 1.5px solid #373a53;
+  background: linear-gradient(135deg, rgba(63, 82, 227, 0.1) 0%, rgba(236, 72, 153, 0.1) 50%, rgba(249, 115, 22, 0.1) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #3F52E3, #ec4899, #f97316);
   transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(63, 82, 227, 0.3);
 }
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(236, 72, 153, 0.5);
 }
 
 .social-icon {
@@ -212,7 +275,7 @@ html.dark #mobile-menu .bg-gray-50 {
   bottom: 100%;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.85);
   color: white;
   padding: 4px 8px;
   border-radius: 4px;
@@ -222,19 +285,27 @@ html.dark #mobile-menu .bg-gray-50 {
   pointer-events: none;
   transition: opacity 0.3s;
   z-index: 1000;
+  border: 1px solid rgba(255,255,255,0.1);
 }
 .tooltip:hover::after {
   opacity: 1;
 }
 
 .project-card {
-  background: #f9fafb;
-  border: 1.5px solid #e5e7eb;
-  backdrop-filter: blur(10px);
+  background: linear-gradient(135deg, rgba(63, 82, 227, 0.08) 0%, rgba(236, 72, 153, 0.08) 50%, rgba(249, 115, 22, 0.08) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(63, 82, 227, 0.2);
+  border-color: rgba(63, 82, 227, 0.3);
 }
 .dark .project-card {
-  background: #23263a;
-  border: 1.5px solid #373a53;
+  background: linear-gradient(135deg, rgba(63, 82, 227, 0.08) 0%, rgba(236, 72, 153, 0.08) 50%, rgba(249, 115, 22, 0.08) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 @media (max-width: 768px) {
   .project-card {
