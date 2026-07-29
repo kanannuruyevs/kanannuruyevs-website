@@ -1,55 +1,72 @@
+// Configure Tailwind CSS Dark Mode (Class-based)
+if (typeof tailwind !== 'undefined') {
+    tailwind.config = { darkMode: 'class' };
+} else {
+    window.tailwind = { config: { darkMode: 'class' } };
+}
+
 // Theme Toggle
 const themeToggle = document.getElementById('theme-toggle');
 const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
 const html = document.documentElement;
 
 function updateThemeIcons() {
-    // Desktop
+    const isDark = html.classList.contains('dark');
+    
+    // Desktop icons
     const moon = document.getElementById('icon-moon');
     const sun = document.getElementById('icon-sun');
     if (moon && sun) {
-        if (html.classList.contains('dark')) {
-            sun.style.display = 'none';
-            moon.style.display = 'inline';
-        } else {
-            sun.style.display = 'inline';
+        if (isDark) {
+            sun.style.display = 'inline-block';
             moon.style.display = 'none';
+        } else {
+            sun.style.display = 'none';
+            moon.style.display = 'inline-block';
         }
     }
-    // Mobile
+    
+    // Mobile icons & labels
     const mobileMoon = document.getElementById('mobile-icon-moon');
     const mobileSun = document.getElementById('mobile-icon-sun');
     const textLight = document.getElementById('mobile-text-light');
     const textDark = document.getElementById('mobile-text-dark');
     if (mobileMoon && mobileSun) {
-        if (html.classList.contains('dark')) {
-            mobileMoon.style.display = 'inline';
-            textDark.style.display = 'inline';
-            mobileSun.style.display = 'none';
-            textLight.style.display = 'none';
-        } else {
+        if (isDark) {
+            mobileSun.style.display = 'inline-block';
+            if (textLight) textLight.style.display = 'inline';
             mobileMoon.style.display = 'none';
-            textDark.style.display = 'none';
-            mobileSun.style.display = 'inline';
-            textLight.style.display = 'inline';
+            if (textDark) textDark.style.display = 'none';
+        } else {
+            mobileMoon.style.display = 'inline-block';
+            if (textDark) textDark.style.display = 'inline';
+            mobileSun.style.display = 'none';
+            if (textLight) textLight.style.display = 'none';
         }
     }
 }
 
 function toggleTheme() {
     html.classList.toggle('dark');
-    localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    const isDark = html.classList.contains('dark');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
     updateThemeIcons();
 }
 
-// On page load, set theme and icons
+// Initial theme setup on load
 if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     html.classList.add('dark');
+} else if (localStorage.getItem('theme') === 'light') {
+    html.classList.remove('dark');
 }
 updateThemeIcons();
 
-themeToggle.addEventListener('click', toggleTheme);
-mobileThemeToggle.addEventListener('click', toggleTheme);
+if (themeToggle) {
+    themeToggle.addEventListener('click', toggleTheme);
+}
+if (mobileThemeToggle) {
+    mobileThemeToggle.addEventListener('click', toggleTheme);
+}
 
 // Mobile Menu
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
