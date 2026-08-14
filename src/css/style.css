@@ -473,18 +473,27 @@ html.dark .project-card:hover {
   justify-content: center;
   gap: 8px;
   width: 100%;
-  padding: 12px 20px;
-  background: #2563eb;
+  padding: 13px 20px;
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
   color: #fff;
   font-size: 14px;
   font-weight: 600;
   border: none;
   border-radius: 12px;
   cursor: pointer;
-  transition: background 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.3);
+  transition: all 0.25s ease;
   margin-top: auto;
+  font-family: 'Inter', sans-serif;
 }
-.brand-work-btn:hover { background: #1d4ed8; transform: translateY(-1px); }
+.brand-work-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.45);
+}
+.brand-work-btn.open {
+  background: linear-gradient(135deg, #1d4ed8 0%, #6d28d9 100%);
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.4);
+}
 .brand-work-btn .bwb-chevron { transition: transform 0.35s ease; font-size: 11px; }
 .brand-work-btn.open .bwb-chevron { transform: rotate(180deg); }
 
@@ -527,13 +536,24 @@ html.dark .project-card:hover {
 }
 
 .brand-card {
+  position: relative;
   will-change: transform;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(16px);
+}
+
+.dark .brand-card {
+  background: linear-gradient(145deg, rgba(17, 24, 39, 0.95), rgba(15, 23, 42, 0.85));
+  border-color: rgba(55, 65, 81, 0.6);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.4);
 }
 
 .brand-card.open {
-  border-color: rgba(139, 92, 246, 0.6);
-  box-shadow: 0 0 24px rgba(139, 92, 246, 0.15);
+  border-color: rgba(139, 92, 246, 0.7);
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.25);
 }
 
 @media (min-width: 1280px) {
@@ -680,5 +700,243 @@ html.dark .project-card:hover {
   text-decoration: none; font-family: 'Inter', sans-serif;
 }
 .brand-collab-btn:hover { opacity: 0.88; transform: translateY(-1px); }
+
+/* ── Option 4: Brand Carousel Layout & Navigation (3D Peek Deck) ── */
+.brand-carousel-container {
+  position: relative;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.brand-carousel-viewport {
+  overflow: hidden;
+  border-radius: 1.5rem;
+  padding: 12px 6px;
+}
+
+.brand-carousel-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+.brand-slide {
+  width: 100%;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  padding: 0 4px;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Card Hero Banner Header */
+.brand-hero-header {
+  position: relative;
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.25), rgba(88, 28, 135, 0.25), rgba(157, 23, 77, 0.2));
+  border-bottom: 1px solid rgba(229, 231, 235, 0.6);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+.dark .brand-hero-header {
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.4), rgba(88, 28, 135, 0.4), rgba(157, 23, 77, 0.3));
+  border-bottom-color: rgba(55, 65, 81, 0.7);
+}
+
+.brand-reach-pill {
+  background: rgba(37, 99, 235, 0.12);
+  border: 1px solid rgba(37, 99, 235, 0.3);
+  color: #2563eb;
+  letter-spacing: 0.05em;
+  backdrop-filter: blur(8px);
+}
+.dark .brand-reach-pill {
+  background: rgba(99, 102, 241, 0.18);
+  border-color: rgba(129, 140, 248, 0.4);
+  color: #a5b4fc;
+}
+
+/* Carousel Navigation Arrows */
+.carousel-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(229, 231, 235, 0.8);
+  background: rgba(255, 255, 255, 0.9);
+  color: #1f2937;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  backdrop-filter: blur(8px);
+}
+
+.dark .carousel-nav-btn {
+  background: rgba(17, 24, 39, 0.85);
+  border-color: rgba(55, 65, 81, 0.8);
+  color: #f3f4f6;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.carousel-nav-btn:hover {
+  transform: translateY(-50%) scale(1.08);
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}
+
+.carousel-nav-btn.prev-btn {
+  left: -20px;
+}
+
+.carousel-nav-btn.next-btn {
+  right: -20px;
+}
+
+@media (max-width: 768px) {
+  .carousel-nav-btn.prev-btn { left: 4px; }
+  .carousel-nav-btn.next-btn { right: 4px; }
+}
+
+/* Carousel Pagination Dots */
+.brand-carousel-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #d1d5db;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.dark .carousel-dot {
+  background: #4b5563;
+}
+
+.carousel-dot.active {
+  width: 28px;
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
+}
+
+/* ── Solution A: Asymmetric Composite Video Grid ── */
+.solution-a-video-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.solution-a-landscape-wrapper {
+  grid-column: span 7;
+}
+
+.solution-a-portrait-wrapper {
+  grid-column: span 5;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+@media (max-width: 768px) {
+  .solution-a-landscape-wrapper { grid-column: span 12; }
+  .solution-a-portrait-wrapper { grid-column: span 12; }
+}
+
+.solution-a-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  display: block;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  border: 1px solid rgba(229, 231, 235, 0.8);
+  background: #111827;
+}
+
+.dark .solution-a-card {
+  border-color: rgba(55, 65, 81, 0.8);
+}
+
+.solution-a-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.2);
+  border-color: rgba(99, 102, 241, 0.6);
+}
+
+.solution-a-card.landscape-card {
+  aspect-ratio: 16/9;
+  height: 100%;
+}
+
+.solution-a-card.portrait-card {
+  aspect-ratio: 9/16;
+  height: 100%;
+}
+
+/* Thumbnail Visual Fallback Gradients */
+.thumb-gradient-yt {
+  background: linear-gradient(135deg, #1e1b4b 0%, #311b92 50%, #4a148c 100%);
+}
+
+.thumb-gradient-ig {
+  background: linear-gradient(135deg, #831843 0%, #9d174d 50%, #be185d 100%);
+}
+
+.thumb-gradient-tt {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+}
+
+/* Language Switcher Buttons for KANANSNOTE */
+.kn-lang-btn {
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.kn-lang-btn.active {
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+}
+
+.kn-lang-btn:not(.active) {
+  background: #f3f4f6;
+  color: #4b5563;
+  border-color: #e5e7eb;
+}
+
+.dark .kn-lang-btn:not(.active) {
+  background: #1f2937;
+  color: #9ca3af;
+  border-color: #374151;
+}
+
+.kn-lang-btn:not(.active):hover {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.dark .kn-lang-btn:not(.active):hover {
+  background: #374151;
+  color: #f9fafb;
+}
 
 /*# sourceMappingURL=style.css.map */

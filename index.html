@@ -241,440 +241,436 @@
                     Explore the portfolio of brands I manage across professional growth, ASMR storytelling, lifestyle guidance, and local-language channels. Each card highlights audience focus, content direction, and sample work that demonstrates the breadth of the brand experience.
                 </p>
 
-                <div class="brand-grid grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+                <!-- Option 4: Visual Brand Slider Carousel -->
+                <div class="brand-carousel-container relative max-w-4xl mx-auto">
 
-                    <!-- KANANNURUYEVS -->
-                    <div class="card-gradient hover-lift brand-card top-row rounded-2xl p-6 border border-slate-200 dark:border-gray-800 flex flex-col">
-                        <div class="flex items-center space-x-4 mb-4">
-                            <div class="w-14 h-14 rounded-full bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 p-0.5 shrink-0 shadow-lg">
-                                <img src="./src/images/brand-avatars/kanannuruyevs-avatar.png" alt="KANANNURUYEVS avatar" class="w-full h-full rounded-full object-cover">
-                            </div>
-                            <div>
-                                <h4 class="text-xl font-bold gradient-text" data-i18n-key="brand_kanannuruyevs">KANANNURUYEVS</h4>
-                                <p class="text-xs text-slate-500 dark:text-gray-400" data-i18n-key="brand_kanannuruyevs_type">Work & Digital Growth Brand</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="brand-chip" data-i18n-key="tag_ai">AI</span>
-                            <span class="brand-chip" data-i18n-key="tag_vibe_coding">Vibe Coding</span>
-                            <span class="brand-chip" data-i18n-key="tag_content_creation">Content Creation</span>
-                            <span class="brand-chip" data-i18n-key="tag_smm">SMM</span>
-                            <span class="brand-chip" data-i18n-key="tag_career_growth">Career Growth</span>
-                        </div>
-                        <p class="text-slate-700 dark:text-gray-300 text-sm leading-relaxed mb-5" data-i18n-key="brand_kanannuruyevs_desc">
-                            Targets a professional audience. The content focuses on digital growth, content creation, and other work-related topics.
-                        </p>
-                        <div class="brand-reach-badge">
-                            <div class="brand-reach-icon"><i class="fas fa-chart-line"></i></div>
-                            <div>
-                                <div class="brand-reach-number">30K+</div>
-                                <div class="brand-reach-label" data-i18n-key="reach_label">Combined Followers</div>
-                            </div>
-                        </div>
-                        <button class="brand-work-btn" onclick="toggleBrandCard(this)" data-i18n-key="view_work">
-                            <i class="fas fa-briefcase" style="font-size:12px"></i>
-                            View Work
-                            <i class="fas fa-chevron-down bwb-chevron"></i>
-                        </button>
-                        <div class="brand-gallery-content">
-                            <div class="brand-panel-inner">
-                                <div class="brand-section-title" data-i18n-key="best_content">Best Content</div>
-                                <div class="brand-content-grid">
-                                    <a href="https://youtube.com/@kanannuruyevs" target="_blank" class="brand-thumb group">
-                                        <img src="https://placehold.co/200x250/1e1b4b/ffffff/png?text=YouTube" alt="YouTube content">
-                                        <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2">
-                                            <span class="brand-thumb-badge"><i class="fab fa-youtube text-red-500"></i> YouTube</span>
+                    <!-- Carousel Nav Arrows -->
+                    <button class="carousel-nav-btn prev-btn" id="brandCarouselPrev" aria-label="Previous Slide">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-nav-btn next-btn" id="brandCarouselNext" aria-label="Next Slide">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+
+                    <!-- Viewport & Track -->
+                    <div class="brand-carousel-viewport">
+                        <div class="brand-carousel-track" id="brandCarouselTrack">
+
+                            <!-- SLIDE 1: KANANNURUYEVS -->
+                            <div class="brand-slide">
+                                <div class="card-gradient hover-lift brand-card rounded-2xl p-6 border border-slate-200 dark:border-gray-800 flex flex-col h-full">
+                                    <div class="flex items-center space-x-4 mb-4">
+                                        <div class="w-14 h-14 rounded-full bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 p-0.5 shrink-0 shadow-lg">
+                                            <img src="./src/images/brand-avatars/kanannuruyevs-avatar.png" alt="KANANNURUYEVS avatar" class="w-full h-full rounded-full object-cover">
                                         </div>
-                                    </a>
-                                    <a href="https://tiktok.com/@kanannuruyevs" target="_blank" class="brand-thumb group">
-                                        <img src="https://placehold.co/200x250/312e81/ffffff/png?text=TikTok" alt="TikTok content">
-                                        <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2">
-                                            <span class="brand-thumb-badge"><i class="fab fa-tiktok"></i> TikTok</span>
+                                        <div>
+                                            <h4 class="text-xl font-bold gradient-text" data-i18n-key="brand_kanannuruyevs">KANANNURUYEVS</h4>
+                                            <p class="text-xs text-slate-500 dark:text-gray-400" data-i18n-key="brand_kanannuruyevs_type">Work & Digital Growth Brand</p>
                                         </div>
-                                    </a>
-                                    <a href="https://instagram.com/kanannuruyevs" target="_blank" class="brand-thumb group">
-                                        <img src="https://placehold.co/200x250/4c1d95/ffffff/png?text=Instagram" alt="Instagram content">
-                                        <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2">
-                                            <span class="brand-thumb-badge"><i class="fab fa-instagram text-pink-500"></i> Instagram</span>
+                                    </div>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="brand-chip" data-i18n-key="tag_ai">AI</span>
+                                        <span class="brand-chip" data-i18n-key="tag_vibe_coding">Vibe Coding</span>
+                                        <span class="brand-chip" data-i18n-key="tag_content_creation">Content Creation</span>
+                                        <span class="brand-chip" data-i18n-key="tag_smm">SMM</span>
+                                        <span class="brand-chip" data-i18n-key="tag_career_growth">Career Growth</span>
+                                    </div>
+                                    <p class="text-slate-700 dark:text-gray-300 text-sm leading-relaxed mb-5" data-i18n-key="brand_kanannuruyevs_desc">
+                                        Targets a professional audience. The content focuses on digital growth, content creation, and other work-related topics.
+                                    </p>
+                                    <div class="brand-reach-badge">
+                                        <div class="brand-reach-icon"><i class="fas fa-chart-line"></i></div>
+                                        <div>
+                                            <div class="brand-reach-number">30K+</div>
+                                            <div class="brand-reach-label" data-i18n-key="reach_label">Combined Followers</div>
                                         </div>
-                                    </a>
+                                    </div>
+                                    <button class="brand-work-btn" onclick="toggleBrandCard(this)" data-i18n-key="view_work">
+                                        <i class="fas fa-briefcase" style="font-size:12px"></i>
+                                        View Work
+                                        <i class="fas fa-chevron-down bwb-chevron"></i>
+                                    </button>
+                                    <div class="brand-gallery-content">
+                                        <div class="brand-panel-inner">
+                                            <div class="brand-section-title" data-i18n-key="best_content">Best Content</div>
+                                            
+                                            <!-- Solution A: Asymmetric Composite Video Grid -->
+                                            <div class="solution-a-video-grid">
+                                                <!-- Left 16:9 Landscape YouTube Slot -->
+                                                <div class="solution-a-landscape-wrapper">
+                                                    <a href="https://youtube.com/@kanannuruyevs" target="_blank" class="solution-a-card landscape-card group relative overflow-hidden block rounded-xl shadow-lg border border-red-500/30">
+                                                        <img src="./src/images/projects-covers/hivency-template-task.png" alt="YouTube Video" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-between p-3.5">
+                                                            <div class="flex items-center justify-between">
+                                                                <span class="brand-thumb-badge bg-red-600 text-white text-[11px] px-2.5 py-0.5 rounded-full font-bold shadow-lg flex items-center gap-1">
+                                                                    <i class="fab fa-youtube"></i> YouTube 16:9
+                                                                </span>
+                                                                <span class="text-[10px] font-mono bg-black/70 text-gray-200 px-2 py-0.5 rounded backdrop-blur-sm">04:12</span>
+                                                            </div>
+                                                            <div class="flex items-end justify-between text-white">
+                                                                <div>
+                                                                    <h5 class="font-bold text-xs md:text-sm line-clamp-1">Digital Growth & Work Highlights</h5>
+                                                                    <p class="text-[11px] text-gray-300">YouTube Channel</p>
+                                                                </div>
+                                                                <div class="w-8 h-8 rounded-full bg-red-600 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform shrink-0">
+                                                                    <i class="fas fa-play text-xs ml-0.5"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+
+                                                <!-- Right Dual 9:16 Portrait Slots -->
+                                                <div class="solution-a-portrait-wrapper">
+                                                    <a href="https://instagram.com/kanannuruyevs" target="_blank" class="solution-a-card portrait-card group relative overflow-hidden block rounded-xl shadow-lg border border-pink-500/30">
+                                                        <img src="./src/images/projects-covers/ogenix-template-task.png" alt="Instagram Reel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-between p-2.5">
+                                                            <div class="flex items-center justify-between">
+                                                                <span class="brand-thumb-badge bg-pink-600 text-white text-[9px] px-2 py-0.5 rounded-full font-bold shadow-md flex items-center gap-1">
+                                                                    <i class="fab fa-instagram"></i> Reel 9:16
+                                                                </span>
+                                                                <span class="text-[9px] font-mono bg-black/70 text-gray-200 px-1.5 py-0.5 rounded backdrop-blur-sm">00:30</span>
+                                                            </div>
+                                                            <div class="text-white">
+                                                                <h6 class="font-bold text-[11px] line-clamp-1">AI Growth Tips</h6>
+                                                                <p class="text-[9px] text-gray-300">Instagram</p>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+
+                                                    <a href="https://tiktok.com/@kanannuruyevs" target="_blank" class="solution-a-card portrait-card group relative overflow-hidden block rounded-xl shadow-lg border border-cyan-500/30">
+                                                        <img src="./src/images/projects-covers/xhibiter-template-task.png" alt="TikTok Video" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-between p-2.5">
+                                                            <div class="flex items-center justify-between">
+                                                                <span class="brand-thumb-badge bg-slate-900 text-white text-[9px] px-2 py-0.5 rounded-full font-bold shadow-md flex items-center gap-1">
+                                                                    <i class="fab fa-tiktok"></i> TikTok 9:16
+                                                                </span>
+                                                                <span class="text-[9px] font-mono bg-black/70 text-gray-200 px-1.5 py-0.5 rounded backdrop-blur-sm">00:45</span>
+                                                            </div>
+                                                            <div class="text-white">
+                                                                <h6 class="font-bold text-[11px] line-clamp-1">Career Growth</h6>
+                                                                <p class="text-[9px] text-gray-300">TikTok</p>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="brand-tab-bar">
+                                                <button class="brand-tab-btn active" onclick="switchBrandTab(this, 'knr-platforms')"><i class="fas fa-satellite-dish"></i> <span data-i18n-key="tab_platforms">Platforms</span></button>
+                                                <button class="brand-tab-btn" onclick="switchBrandTab(this, 'knr-stats')"><i class="fas fa-chart-bar"></i> <span data-i18n-key="tab_audience">Audience Stats</span></button>
+                                            </div>
+                                            <div id="knr-platforms" class="brand-tab-panel active">
+                                                <a href="https://instagram.com/kanannuruyevs" target="_blank" class="brand-platform-row">
+                                                    <span class="bpr-icon"><i class="fab fa-instagram" style="color:#e1306c"></i></span>
+                                                    <div class="bpr-info"><div class="bpr-name">Instagram</div><div class="bpr-followers">30K followers</div></div>
+                                                    <span class="bpr-visit" data-i18n-key="visit_btn">Visit →</span>
+                                                </a>
+                                                <a href="https://youtube.com/@kanannuruyevs" target="_blank" class="brand-platform-row">
+                                                    <span class="bpr-icon"><i class="fab fa-youtube" style="color:#ff0000"></i></span>
+                                                    <div class="bpr-info"><div class="bpr-name">YouTube</div><div class="bpr-followers">–</div></div>
+                                                    <span class="bpr-visit" data-i18n-key="visit_btn">Visit →</span>
+                                                </a>
+                                                <a href="https://tiktok.com/@kanannuruyevs" target="_blank" class="brand-platform-row">
+                                                    <span class="bpr-icon"><i class="fab fa-tiktok"></i></span>
+                                                    <div class="bpr-info"><div class="bpr-name">TikTok</div><div class="bpr-followers">–</div></div>
+                                                    <span class="bpr-visit" data-i18n-key="visit_btn">Visit →</span>
+                                                </a>
+                                            </div>
+                                            <div id="knr-stats" class="brand-tab-panel">
+                                                <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_reach">Combined Reach</span><span class="bsr-value text-slate-900 dark:text-white">30K+</span></div>
+                                                <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_engagement">Avg. Engagement</span><div class="bsr-bar-wrap"><div class="bsr-bar-bg"><div class="bsr-bar-fill" style="width:54%"></div></div><span class="bsr-value text-slate-900 dark:text-white">5.4%</span></div></div>
+                                                <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_age">Core Audience</span><span class="bsr-value text-slate-900 dark:text-white">18 – 34</span></div>
+                                            </div>
+                                            <a href="./media-kit.html" target="_blank" class="brand-collab-btn">
+                                                <i class="fas fa-file-alt"></i> <span data-i18n-key="download_media_kit">Download Media Kit</span>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="brand-tab-bar">
-                                    <button class="brand-tab-btn active" onclick="switchBrandTab(this, 'knr-platforms')"><i class="fas fa-satellite-dish"></i> <span data-i18n-key="tab_platforms">Platforms</span></button>
-                                    <button class="brand-tab-btn" onclick="switchBrandTab(this, 'knr-stats')"><i class="fas fa-chart-bar"></i> <span data-i18n-key="tab_audience">Audience Stats</span></button>
-                                </div>
-                                <div id="knr-platforms" class="brand-tab-panel active">
-                                    <a href="https://instagram.com/kanannuruyevs" target="_blank" class="brand-platform-row">
-                                        <span class="bpr-icon"><i class="fab fa-instagram" style="color:#e1306c"></i></span>
-                                        <div class="bpr-info"><div class="bpr-name">Instagram</div><div class="bpr-followers">30K followers</div></div>
-                                        <span class="bpr-visit" data-i18n-key="visit_btn">Visit →</span>
-                                    </a>
-                                    <a href="https://youtube.com/@kanannuruyevs" target="_blank" class="brand-platform-row">
-                                        <span class="bpr-icon"><i class="fab fa-youtube" style="color:#ff0000"></i></span>
-                                        <div class="bpr-info"><div class="bpr-name">YouTube</div><div class="bpr-followers">–</div></div>
-                                        <span class="bpr-visit" data-i18n-key="visit_btn">Visit →</span>
-                                    </a>
-                                    <a href="https://tiktok.com/@kanannuruyevs" target="_blank" class="brand-platform-row">
-                                        <span class="bpr-icon"><i class="fab fa-tiktok"></i></span>
-                                        <div class="bpr-info"><div class="bpr-name">TikTok</div><div class="bpr-followers">–</div></div>
-                                        <span class="bpr-visit" data-i18n-key="visit_btn">Visit →</span>
-                                    </a>
-                                </div>
-                                <div id="knr-stats" class="brand-tab-panel">
-                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_reach">Combined Reach</span><span class="bsr-value text-slate-900 dark:text-white">30K+</span></div>
-                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_engagement">Avg. Engagement</span><div class="bsr-bar-wrap"><div class="bsr-bar-bg"><div class="bsr-bar-fill" style="width:54%"></div></div><span class="bsr-value text-slate-900 dark:text-white">5.4%</span></div></div>
-                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_age">Core Audience</span><span class="bsr-value text-slate-900 dark:text-white">18 – 34</span></div>
-                                </div>
-                                <a href="./media-kit.html" target="_blank" class="brand-collab-btn">
-                                    <i class="fas fa-file-alt"></i> <span data-i18n-key="download_media_kit">Download Media Kit</span>
-                                </a>
                             </div>
+
+                            <!-- SLIDE 2: KANANWHISPERSASMR -->
+                            <div class="brand-slide">
+                                <div class="card-gradient hover-lift brand-card rounded-2xl p-6 border border-slate-200 dark:border-gray-800 flex flex-col h-full">
+                                    <div class="flex items-center space-x-4 mb-4">
+                                        <div class="w-14 h-14 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 p-0.5 shrink-0 shadow-lg">
+                                            <img src="./src/images/brand-avatars/kananwhispersasmr-avatar.png" alt="KANANWHISPERSASMR avatar" class="w-full h-full rounded-full object-cover">
+                                        </div>
+                                        <div>
+                                            <h4 class="text-xl font-bold gradient-text" data-i18n-key="brand_kananwhispersasmr">KANANWHISPERSASMR</h4>
+                                            <p class="text-xs text-slate-500 dark:text-gray-400" data-i18n-key="brand_kananwhispersasmr_type">ASMR Brand</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="brand-chip" data-i18n-key="tag_asrm">ASMR</span>
+                                        <span class="brand-chip" data-i18n-key="tag_relaxation">Relaxation</span>
+                                        <span class="brand-chip" data-i18n-key="tag_roleplay">Roleplay</span>
+                                        <span class="brand-chip" data-i18n-key="tag_multilingual">Multilingual</span>
+                                    </div>
+                                    <p class="text-slate-700 dark:text-gray-300 text-sm leading-relaxed mb-5" data-i18n-key="brand_kananwhispersasmr_desc">
+                                        Targets an international audience. The content focuses on ASMR roleplays, triggers, and other related topics.
+                                    </p>
+                                    <div class="brand-reach-badge">
+                                        <div class="brand-reach-icon"><i class="fas fa-chart-line"></i></div>
+                                        <div>
+                                            <div class="brand-reach-number">60K+</div>
+                                            <div class="brand-reach-label" data-i18n-key="reach_label">Combined Followers</div>
+                                        </div>
+                                    </div>
+                                    <button class="brand-work-btn" onclick="toggleBrandCard(this)" data-i18n-key="view_work">
+                                        <i class="fas fa-briefcase" style="font-size:12px"></i>
+                                        View Work
+                                        <i class="fas fa-chevron-down bwb-chevron"></i>
+                                    </button>
+                                    <div class="brand-gallery-content">
+                                        <div class="brand-panel-inner">
+                                            <div class="brand-section-title" data-i18n-key="best_content">Best Content</div>
+                                            
+                                            <!-- Solution A: Asymmetric Composite Video Grid -->
+                                            <div class="solution-a-video-grid">
+                                                <div class="solution-a-landscape-wrapper">
+                                                    <div class="solution-a-card landscape-card group relative overflow-hidden block rounded-xl shadow-lg border border-purple-500/30">
+                                                        <img src="./src/images/projects-covers/themedox-template-task.png" alt="YouTube Video" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-between p-3.5">
+                                                            <div class="flex items-center justify-between">
+                                                                <span class="brand-thumb-badge bg-purple-600 text-white text-[11px] px-2.5 py-0.5 rounded-full font-bold shadow-lg flex items-center gap-1">
+                                                                    <i class="fab fa-youtube"></i> YouTube 16:9
+                                                                </span>
+                                                                <span class="text-[10px] font-mono bg-black/70 text-gray-200 px-2 py-0.5 rounded backdrop-blur-sm">08:15</span>
+                                                            </div>
+                                                            <div class="flex items-end justify-between text-white">
+                                                                <div>
+                                                                    <h5 class="font-bold text-xs md:text-sm line-clamp-1">ASMR Roleplay & Relaxation</h5>
+                                                                    <p class="text-[11px] text-gray-300">250K+ Total Plays</p>
+                                                                </div>
+                                                                <div class="w-8 h-8 rounded-full bg-purple-600 text-white flex items-center justify-center shadow-lg shrink-0">
+                                                                    <i class="fas fa-headphones text-xs"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="solution-a-portrait-wrapper">
+                                                    <div class="solution-a-card portrait-card group relative overflow-hidden block rounded-xl shadow-lg border border-pink-500/30">
+                                                        <img src="./src/images/projects-covers/startbootstrap-template-task.png" alt="Instagram Reel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-between p-2.5">
+                                                            <div class="flex items-center justify-between">
+                                                                <span class="brand-thumb-badge bg-pink-600 text-white text-[9px] px-2 py-0.5 rounded-full font-bold shadow-md flex items-center gap-1">
+                                                                    <i class="fab fa-instagram"></i> Reel 9:16
+                                                                </span>
+                                                                <span class="text-[9px] font-mono bg-black/70 text-gray-200 px-1.5 py-0.5 rounded backdrop-blur-sm">00:30</span>
+                                                            </div>
+                                                            <div class="text-white">
+                                                                <h6 class="font-bold text-[11px] line-clamp-1">Tapping & Triggers</h6>
+                                                                <p class="text-[9px] text-gray-300">Instagram</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="solution-a-card portrait-card group relative overflow-hidden block rounded-xl shadow-lg border border-cyan-500/30">
+                                                        <img src="./src/images/projects-covers/stag-template-task.jpeg" alt="TikTok Video" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-between p-2.5">
+                                                            <div class="flex items-center justify-between">
+                                                                <span class="brand-thumb-badge bg-slate-900 text-white text-[9px] px-2 py-0.5 rounded-full font-bold shadow-md flex items-center gap-1">
+                                                                    <i class="fab fa-tiktok"></i> TikTok 9:16
+                                                                </span>
+                                                                <span class="text-[9px] font-mono bg-black/70 text-gray-200 px-1.5 py-0.5 rounded backdrop-blur-sm">00:40</span>
+                                                            </div>
+                                                            <div class="text-white">
+                                                                <h6 class="font-bold text-[11px] line-clamp-1">Soft Whispers</h6>
+                                                                <p class="text-[9px] text-gray-300">TikTok</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="brand-tab-bar">
+                                                <button class="brand-tab-btn active" onclick="switchBrandTab(this, 'kwa-platforms')"><i class="fas fa-satellite-dish"></i> <span data-i18n-key="tab_platforms">Platforms</span></button>
+                                                <button class="brand-tab-btn" onclick="switchBrandTab(this, 'kwa-stats')"><i class="fas fa-chart-bar"></i> <span data-i18n-key="tab_audience">Audience Stats</span></button>
+                                            </div>
+                                            <div id="kwa-platforms" class="brand-tab-panel active">
+                                                <div class="brand-platform-row disabled">
+                                                    <span class="bpr-icon"><i class="fab fa-youtube" style="color:#ff0000"></i></span>
+                                                    <div class="bpr-info"><div class="bpr-name">YouTube</div><div class="bpr-followers">250K+ total plays</div></div>
+                                                    <span class="bpr-visit no-link" data-i18n-key="no_link">No Link</span>
+                                                </div>
+                                                <div class="brand-platform-row disabled">
+                                                    <span class="bpr-icon"><i class="fab fa-instagram" style="color:#e1306c"></i></span>
+                                                    <div class="bpr-info"><div class="bpr-name">Instagram</div><div class="bpr-followers">60K followers</div></div>
+                                                    <span class="bpr-visit no-link" data-i18n-key="no_link">No Link</span>
+                                                </div>
+                                                <div class="brand-platform-row disabled">
+                                                    <span class="bpr-icon"><i class="fab fa-tiktok"></i></span>
+                                                    <div class="bpr-info"><div class="bpr-name">TikTok</div><div class="bpr-followers">–</div></div>
+                                                    <span class="bpr-visit no-link" data-i18n-key="no_link">No Link</span>
+                                                </div>
+                                            </div>
+                                            <div id="kwa-stats" class="brand-tab-panel">
+                                                <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_reach">Combined Reach</span><span class="bsr-value text-slate-900 dark:text-white">60K+</span></div>
+                                                <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_engagement">Avg. Engagement</span><div class="bsr-bar-wrap"><div class="bsr-bar-bg"><div class="bsr-bar-fill" style="width:62%"></div></div><span class="bsr-value text-slate-900 dark:text-white">6.2%</span></div></div>
+                                                <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_age">Core Audience</span><span class="bsr-value text-slate-900 dark:text-white">18 – 34</span></div>
+                                            </div>
+                                            <a href="./media-kit.html" target="_blank" class="brand-collab-btn">
+                                                <i class="fas fa-file-alt"></i> <span data-i18n-key="download_media_kit">Download Media Kit</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- SLIDE 3: KANANSNOTE SUITE (Integrated EN | AZ | RU Language Pills) -->
+                            <div class="brand-slide">
+                                <div class="card-gradient hover-lift brand-card rounded-2xl p-6 border border-slate-200 dark:border-gray-800 flex flex-col h-full">
+                                    <div class="flex items-center justify-between mb-4">
+                                        <div class="flex items-center space-x-4">
+                                            <div class="w-14 h-14 rounded-full bg-gradient-to-r from-blue-500 to-teal-400 p-0.5 shrink-0 shadow-lg">
+                                                <img id="kn-avatar-img" src="./src/images/brand-avatars/kanansnote-avatar.png" alt="KANANSNOTE avatar" class="w-full h-full rounded-full object-cover">
+                                            </div>
+                                            <div>
+                                                <h4 id="kn-brand-title" class="text-xl font-bold gradient-text" data-i18n-key="brand_kanansnote">KANANSNOTE</h4>
+                                                <p id="kn-brand-type" class="text-xs text-slate-500 dark:text-gray-400" data-i18n-key="brand_kanansnote_type">Personal Brand</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Language Sub-Channel Pills -->
+                                        <div class="flex items-center space-x-1.5 bg-slate-100 dark:bg-gray-900/80 p-1 rounded-full border border-slate-200 dark:border-gray-800">
+                                            <button class="kn-lang-btn active" onclick="switchKnLang('en', this)">EN</button>
+                                            <button class="kn-lang-btn" onclick="switchKnLang('aze', this)">AZ</button>
+                                            <button class="kn-lang-btn" onclick="switchKnLang('ru', this)">RU</button>
+                                        </div>
+                                    </div>
+
+                                    <div id="kn-tags-container" class="flex flex-wrap gap-2 mb-4">
+                                        <span class="brand-chip" data-i18n-key="tag_lifestyle">Lifestyle</span>
+                                        <span class="brand-chip" data-i18n-key="tag_mental_health">Mental Health</span>
+                                        <span class="brand-chip" data-i18n-key="tag_personal_style">Personal Style</span>
+                                        <span class="brand-chip" data-i18n-key="tag_reactions">Reactions</span>
+                                        <span class="brand-chip" data-i18n-key="tag_english">English</span>
+                                    </div>
+                                    <p id="kn-brand-desc" class="text-slate-700 dark:text-gray-300 text-sm leading-relaxed mb-5" data-i18n-key="brand_kanansnote_desc">
+                                        Targets an international audience. The content focuses on lifestyle, self-improvement, mental health, fashion, and entertainment.
+                                    </p>
+                                    <div class="brand-reach-badge">
+                                        <div class="brand-reach-icon"><i class="fas fa-chart-line"></i></div>
+                                        <div>
+                                            <div id="kn-reach-num" class="brand-reach-number">95K+</div>
+                                            <div class="brand-reach-label" data-i18n-key="reach_label">Combined Followers</div>
+                                        </div>
+                                    </div>
+                                    <button class="brand-work-btn" onclick="toggleBrandCard(this)" data-i18n-key="view_work">
+                                        <i class="fas fa-briefcase" style="font-size:12px"></i>
+                                        View Work
+                                        <i class="fas fa-chevron-down bwb-chevron"></i>
+                                    </button>
+                                    <div class="brand-gallery-content">
+                                        <div class="brand-panel-inner">
+                                            <div class="brand-section-title" data-i18n-key="best_content">Best Content</div>
+                                            
+                                            <!-- Solution A: Asymmetric Composite Video Grid -->
+                                            <div class="solution-a-video-grid">
+                                                <div class="solution-a-landscape-wrapper">
+                                                    <a id="kn-yt-link" href="https://youtube.com/@kanansnote" target="_blank" class="solution-a-card landscape-card group relative overflow-hidden block rounded-xl shadow-lg border border-blue-500/30">
+                                                        <img src="./src/images/projects-covers/programming.jpeg" alt="YouTube Video" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-between p-3.5">
+                                                            <div class="flex items-center justify-between">
+                                                                <span class="brand-thumb-badge bg-red-600 text-white text-[11px] px-2.5 py-0.5 rounded-full font-bold shadow-lg flex items-center gap-1">
+                                                                    <i class="fab fa-youtube"></i> YouTube 16:9
+                                                                </span>
+                                                                <span class="text-[10px] font-mono bg-black/70 text-gray-200 px-2 py-0.5 rounded backdrop-blur-sm">06:45</span>
+                                                            </div>
+                                                            <div class="flex items-end justify-between text-white">
+                                                                <div>
+                                                                    <h5 class="font-bold text-xs md:text-sm line-clamp-1">Lifestyle & Mental Health Vlogs</h5>
+                                                                    <p class="text-[11px] text-gray-300">YouTube Channel</p>
+                                                                </div>
+                                                                <div class="w-8 h-8 rounded-full bg-red-600 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform shrink-0">
+                                                                    <i class="fas fa-play text-xs ml-0.5"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+
+                                                <div class="solution-a-portrait-wrapper">
+                                                    <a id="kn-ig-link" href="https://instagram.com/kanansnote" target="_blank" class="solution-a-card portrait-card group relative overflow-hidden block rounded-xl shadow-lg border border-pink-500/30">
+                                                        <img src="./src/images/projects-covers/business-calendar.jpeg" alt="Instagram Reel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-between p-2.5">
+                                                            <div class="flex items-center justify-between">
+                                                                <span class="brand-thumb-badge bg-pink-600 text-white text-[9px] px-2 py-0.5 rounded-full font-bold shadow-md flex items-center gap-1">
+                                                                    <i class="fab fa-instagram"></i> Reel 9:16
+                                                                </span>
+                                                                <span class="text-[9px] font-mono bg-black/70 text-gray-200 px-1.5 py-0.5 rounded backdrop-blur-sm">00:30</span>
+                                                            </div>
+                                                            <div class="text-white">
+                                                                <h6 class="font-bold text-[11px] line-clamp-1">Personal Style</h6>
+                                                                <p class="text-[9px] text-gray-300">Instagram</p>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+
+                                                    <a id="kn-tt-link" href="https://tiktok.com/@kanansnote" target="_blank" class="solution-a-card portrait-card group relative overflow-hidden block rounded-xl shadow-lg border border-cyan-500/30">
+                                                        <img src="./src/images/projects-covers/venn-diagram-project.jpeg" alt="TikTok Video" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-between p-2.5">
+                                                            <div class="flex items-center justify-between">
+                                                                <span class="brand-thumb-badge bg-slate-900 text-white text-[9px] px-2 py-0.5 rounded-full font-bold shadow-md flex items-center gap-1">
+                                                                    <i class="fab fa-tiktok"></i> TikTok 9:16
+                                                                </span>
+                                                                <span class="text-[9px] font-mono bg-black/70 text-gray-200 px-1.5 py-0.5 rounded backdrop-blur-sm">00:50</span>
+                                                            </div>
+                                                            <div class="text-white">
+                                                                <h6 class="font-bold text-[11px] line-clamp-1">Reactions</h6>
+                                                                <p class="text-[9px] text-gray-300">TikTok</p>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="brand-tab-bar">
+                                                <button class="brand-tab-btn active" onclick="switchBrandTab(this, 'ksn-platforms')"><i class="fas fa-satellite-dish"></i> <span data-i18n-key="tab_platforms">Platforms</span></button>
+                                                <button class="brand-tab-btn" onclick="switchBrandTab(this, 'ksn-stats')"><i class="fas fa-chart-bar"></i> <span data-i18n-key="tab_audience">Audience Stats</span></button>
+                                            </div>
+                                            <div id="ksn-platforms" class="brand-tab-panel active">
+                                                <a id="kn-row-ig" href="https://instagram.com/kanansnote" target="_blank" class="brand-platform-row">
+                                                    <span class="bpr-icon"><i class="fab fa-instagram" style="color:#e1306c"></i></span>
+                                                    <div class="bpr-info"><div class="bpr-name">Instagram</div><div id="kn-fol-ig" class="bpr-followers">80K followers</div></div>
+                                                    <span class="bpr-visit" data-i18n-key="visit_btn">Visit →</span>
+                                                </a>
+                                                <a id="kn-row-tt" href="https://tiktok.com/@kanansnote" target="_blank" class="brand-platform-row">
+                                                    <span class="bpr-icon"><i class="fab fa-tiktok"></i></span>
+                                                    <div class="bpr-info"><div class="bpr-name">TikTok</div><div id="kn-fol-tt" class="bpr-followers">–</div></div>
+                                                    <span class="bpr-visit" data-i18n-key="visit_btn">Visit →</span>
+                                                </a>
+                                                <a id="kn-row-yt" href="https://youtube.com/@kanansnote" target="_blank" class="brand-platform-row">
+                                                    <span class="bpr-icon"><i class="fab fa-youtube" style="color:#ff0000"></i></span>
+                                                    <div class="bpr-info"><div class="bpr-name">YouTube</div><div id="kn-fol-yt" class="bpr-followers">15K subscribers</div></div>
+                                                    <span class="bpr-visit" data-i18n-key="visit_btn">Visit →</span>
+                                                </a>
+                                            </div>
+                                            <div id="ksn-stats" class="brand-tab-panel">
+                                                <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_reach">Combined Reach</span><span id="kn-stat-reach" class="bsr-value text-slate-900 dark:text-white">95K+</span></div>
+                                                <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_engagement">Avg. Engagement</span><div class="bsr-bar-wrap"><div class="bsr-bar-bg"><div class="bsr-bar-fill" style="width:48%"></div></div><span class="bsr-value text-slate-900 dark:text-white">4.8%</span></div></div>
+                                                <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_age">Core Audience</span><span class="bsr-value text-slate-900 dark:text-white">18 – 34</span></div>
+                                            </div>
+                                            <a href="./media-kit.html" target="_blank" class="brand-collab-btn">
+                                                <i class="fas fa-file-alt"></i> <span data-i18n-key="download_media_kit">Download Media Kit</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
 
-                    <!-- KANANWHISPERSASMR -->
-                    <div class="card-gradient hover-lift brand-card top-row rounded-2xl p-6 border border-slate-200 dark:border-gray-800 flex flex-col">
-                        <div class="flex items-center space-x-4 mb-4">
-                            <div class="w-14 h-14 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 p-0.5 shrink-0 shadow-lg">
-                                <img src="./src/images/brand-avatars/kananwhispersasmr-avatar.png" alt="KANANWHISPERSASMR avatar" class="w-full h-full rounded-full object-cover">
-                            </div>
-                            <div>
-                                <h4 class="text-xl font-bold gradient-text" data-i18n-key="brand_kananwhispersasmr">KANANWHISPERSASMR</h4>
-                                <p class="text-xs text-slate-500 dark:text-gray-400" data-i18n-key="brand_kananwhispersasmr_type">ASMR Brand</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="brand-chip" data-i18n-key="tag_asrm">ASMR</span>
-                            <span class="brand-chip" data-i18n-key="tag_relaxation">Relaxation</span>
-                            <span class="brand-chip" data-i18n-key="tag_roleplay">Roleplay</span>
-                            <span class="brand-chip" data-i18n-key="tag_multilingual">Multilingual</span>
-                        </div>
-                        <p class="text-slate-700 dark:text-gray-300 text-sm leading-relaxed mb-5" data-i18n-key="brand_kananwhispersasmr_desc">
-                            Targets an international audience. The content focuses on ASMR roleplays, triggers, and other related topics.
-                        </p>
-                        <div class="brand-reach-badge">
-                            <div class="brand-reach-icon"><i class="fas fa-chart-line"></i></div>
-                            <div>
-                                <div class="brand-reach-number">60K+</div>
-                                <div class="brand-reach-label" data-i18n-key="reach_label">Combined Followers</div>
-                            </div>
-                        </div>
-                        <button class="brand-work-btn" onclick="toggleBrandCard(this)" data-i18n-key="view_work">
-                            <i class="fas fa-briefcase" style="font-size:12px"></i>
-                            View Work
-                            <i class="fas fa-chevron-down bwb-chevron"></i>
-                        </button>
-                        <div class="brand-gallery-content">
-                            <div class="brand-panel-inner">
-                                <div class="brand-section-title" data-i18n-key="best_content">Best Content</div>
-                                <div class="brand-content-grid">
-                                    <div class="brand-thumb group">
-                                        <img src="https://placehold.co/200x250/701a75/ffffff/png?text=ASMR+1" alt="ASMR content 1">
-                                        <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2">
-                                            <span class="brand-thumb-badge"><i class="fab fa-youtube text-red-500"></i> YouTube</span>
-                                        </div>
-                                    </div>
-                                    <div class="brand-thumb group">
-                                        <img src="https://placehold.co/200x250/831843/ffffff/png?text=ASMR+2" alt="ASMR content 2">
-                                        <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2">
-                                            <span class="brand-thumb-badge"><i class="fab fa-tiktok"></i> TikTok</span>
-                                        </div>
-                                    </div>
-                                    <div class="brand-thumb group">
-                                        <img src="https://placehold.co/200x250/9f1239/ffffff/png?text=ASMR+3" alt="ASMR content 3">
-                                        <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2">
-                                            <span class="brand-thumb-badge"><i class="fab fa-instagram text-pink-500"></i> Instagram</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="brand-tab-bar">
-                                    <button class="brand-tab-btn active" onclick="switchBrandTab(this, 'kwa-platforms')"><i class="fas fa-satellite-dish"></i> <span data-i18n-key="tab_platforms">Platforms</span></button>
-                                    <button class="brand-tab-btn" onclick="switchBrandTab(this, 'kwa-stats')"><i class="fas fa-chart-bar"></i> <span data-i18n-key="tab_audience">Audience Stats</span></button>
-                                </div>
-                                <div id="kwa-platforms" class="brand-tab-panel active">
-                                    <div class="brand-platform-row disabled">
-                                        <span class="bpr-icon"><i class="fab fa-youtube" style="color:#ff0000"></i></span>
-                                        <div class="bpr-info"><div class="bpr-name">YouTube</div><div class="bpr-followers">250K+ total plays</div></div>
-                                        <span class="bpr-visit no-link" data-i18n-key="no_link">No Link</span>
-                                    </div>
-                                    <div class="brand-platform-row disabled">
-                                        <span class="bpr-icon"><i class="fab fa-instagram" style="color:#e1306c"></i></span>
-                                        <div class="bpr-info"><div class="bpr-name">Instagram</div><div class="bpr-followers">60K followers</div></div>
-                                        <span class="bpr-visit no-link" data-i18n-key="no_link">No Link</span>
-                                    </div>
-                                    <div class="brand-platform-row disabled">
-                                        <span class="bpr-icon"><i class="fab fa-tiktok"></i></span>
-                                        <div class="bpr-info"><div class="bpr-name">TikTok</div><div class="bpr-followers">–</div></div>
-                                        <span class="bpr-visit no-link" data-i18n-key="no_link">No Link</span>
-                                    </div>
-                                </div>
-                                <div id="kwa-stats" class="brand-tab-panel">
-                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_reach">Combined Reach</span><span class="bsr-value text-slate-900 dark:text-white">60K+</span></div>
-                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_engagement">Avg. Engagement</span><div class="bsr-bar-wrap"><div class="bsr-bar-bg"><div class="bsr-bar-fill" style="width:62%"></div></div><span class="bsr-value text-slate-900 dark:text-white">6.2%</span></div></div>
-                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_age">Core Audience</span><span class="bsr-value text-slate-900 dark:text-white">18 – 34</span></div>
-                                </div>
-                                <a href="./media-kit.html" target="_blank" class="brand-collab-btn">
-                                    <i class="fas fa-file-alt"></i> <span data-i18n-key="download_media_kit">Download Media Kit</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- KANANSNOTE -->
-                    <div class="card-gradient hover-lift brand-card top-row rounded-2xl p-6 border border-slate-200 dark:border-gray-800 flex flex-col">
-                        <div class="flex items-center space-x-4 mb-4">
-                            <div class="w-14 h-14 rounded-full bg-gradient-to-r from-blue-500 to-teal-400 p-0.5 shrink-0 shadow-lg">
-                                <img src="./src/images/brand-avatars/kanansnote-avatar.png" alt="KANANSNOTE avatar" class="w-full h-full rounded-full object-cover">
-                            </div>
-                            <div>
-                                <h4 class="text-xl font-bold gradient-text" data-i18n-key="brand_kanansnote">KANANSNOTE</h4>
-                                <p class="text-xs text-slate-500 dark:text-gray-400" data-i18n-key="brand_kanansnote_type">Personal Brand</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="brand-chip" data-i18n-key="tag_lifestyle">Lifestyle</span>
-                            <span class="brand-chip" data-i18n-key="tag_mental_health">Mental Health</span>
-                            <span class="brand-chip" data-i18n-key="tag_personal_style">Personal Style</span>
-                            <span class="brand-chip" data-i18n-key="tag_reactions">Reactions</span>
-                            <span class="brand-chip" data-i18n-key="tag_english">English</span>
-                        </div>
-                        <p class="text-slate-700 dark:text-gray-300 text-sm leading-relaxed mb-5" data-i18n-key="brand_kanansnote_desc">
-                            Targets an international audience. The content focuses on lifestyle, self-improvement, mental health, fashion, and entertainment.
-                        </p>
-                        <div class="brand-reach-badge">
-                            <div class="brand-reach-icon"><i class="fas fa-chart-line"></i></div>
-                            <div>
-                                <div class="brand-reach-number">95K+</div>
-                                <div class="brand-reach-label" data-i18n-key="reach_label">Combined Followers</div>
-                            </div>
-                        </div>
-                        <button class="brand-work-btn" onclick="toggleBrandCard(this)" data-i18n-key="view_work">
-                            <i class="fas fa-briefcase" style="font-size:12px"></i>
-                            View Work
-                            <i class="fas fa-chevron-down bwb-chevron"></i>
-                        </button>
-                        <div class="brand-gallery-content">
-                            <div class="brand-panel-inner">
-                                <div class="brand-section-title" data-i18n-key="best_content">Best Content</div>
-                                <div class="brand-content-grid">
-                                    <a href="https://instagram.com/kanansnote" target="_blank" class="brand-thumb group">
-                                        <img src="https://placehold.co/200x250/0c4a6e/ffffff/png?text=Lifestyle" alt="Lifestyle content">
-                                        <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2">
-                                            <span class="brand-thumb-badge"><i class="fab fa-instagram text-pink-500"></i> Instagram</span>
-                                        </div>
-                                    </a>
-                                    <a href="https://tiktok.com/@kanansnote" target="_blank" class="brand-thumb group">
-                                        <img src="https://placehold.co/200x250/0369a1/ffffff/png?text=TikTok" alt="TikTok content">
-                                        <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2">
-                                            <span class="brand-thumb-badge"><i class="fab fa-tiktok"></i> TikTok</span>
-                                        </div>
-                                    </a>
-                                    <a href="https://youtube.com/@kanansnote" target="_blank" class="brand-thumb group">
-                                        <img src="https://placehold.co/200x250/0284c7/ffffff/png?text=YouTube" alt="YouTube content">
-                                        <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2">
-                                            <span class="brand-thumb-badge"><i class="fab fa-youtube text-red-500"></i> YouTube</span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="brand-tab-bar">
-                                    <button class="brand-tab-btn active" onclick="switchBrandTab(this, 'ksn-platforms')"><i class="fas fa-satellite-dish"></i> <span data-i18n-key="tab_platforms">Platforms</span></button>
-                                    <button class="brand-tab-btn" onclick="switchBrandTab(this, 'ksn-stats')"><i class="fas fa-chart-bar"></i> <span data-i18n-key="tab_audience">Audience Stats</span></button>
-                                </div>
-                                <div id="ksn-platforms" class="brand-tab-panel active">
-                                    <a href="https://instagram.com/kanansnote" target="_blank" class="brand-platform-row">
-                                        <span class="bpr-icon"><i class="fab fa-instagram" style="color:#e1306c"></i></span>
-                                        <div class="bpr-info"><div class="bpr-name">Instagram</div><div class="bpr-followers">80K followers</div></div>
-                                        <span class="bpr-visit" data-i18n-key="visit_btn">Visit →</span>
-                                    </a>
-                                    <a href="https://tiktok.com/@kanansnote" target="_blank" class="brand-platform-row">
-                                        <span class="bpr-icon"><i class="fab fa-tiktok"></i></span>
-                                        <div class="bpr-info"><div class="bpr-name">TikTok</div><div class="bpr-followers">–</div></div>
-                                        <span class="bpr-visit" data-i18n-key="visit_btn">Visit →</span>
-                                    </a>
-                                    <a href="https://youtube.com/@kanansnote" target="_blank" class="brand-platform-row">
-                                        <span class="bpr-icon"><i class="fab fa-youtube" style="color:#ff0000"></i></span>
-                                        <div class="bpr-info"><div class="bpr-name">YouTube</div><div class="bpr-followers">15K subscribers</div></div>
-                                        <span class="bpr-visit" data-i18n-key="visit_btn">Visit →</span>
-                                    </a>
-                                </div>
-                                <div id="ksn-stats" class="brand-tab-panel">
-                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_reach">Combined Reach</span><span class="bsr-value text-slate-900 dark:text-white">95K+</span></div>
-                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_engagement">Avg. Engagement</span><div class="bsr-bar-wrap"><div class="bsr-bar-bg"><div class="bsr-bar-fill" style="width:48%"></div></div><span class="bsr-value text-slate-900 dark:text-white">4.8%</span></div></div>
-                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_age">Core Audience</span><span class="bsr-value text-slate-900 dark:text-white">18 – 34</span></div>
-                                </div>
-                                <a href="./media-kit.html" target="_blank" class="brand-collab-btn">
-                                    <i class="fas fa-file-alt"></i> <span data-i18n-key="download_media_kit">Download Media Kit</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- KANANSNOTEAZE -->
-                    <div class="card-gradient hover-lift brand-card rounded-2xl p-6 border border-slate-200 dark:border-gray-800 flex flex-col">
-                        <div class="flex items-center space-x-4 mb-4">
-                            <div class="w-14 h-14 rounded-full bg-gradient-to-r from-amber-500 to-orange-600 p-0.5 shrink-0 shadow-lg">
-                                <img src="./src/images/brand-avatars/kanansnoteaze-avatar.png" alt="KANANSNOTEAZE avatar" class="w-full h-full rounded-full object-cover">
-                            </div>
-                            <div>
-                                <h4 class="text-xl font-bold gradient-text" data-i18n-key="brand_kanansnoteaze">KANANSNOTEAZE</h4>
-                                <p class="text-xs text-slate-500 dark:text-gray-400" data-i18n-key="brand_kanansnoteaze_type">Personal Brand</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="brand-chip" data-i18n-key="tag_lifestyle">Lifestyle</span>
-                            <span class="brand-chip" data-i18n-key="tag_mental_health">Mental Health</span>
-                            <span class="brand-chip" data-i18n-key="tag_personal_style">Personal Style</span>
-                            <span class="brand-chip" data-i18n-key="tag_reactions">Reactions</span>
-                            <span class="brand-chip" data-i18n-key="tag_azerbaijani">Azerbaijani</span>
-                        </div>
-                        <p class="text-slate-700 dark:text-gray-300 text-sm leading-relaxed mb-5" data-i18n-key="brand_kanansnoteaze_desc">
-                            Targets the Azerbaijani audience. The content focuses on lifestyle, self-improvement, mental health, fashion, and entertainment.
-                        </p>
-                        <div class="brand-reach-badge">
-                            <div class="brand-reach-icon"><i class="fas fa-chart-line"></i></div>
-                            <div>
-                                <div class="brand-reach-number">45K+</div>
-                                <div class="brand-reach-label" data-i18n-key="reach_label">Combined Followers</div>
-                            </div>
-                        </div>
-                        <button class="brand-work-btn" onclick="toggleBrandCard(this)" data-i18n-key="view_work">
-                            <i class="fas fa-briefcase" style="font-size:12px"></i>
-                            View Work
-                            <i class="fas fa-chevron-down bwb-chevron"></i>
-                        </button>
-                        <div class="brand-gallery-content">
-                            <div class="brand-panel-inner">
-                                <div class="brand-section-title" data-i18n-key="best_content">Best Content</div>
-                                <div class="brand-content-grid">
-                                    <a href="https://instagram.com/kanansnoteaze" target="_blank" class="brand-thumb group">
-                                        <img src="https://placehold.co/200x250/7c2d12/ffffff/png?text=AZE+1" alt="Azerbaijani content 1">
-                                        <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2">
-                                            <span class="brand-thumb-badge"><i class="fab fa-instagram text-pink-500"></i> Instagram</span>
-                                        </div>
-                                    </a>
-                                    <a href="https://tiktok.com/@kanansnoteaze" target="_blank" class="brand-thumb group">
-                                        <img src="https://placehold.co/200x250/9a3412/ffffff/png?text=AZE+2" alt="Azerbaijani content 2">
-                                        <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2">
-                                            <span class="brand-thumb-badge"><i class="fab fa-tiktok"></i> TikTok</span>
-                                        </div>
-                                    </a>
-                                    <div class="brand-thumb group">
-                                        <img src="https://placehold.co/200x250/c2410c/ffffff/png?text=AZE+3" alt="Azerbaijani content 3">
-                                        <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2">
-                                            <span class="brand-thumb-badge"><i class="fas fa-photo-film"></i> Content</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="brand-tab-bar">
-                                    <button class="brand-tab-btn active" onclick="switchBrandTab(this, 'kaze-platforms')"><i class="fas fa-satellite-dish"></i> <span data-i18n-key="tab_platforms">Platforms</span></button>
-                                    <button class="brand-tab-btn" onclick="switchBrandTab(this, 'kaze-stats')"><i class="fas fa-chart-bar"></i> <span data-i18n-key="tab_audience">Audience Stats</span></button>
-                                </div>
-                                <div id="kaze-platforms" class="brand-tab-panel active">
-                                    <a href="https://instagram.com/kanansnoteaze" target="_blank" class="brand-platform-row">
-                                        <span class="bpr-icon"><i class="fab fa-instagram" style="color:#e1306c"></i></span>
-                                        <div class="bpr-info"><div class="bpr-name">Instagram</div><div class="bpr-followers">45K followers</div></div>
-                                        <span class="bpr-visit" data-i18n-key="visit_btn">Visit →</span>
-                                    </a>
-                                    <a href="https://tiktok.com/@kanansnoteaze" target="_blank" class="brand-platform-row">
-                                        <span class="bpr-icon"><i class="fab fa-tiktok"></i></span>
-                                        <div class="bpr-info"><div class="bpr-name">TikTok</div><div class="bpr-followers">–</div></div>
-                                        <span class="bpr-visit" data-i18n-key="visit_btn">Visit →</span>
-                                    </a>
-                                </div>
-                                <div id="kaze-stats" class="brand-tab-panel">
-                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_reach">Combined Reach</span><span class="bsr-value text-slate-900 dark:text-white">45K+</span></div>
-                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_engagement">Avg. Engagement</span><div class="bsr-bar-wrap"><div class="bsr-bar-bg"><div class="bsr-bar-fill" style="width:51%"></div></div><span class="bsr-value text-slate-900 dark:text-white">5.1%</span></div></div>
-                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_age">Core Audience</span><span class="bsr-value text-slate-900 dark:text-white">18 – 34</span></div>
-                                </div>
-                                <a href="./media-kit.html" target="_blank" class="brand-collab-btn">
-                                    <i class="fas fa-file-alt"></i> <span data-i18n-key="download_media_kit">Download Media Kit</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- KANANSNOTERU -->
-                    <div class="card-gradient hover-lift brand-card rounded-2xl p-6 border border-slate-200 dark:border-gray-800 flex flex-col">
-                        <div class="flex items-center space-x-4 mb-4">
-                            <div class="w-14 h-14 rounded-full bg-gradient-to-r from-red-500 to-rose-600 p-0.5 shrink-0 shadow-lg">
-                                <img src="./src/images/brand-avatars/kanansnoteru-avatar.png" alt="KANANSNOTERU avatar" class="w-full h-full rounded-full object-cover">
-                            </div>
-                            <div>
-                                <h4 class="text-xl font-bold gradient-text" data-i18n-key="brand_kanansnoteru">KANANSNOTERU</h4>
-                                <p class="text-xs text-slate-500 dark:text-gray-400" data-i18n-key="brand_kanansnoteru_type">Personal Brand</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="brand-chip" data-i18n-key="tag_lifestyle">Lifestyle</span>
-                            <span class="brand-chip" data-i18n-key="tag_mental_health">Mental Health</span>
-                            <span class="brand-chip" data-i18n-key="tag_personal_style">Personal Style</span>
-                            <span class="brand-chip" data-i18n-key="tag_reactions">Reactions</span>
-                            <span class="brand-chip" data-i18n-key="tag_russian">Russian</span>
-                        </div>
-                        <p class="text-slate-700 dark:text-gray-300 text-sm leading-relaxed mb-5" data-i18n-key="brand_kanansnoteru_desc">
-                            Targets the Russian-speaking audience. The content focuses on lifestyle, self-improvement, mental health, fashion, and entertainment.
-                        </p>
-                        <div class="brand-reach-badge">
-                            <div class="brand-reach-icon"><i class="fas fa-chart-line"></i></div>
-                            <div>
-                                <div class="brand-reach-number">60K+</div>
-                                <div class="brand-reach-label" data-i18n-key="reach_label">Combined Followers</div>
-                            </div>
-                        </div>
-                        <button class="brand-work-btn" onclick="toggleBrandCard(this)" data-i18n-key="view_work">
-                            <i class="fas fa-briefcase" style="font-size:12px"></i>
-                            View Work
-                            <i class="fas fa-chevron-down bwb-chevron"></i>
-                        </button>
-                        <div class="brand-gallery-content">
-                            <div class="brand-panel-inner">
-                                <div class="brand-section-title" data-i18n-key="best_content">Best Content</div>
-                                <div class="brand-content-grid">
-                                    <a href="https://instagram.com/kanansnoteru" target="_blank" class="brand-thumb group">
-                                        <img src="https://placehold.co/200x250/881337/ffffff/png?text=RU+1" alt="Russian content 1">
-                                        <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2">
-                                            <span class="brand-thumb-badge"><i class="fab fa-instagram text-pink-500"></i> Instagram</span>
-                                        </div>
-                                    </a>
-                                    <a href="https://tiktok.com/@kanansnoteru" target="_blank" class="brand-thumb group">
-                                        <img src="https://placehold.co/200x250/9f1239/ffffff/png?text=RU+2" alt="Russian content 2">
-                                        <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2">
-                                            <span class="brand-thumb-badge"><i class="fab fa-tiktok"></i> TikTok</span>
-                                        </div>
-                                    </a>
-                                    <div class="brand-thumb group">
-                                        <img src="https://placehold.co/200x250/be123c/ffffff/png?text=RU+3" alt="Russian content 3">
-                                        <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2">
-                                            <span class="brand-thumb-badge"><i class="fas fa-photo-film"></i> Content</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="brand-tab-bar">
-                                    <button class="brand-tab-btn active" onclick="switchBrandTab(this, 'kru-platforms')"><i class="fas fa-satellite-dish"></i> <span data-i18n-key="tab_platforms">Platforms</span></button>
-                                    <button class="brand-tab-btn" onclick="switchBrandTab(this, 'kru-stats')"><i class="fas fa-chart-bar"></i> <span data-i18n-key="tab_audience">Audience Stats</span></button>
-                                </div>
-                                <div id="kru-platforms" class="brand-tab-panel active">
-                                    <a href="https://instagram.com/kanansnoteru" target="_blank" class="brand-platform-row">
-                                        <span class="bpr-icon"><i class="fab fa-instagram" style="color:#e1306c"></i></span>
-                                        <div class="bpr-info"><div class="bpr-name">Instagram</div><div class="bpr-followers">60K followers</div></div>
-                                        <span class="bpr-visit" data-i18n-key="visit_btn">Visit →</span>
-                                    </a>
-                                    <a href="https://tiktok.com/@kanansnoteru" target="_blank" class="brand-platform-row">
-                                        <span class="bpr-icon"><i class="fab fa-tiktok"></i></span>
-                                        <div class="bpr-info"><div class="bpr-name">TikTok</div><div class="bpr-followers">–</div></div>
-                                        <span class="bpr-visit" data-i18n-key="visit_btn">Visit →</span>
-                                    </a>
-                                </div>
-                                <div id="kru-stats" class="brand-tab-panel">
-                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_reach">Combined Reach</span><span class="bsr-value text-slate-900 dark:text-white">60K+</span></div>
-                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_engagement">Avg. Engagement</span><div class="bsr-bar-wrap"><div class="bsr-bar-bg"><div class="bsr-bar-fill" style="width:46%"></div></div><span class="bsr-value text-slate-900 dark:text-white">4.6%</span></div></div>
-                                    <div class="brand-stat-row"><span class="bsr-label" data-i18n-key="stat_age">Core Audience</span><span class="bsr-value text-slate-900 dark:text-white">18 – 34</span></div>
-                                </div>
-                                <a href="./media-kit.html" target="_blank" class="brand-collab-btn">
-                                    <i class="fas fa-file-alt"></i> <span data-i18n-key="download_media_kit">Download Media Kit</span>
-                                </a>
-                            </div>
-                        </div>
+                    <!-- Carousel Pagination Dot Indicators -->
+                    <div class="brand-carousel-dots" id="brandCarouselDots">
+                        <button class="carousel-dot active" data-slide="0" aria-label="Slide 1"></button>
+                        <button class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
+                        <button class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
                     </div>
 
                 </div>

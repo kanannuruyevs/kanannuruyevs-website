@@ -318,3 +318,218 @@ if (footerUsernameElement) {
         footerUsernameElement.classList.add("is-changing");
     }, 4000);
 }
+
+// --- Option 4: Brand Slider Carousel Logic ---
+let currentBrandSlide = 0;
+const totalBrandSlides = 3;
+
+function initBrandCarousel() {
+    const track = document.getElementById('brandCarouselTrack');
+    const prevBtn = document.getElementById('brandCarouselPrev');
+    const nextBtn = document.getElementById('brandCarouselNext');
+    const dots = document.querySelectorAll('#brandCarouselDots .carousel-dot');
+
+    if (!track) return;
+
+    function updateCarousel() {
+        const slides = track.querySelectorAll('.brand-slide');
+        track.style.transform = `translateX(-${currentBrandSlide * 100}%)`;
+        slides.forEach((slide, idx) => {
+            slide.classList.toggle('active-slide', idx === currentBrandSlide);
+        });
+        dots.forEach((dot, idx) => {
+            dot.classList.toggle('active', idx === currentBrandSlide);
+        });
+    }
+
+    updateCarousel();
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            currentBrandSlide = (currentBrandSlide - 1 + totalBrandSlides) % totalBrandSlides;
+            updateCarousel();
+        });
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            currentBrandSlide = (currentBrandSlide + 1) % totalBrandSlides;
+            updateCarousel();
+        });
+    }
+
+    dots.forEach((dot, idx) => {
+        dot.addEventListener('click', () => {
+            currentBrandSlide = idx;
+            updateCarousel();
+        });
+    });
+
+    // Touch Swipe Gestures
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    const viewport = track.closest('.brand-carousel-viewport');
+    if (viewport) {
+        viewport.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        viewport.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            if (touchStartX - touchEndX > 50) {
+                currentBrandSlide = (currentBrandSlide + 1) % totalBrandSlides;
+                updateCarousel();
+            } else if (touchEndX - touchStartX > 50) {
+                currentBrandSlide = (currentBrandSlide - 1 + totalBrandSlides) % totalBrandSlides;
+                updateCarousel();
+            }
+        }, { passive: true });
+    }
+}
+
+// --- KANANSNOTE Language Switcher (EN | AZ | RU) ---
+const knLangData = {
+    en: {
+        avatar: './src/images/brand-avatars/kanansnote-avatar.png',
+        titleKey: 'brand_kanansnote',
+        typeKey: 'brand_kanansnote_type',
+        descKey: 'brand_kanansnote_desc',
+        reach: '95K+',
+        tags: [
+            { key: 'tag_lifestyle', text: 'Lifestyle' },
+            { key: 'tag_mental_health', text: 'Mental Health' },
+            { key: 'tag_personal_style', text: 'Personal Style' },
+            { key: 'tag_reactions', text: 'Reactions' },
+            { key: 'tag_english', text: 'English' }
+        ],
+        ig: 'https://instagram.com/kanansnote',
+        igFol: '80K followers',
+        tt: 'https://tiktok.com/@kanansnote',
+        ttFol: '–',
+        yt: 'https://youtube.com/@kanansnote',
+        ytFol: '15K subscribers'
+    },
+    aze: {
+        avatar: './src/images/brand-avatars/kanansnoteaze-avatar.png',
+        titleKey: 'brand_kanansnoteaze',
+        typeKey: 'brand_kanansnoteaze_type',
+        descKey: 'brand_kanansnoteaze_desc',
+        reach: '45K+',
+        tags: [
+            { key: 'tag_lifestyle', text: 'Lifestyle' },
+            { key: 'tag_mental_health', text: 'Mental Health' },
+            { key: 'tag_personal_style', text: 'Personal Style' },
+            { key: 'tag_reactions', text: 'Reactions' },
+            { key: 'tag_azerbaijani', text: 'Azerbaijani' }
+        ],
+        ig: 'https://instagram.com/kanansnoteaze',
+        igFol: '45K followers',
+        tt: 'https://tiktok.com/@kanansnoteaze',
+        ttFol: '–',
+        yt: 'https://youtube.com/@kanansnoteaze',
+        ytFol: '–'
+    },
+    ru: {
+        avatar: './src/images/brand-avatars/kanansnoteru-avatar.png',
+        titleKey: 'brand_kanansnoteru',
+        typeKey: 'brand_kanansnoteru_type',
+        descKey: 'brand_kanansnoteru_desc',
+        reach: '60K+',
+        tags: [
+            { key: 'tag_lifestyle', text: 'Lifestyle' },
+            { key: 'tag_mental_health', text: 'Mental Health' },
+            { key: 'tag_personal_style', text: 'Personal Style' },
+            { key: 'tag_reactions', text: 'Reactions' },
+            { key: 'tag_russian', text: 'Russian' }
+        ],
+        ig: 'https://instagram.com/kanansnoteru',
+        igFol: '60K followers',
+        tt: 'https://tiktok.com/@kanansnoteru',
+        ttFol: '–',
+        yt: 'https://youtube.com/@kanansnoteru',
+        ytFol: '–'
+    }
+};
+
+function switchKnLang(lang, btn) {
+    const data = knLangData[lang];
+    if (!data) return;
+
+    if (btn) {
+        const container = btn.closest('div');
+        if (container) {
+            container.querySelectorAll('.kn-lang-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+        }
+    }
+
+    const avatar = document.getElementById('kn-avatar-img');
+    if (avatar) avatar.src = data.avatar;
+
+    const title = document.getElementById('kn-brand-title');
+    if (title) {
+        title.setAttribute('data-i18n-key', data.titleKey);
+        if (typeof translations !== 'undefined' && typeof currentLanguage !== 'undefined' && translations[currentLanguage] && translations[currentLanguage][data.titleKey]) {
+            title.textContent = translations[currentLanguage][data.titleKey];
+        }
+    }
+
+    const type = document.getElementById('kn-brand-type');
+    if (type) {
+        type.setAttribute('data-i18n-key', data.typeKey);
+        if (typeof translations !== 'undefined' && typeof currentLanguage !== 'undefined' && translations[currentLanguage] && translations[currentLanguage][data.typeKey]) {
+            type.textContent = translations[currentLanguage][data.typeKey];
+        }
+    }
+
+    const desc = document.getElementById('kn-brand-desc');
+    if (desc) {
+        desc.setAttribute('data-i18n-key', data.descKey);
+        if (typeof translations !== 'undefined' && typeof currentLanguage !== 'undefined' && translations[currentLanguage] && translations[currentLanguage][data.descKey]) {
+            desc.textContent = translations[currentLanguage][data.descKey];
+        }
+    }
+
+    const reachNum = document.getElementById('kn-reach-num');
+    if (reachNum) reachNum.textContent = data.reach;
+
+    const statReach = document.getElementById('kn-stat-reach');
+    if (statReach) statReach.textContent = data.reach;
+
+    const tagsContainer = document.getElementById('kn-tags-container');
+    if (tagsContainer) {
+        tagsContainer.innerHTML = data.tags.map(t => `<span class="brand-chip" data-i18n-key="${t.key}">${t.text}</span>`).join('');
+    }
+
+    const igLink = document.getElementById('kn-ig-link');
+    if (igLink) igLink.href = data.ig;
+
+    const rowIg = document.getElementById('kn-row-ig');
+    if (rowIg) rowIg.href = data.ig;
+
+    const folIg = document.getElementById('kn-fol-ig');
+    if (folIg) folIg.textContent = data.igFol;
+
+    const ttLink = document.getElementById('kn-tt-link');
+    if (ttLink) ttLink.href = data.tt;
+
+    const rowTt = document.getElementById('kn-row-tt');
+    if (rowTt) rowTt.href = data.tt;
+
+    const folTt = document.getElementById('kn-fol-tt');
+    if (folTt) folTt.textContent = data.ttFol;
+
+    const ytLink = document.getElementById('kn-yt-link');
+    if (ytLink) ytLink.href = data.yt || '#';
+
+    const rowYt = document.getElementById('kn-row-yt');
+    if (rowYt) rowYt.href = data.yt || '#';
+
+    const folYt = document.getElementById('kn-fol-yt');
+    if (folYt) folYt.textContent = data.ytFol || '–';
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    initBrandCarousel();
+});
