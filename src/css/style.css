@@ -497,6 +497,92 @@ html.dark .project-card:hover {
 .brand-work-btn .bwb-chevron { transition: transform 0.35s ease; font-size: 11px; }
 .brand-work-btn.open .bwb-chevron { transform: rotate(180deg); }
 
+/* ── Top-right platform badges & hover animations ── */
+.brand-top-platforms {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.brand-platform-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 11px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  background: rgba(241, 245, 249, 0.85);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  color: #475569;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  position: relative;
+  cursor: pointer;
+}
+
+.dark .brand-platform-badge {
+  background: rgba(30, 41, 59, 0.7);
+  border-color: rgba(51, 65, 85, 0.8);
+  color: #cbd5e1;
+}
+
+/* Default icon colors when not hovered */
+.brand-platform-badge.instagram i { color: #e1306c; }
+.brand-platform-badge.youtube i { color: #ff0000; }
+.brand-platform-badge.tiktok i { color: #000000; }
+.dark .brand-platform-badge.tiktok i { color: #00f2fe; }
+
+.brand-platform-badge i {
+  font-size: 14px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.brand-platform-badge .follower-count {
+  font-size: 11px;
+  font-weight: 700;
+  opacity: 0.9;
+  letter-spacing: -0.01em;
+}
+
+/* Hover effects with signature brand colors and micro-animations */
+.brand-platform-badge:hover {
+  transform: translateY(-3px) scale(1.06);
+}
+
+.brand-platform-badge:hover i {
+  transform: scale(1.25) rotate(-6deg);
+  color: #ffffff !important;
+}
+
+.brand-platform-badge.instagram:hover {
+  background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 8px 20px -4px rgba(225, 48, 108, 0.45);
+}
+
+.brand-platform-badge.youtube:hover {
+  background: linear-gradient(135deg, #ff0000, #cc0000);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 8px 20px -4px rgba(255, 0, 0, 0.45);
+}
+
+.brand-platform-badge.tiktok:hover {
+  background: linear-gradient(135deg, #0f172a, #000000);
+  color: #ffffff;
+  border-color: rgba(37, 244, 238, 0.5);
+  box-shadow: 0 8px 20px -4px rgba(37, 244, 238, 0.4);
+}
+
+.brand-platform-badge:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
 /* ── Reach badge ── */
 .brand-reach-badge {
   display: flex;

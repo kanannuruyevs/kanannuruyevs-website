@@ -393,6 +393,7 @@ const knLangData = {
     en: {
         avatar: './src/images/brand-avatars/kanansnote-avatar.png',
         titleKey: 'brand_kanansnote',
+        titleText: 'KANANSNOTE',
         typeKey: 'brand_kanansnote_type',
         descKey: 'brand_kanansnote_desc',
         reach: '95K+',
@@ -413,6 +414,7 @@ const knLangData = {
     aze: {
         avatar: './src/images/brand-avatars/kanansnoteaze-avatar.png',
         titleKey: 'brand_kanansnoteaze',
+        titleText: 'KANANSNOTEAZE',
         typeKey: 'brand_kanansnoteaze_type',
         descKey: 'brand_kanansnoteaze_desc',
         reach: '45K+',
@@ -433,6 +435,7 @@ const knLangData = {
     ru: {
         avatar: './src/images/brand-avatars/kanansnoteru-avatar.png',
         titleKey: 'brand_kanansnoteru',
+        titleText: 'KANANSNOTERU',
         typeKey: 'brand_kanansnoteru_type',
         descKey: 'brand_kanansnoteru_desc',
         reach: '60K+',
@@ -470,24 +473,26 @@ function switchKnLang(lang, btn) {
     const title = document.getElementById('kn-brand-title');
     if (title) {
         title.setAttribute('data-i18n-key', data.titleKey);
-        if (typeof translations !== 'undefined' && typeof currentLanguage !== 'undefined' && translations[currentLanguage] && translations[currentLanguage][data.titleKey]) {
-            title.textContent = translations[currentLanguage][data.titleKey];
-        }
+        const currLang = (typeof currentLanguage !== 'undefined' && currentLanguage) ? currentLanguage : 'en';
+        const translated = (typeof translations !== 'undefined' && translations[currLang]) ? translations[currLang][data.titleKey] : null;
+        title.textContent = translated || data.titleText;
     }
 
     const type = document.getElementById('kn-brand-type');
     if (type) {
         type.setAttribute('data-i18n-key', data.typeKey);
-        if (typeof translations !== 'undefined' && typeof currentLanguage !== 'undefined' && translations[currentLanguage] && translations[currentLanguage][data.typeKey]) {
-            type.textContent = translations[currentLanguage][data.typeKey];
+        const currLang = (typeof currentLanguage !== 'undefined' && currentLanguage) ? currentLanguage : 'en';
+        if (typeof translations !== 'undefined' && translations[currLang] && translations[currLang][data.typeKey]) {
+            type.textContent = translations[currLang][data.typeKey];
         }
     }
 
     const desc = document.getElementById('kn-brand-desc');
     if (desc) {
         desc.setAttribute('data-i18n-key', data.descKey);
-        if (typeof translations !== 'undefined' && typeof currentLanguage !== 'undefined' && translations[currentLanguage] && translations[currentLanguage][data.descKey]) {
-            desc.textContent = translations[currentLanguage][data.descKey];
+        const currLang = (typeof currentLanguage !== 'undefined' && currentLanguage) ? currentLanguage : 'en';
+        if (typeof translations !== 'undefined' && translations[currLang] && translations[currLang][data.descKey]) {
+            desc.textContent = translations[currLang][data.descKey];
         }
     }
 
@@ -528,6 +533,16 @@ function switchKnLang(lang, btn) {
 
     const folYt = document.getElementById('kn-fol-yt');
     if (folYt) folYt.textContent = data.ytFol || '–';
+
+    // Top-right platform badges dynamic link update
+    const topIg = document.getElementById('kn-top-ig');
+    if (topIg) topIg.href = data.ig;
+
+    const topYt = document.getElementById('kn-top-yt');
+    if (topYt) topYt.href = data.yt || '#';
+
+    const topTt = document.getElementById('kn-top-tt');
+    if (topTt) topTt.href = data.tt || '#';
 }
 
 document.addEventListener('DOMContentLoaded', function() {
