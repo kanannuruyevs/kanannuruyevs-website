@@ -1,8 +1,34 @@
-// Configure Tailwind CSS Dark Mode (Class-based)
+// Configure Tailwind CSS Dark Mode (Class-based) & Cyberpunk Theme Extensions
+const cyberpunkTheme = {
+    darkMode: 'class',
+    theme: {
+        extend: {
+            colors: {
+                obsidian: {
+                    DEFAULT: '#0B0E14',
+                    card: '#12161F',
+                    border: 'rgba(255, 255, 255, 0.08)',
+                },
+                cyber: {
+                    cyan: '#0EA5E9',
+                    sky: '#38BDF8',
+                    mint: '#34D399',
+                    purple: '#A855F7',
+                    violet: '#7C3AED',
+                    coral: '#FF5E62',
+                    orange: '#F97316',
+                    slate: '#F8FAFC',
+                    muted: '#94A3B8'
+                }
+            }
+        }
+    }
+};
+
 if (typeof tailwind !== 'undefined') {
-    tailwind.config = { darkMode: 'class' };
+    tailwind.config = cyberpunkTheme;
 } else {
-    window.tailwind = { config: { darkMode: 'class' } };
+    window.tailwind = { config: cyberpunkTheme };
 }
 
 // Theme Toggle
@@ -53,11 +79,11 @@ function toggleTheme() {
     updateThemeIcons();
 }
 
-// Initial theme setup on load
-if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    html.classList.add('dark');
-} else if (localStorage.getItem('theme') === 'light') {
+// Initial theme setup on load (default to dark mode for cyberpunk portfolio experience)
+if (localStorage.getItem('theme') === 'light') {
     html.classList.remove('dark');
+} else {
+    html.classList.add('dark');
 }
 updateThemeIcons();
 
