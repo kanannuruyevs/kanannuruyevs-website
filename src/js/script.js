@@ -131,36 +131,38 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Scroll to Top Button
 const scrollToTopBtn = document.getElementById('scroll-to-top');
 
-window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 300) {
-        scrollToTopBtn.classList.add('visible');
-    } else {
-        scrollToTopBtn.classList.remove('visible');
-    }
-});
-
-scrollToTopBtn.addEventListener('click', () => {
-    const startPosition = window.pageYOffset;
-    const startTime = performance.now();
-    const duration = 800; // animation duration in milliseconds
-
-    function easeOutQuad(t) {
-        return t * (2 - t);
-    }
-
-    function scrollAnimation(currentTime) {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        
-        window.scrollTo(0, startPosition * (1 - easeOutQuad(progress)));
-        
-        if (progress < 1) {
-            requestAnimationFrame(scrollAnimation);
+if (scrollToTopBtn) {
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            scrollToTopBtn.classList.add('visible');
+        } else {
+            scrollToTopBtn.classList.remove('visible');
         }
-    }
+    }, { passive: true });
 
-    requestAnimationFrame(scrollAnimation);
-});
+    scrollToTopBtn.addEventListener('click', () => {
+        const startPosition = window.pageYOffset;
+        const startTime = performance.now();
+        const duration = 800; // animation duration in milliseconds
+
+        function easeOutQuad(t) {
+            return t * (2 - t);
+        }
+
+        function scrollAnimation(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            
+            window.scrollTo(0, startPosition * (1 - easeOutQuad(progress)));
+            
+            if (progress < 1) {
+                requestAnimationFrame(scrollAnimation);
+            }
+        }
+
+        requestAnimationFrame(scrollAnimation);
+    });
+}
 
 // Brand Card: Toggle expand/collapse with FLIP animation
 let activeOpenBrandCard = null;
@@ -316,27 +318,42 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// Add scroll animations
+// Smooth Scroll Reveal Animations (GPU Accelerated, Lag-Free)
 const observerOptions = {
     threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    rootMargin: '0px 0px -30px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            const target = entry.target;
+            target.style.opacity = '1';
+            target.style.transform = 'translateY(0)';
+
+            // Clear transform after transition completes so CSS hover scale works seamlessly
+            setTimeout(() => {
+                target.style.transform = '';
+            }, 500);
+
+            observer.unobserve(target);
         }
     });
 }, observerOptions);
 
-// Observe elements for animation
-document.querySelectorAll('.card-hover, .project-card, .scroll-animate').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(el);
+// Observe elements for smooth reveal as user scrolls down
+document.querySelectorAll('.card-hover, .project-card, .scroll-animate, .hover-lift, .solution-a-card, .brand-card').forEach(el => {
+    const rect = el.getBoundingClientRect();
+    // Reveal top fold elements immediately without animation delay
+    if (rect.top < window.innerHeight * 0.75) {
+        el.style.opacity = '1';
+        el.style.transform = '';
+    } else {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(24px)';
+        el.style.transition = 'opacity 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1)';
+        observer.observe(el);
+    }
 });
 
 // Update year in footer tag
