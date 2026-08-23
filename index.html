@@ -1181,43 +1181,7 @@
     <script src="./src/js/translations.js"></script>
     <script src="./src/js/i18n.js"></script>
     <script src="./src/js/script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const brandWorkButtons = document.querySelectorAll('.brand-work-btn');
 
-            function closeAllExcept(exceptionContent) {
-                document.querySelectorAll('.brand-gallery-content').forEach(content => {
-                    if (content !== exceptionContent) {
-                        content.style.maxHeight = '0px';
-                        const prevBtn = content.previousElementSibling;
-                        if (prevBtn) {
-                            const icon = prevBtn.querySelector('i');
-                            if (icon) icon.classList.remove('rotate-180');
-                        }
-                    }
-                });
-            }
-
-            brandWorkButtons.forEach(button => {
-                button.addEventListener('click', (e) => {
-                    const content = button.nextElementSibling;
-                    const icon = button.querySelector('i');
-
-                    // Close others first
-                    closeAllExcept(content);
-
-                    // Toggle the clicked one
-                    if (content.style.maxHeight && content.style.maxHeight !== '0px') {
-                        content.style.maxHeight = '0px';
-                        if (icon) icon.classList.remove('rotate-180');
-                    } else {
-                        content.style.maxHeight = content.scrollHeight + 'px';
-                        if (icon) icon.classList.add('rotate-180');
-                    }
-                });
-            });
-        });
-    </script>
 
 </body>
 

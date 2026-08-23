@@ -165,12 +165,31 @@ scrollToTopBtn.addEventListener('click', () => {
 // Brand Card: Toggle expand/collapse with FLIP animation
 let activeOpenBrandCard = null;
 
+function closeAllBrandCards() {
+    document.querySelectorAll('.brand-card').forEach(c => {
+        c.classList.remove('open');
+        const panel = c.querySelector('.brand-gallery-content');
+        const btn = c.querySelector('.brand-work-btn');
+        if (panel) {
+            panel.classList.remove('open');
+            panel.style.maxHeight = '';
+        }
+        if (btn) {
+            btn.classList.remove('open');
+            const icon = btn.querySelector('.bwb-chevron, i');
+            if (icon) icon.classList.remove('rotate-180');
+        }
+    });
+    activeOpenBrandCard = null;
+}
+
 function toggleBrandCard(btn) {
     const card = btn.closest('.brand-card');
     if (!card) return;
 
     const panel = card.querySelector('.brand-gallery-content');
-    const isCurrentlyOpen = card.classList.contains('open');
+    const chevron = btn.querySelector('.bwb-chevron, i');
+    const isCurrentlyOpen = card.classList.contains('open') || (panel && panel.classList.contains('open'));
     const allBrandCards = Array.from(document.querySelectorAll('.brand-card'));
 
     // 1. Snapshot ALL brand cards before layout change
@@ -181,23 +200,27 @@ function toggleBrandCard(btn) {
 
     // 2. Close active card if another one is open
     if (activeOpenBrandCard && activeOpenBrandCard !== card) {
-        const prevPanel = activeOpenBrandCard.querySelector('.brand-gallery-content');
-        const prevBtn = activeOpenBrandCard.querySelector('.brand-work-btn');
-        activeOpenBrandCard.classList.remove('open');
-        if (prevPanel) prevPanel.classList.remove('open');
-        if (prevBtn) prevBtn.classList.remove('open');
+        closeAllBrandCards();
     }
 
     // 3. Toggle target card
     if (!isCurrentlyOpen) {
         card.classList.add('open');
-        if (panel) panel.classList.add('open');
+        if (panel) {
+            panel.classList.add('open');
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+        }
         btn.classList.add('open');
+        if (chevron) chevron.classList.add('rotate-180');
         activeOpenBrandCard = card;
     } else {
         card.classList.remove('open');
-        if (panel) panel.classList.remove('open');
+        if (panel) {
+            panel.classList.remove('open');
+            panel.style.maxHeight = '';
+        }
         btn.classList.remove('open');
+        if (chevron) chevron.classList.remove('rotate-180');
         activeOpenBrandCard = null;
     }
 
@@ -358,6 +381,8 @@ function initBrandCarousel() {
     if (!track) return;
 
     function updateCarousel() {
+        closeAllBrandCards();
+
         const slides = track.querySelectorAll('.brand-slide');
         track.style.transform = `translateX(-${currentBrandSlide * 100}%)`;
         slides.forEach((slide, idx) => {
