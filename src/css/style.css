@@ -269,6 +269,8 @@ html.dark section.bg-slate-100,
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .card-gradient,
@@ -1037,6 +1039,29 @@ html.dark .project-card:hover {
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
+.brand-card {
+  container-type: inline-size;
+  container-name: brandcard;
+}
+
+.brand-card-title {
+  font-size: clamp(1.1rem, 5vw, 1.35rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  display: block;
+  line-height: 1.2;
+}
+
+@supports (container-type: inline-size) {
+  .brand-card-title {
+    font-size: clamp(1.1rem, 5.2cqw, 1.35rem);
+  }
+}
+
 /* Card Hero Banner Header */
 .brand-hero-header,
 .dark .brand-hero-header {
@@ -1284,4 +1309,4 @@ html.dark .project-card:hover {
 }
 
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */

@@ -611,8 +611,30 @@ function switchKnLang(lang, btn) {
 
     const topTt = document.getElementById('kn-top-tt');
     if (topTt) topTt.href = data.tt || '#';
+
+    autoFitBrandTitles();
 }
+
+function autoFitBrandTitles() {
+    const titles = document.querySelectorAll('.brand-card-title');
+    titles.forEach(title => {
+        const parent = title.parentElement;
+        if (!parent) return;
+        title.style.fontSize = '';
+        let currentSize = parseFloat(window.getComputedStyle(title).fontSize);
+        const availableWidth = parent.clientWidth;
+        if (availableWidth > 0) {
+            while (title.scrollWidth > availableWidth && currentSize > 14) {
+                currentSize -= 0.5;
+                title.style.fontSize = currentSize + 'px';
+            }
+        }
+    });
+}
+
+window.addEventListener('resize', autoFitBrandTitles);
 
 document.addEventListener('DOMContentLoaded', function() {
     initBrandCarousel();
+    autoFitBrandTitles();
 });
