@@ -94,25 +94,39 @@ if (mobileThemeToggle) {
     mobileThemeToggle.addEventListener('click', toggleTheme);
 }
 
-// Mobile Menu
+// Mobile Menu & Backdrop Overlay
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
 const mobileMenuClose = document.getElementById('mobile-menu-close');
+const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
 
-mobileMenuBtn.addEventListener('click', () => {
-    mobileMenu.classList.add('open');
-});
+function openMobileMenu() {
+    if (mobileMenu) mobileMenu.classList.add('open');
+    if (mobileMenuOverlay) mobileMenuOverlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+}
 
-mobileMenuClose.addEventListener('click', () => {
-    mobileMenu.classList.remove('open');
-});
+function closeMobileMenu() {
+    if (mobileMenu) mobileMenu.classList.remove('open');
+    if (mobileMenuOverlay) mobileMenuOverlay.classList.remove('open');
+    document.body.style.overflow = '';
+}
+
+if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener('click', openMobileMenu);
+}
+if (mobileMenuClose) {
+    mobileMenuClose.addEventListener('click', closeMobileMenu);
+}
+if (mobileMenuOverlay) {
+    mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+}
 
 // Close mobile menu when clicking on links
 document.querySelectorAll('#mobile-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-        mobileMenu.classList.remove('open');
-    });
+    link.addEventListener('click', closeMobileMenu);
 });
+
 
 // Smooth Scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

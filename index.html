@@ -136,42 +136,43 @@
                 </button>
             </div>
         </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu"
-            class="mobile-menu fixed top-0 right-0 w-72 h-full bg-white/95 dark:bg-black/95 border-l border-slate-200 dark:border-gray-800 backdrop-blur-xl z-50 md:hidden transition-colors">
-            <div class="p-6">
-                <button id="mobile-menu-close" class="absolute top-4 right-4 p-2 text-slate-500 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white">
-                    <i class="fas fa-times text-xl"></i>
-                </button>
-                <div class="mt-8 mb-6">
-                    <span class="text-xl font-bold gradient-text">Kanan Nuruyev</span>
-                </div>
-                <nav class="space-y-4 text-slate-700 dark:text-gray-200">
-                    <a href="#home" data-i18n-key="nav_home" class="block py-2 hover:text-orange-500 dark:hover:text-orange-400 transition-colors">Home</a>
-                    <a href="#about" data-i18n-key="nav_about" class="block py-2 hover:text-orange-500 dark:hover:text-orange-400 transition-colors">About</a>
-                    <a href="#portfolio" data-i18n-key="nav_portfolio" class="block py-2 hover:text-orange-500 dark:hover:text-orange-400 transition-colors">Portfolio</a>
-                    <a href="#skills" data-i18n-key="nav_skills" class="block py-2 hover:text-orange-500 dark:hover:text-orange-400 transition-colors">Skills</a>
-                    <a href="#contact" data-i18n-key="nav_contact" class="block py-2 hover:text-orange-500 dark:hover:text-orange-400 transition-colors">Contact</a>
-                    <button id="mobile-theme-toggle" class="flex items-center space-x-2 py-2 w-full text-left text-slate-700 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-400 transition-colors">
-                        <i class="fas fa-sun" id="mobile-icon-sun"></i>
-                        <i class="fas fa-moon" id="mobile-icon-moon"></i>
-                        <span id="mobile-text-light" data-i18n-key="light_theme">Light Theme</span>
-                        <span id="mobile-text-dark" data-i18n-key="dark_theme">Dark Theme</span>
-                    </button>
-                    <!-- Mobile Language Switcher -->
-                    <div class="relative pt-2">
-                        <select id="mobile-language-switcher" class="w-full p-2.5 rounded-xl bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 text-slate-800 dark:text-gray-200 appearance-none cursor-pointer shadow-sm">
-                            <option value="en" data-i18n-key="english">English</option>
-                            <option value="az" data-i18n-key="azerbaijani">Azerbaijani</option>
-                            <option value="ru" data-i18n-key="russian">Russian</option>
-                        </select>
-                        <i class="fas fa-chevron-down absolute right-3 top-1/2 translate-y-1 text-xs pointer-events-none text-slate-400 dark:text-gray-400"></i>
-                    </div>
-                </nav>
-            </div>
-        </div>
     </header>
+
+    <!-- Mobile Menu Overlay & Drawer -->
+    <div id="mobile-menu-overlay" class="mobile-menu-overlay md:hidden"></div>
+    <div id="mobile-menu"
+        class="mobile-menu fixed top-0 right-0 w-72 max-w-[85vw] h-full bg-white dark:bg-slate-900 text-slate-800 dark:text-gray-100 border-l border-slate-200 dark:border-gray-800 z-[1000] md:hidden shadow-2xl transition-colors">
+        <div class="p-6">
+            <button id="mobile-menu-close" class="absolute top-4 right-4 p-2 text-slate-500 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+            <div class="mt-8 mb-6">
+                <span class="text-xl font-bold gradient-text">Kanan Nuruyev</span>
+            </div>
+            <nav class="space-y-4 text-slate-800 dark:text-gray-100">
+                <a href="#home" data-i18n-key="nav_home" class="block py-2 text-slate-800 dark:text-gray-100 hover:text-orange-500 dark:hover:text-orange-400 font-medium transition-colors">Home</a>
+                <a href="#about" data-i18n-key="nav_about" class="block py-2 text-slate-800 dark:text-gray-100 hover:text-orange-500 dark:hover:text-orange-400 font-medium transition-colors">About</a>
+                <a href="#portfolio" data-i18n-key="nav_portfolio" class="block py-2 text-slate-800 dark:text-gray-100 hover:text-orange-500 dark:hover:text-orange-400 font-medium transition-colors">Portfolio</a>
+                <a href="#skills" data-i18n-key="nav_skills" class="block py-2 text-slate-800 dark:text-gray-100 hover:text-orange-500 dark:hover:text-orange-400 font-medium transition-colors">Skills</a>
+                <a href="#contact" data-i18n-key="nav_contact" class="block py-2 text-slate-800 dark:text-gray-100 hover:text-orange-500 dark:hover:text-orange-400 font-medium transition-colors">Contact</a>
+                <button id="mobile-theme-toggle" class="flex items-center space-x-2 py-2 w-full text-left text-slate-800 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-400 font-medium transition-colors">
+                    <i class="fas fa-sun" id="mobile-icon-sun"></i>
+                    <i class="fas fa-moon" id="mobile-icon-moon"></i>
+                    <span id="mobile-text-light" data-i18n-key="light_theme">Light Theme</span>
+                    <span id="mobile-text-dark" data-i18n-key="dark_theme">Dark Theme</span>
+                </button>
+                <!-- Mobile Language Switcher -->
+                <div class="relative pt-2">
+                    <select id="mobile-language-switcher" class="w-full p-2.5 rounded-xl bg-slate-100 dark:bg-gray-800 border border-slate-200 dark:border-gray-700 text-slate-800 dark:text-gray-200 appearance-none cursor-pointer shadow-sm">
+                        <option value="en" data-i18n-key="english">English</option>
+                        <option value="az" data-i18n-key="azerbaijani">Azerbaijani</option>
+                        <option value="ru" data-i18n-key="russian">Russian</option>
+                    </select>
+                    <i class="fas fa-chevron-down absolute right-3 top-1/2 translate-y-1 text-xs pointer-events-none text-slate-400 dark:text-gray-400"></i>
+                </div>
+            </nav>
+        </div>
+    </div>
 
     <!-- Home / Hero Section -->
     <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden bg-slate-50 dark:bg-black text-slate-900 dark:text-white pt-28 md:pt-32 pb-16 transition-colors">
