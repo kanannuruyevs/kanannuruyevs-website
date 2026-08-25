@@ -648,7 +648,321 @@ function autoFitBrandTitles() {
 
 window.addEventListener('resize', autoFitBrandTitles);
 
+// Services Section & Interactive Modal Logic (Variant 1 + Variant 3)
+const servicesData = {
+    'content-creation': {
+        keyPrefix: 'service_1',
+        icon: 'fas fa-video',
+        deliverables: {
+            en: [
+                { step: '1. Brief & Concept', desc: 'Topic selection, target audience analysis, and concept planning.' },
+                { step: '2. Filming & Audio Capture', desc: 'Professional 4K camera, studio lighting, and crisp microphone audio recording.' },
+                { step: '3. Editing & Post-Production', desc: 'Dynamic cuts, captions/subtitles, sound effects, and color grading.' },
+                { step: '4. Final Delivery & Formatting', desc: 'Delivery of ready-to-publish files in Instagram (9:16) and YouTube (16:9) formats.' }
+            ],
+            az: [
+                { step: '1. Brifinq və İdeya', desc: 'Mövzunun seçilməsi, hədəf auditoriyanın təhlili və konsept planlaşdırılması.' },
+                { step: '2. Çəkiliş və Səs Yazılışı', desc: 'Peşəkar kamera (4K), işıqlandırma və aydın mikrafon səs yazılışı.' },
+                { step: '3. Montaj və Post-prodakşn', desc: 'Dinamik kəsimlər, altyazılar (subtitles), səs effektləri və rəng korreksiyası.' },
+                { step: '4. Təhvil və Formatlaşdırma', desc: 'Instagram (9:16) və YouTube (16:9) formatlarında hazır faylların çatdırılması.' }
+            ],
+            ru: [
+                { step: '1. Брифинг и Концепция', desc: 'Выбор темы, анализ целевой аудитории и планирование концепта.' },
+                { step: '2. Съемка и Запись Звука', desc: 'Профессиональная 4K камера, студийное освещение и чистая запись звука.' },
+                { step: '3. Монтаж и Пост-продакшн', desc: 'Динамичный монтаж, субтитры, звуковые эффекты и цветокоррекция.' },
+                { step: '4. Финальная Сдача и Форматирование', desc: 'Передача готовых файлов в форматах Instagram (9:16) и YouTube (16:9).' }
+            ]
+        }
+    },
+    'ai-content': {
+        keyPrefix: 'service_2',
+        icon: 'fas fa-wand-magic-sparkles',
+        deliverables: {
+            en: [
+                { step: '1. AI Prompt Strategy', desc: 'Analyzing topic ideas, target hooks, and structuring viral AI prompts.' },
+                { step: '2. AI Scriptwriting & Copywriting', desc: 'Generating engaging video scripts, captions, and content outlines using AI.' },
+                { step: '3. AI Thumbnail & Graphic Design', desc: 'Generating eye-catching cover graphics and visual assets with Midjourney/DALL-E.' },
+                { step: '4. Automated Publishing Setup', desc: 'Configuring AI content pipelines and scheduling tools for multi-platform delivery.' }
+            ],
+            az: [
+                { step: '1. AI Prompt Strategiyası', desc: 'Mövzu ideyalarının, diqqətçəkən başlıqların və AI sorğularının planlaşdırılması.' },
+                { step: '2. AI Skript & Mətn Yazılışı', desc: 'AI alətləri ilə cəlbedici video skriptlərinin, altyazıların və kontent planının hazırlanması.' },
+                { step: '3. AI Örtük & Qrafik Dizayn', desc: 'Midjourney/DALL-E ilə yüksək diqqətçəkən örtük şəkillərinin və vizualların hazırlanması.' },
+                { step: '4. Avtomatlaşdırılmış Paylaşım', desc: 'Kontent zəncirinin qurulması və sosial şəbəkələrdə avtomatlaşdırılmış vaxt planı.' }
+            ],
+            ru: [
+                { step: '1. ИИ Промпт-Стратегия', desc: 'Анализ идей, цепляющих хуков и составление промптов для ИИ.' },
+                { step: '2. Написание ИИ-Сценариев', desc: 'Генерация увлекательных видео-сценариев и текстов с помощью ИИ.' },
+                { step: '3. ИИ Дизайн Обложек и Графики', desc: 'Создание привлекательных обложек и визуала с Midjourney/DALL-E.' },
+                { step: '4. Автоматизация Публикаций', desc: 'Настройка контент-цепочек и автопостинга для нескольких платформ.' }
+            ]
+        }
+    },
+    'vibe-coding': {
+        keyPrefix: 'service_3',
+        icon: 'fas fa-laptop-code',
+        deliverables: {
+            en: [
+                { step: '1. Architecture & Design Wireframe', desc: 'Defining website requirements, glassmorphism dark-mode UI, and structure.' },
+                { step: '2. AI-Assisted Vibe Coding', desc: 'Building responsive web pages, interactive components, and smooth animations.' },
+                { step: '3. SEO & Mobile Optimization', desc: 'Ensuring ultra-fast page speeds, mobile responsiveness, and search optimization.' },
+                { step: '4. Launch & Hosting Setup', desc: 'Connecting custom domain, SSL certification, and deployment.' }
+            ],
+            az: [
+                { step: '1. Arxitektura və Struktur Planı', desc: 'Saytın ehtiyaclarının, şüşə effekti (Glassmorphism) və dark-mode dizaynının təyini.' },
+                { step: '2. AI Dəstəkli Vibe Coding', desc: 'Responsiv səhifələrin, interaktiv komponentlərin və animasiyaların hazırlanması.' },
+                { step: '3. SEO və Mobil Optimizasiya', desc: 'Yüksək açılış sürəti, mobil cihazlara tam uyğunluq və SEO optimallaşdırılması.' },
+                { step: '4. Buraxılış və Hostinq Qurulması', desc: 'Domenin qoşulması, SSL təhlükəsizlik sertifikatı və saytın canlıya verilməsi.' }
+            ],
+            ru: [
+                { step: '1. Архитектура и Структура', desc: 'Определение требований к сайту, темного Glassmorphism интерфейса.' },
+                { step: '2. Vibe Coding с Помощью ИИ', desc: 'Разработка адаптивных страниц, интерактивных элементов и анимаций.' },
+                { step: '3. SEO и Мобильная Оптимизация', desc: 'Обеспечение молниеносной скорости загрузки, мобильной адаптивности и SEO.' },
+                { step: '4. Запуск и Настройка Хостинга', desc: 'Подключение домена, SSL сертификата и деплой проекта.' }
+            ]
+        }
+    },
+    'personal-branding': {
+        keyPrefix: 'service_4',
+        icon: 'fas fa-bullhorn',
+        deliverables: {
+            en: [
+                { step: '1. Authentic Identity & Positioning', desc: 'Finding your unique voice, niche positioning, and audience resonance.' },
+                { step: '2. Content Strategy & Pillars', desc: 'Structuring content pillars for Instagram Reels, YouTube, and TikTok.' },
+                { step: '3. Visual Feed & Aesthetics', desc: 'Designing cohesive cyber-minimalist feed templates and profile branding.' },
+                { step: '4. Growth & Engagement Audit', desc: 'Optimizing reach, community engagement, and analytics tracking.' }
+            ],
+            az: [
+                { step: '1. Səmimi Kimlik və Pozisionlanma', desc: 'Öz unikal səsini tapmaq, niş seçimi və auditoriya ilə dərin əlaqə.' },
+                { step: '2. Kontent Strategiyası və Sütunlar', desc: 'Instagram Reels, YouTube və TikTok üçün kontent mövzularının bölüşdürülməsi.' },
+                { step: '3. Vizual Şəbəkə və Estetika', desc: 'Kiber-minimalist profil dizaynı və estetik post/story şablonları.' },
+                { step: '4. Böyümə və Əlaqə Auditi', desc: 'Baxış sayının artırılması, auditoriya ilə qarşılıqlı əlaqə və analitika.' }
+            ],
+            ru: [
+                { step: '1. Искренний Стиль и Позиционирование', desc: 'Поиск уникального голоса, выбор ниши и связь с аудиторией.' },
+                { step: '2. Контент-Стратегия и Рубрики', desc: 'Структурирование рубрик для Instagram Reels, YouTube и TikTok.' },
+                { step: '3. Визуальный Стиль и Шаблоны', desc: 'Создание эстетичного оформления профиля и кибер-минималистичных шаблонов.' },
+                { step: '4. Аудит Роста и Вовлеченности', desc: 'Оптимизация охватов, работы с аудиторией и аналитики.' }
+            ]
+        }
+    },
+    'creator-mentorship': {
+        keyPrefix: 'service_5',
+        icon: 'fas fa-user-astronaut',
+        deliverables: {
+            en: [
+                { step: '1. Pre-Session Questionnaire', desc: 'Analyzing your current creator stage, goals, and primary roadblocks.' },
+                { step: '2. 1-on-1 Live Strategy Session', desc: 'In-depth consultation covering camera confidence, topic ideas, and mindset.' },
+                { step: '3. Overcoming Burnout & Blocks', desc: 'Actionable techniques to maintain consistency without mental exhaustion.' },
+                { step: '4. Digital Tools Roadmap', desc: 'Personalized toolkit recommendation for editing, AI tools, and workflow.' }
+            ],
+            az: [
+                { step: '1. Seans Önçəsi Sorğu', desc: 'Hazırkı məzmun yaradıcılığı mərhələinizin və maneələrin təhlili.' },
+                { step: '2. 1-ə-1 Canlı Strategiya Seansı', desc: 'Kamera qarşısında sərbəstlik, mövzu seçimi və mental rahatlıq üzrə dərin seans.' },
+                { step: '3. Tıxanma və Burnout-un Dəfi', desc: 'Tükanmadan, rəvan şəkildə davamlı kontent yaratmaq üçün texnikalar.' },
+                { step: '4. Rəqəmsal Alətlər Xəritəsi', desc: 'Montaj, AI alətləri və avtomatlaşdırma üzrə fərdi alət tövsiyələri.' }
+            ],
+            ru: [
+                { step: '1. Предсессионный Опросник', desc: 'Анализ текущего этапа, целей и главных трудностей авторского пути.' },
+                { step: '2. 1-на-1 Живая Стратегическая Сессия', desc: 'Глубокая консультация: уверенность перед камерой, выбор тем и настрой.' },
+                { step: '3. Преодоление Выгорания', desc: 'Практические техники регулярного создания контента без выгорания.' },
+                { step: '4. Дорожная Карта Инструментов', desc: 'Персональные рекомендации инструментов для монтажа, ИИ и процессов.' }
+            ]
+        }
+    }
+};
+
+let currentActiveServiceId = 'content-creation';
+
+function getActiveLanguage() {
+    return localStorage.getItem('language') || 'en';
+}
+
+function initServicesSection() {
+    // Service Filter Tabs
+    const filterBtns = document.querySelectorAll('.service-tab-btn');
+    const serviceCards = document.querySelectorAll('.service-card');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+
+            const filter = this.getAttribute('data-filter');
+
+            serviceCards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                if (filter === 'all' || category === filter) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    // Service Modal Trigger Buttons
+    const openModalBtns = document.querySelectorAll('.open-service-btn');
+    openModalBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const serviceId = this.getAttribute('data-service-id');
+            openServiceModal(serviceId);
+        });
+    });
+
+    // Close Modal Listeners
+    const modalBackdrop = document.getElementById('service-modal-backdrop');
+    const closeModalBtn = document.getElementById('close-service-modal');
+
+    if (modalBackdrop) modalBackdrop.addEventListener('click', closeServiceModal);
+    if (closeModalBtn) closeModalBtn.addEventListener('click', closeServiceModal);
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeServiceModal();
+    });
+
+    // WhatsApp Submit Handler
+    const btnSubmitWhatsapp = document.getElementById('btn-submit-whatsapp');
+    if (btnSubmitWhatsapp) {
+        btnSubmitWhatsapp.addEventListener('click', sendOrderToWhatsApp);
+    }
+
+    // Email / Form Submit Handler
+    const btnSubmitEmail = document.getElementById('btn-submit-email');
+    if (btnSubmitEmail) {
+        btnSubmitEmail.addEventListener('click', sendOrderViaForm);
+    }
+
+    // Check URL Parameters for Direct Instagram Ad Traffic landing (e.g. ?service=content-creation)
+    const urlParams = new URLSearchParams(window.location.search);
+    const serviceParam = urlParams.get('service');
+    if (serviceParam && servicesData[serviceParam]) {
+        setTimeout(() => {
+            openServiceModal(serviceParam);
+        }, 500);
+    }
+}
+
+function openServiceModal(serviceId) {
+    const lang = getActiveLanguage();
+    const data = servicesData[serviceId] || servicesData['content-creation'];
+    currentActiveServiceId = serviceId;
+
+    const modal = document.getElementById('service-modal');
+    const modalBadge = document.getElementById('modal-service-badge');
+    const modalTitle = document.getElementById('modal-service-title');
+    const modalDesc = document.getElementById('modal-service-desc');
+    const modalPrice = document.getElementById('modal-service-price');
+    const modalIcon = document.getElementById('modal-service-icon');
+    const modalDeliverables = document.getElementById('modal-service-deliverables');
+
+    const titleKey = `${data.keyPrefix}_title`;
+    const badgeKey = `${data.keyPrefix}_badge`;
+    const descKey = `${data.keyPrefix}_desc`;
+    const priceKey = `${data.keyPrefix}_price`;
+
+    if (modalBadge) {
+        modalBadge.setAttribute('data-i18n-key', badgeKey);
+        modalBadge.textContent = (typeof translations !== 'undefined' && translations[lang] && translations[lang][badgeKey]) ? translations[lang][badgeKey] : 'Service Booking';
+    }
+    if (modalTitle) {
+        modalTitle.setAttribute('data-i18n-key', titleKey);
+        modalTitle.textContent = (typeof translations !== 'undefined' && translations[lang] && translations[lang][titleKey]) ? translations[lang][titleKey] : '';
+    }
+    if (modalDesc) {
+        modalDesc.setAttribute('data-i18n-key', descKey);
+        modalDesc.textContent = (typeof translations !== 'undefined' && translations[lang] && translations[lang][descKey]) ? translations[lang][descKey] : '';
+    }
+    if (modalPrice) {
+        modalPrice.setAttribute('data-i18n-key', priceKey);
+        modalPrice.textContent = (typeof translations !== 'undefined' && translations[lang] && translations[lang][priceKey]) ? translations[lang][priceKey] : '';
+    }
+    if (modalIcon) {
+        modalIcon.innerHTML = `<i class="${data.icon}"></i>`;
+    }
+
+    const stepsList = data.deliverables[lang] || data.deliverables['en'];
+    if (modalDeliverables) {
+        modalDeliverables.innerHTML = stepsList.map(item => `
+            <div class="p-3 rounded-xl bg-slate-950/40 border border-gray-800/80 flex items-start space-x-3">
+                <i class="fas fa-check-circle text-cyan-400 text-sm mt-0.5"></i>
+                <div>
+                    <span class="block text-xs font-bold text-gray-200">${item.step}</span>
+                    <span class="block text-xs text-gray-400 mt-0.5">${item.desc}</span>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        setTimeout(() => {
+            modal.classList.add('open');
+        }, 10);
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeServiceModal() {
+    const modal = document.getElementById('service-modal');
+    if (modal) {
+        modal.classList.remove('open');
+        setTimeout(() => {
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }, 300);
+    }
+}
+
+function sendOrderToWhatsApp() {
+    const lang = getActiveLanguage();
+    const name = document.getElementById('modal-client-name')?.value || 'N/A';
+    const phone = document.getElementById('modal-client-phone')?.value || 'N/A';
+    const ig = document.getElementById('modal-client-ig')?.value || 'N/A';
+    const notes = document.getElementById('modal-client-notes')?.value || 'N/A';
+    const serviceData = servicesData[currentActiveServiceId];
+    const serviceTitleKey = serviceData ? `${serviceData.keyPrefix}_title` : '';
+    const serviceTitle = (serviceTitleKey && typeof translations !== 'undefined' && translations[lang] && translations[lang][serviceTitleKey]) ? translations[lang][serviceTitleKey] : 'Service Inquiry';
+
+    const text = `Hello Kanan! New service inquiry from website:%0A%0A📌 *Service:* ${encodeURIComponent(serviceTitle)}%0A👤 *Name:* ${encodeURIComponent(name)}%0A📞 *Phone/WhatsApp:* ${encodeURIComponent(phone)}%0A📸 *Instagram:* ${encodeURIComponent(ig)}%0A📝 *Notes:* ${encodeURIComponent(notes)}`;
+
+    const whatsappUrl = `https://wa.me/?text=${text}`;
+    window.open(whatsappUrl, '_blank');
+}
+
+function sendOrderViaForm() {
+    const lang = getActiveLanguage();
+    const name = document.getElementById('modal-client-name')?.value;
+    const phone = document.getElementById('modal-client-phone')?.value;
+
+    const alertFillKey = 'service_modal_alert_fill';
+    const alertFill = (typeof translations !== 'undefined' && translations[lang] && translations[lang][alertFillKey]) ? translations[lang][alertFillKey] : 'Please enter your Name and Phone / WhatsApp number.';
+
+    if (!name || !phone) {
+        alert(alertFill);
+        return;
+    }
+
+    const alertSuccessKey = 'service_modal_alert_success';
+    const alertSuccessTpl = (typeof translations !== 'undefined' && translations[lang] && translations[lang][alertSuccessKey]) ? translations[lang][alertSuccessKey] : 'Thank you, {name}! Your inquiry has been received. We will contact you soon.';
+    const alertSuccess = alertSuccessTpl.replace('{name}', name);
+
+    alert(alertSuccess);
+    closeServiceModal();
+}
+
+window.addEventListener('languageChanged', (e) => {
+    const modal = document.getElementById('service-modal');
+    if (modal && modal.classList.contains('open')) {
+        openServiceModal(currentActiveServiceId);
+    }
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     initBrandCarousel();
     autoFitBrandTitles();
+    initServicesSection();
 });
