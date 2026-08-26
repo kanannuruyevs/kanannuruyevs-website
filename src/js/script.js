@@ -449,22 +449,36 @@ function initBrandCarousel() {
 
     // Touch Swipe Gestures
     let touchStartX = 0;
-    let touchEndX = 0;
+    let touchStartY = 0;
 
     const viewport = track.closest('.brand-carousel-viewport');
     if (viewport) {
         viewport.addEventListener('touchstart', (e) => {
-            touchStartX = e.changedTouches[0].screenX;
+            touchStartX = e.changedTouches[0].clientX;
+            touchStartY = e.changedTouches[0].clientY;
         }, { passive: true });
 
         viewport.addEventListener('touchend', (e) => {
-            touchEndX = e.changedTouches[0].screenX;
-            if (touchStartX - touchEndX > 50) {
-                currentBrandSlide = (currentBrandSlide + 1) % totalBrandSlides;
-                updateCarousel();
-            } else if (touchEndX - touchStartX > 50) {
-                currentBrandSlide = (currentBrandSlide - 1 + totalBrandSlides) % totalBrandSlides;
-                updateCarousel();
+            const touchEndX = e.changedTouches[0].clientX;
+            const touchEndY = e.changedTouches[0].clientY;
+
+            const deltaX = touchEndX - touchStartX;
+            const deltaY = touchEndY - touchStartY;
+
+            // Ignore vertical scrolling: if Y movement is greater than X movement, do not switch slides
+            if (Math.abs(deltaY) >= Math.abs(deltaX)) {
+                return;
+            }
+
+            // Only trigger slide transition for intentional horizontal swipes (> 60px)
+            if (Math.abs(deltaX) > 60) {
+                if (deltaX < 0) {
+                    currentBrandSlide = (currentBrandSlide + 1) % totalBrandSlides;
+                    updateCarousel();
+                } else {
+                    currentBrandSlide = (currentBrandSlide - 1 + totalBrandSlides) % totalBrandSlides;
+                    updateCarousel();
+                }
             }
         }, { passive: true });
     }
