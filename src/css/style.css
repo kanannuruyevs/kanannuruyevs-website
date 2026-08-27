@@ -1238,11 +1238,11 @@ html.dark .mobile-menu {
 
 .solution-a-video-grid {
   display: grid;
-  grid-template-columns: minmax(0, 3.16fr) minmax(0, 2fr);
+  grid-template-columns: minmax(0, 1.54fr) minmax(0, 1fr);
   gap: 12px;
   margin-bottom: 18px;
   width: 100%;
-  align-items: center;
+  align-items: start;
 }
 
 .solution-a-landscape-wrapper {
