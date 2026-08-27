@@ -1204,27 +1204,60 @@ html.dark .mobile-menu {
 }
 
 /* ── Solution A: Asymmetric Composite Video Grid & Neon Coral Accents ── */
+.brand-section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #38BDF8;
+  margin-bottom: 14px;
+}
+
+.brand-section-title::before {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #38BDF8;
+  box-shadow: 0 0 8px #38BDF8;
+  flex-shrink: 0;
+}
+
 .solution-a-video-grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: minmax(0, 3.16fr) minmax(0, 2fr);
   gap: 12px;
   margin-bottom: 18px;
+  width: 100%;
+  align-items: center;
 }
 
 .solution-a-landscape-wrapper {
-  grid-column: span 7;
+  min-width: 0;
+  width: 100%;
 }
 
 .solution-a-portrait-wrapper {
-  grid-column: span 5;
+  min-width: 0;
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 8px;
 }
 
 @media (max-width: 768px) {
-  .solution-a-landscape-wrapper { grid-column: span 12; }
-  .solution-a-portrait-wrapper { grid-column: span 12; }
+  .solution-a-video-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+  .solution-a-portrait-wrapper {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 8px;
+  }
 }
 
 .solution-a-card,
@@ -1233,6 +1266,8 @@ html.dark .mobile-menu {
   border-radius: 16px;
   overflow: hidden;
   display: block;
+  width: 100%;
+  box-sizing: border-box;
   text-decoration: none;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   border: 1.5px solid rgba(255, 94, 98, 0.4);
@@ -1248,12 +1283,14 @@ html.dark .mobile-menu {
 
 .solution-a-card.landscape-card {
   aspect-ratio: 16/9;
-  height: 100%;
+  width: 100%;
+  height: auto;
 }
 
 .solution-a-card.portrait-card {
   aspect-ratio: 9/16;
-  height: 100%;
+  width: 100%;
+  height: auto;
 }
 
 /* Thumbnail Visual Fallback Gradients */
@@ -1291,6 +1328,7 @@ html.dark .mobile-menu {
   opacity: 0.85;
   transition: transform 0.25s ease, opacity 0.25s ease, box-shadow 0.25s ease;
   pointer-events: none;
+  z-index: 10;
 }
 
 .solution-a-card:hover::after {
