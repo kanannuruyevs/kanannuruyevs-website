@@ -770,8 +770,17 @@ html.dark .mobile-menu {
   color: #FFFFFF;
   box-shadow: 0 0 20px rgba(168, 85, 247, 0.35);
 }
-.brand-work-btn .bwb-chevron { transition: transform 0.35s ease; font-size: 11px; }
-.brand-work-btn.open .bwb-chevron { transform: rotate(180deg); }
+.brand-work-btn .bwb-chevron {
+  display: inline-block;
+  line-height: 1;
+  font-size: 11px;
+  margin-left: 2px;
+  transform-origin: center;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.brand-work-btn.open .bwb-chevron {
+  transform: rotate(180deg);
+}
 
 /* ── Top-right platform badges & hover animations ── */
 .brand-top-platforms {

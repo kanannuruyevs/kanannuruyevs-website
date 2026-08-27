@@ -192,7 +192,7 @@ function closeAllBrandCards() {
         }
         if (btn) {
             btn.classList.remove('open');
-            const icon = btn.querySelector('.bwb-chevron, i');
+            const icon = btn.querySelector('.bwb-chevron');
             if (icon) icon.classList.remove('rotate-180');
         }
     });
@@ -204,7 +204,7 @@ function toggleBrandCard(btn) {
     if (!card) return;
 
     const panel = card.querySelector('.brand-gallery-content');
-    const chevron = btn.querySelector('.bwb-chevron, i');
+    const chevron = btn.querySelector('.bwb-chevron');
     const isCurrentlyOpen = card.classList.contains('open') || (panel && panel.classList.contains('open'));
     const allBrandCards = Array.from(document.querySelectorAll('.brand-card'));
 
