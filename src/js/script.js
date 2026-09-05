@@ -662,77 +662,29 @@ function autoFitBrandTitles() {
 
 window.addEventListener('resize', autoFitBrandTitles);
 
-// Services Section & Interactive Modal Logic (Variant 1 + Variant 3)
+// Services Section & Interactive Modal Logic (3 Core Services)
 const servicesData = {
     'content-creation': {
         keyPrefix: 'service_1',
         icon: 'fas fa-video',
         deliverables: {
             en: [
-                { step: '1. Brief & Concept', desc: 'Topic selection, target audience analysis, and concept planning.' },
-                { step: '2. Filming & Audio Capture', desc: 'Professional 4K camera, studio lighting, and crisp microphone audio recording.' },
-                { step: '3. Editing & Post-Production', desc: 'Dynamic cuts, captions/subtitles, sound effects, and color grading.' },
-                { step: '4. Final Delivery & Formatting', desc: 'Delivery of ready-to-publish files in Instagram (9:16) and YouTube (16:9) formats.' }
+                { step: '1. Brief, Concept & AI Ideation', desc: 'Topic selection, target audience analysis, and AI-assisted viral script & hook planning.' },
+                { step: '2. Filming & Audio Capture', desc: 'Professional 4K camera setup, cinematic lighting, and crisp microphone audio recording.' },
+                { step: '3. Editing, AI Visuals & Post-Production', desc: 'Dynamic cuts, captions/subtitles, AI-generated covers/graphics, sound effects, and color grading.' },
+                { step: '4. Final Delivery & Multi-Platform Formatting', desc: 'Ready-to-publish files optimized for Instagram Reels (9:16), TikTok, and YouTube (16:9).' }
             ],
             az: [
-                { step: '1. Brifinq və İdeya', desc: 'Mövzunun seçilməsi, hədəf auditoriyanın təhlili və konsept planlaşdırılması.' },
-                { step: '2. Çəkiliş və Səs Yazılışı', desc: 'Peşəkar kamera (4K), işıqlandırma və aydın mikrafon səs yazılışı.' },
-                { step: '3. Montaj və Post-prodakşn', desc: 'Dinamik kəsimlər, altyazılar (subtitles), səs effektləri və rəng korreksiyası.' },
-                { step: '4. Təhvil və Formatlaşdırma', desc: 'Instagram (9:16) və YouTube (16:9) formatlarında hazır faylların çatdırılması.' }
+                { step: '1. Brifinq, İdeya və AI Planlaşdırma', desc: 'Mövzunun seçilməsi, hədəf auditoriyanın təhlili və süni intellektlə viral skript/hook planı.' },
+                { step: '2. Çəkiliş və Səs Yazılışı', desc: 'Peşəkar kamera (4K), studiya işıqlandırması və aydın mikrafon səs yazılışı.' },
+                { step: '3. Montaj, AI Vizual və Post-prodakşn', desc: 'Dinamik kəsimlər, altyazılar (subtitles), AI örtüklər, səs effektləri və rəng korreksiyası.' },
+                { step: '4. Təhvil və Formatlaşdırma', desc: 'Instagram Reels (9:16), TikTok və YouTube (16:9) üçün tam hazır faylların çatdırılması.' }
             ],
             ru: [
-                { step: '1. Брифинг и Концепция', desc: 'Выбор темы, анализ целевой аудитории и планирование концепта.' },
-                { step: '2. Съемка и Запись Звука', desc: 'Профессиональная 4K камера, студийное освещение и чистая запись звука.' },
-                { step: '3. Монтаж и Пост-продакшн', desc: 'Динамичный монтаж, субтитры, звуковые эффекты и цветокоррекция.' },
-                { step: '4. Финальная Сдача и Форматирование', desc: 'Передача готовых файлов в форматах Instagram (9:16) и YouTube (16:9).' }
-            ]
-        }
-    },
-    'ai-content': {
-        keyPrefix: 'service_2',
-        icon: 'fas fa-wand-magic-sparkles',
-        deliverables: {
-            en: [
-                { step: '1. AI Prompt Strategy', desc: 'Analyzing topic ideas, target hooks, and structuring viral AI prompts.' },
-                { step: '2. AI Scriptwriting & Copywriting', desc: 'Generating engaging video scripts, captions, and content outlines using AI.' },
-                { step: '3. AI Thumbnail & Graphic Design', desc: 'Generating eye-catching cover graphics and visual assets with Midjourney/DALL-E.' },
-                { step: '4. Automated Publishing Setup', desc: 'Configuring AI content pipelines and scheduling tools for multi-platform delivery.' }
-            ],
-            az: [
-                { step: '1. AI Prompt Strategiyası', desc: 'Mövzu ideyalarının, diqqətçəkən başlıqların və AI sorğularının planlaşdırılması.' },
-                { step: '2. AI Skript & Mətn Yazılışı', desc: 'AI alətləri ilə cəlbedici video skriptlərinin, altyazıların və kontent planının hazırlanması.' },
-                { step: '3. AI Örtük & Qrafik Dizayn', desc: 'Midjourney/DALL-E ilə yüksək diqqətçəkən örtük şəkillərinin və vizualların hazırlanması.' },
-                { step: '4. Avtomatlaşdırılmış Paylaşım', desc: 'Kontent zəncirinin qurulması və sosial şəbəkələrdə avtomatlaşdırılmış vaxt planı.' }
-            ],
-            ru: [
-                { step: '1. ИИ Промпт-Стратегия', desc: 'Анализ идей, цепляющих хуков и составление промптов для ИИ.' },
-                { step: '2. Написание ИИ-Сценариев', desc: 'Генерация увлекательных видео-сценариев и текстов с помощью ИИ.' },
-                { step: '3. ИИ Дизайн Обложек и Графики', desc: 'Создание привлекательных обложек и визуала с Midjourney/DALL-E.' },
-                { step: '4. Автоматизация Публикаций', desc: 'Настройка контент-цепочек и автопостинга для нескольких платформ.' }
-            ]
-        }
-    },
-    'vibe-coding': {
-        keyPrefix: 'service_3',
-        icon: 'fas fa-laptop-code',
-        deliverables: {
-            en: [
-                { step: '1. Architecture & Design Wireframe', desc: 'Defining website requirements, glassmorphism dark-mode UI, and structure.' },
-                { step: '2. AI-Assisted Vibe Coding', desc: 'Building responsive web pages, interactive components, and smooth animations.' },
-                { step: '3. SEO & Mobile Optimization', desc: 'Ensuring ultra-fast page speeds, mobile responsiveness, and search optimization.' },
-                { step: '4. Launch & Hosting Setup', desc: 'Connecting custom domain, SSL certification, and deployment.' }
-            ],
-            az: [
-                { step: '1. Arxitektura və Struktur Planı', desc: 'Saytın ehtiyaclarının, şüşə effekti (Glassmorphism) və dark-mode dizaynının təyini.' },
-                { step: '2. AI Dəstəkli Vibe Coding', desc: 'Responsiv səhifələrin, interaktiv komponentlərin və animasiyaların hazırlanması.' },
-                { step: '3. SEO və Mobil Optimizasiya', desc: 'Yüksək açılış sürəti, mobil cihazlara tam uyğunluq və SEO optimallaşdırılması.' },
-                { step: '4. Buraxılış və Hostinq Qurulması', desc: 'Domenin qoşulması, SSL təhlükəsizlik sertifikatı və saytın canlıya verilməsi.' }
-            ],
-            ru: [
-                { step: '1. Архитектура и Структура', desc: 'Определение требований к сайту, темного Glassmorphism интерфейса.' },
-                { step: '2. Vibe Coding с Помощью ИИ', desc: 'Разработка адаптивных страниц, интерактивных элементов и анимаций.' },
-                { step: '3. SEO и Мобильная Оптимизация', desc: 'Обеспечение молниеносной скорости загрузки, мобильной адаптивности и SEO.' },
-                { step: '4. Запуск и Настройка Хостинга', desc: 'Подключение домена, SSL сертификата и деплой проекта.' }
+                { step: '1. Брифинг, Идея и ИИ-Концепция', desc: 'Выбор темы, анализ аудитории и планирование сценариев/хуков с помощью ИИ.' },
+                { step: '2. Съемка и Запись Звука', desc: 'Профессиональная 4K камера, студийный свет и кристально чистая запись звука.' },
+                { step: '3. Монтаж, ИИ-Визуал и Пост-продакшн', desc: 'Динамичный монтаж, субтитры, звуковые эффекты, ИИ-обложки и цветокоррекция.' },
+                { step: '4. Финальная Сдача и Форматирование', desc: 'Передача готовых к публикации файлов для Instagram (9:16), TikTok и YouTube (16:9).' }
             ]
         }
     },
