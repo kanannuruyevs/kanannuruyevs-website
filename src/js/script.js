@@ -272,15 +272,6 @@ function toggleBrandCard(btn) {
     });
 }
 
-// Brand Card: Switch between Platforms / Audience Stats tabs
-function switchBrandTab(clickedBtn, panelId) {
-    const tabBar = clickedBtn.closest('.brand-tab-bar');
-    const panel = clickedBtn.closest('.brand-panel-inner');
-    tabBar.querySelectorAll('.brand-tab-btn').forEach(b => b.classList.remove('active'));
-    panel.querySelectorAll('.brand-tab-panel').forEach(p => p.classList.remove('active'));
-    clickedBtn.classList.add('active');
-    document.getElementById(panelId).classList.add('active');
-}
 
 
 // --- Contact Form Logic with EmailJS ---
@@ -501,11 +492,8 @@ const knLangData = {
             { key: 'tag_english', text: 'English' }
         ],
         ig: 'https://instagram.com/kanansnote',
-        igFol: '80K followers',
         tt: 'https://tiktok.com/@kanansnote',
-        ttFol: '–',
-        yt: 'https://youtube.com/@kanansnote',
-        ytFol: '15K subscribers'
+        yt: 'https://youtube.com/@kanansnote'
     },
     aze: {
         avatar: './src/images/brand-avatars/kanansnoteaze-avatar.png',
@@ -522,11 +510,8 @@ const knLangData = {
             { key: 'tag_azerbaijani', text: 'Azerbaijani' }
         ],
         ig: 'https://instagram.com/kanansnoteaze',
-        igFol: '45K followers',
         tt: 'https://tiktok.com/@kanansnoteaze',
-        ttFol: '–',
-        yt: 'https://youtube.com/@kanansnoteaze',
-        ytFol: '–'
+        yt: 'https://youtube.com/@kanansnoteaze'
     },
     ru: {
         avatar: './src/images/brand-avatars/kanansnoteru-avatar.png',
@@ -543,11 +528,8 @@ const knLangData = {
             { key: 'tag_russian', text: 'Russian' }
         ],
         ig: 'https://instagram.com/kanansnoteru',
-        igFol: '60K followers',
         tt: 'https://tiktok.com/@kanansnoteru',
-        ttFol: '–',
-        yt: 'https://youtube.com/@kanansnoteru',
-        ytFol: '–'
+        yt: 'https://youtube.com/@kanansnoteru'
     }
 };
 
@@ -566,10 +548,11 @@ function switchKnLang(lang, btn) {
     const avatar = document.getElementById('kn-avatar-img');
     if (avatar) avatar.src = data.avatar;
 
+    const currLang = getActiveLanguage();
+
     const title = document.getElementById('kn-brand-title');
     if (title) {
         title.setAttribute('data-i18n-key', data.titleKey);
-        const currLang = (typeof currentLanguage !== 'undefined' && currentLanguage) ? currentLanguage : 'en';
         const translated = (typeof translations !== 'undefined' && translations[currLang]) ? translations[currLang][data.titleKey] : null;
         title.textContent = translated || data.titleText;
     }
@@ -577,7 +560,6 @@ function switchKnLang(lang, btn) {
     const type = document.getElementById('kn-brand-type');
     if (type) {
         type.setAttribute('data-i18n-key', data.typeKey);
-        const currLang = (typeof currentLanguage !== 'undefined' && currentLanguage) ? currentLanguage : 'en';
         if (typeof translations !== 'undefined' && translations[currLang] && translations[currLang][data.typeKey]) {
             type.textContent = translations[currLang][data.typeKey];
         }
@@ -586,7 +568,6 @@ function switchKnLang(lang, btn) {
     const desc = document.getElementById('kn-brand-desc');
     if (desc) {
         desc.setAttribute('data-i18n-key', data.descKey);
-        const currLang = (typeof currentLanguage !== 'undefined' && currentLanguage) ? currentLanguage : 'en';
         if (typeof translations !== 'undefined' && translations[currLang] && translations[currLang][data.descKey]) {
             desc.textContent = translations[currLang][data.descKey];
         }
@@ -594,9 +575,6 @@ function switchKnLang(lang, btn) {
 
     const reachNum = document.getElementById('kn-reach-num');
     if (reachNum) reachNum.textContent = data.reach;
-
-    const statReach = document.getElementById('kn-stat-reach');
-    if (statReach) statReach.textContent = data.reach;
 
     const tagsContainer = document.getElementById('kn-tags-container');
     if (tagsContainer) {
@@ -606,29 +584,11 @@ function switchKnLang(lang, btn) {
     const igLink = document.getElementById('kn-ig-link');
     if (igLink) igLink.href = data.ig;
 
-    const rowIg = document.getElementById('kn-row-ig');
-    if (rowIg) rowIg.href = data.ig;
-
-    const folIg = document.getElementById('kn-fol-ig');
-    if (folIg) folIg.textContent = data.igFol;
-
     const ttLink = document.getElementById('kn-tt-link');
     if (ttLink) ttLink.href = data.tt;
 
-    const rowTt = document.getElementById('kn-row-tt');
-    if (rowTt) rowTt.href = data.tt;
-
-    const folTt = document.getElementById('kn-fol-tt');
-    if (folTt) folTt.textContent = data.ttFol;
-
     const ytLink = document.getElementById('kn-yt-link');
     if (ytLink) ytLink.href = data.yt || '#';
-
-    const rowYt = document.getElementById('kn-row-yt');
-    if (rowYt) rowYt.href = data.yt || '#';
-
-    const folYt = document.getElementById('kn-fol-yt');
-    if (folYt) folYt.textContent = data.ytFol || '–';
 
     // Top-right platform badges dynamic link update
     const topIg = document.getElementById('kn-top-ig');
