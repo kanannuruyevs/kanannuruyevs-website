@@ -146,11 +146,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const scrollToTopBtn = document.getElementById('scroll-to-top');
 
 if (scrollToTopBtn) {
+    let scrollTicking = false;
     window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-            scrollToTopBtn.classList.add('visible');
-        } else {
-            scrollToTopBtn.classList.remove('visible');
+        if (!scrollTicking) {
+            window.requestAnimationFrame(() => {
+                if (window.pageYOffset > 300) {
+                    scrollToTopBtn.classList.add('visible');
+                } else {
+                    scrollToTopBtn.classList.remove('visible');
+                }
+                scrollTicking = false;
+            });
+            scrollTicking = true;
         }
     }, { passive: true });
 
@@ -603,24 +610,28 @@ function switchKnLang(lang, btn) {
     autoFitBrandTitles();
 }
 
+let autoFitBrandTitlesRaf = null;
 function autoFitBrandTitles() {
-    const titles = document.querySelectorAll('.brand-card-title');
-    titles.forEach(title => {
-        const parent = title.parentElement;
-        if (!parent) return;
-        title.style.fontSize = '';
-        let currentSize = parseFloat(window.getComputedStyle(title).fontSize);
-        const availableWidth = parent.clientWidth;
-        if (availableWidth > 0) {
-            while (title.scrollWidth > availableWidth && currentSize > 14) {
-                currentSize -= 0.5;
-                title.style.fontSize = currentSize + 'px';
+    if (autoFitBrandTitlesRaf) cancelAnimationFrame(autoFitBrandTitlesRaf);
+    autoFitBrandTitlesRaf = requestAnimationFrame(() => {
+        const titles = document.querySelectorAll('.brand-card-title');
+        titles.forEach(title => {
+            const parent = title.parentElement;
+            if (!parent) return;
+            title.style.fontSize = '';
+            let currentSize = parseFloat(window.getComputedStyle(title).fontSize);
+            const availableWidth = parent.clientWidth;
+            if (availableWidth > 0 && title.scrollWidth > availableWidth) {
+                while (title.scrollWidth > availableWidth && currentSize > 14) {
+                    currentSize -= 0.5;
+                    title.style.fontSize = currentSize + 'px';
+                }
             }
-        }
+        });
     });
 }
 
-window.addEventListener('resize', autoFitBrandTitles);
+window.addEventListener('resize', autoFitBrandTitles, { passive: true });
 
 // Services Section & Interactive Modal Logic (3 Core Services)
 const servicesData = {
