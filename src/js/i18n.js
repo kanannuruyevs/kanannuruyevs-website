@@ -46,6 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if (['az', 'ru'].includes(browserLang)) {
         window.setLanguage(browserLang);
     } else {
-        window.setLanguage('en'); // Default to English
+        window.setLanguage('az');
     }
 });
