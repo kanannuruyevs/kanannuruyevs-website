@@ -722,14 +722,6 @@ html.dark section.bg-slate-100,
 
 .site-project-panels {
   min-width: 0;
-  height: 32rem;
-  max-height: 70vh;
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  scrollbar-gutter: stable;
-  padding-right: 0.35rem;
-  scrollbar-color: rgba(103, 232, 249, 0.45) rgba(148, 163, 184, 0.08);
-  scrollbar-width: thin;
 }
 
 .site-project-panel[hidden] {
@@ -737,7 +729,6 @@ html.dark section.bg-slate-100,
 }
 
 .site-project-card {
-  height: 100%;
   overflow: hidden;
   border: 1px solid rgba(148, 163, 184, 0.14);
   border-radius: 1rem;
