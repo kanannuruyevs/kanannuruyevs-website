@@ -79,7 +79,7 @@ Object.assign(translations.az, {
     site_nav_contact: "Əlaqə",
     site_hero_eyebrow: "Kontent · Strategiya · Texnologiya",
     site_hero_title: "Kənan Nuruyev",
-    site_hero_role: "Content Creator & Strategist",
+    site_hero_role: "Kontent Yaradıcısı və Strateqi",
     site_hero_copy: "Kontent strategiyası, rəqəmsal alətlər, AI və texnologiya (smartfonlar) üzrə yaradıcı işlər. İT və Front-End təməlli yanaşma.",
     site_hero_contact: "Əlaqə saxla",
     site_hero_work: "İşlərimə bax",
@@ -145,13 +145,13 @@ Object.assign(translations.az, {
 });
 
 Object.assign(translations.ru, {
-    site_name: "Кенан Нуруев",
+    site_name: "Канан Нуруев",
     site_nav_focus: "Направления",
     site_nav_work: "Портфолио",
     site_nav_about: "Обо мне",
     site_nav_contact: "Контакты",
     site_hero_eyebrow: "Контент · Стратегия · Технологии",
-    site_hero_title: "Кенан Нуруев",
+    site_hero_title: "Канан Нуруев",
     site_hero_role: "Content Creator & Strategist",
     site_hero_copy: "Создаю контент о стратегиях, цифровых инструментах, ИИ и технологиях смартфонов, опираясь на знания в ИТ и Front-End.",
     site_hero_contact: "Связаться",
