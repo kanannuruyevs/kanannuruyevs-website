@@ -67,6 +67,7 @@ Object.assign(translations.en, {
     site_contribution_reco: "Reported information about an end-of-life GNOME runtime",
     site_contribution_todo: "Reported that sign-in appeared on every launch",
     site_resume_download: "Download resume",
+    site_email_me: "Email me",
     site_footer_rights: "All rights reserved."
 });
 
@@ -139,6 +140,7 @@ Object.assign(translations.az, {
     site_contribution_reco: "İstifadə müddəti bitmiş GNOME runtime məlumatı barədə bildiriş",
     site_contribution_todo: "Tətbiq hər açılanda yenidən giriş istənməsi barədə bildiriş",
     site_resume_download: "CV-ni yüklə",
+    site_email_me: "E-poçta yaz",
     site_footer_rights: "Bütün hüquqlar qorunur."
 });
 
@@ -211,5 +213,6 @@ Object.assign(translations.ru, {
     site_contribution_reco: "Сообщение об устаревшей информации о GNOME runtime",
     site_contribution_todo: "Сообщение о повторном запросе входа при каждом запуске",
     site_resume_download: "Скачать резюме",
+    site_email_me: "Написать на email",
     site_footer_rights: "Все права защищены."
 });

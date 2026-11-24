@@ -833,21 +833,42 @@ html.dark section.bg-slate-100,
 .site-resume-link {
   display: flex;
   width: fit-content;
+  min-height: 3.25rem;
   align-items: center;
+  justify-content: center;
   gap: 0.6rem;
-  margin: 1.5rem auto 0;
   border: 1px solid rgba(148, 163, 184, 0.22);
   border-radius: 0.85rem;
-  padding: 0.75rem 1rem;
+  padding: 0.85rem 1.25rem;
   color: #cbd5e1;
-  font-size: 0.875rem;
-  font-weight: 600;
-  transition: border-color 0.2s ease, color 0.2s ease;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
 .site-resume-link:hover {
+  transform: translateY(-2px);
   border-color: rgba(103, 232, 249, 0.5);
   color: #67e8f9;
+}
+
+.site-contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.site-contact-actions .site-resume-link,
+.site-contact-actions .site-button {
+  min-height: 3.5rem;
+  padding: 0.95rem 1.5rem;
+}
+
+.site-contact-actions .site-button {
+  transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
 html:not(.dark) body {
@@ -1509,6 +1530,8 @@ html.dark .mobile-menu {
 .brand-platform-badge.instagram i { color: #FF5E62; }
 .brand-platform-badge.youtube i { color: #FF0000; }
 .brand-platform-badge.tiktok i { color: #38BDF8; }
+.brand-platform-badge.linkedin i { color: #0A66C2; }
+.brand-platform-badge.beacons i { color: #A78BFA; }
 
 .brand-platform-badge i {
   font-size: 14px;
@@ -1551,6 +1574,20 @@ html.dark .mobile-menu {
   color: #ffffff;
   border-color: rgba(56, 189, 248, 0.5);
   box-shadow: 0 8px 20px -4px rgba(56, 189, 248, 0.3);
+}
+
+.brand-platform-badge.linkedin:hover {
+  background: linear-gradient(135deg, #0A66C2, #004182);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 8px 20px -4px rgba(10, 102, 194, 0.45);
+}
+
+.brand-platform-badge.beacons:hover {
+  background: linear-gradient(135deg, #8B5CF6, #6D28D9);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 8px 20px -4px rgba(139, 92, 246, 0.45);
 }
 
 .brand-platform-badge:active {
